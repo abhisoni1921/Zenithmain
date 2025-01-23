@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="logo-container">
         <a href="/" className="navbar-logo">
           <img 
-            src="/ZenithLogo.png" 
+            src="/ZenithL.png" 
             alt="Logo" 
             width={isScrolled ? "80" : "80"} 
             height={isScrolled ? "24" : "24"}
@@ -53,7 +53,7 @@ const Navbar = () => {
             <a href="/" style={{ textDecoration: 'none' }} className="navbar-link">Learnings</a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><AllInclusiveIcon/><span>Al</span><span>gnite</span> Apti Forge</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-red-400 text-lg font-semibold ">gnite</span> Apti Forge</span>
               </Link>
               <Link to="/AlgniteTechForge" style={{ textDecoration: 'none' }}>
                 <span className="special"><AllInclusiveIcon/>Algnite Tech Forge</span>
