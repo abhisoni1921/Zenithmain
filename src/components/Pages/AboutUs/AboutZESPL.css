@@ -1,0 +1,429 @@
+/* AboutUs.css */
+.about-container {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    color: #333;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 0 auto;
+    padding: 0% 0.1rem;
+    /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
+    border: 1px solid rgba(224, 224, 224, 0.3);
+    border-radius: 8px;
+    animation: fadeIn 1s ease-out;
+    text-align: justify;
+}
+
+.about-header {
+    margin-bottom: 15px;
+    color: #2980b9;
+}
+
+.about-header h1 {
+    font-size: 2.4em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.about-header p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+}
+
+.about-section,
+.vision-mission,
+.about-logo,
+.about-colors,
+.founders,
+.useful-links,
+.contact {
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 20px;
+    border-radius: 6px;
+    opacity: 0;
+    animation: slideIn 0.8s ease-out forwards;
+}
+
+.about-section { animation-delay: 0.2s; }
+.vision-mission { animation-delay: 0.4s; }
+.about-logo { animation-delay: 0.6s; }
+.about-colors { animation-delay: 0.8s; }
+.founders { animation-delay: 1s; }
+.useful-links { animation-delay: 1.2s; }
+.contact { animation-delay: 1.4s; }
+
+.about-header h1,
+.about-section h2,
+.vision-mission h3,
+.about-logo h3,
+.about-colors h3,
+.founders h3,
+.useful-links h3,
+.contact h3 {
+    font-size: 1.8em;
+    color: #34495e;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgba(224, 224, 224, 0.3);
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.about-section h2::after,
+.vision-mission h3::after,
+.about-logo h3::after,
+.about-colors h3::after,
+.founders h3::after,
+.useful-links h3::after,
+.contact h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to right, #2980b9, #2c3e50);
+    transition: width 0.3s ease;
+}
+
+.about-section:hover h2::after,
+.vision-mission:hover h3::after,
+.about-logo:hover h3::after,
+.about-colors:hover h3::after,
+.founders:hover h3::after,
+.useful-links:hover h3::after,
+.contact:hover h3::after {
+    width: 100%;
+}
+
+.about-section p,
+.about-logo p,
+.about-colors p,
+.founders p,
+.contact address {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.vision-mission {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.vision, .mission {
+    flex: 1;
+    min-width: 320px;
+    padding: 10px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(249,249,249,0.4) 100%);
+    border-radius: 6px;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vision:hover, .mission:hover {
+    background: linear-gradient(135deg, rgba(255,255,255,0.6) 0%, rgba(249,249,249,0.6) 100%);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.vision ul, .mission ol {
+    padding-left: 30px;
+    list-style-position: outside;
+}
+
+.about-colors ul {
+    padding-left: 30px;
+    list-style: none;
+}
+
+.about-colors ul li {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideInList 0.5s ease-out forwards;
+}
+
+.about-colors ul li strong {
+    color: #2c3e50;
+}
+
+.founder {
+    margin-bottom: 30px;
+    padding: 10px;
+    /* background-color: rgba(255, 255, 255, 0.4); */
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.founder:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.founder h4 {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin-bottom: 10px;
+}
+
+.founder p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.useful-links ul {
+    padding-left: 30px;
+    list-style-type: disc;
+}
+
+.useful-links ul li {
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: slideInList 0.5s ease-out forwards;
+}
+
+.contact address {
+    font-style: normal;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.contact a {
+    transition: color 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.contact a:hover {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.contact a:hover::after {
+    transform: scaleX(1);
+}
+
+.hero-container {
+    min-height: 70vh; /* Reduced from 90vh */
+    height: auto; /* Changed from 100vh */
+    display: flex;
+    align-items: flex-start; /* Changed from flex-start */
+    margin: 0;
+    padding: 0;
+    margin-top: -50px; /* Reduced from -100px */
+    background: transparent;
+    max-width: 100%;
+}
+
+.hero-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed from space-between */
+    gap: 4rem; /* Increased gap between image and text */
+    max-width: 100%; /* Added max-width to control overall container size */
+    margin: 0 auto; /* Center the content */
+    background: linear-gradient(to bottom, #3a1c71, #d76d77, #ffaf7b);
+}
+
+.hero-image-container {
+    flex: 0 0 40%; /* Reduced width and fixed proportion */
+    max-width: 400px; /* Added max-width */
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.hero-text {
+    flex: 0 0 50%; /* Reduced width and fixed proportion */
+    padding-top: 0; /* Removed top padding */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.logo-badge {
+    background-color: #553C9A;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #4a5568;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.view-solutions-btn {
+    background-color: #96085d;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-solutions-btn:hover {
+    background-color: #319795;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1em;
+    color: #7f8c8d;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 6px;
+}
+
+a {
+    color: #2980b9;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInList {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-container {
+        min-height: auto;
+        padding-top: 1rem;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+    }
+
+    .logo-container {
+        justify-content: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Backdrop blur */
+.about-section,
+.vision-mission,
+.about-logo,
+.about-colors,
+.founders,
+.useful-links,
+.contact {
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+}
+
+/* Scroll reveal animation */
+@media (prefers-reduced-motion: no-preference) {
+    .about-section,
+    .vision-mission,
+    .about-logo,
+    .about-colors,
+    .founders,
+    .useful-links,
+    .contact {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
