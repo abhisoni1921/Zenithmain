@@ -331,8 +331,14 @@ section.visible {
 /* ZESPL Section */
 .zespl-section {
   background-color: rgba(144, 238, 144, 0.3); /* Peach */
-  margin-top: 0rem;
 }
+
+
+/* Impact Section */
+.impact-section {
+  background-color: rgba(176, 224, 230, 0.3); /* Powder Blue */
+}
+
 
 /* Banner Container */
 .banner-container {
@@ -683,11 +689,10 @@ section.visible {
 }
 
 .talent-page {
-  max-width: 1550px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
   background-color: rgba(152, 251, 152, 0.3);
-  height: 750px;
 }
 
 .header {
@@ -711,9 +716,8 @@ section.visible {
 .services-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 6rem;
-  margin-top: -11rem;
-  padding: 11rem;
+  gap: 2rem;
+  margin-top: 2rem;
 }
 
 .service-card {
@@ -934,7 +938,7 @@ section.visible {
   color: #ffffff;
   padding: 4rem 2rem 1rem;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  margin: -4rem;
+  margin-top: -4rem;
 }
 
 .top-section {
