@@ -39,20 +39,17 @@ const AboutZESPL = () => {
       <div className="hero-content">
         <div className="hero-image-container">
           <img 
-            src="/pink.gif" 
+            src="/Aboutus.gif" 
             alt="Developer working on laptop" 
             className="hero-image"
           />
         </div>
         
         <div className="hero-text">
-          <div className="logo-container">
-            <span className="logo-text">neo</span>
-            <span className="logo-badge">coder</span>
-          </div>
+
           
           <h1 className="hero-title">
-            Onboard Freshers at Scale & Train them to be
+            About Zenith India
           </h1>
           
           <p className="hero-description">

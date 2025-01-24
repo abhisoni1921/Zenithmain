@@ -42,11 +42,7 @@ import React from 'react';
         </div>
       </div>
     </div>
-    <div>
-      <h1>
-        hello ise bhi edit krna pedaga
-      </h1>
-    </div>
+
     </div>
 
   );

@@ -38,9 +38,9 @@
 .founders,
 .useful-links,
 .contact {
-    margin-bottom: 20px;
+    margin-bottom: 1px;
     background-color: rgba(255, 255, 255, 0.4);
-    padding: 20px;
+    padding: 40px;
     border-radius: 6px;
     opacity: 0;
     animation: slideIn 0.8s ease-out forwards;
@@ -238,11 +238,12 @@
     display: flex;
     align-items: center;
     justify-content: center; /* Changed from space-between */
-    gap: 4rem; /* Increased gap between image and text */
+    gap: 10rem; /* Increased gap between image and text */
     max-width: 100%; /* Added max-width to control overall container size */
     margin: 0 auto; /* Center the content */
-    background: linear-gradient(to bottom, #3a1c71, #d76d77, #ffaf7b);
+    background: linear-gradient(rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));;
     width: 100%;
+    height: 90vh;
 }
 
 .hero-image-container {
@@ -295,7 +296,7 @@
     font-size: 1.25rem;
     line-height: 1.6;
     margin-bottom: 2rem;
-    color: #4a5568;
+    color: #2d3748;
     max-width: 600px;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
 }

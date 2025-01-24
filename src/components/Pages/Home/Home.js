@@ -3,6 +3,8 @@ import './Home.css';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 // import { ArrowRight } from 'lucide-react';
+import MailIcon from '@mui/icons-material/Mail';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const useIntersectionObserver = (options = {}) => {
   const elementRef = useRef(null);
@@ -579,7 +581,7 @@ const Home = () => {
         <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <img src="/ZenithLogo.png" alt="Zenith Logo" className="lt-logo" />
+          <img src="/ZenithL.png" alt="Zenith Logo" className="lt-logo" />
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"></i></a>
             <a href="#"><i className="fab fa-facebook"></i></a>
@@ -643,28 +645,20 @@ const Home = () => {
 
           <div className="footer-section">
             <h3>Contact</h3>
-            <p>Zenith education solution pvt ltd</p>
-            <p>TCTC Building, 1st Floor Right Wing,</p>
-            <p>Mount Poonamallee Road, Manapakkam,</p>
-            <p>Chennai – 600089</p>
-            <a href="mailto:contact@lntedutech.com">contact@lntedutech.com</a>
+            <p>Address: 207, 1st floor, Sainik Vihar,</p>
+            <p>Pitampura, Delhi, India - 110034</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
             <h3>Support</h3>
             <p>Learning Management System:</p>
-            <a href="mailto:collegeconnect.support@lntedutech.com">
-              collegeconnect.support@lntedutech.com
-            </a>
-            <p>Assessments:</p>
-            <a href="mailto:assess.support@lntedutech.co.in">
-              assess.support@lntedutech.co.in
-            </a>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
           </div>
         </div>
       </div>
 
       <div className="bottom-section">
         <img src="" alt="CMMI Logo" className="cmmi-logo" />
-        <p>© {currentYear} All rights reserved. L&T EduTech.</p>
+        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
         <div className="bottom-links">
           <a href="#">Support</a>
           <span>|</span>
