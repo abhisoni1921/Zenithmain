@@ -10,13 +10,13 @@ import { ArrowRight } from 'lucide-react';
   const offerings = [
     {
       title: 'Skill Exchange',
-      image: '/api/placeholder/500/300',
+      image: '/com2.jpeg',
       cta: 'Explore Jobs',
       link: '#'
     },
     {
       title: 'Engineers Ensemble',
-      image: '/api/placeholder/500/300',
+      image: '/com1.jpeg',
       cta: 'Join Community',
       link: '#'
     },
