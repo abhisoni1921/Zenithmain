@@ -577,7 +577,7 @@ const Home = () => {
         <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <img src="/ZenithL.png" alt="Zenith Logo" className="lt-logo" />
+          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"></i></a>
             <a href="#"><i className="fab fa-facebook"></i></a>

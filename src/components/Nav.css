@@ -4,7 +4,7 @@
   background-color: transparent;
   padding: 0.2rem 0.4rem;
   margin: 0.00001rem;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom:  transparent;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -57,6 +57,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
+  margin: 0rem;
   padding: 0.375rem;
   transition: transform 0.3s ease;
 }
