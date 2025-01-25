@@ -494,28 +494,24 @@ const Home = () => {
         </button>
       </div>
     </div> */}
-
-
-        {/* ZESPL Section */}
-        <section className="zespl-section" ref={zesplRef}>
-          <SectionTitle>Comprehensive Training Programs</SectionTitle>
-          <Card>
-            <p className="zespl-description">
-              ZESPL stands at the forefront of educational innovation, leveraging
-              cutting-edge technology to transform the way institutions deliver
-              knowledge. Our platform combines artificial intelligence, data
-              analytics, and pedagogical expertise to create a comprehensive
-              learning ecosystem.
-            </p>
-            <p className="zespl-description">
+         
+         <div className="talent-page">
+      <div className="header">
+        <h1>Comprehensive Training Programs</h1>
+        <p className="description">
               We believe in the power of personalized learning experiences and
               data-driven decision making to enhance educational outcomes. Our
               solutions are designed to meet the evolving needs of modern
               educational institutions while maintaining the highest standards of
               academic excellence.
-            </p>
-          </Card>
-        </section>
+        </p>
+      </div>
+      
+
+      
+    </div>
+        
+
 
         {/* Vision & Mission Section */}
         <section className="vision-section" ref={visionRef}>
@@ -550,7 +546,7 @@ const Home = () => {
   <SectionTitle>Training Services Offered</SectionTitle>
   <div className="training-services-grid">
     {services.map((service, index) => (
-      <Card key={index} className="service-card">
+      <Card key={index} className="service-newcard">
         <div className="service-header">
           <span className="service-icon">{service.icon}</span>
           <h3 className="service-title">{service.title}</h3>

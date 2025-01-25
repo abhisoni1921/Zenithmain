@@ -9,21 +9,21 @@
     margin: 0 ;
     padding: 0% 0.1rem;
     /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
-    border: 1px solid rgba(224, 224, 224, 0.3);
+    border: 1px solid transparent;
     border-radius: 8px;
     animation: fadeIn 1s ease-out;
     text-align: justify;
 }
 
 .about-header {
-    margin-bottom: 15px;
-    color: #2980b9;
+    text-align: left;
+    margin-bottom: 3rem;
 }
 
 .about-header h1 {
-    font-size: 2.4em;
-    color: #2c3e50;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
 }
 
 .about-header p {
@@ -38,8 +38,8 @@
 .founders,
 .useful-links,
 .contact {
-    margin-bottom: 1px;
-    background-color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 0%;
+    background-color: rgba(152, 251, 152, 0.3);
     padding: 40px;
     border-radius: 6px;
     opacity: 0;
@@ -62,9 +62,9 @@
 .founders h3,
 .useful-links h3,
 .contact h3 {
-    font-size: 1.8em;
-    color: #34495e;
-    margin-bottom: 15px;
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1.5rem;
     border-bottom: 2px solid rgba(224, 224, 224, 0.3);
     padding-bottom: 10px;
     position: relative;
@@ -319,10 +319,10 @@
 
 footer {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 0%;
     font-size: 1em;
     color: #7f8c8d;
-    background-color: rgba(255, 255, 255, 0.4);
+    background: linear-gradient(rgba(255, 0, 150, 0.5), rgba(0, 204, 255, 0.5));
     padding: 10px;
     border-radius: 6px;
 }
