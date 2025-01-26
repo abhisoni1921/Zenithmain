@@ -1,0 +1,97 @@
+.Lab-hero-container {
+    height: 70vh; /* Reduced from 90vh */
+    height: auto; /* Changed from 100vh */
+    display: flex;
+    align-items: flex-start; /* Changed from flex-start */
+    margin: 0;
+    padding: 0;
+    margin-top: -62px; /* Reduced from -100px */
+    background: transparent;
+    max-width: 100%;
+    width: 100%;
+}
+
+.Lab-hero-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Changed from space-between */
+    gap: 10rem; /* Increased gap between image and text */
+    max-width: 100%; /* Added max-width to control overall container size */
+    margin: 0 auto; /* Center the content */
+    background: linear-gradient(rgba(2, 29, 92, 0.5), rgba(0, 204, 255, 0.5));;
+    width: 100%;
+    height: 85vh;
+}
+
+.Lab-hero-image-container {
+    flex: 0 0 40%; /* Reduced width and fixed proportion */
+    max-width: 400px; /* Added max-width */
+}
+
+.Lab-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.Lab-hero-text {
+    flex: 0 0 50%; /* Reduced width and fixed proportion */
+    padding-top: 0; /* Removed top padding */
+}
+
+.Lab-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.Lab-logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+}
+
+.Lab-logo-badge {
+    background-color: #553C9A;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+}
+
+.Lab-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.Lab-hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #2d3748;
+    max-width: 600px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+.Lab-view-solutions-btn {
+    background-color: #96085d;
+    color: white;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.Lab-view-solutions-btn:hover {
+    background-color: #319795;
+}

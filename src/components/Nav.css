@@ -74,7 +74,7 @@
 
 .navbar-list {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -132,7 +132,7 @@
 .dropdown-content {
   position: absolute;
   top: 100%;
-  left: 50%;
+  left: 100%;
   transform: translateX(-50%) translateY(10px);
   min-width: 220px;
   border-radius: 0.5rem;

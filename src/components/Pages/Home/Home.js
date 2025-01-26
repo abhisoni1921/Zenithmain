@@ -323,6 +323,42 @@ const handlePrev = () => {
   //   }
   // };
   const currentYear = new Date().getFullYear();
+  const cards = [
+    {
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg",
+      title: "Fletch Skinner",
+      description:
+        "I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway."
+    },
+    {
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample21.jpg",
+      title: "Indigo Violet",
+      description:
+        "What's the point of wearing your favorite rocketship underpants if nobody ever asks to see 'em?"
+    },
+    {
+      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample86.jpg",
+      title: "Gunther Beard",
+      description:
+        "Given that sooner or later we're all just going to die, what's the point of learning about integers?"
+    }
+  ];
+  const Snip1273Card = ({ image, title, description }) => {
+    return (
+      <figure className="relative m-4 w-full max-w-xs bg-black text-white text-left font-raleway group">
+        <img
+          src={image}
+          alt={title}
+          className="w-full transition-opacity duration-300 group-hover:opacity-40"
+        />
+        <figcaption className="absolute inset-0 flex flex-col justify-center p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <h3 className="mb-2 text-lg font-bold uppercase">{title}</h3>
+          <p className="text-sm font-medium">{description}</p>
+        </figcaption>
+        <div className="absolute inset-0 z-0 bg-white opacity-0 group-hover:opacity-10 transition-all duration-300" />
+      </figure>
+    );
+  };
 
 
   return (
@@ -474,30 +510,18 @@ const handlePrev = () => {
       </div>
       
 
-      <div className="services-container">
-        <div className="service-card college-connect">
-          <div className="overlay">
-            <h2>CollegeConnect</h2>
-          </div>
-        </div>
-        
-
-        <div className="service-card workonnect">
-          <h2>Workonnect</h2>
-          <ul className="menu-list">
-            {workonnectMenu.map((item, index) => (
-              <li key={index}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="service-card learnkonnect">
-          <div className="overlay">
-            <h2>Learnkonnect</h2>
-          </div>
-        </div>
-      </div>
+      <div className="flex flex-wrap justify-center">
+      {cards.map((card, index) => (
+        <Snip1273Card
+          key={index}
+          image={card.image}
+          title={card.title}
+          description={card.description}
+        />
+      ))}
     </div>
+    </div>
+
     {/* <div className="new-banner-container">
       <div className="new-banner-header">
         <h3>Our Advantage</h3>
@@ -561,6 +585,7 @@ const handlePrev = () => {
 
       
     </div>
+
         
 
 
