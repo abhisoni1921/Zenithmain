@@ -81,8 +81,8 @@ section.visible {
 }
 
 .section-title {
-  font-size: inherit;
-  font-size: 2rem;
+  font-weight: 490;
+  font-size: 2.5rem;
   color: #333;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
@@ -96,6 +96,7 @@ section.visible {
 .section-title.visible {
   opacity: 1;
   transform: translateX(0);
+  
 }
 
 .section-title::after {
@@ -859,80 +860,7 @@ body {
   margin-top: -4rem;
   padding: 5rem;
 }
-.service-newcard {
-  height: 150px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
-.service-card {
-  height: 400px;
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-}
 
-.service-card h2 {
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.college-connect {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg') center/cover;
-}
-
-.workonnect {
-  background-color: #1e4b94;
-  padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg') center/cover;
-  
-}
-
-.learnkonnect {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-              url('https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg') center/cover;
-}
-
-.overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 2rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
-}
-
-.menu-list {
-  list-style: none;
-  padding: 0;
-}
-
-.menu-list li {
-  color: white;
-  padding: 0.75rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.menu-list li:first-child {
-  border-top: none;
-}
-
-@media (max-width: 768px) {
-  .services-container {
-    grid-template-columns: 1fr;
-  }
-
-  .service-card {
-    height: 300px;
-  }
-
-  .header h1 {
-    font-size: 2rem;
-  }
-}
 
 .new-banner-container {
   margin: 0rem;

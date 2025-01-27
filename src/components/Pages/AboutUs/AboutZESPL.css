@@ -8,7 +8,6 @@
     max-height: 500px;
     margin: 0 ;
     padding: 0% 0.1rem;
-    /* background: linear-gradient(135deg, #ff9a9e, #fad0c4); */
     border: 1px solid transparent;
     border-radius: 8px;
     animation: fadeIn 1s ease-out;
@@ -62,6 +61,7 @@
 .founders h3,
 .useful-links h3,
 .contact h3 {
+    font-weight: 540;
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 1.5rem;
@@ -102,7 +102,7 @@
 .about-colors p,
 .founders p,
 .contact address {
-    font-size: 1.1em;
+    font-size: 1em;
     color: #555;
     margin-bottom: 15px;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
