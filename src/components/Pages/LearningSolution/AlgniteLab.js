@@ -22,7 +22,7 @@ const AlgniteLab = () => {
 
           
           <h1 className="Lab-hero-title">
-            About Zenith India
+            AIgnite Lab
           </h1>
           
           <p className="Lab-hero-description">

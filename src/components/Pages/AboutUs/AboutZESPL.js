@@ -31,6 +31,28 @@ const AboutZESPL = () => {
 
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
+  const timelineData = [
+    {
+      year: "2015",
+      title: "The Beginning of Our Journey",
+      description: "Launched our platform with programming languages, workshops, and soft skill training"
+    },
+    {
+      year: "2018",
+      title: "Expansion into Advanced Courses",
+      description: "Introduced advanced courses like full-stack development and web development to meet industry needs."
+    },
+    {
+      year: "2022",
+      title: "AI Integration and Client Growth",
+      description: "Implemented AI into our platform and secured our first circle of clients: Sri Krishna and MCET"
+    },
+    {
+      year: "2024",
+      title: "Leading the EdTech Revolution",
+      description: "Continuing our leadership in the EdTech space with cutting-edge AI-powered learning tools and top-tier instructors"
+    }
+  ];
   
   return (
     // a
@@ -62,6 +84,8 @@ const AboutZESPL = () => {
         </div>
       </div>
     </div>
+
+    
 
    
       
@@ -132,6 +156,44 @@ const AboutZESPL = () => {
           <li>Careers</li>
         </ul>
       </section>
+      <div className="timeline-container">
+      <div className="timeline-header">
+        <h1 className="timeline-title">
+          Our <span className="timeline-badge">Timeline</span>
+        </h1>
+      </div>
+
+      <div className="timeline-content">
+        <div className="timeline-line"></div>
+        
+        {timelineData.map((item, index) => (
+          <div key={index} className="timeline-item">
+            <div className="timeline-marker"></div>
+            <div className="timeline-year">{item.year}</div>
+            <div className="timeline-card">
+              <div className="timeline-card-header">
+                <div className="timeline-avatar">
+                  <svg 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth={2} 
+                      d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" 
+                    />
+                  </svg>
+                </div>
+                <h3 className="timeline-card-title">{item.title}</h3>
+              </div>
+              <p className="timeline-card-description">{item.description}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
 
       <section className="contact">
         <h3>Contact Us</h3>
