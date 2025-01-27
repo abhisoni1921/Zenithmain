@@ -134,37 +134,37 @@ const Home = () => {
 const offerings = [
   {
     title: 'Skill Exchange',
-    image: '/api/placeholder/500/300',
+    image: '/img1.jpg',
     cta: 'Explore Jobs',
     link: '#'
   },
   {
     title: 'Engineers Ensemble',
-    image: '/api/placeholder/500/300',
+    image: '/img2.jpg',
     cta: 'Join Community',
     link: '#'
   },
   {
     title: 'Micro Learning',
-    image: '/api/placeholder/500/300',
+    image: '/img3.jpg',
     cta: 'Know More',
     link: '#'
   },
   {
     title: 'Expert Network',
-    image: '/api/placeholder/500/300',
+    image: '/img4.jpg',
     cta: 'Connect Now',
     link: '#'
   },
   {
     title: 'Career Growth',
-    image: '/api/placeholder/500/300',
+    image: '/img5.jpg',
     cta: 'Learn More',
     link: '#'
   },
   {
     title: 'Tech Workshops',
-    image: '/api/placeholder/500/300',
+    image: '/img6.jpg',
     cta: 'Register Now',
     link: '#'
   }
@@ -271,91 +271,83 @@ const handlePrev = () => {
     'Assessment Solutions',
     'Partners'
   ];
-  // const [translateX, setTranslateX] = useState(0);
-  // const offerings = [
-  //   {
-  //     title: 'Skill Exchange',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Explore Jobs',
-  //     link: '#'
-  //   },
-  //   {
-  //     title: 'Engineers Ensemble',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Join Community',
-  //     link: '#'
-  //   },
-  //   {
-  //     title: 'Micro Learning',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Know More',
-  //     link: '#'
-  //   },
-  //   {
-  //     title: 'Expert Network',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Connect Now',
-  //     link: '#'
-  //   },
-  //   {
-  //     title: 'Career Growth',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Learn More',
-  //     link: '#'
-  //   },
-  //   {
-  //     title: 'Tech Workshops',
-  //     image: '/api/placeholder/500/300',
-  //     cta: 'Register Now',
-  //     link: '#'
-  //   }
-  // ];
-
-  // const handleNext = () => {
-  //   if (translateX > -(offerings.length - 3) * 100) {
-  //     setTranslateX(prev => prev - 100);
-  //   }
-  // };
-
-  // const handlePrev = () => {
-  //   if (translateX < 0) {
-  //     setTranslateX(prev => prev + 100);
-  //   }
-  // };
+  
   const currentYear = new Date().getFullYear();
   const cards = [
     {
       image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg",
-      title: "Fletch Skinner",
-      description:
-        "I don't need to compromise my principles, because they don't have the slightest bearing on what happens to me anyway."
+      title: "Learning",
+      description: [
+        "AIgnite Apti Forge",
+        "AIgnite Tech Forge",
+        "AIgnite SoftSkills",
+        "AIgnite Apti Boost",
+        "AIgnite Soft Boost",
+        "AIgnite Company Specific",
+        "AIgnite Lab"
+
+      ]
     },
     {
-      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample21.jpg",
-      title: "Indigo Violet",
-      description:
-        "What's the point of wearing your favorite rocketship underpants if nobody ever asks to see 'em?"
+      image: "https://www.shutterstock.com/image-photo/calm-weather-on-sea-ocean-600nw-2212935531.jpg",
+      title: "Assessment",
+      description: [
+        "AIgnite Apti Assess",
+        "AIgnite Tech Assess",
+        "AIgnite Assess360",
+        "AIgnite HIRE"
+      ]
     },
     {
       image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample86.jpg",
-      title: "Gunther Beard",
-      description:
-        "Given that sooner or later we're all just going to die, what's the point of learning about integers?"
+      title: "Content",
+      description: [
+        "Assessment Content Solution",
+        "Learning Content Solution",
+        "Interactive Content Solution"
+      ]
     }
   ];
+  
   const Snip1273Card = ({ image, title, description }) => {
     return (
-      <figure className="relative m-4 w-full max-w-xs bg-black text-white text-left font-raleway group">
-        <img
-          src={image}
-          alt={title}
-          className="w-full transition-opacity duration-300 group-hover:opacity-40"
-        />
-        <figcaption className="absolute inset-0 flex flex-col justify-center p-6 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-          <h3 className="mb-2 text-lg font-bold uppercase">{title}</h3>
-          <p className="text-sm font-medium">{description}</p>
-        </figcaption>
-        <div className="absolute inset-0 z-0 bg-white opacity-0 group-hover:opacity-10 transition-all duration-300" />
+      <figure className="card-figure">
+        <div className="card-container">
+          {/* Image container */}
+          <div className="image-container">
+            <img
+              src={image}
+              alt={title}
+              className="card-image"
+            />
+          </div>
+  
+          {/* Content overlay */}
+          <figcaption className="card-content">
+            <h3 className="card-title">
+              {title}
+            </h3>
+            <div className="description-container">
+              {description.map((item, index) => (
+                <div 
+                  key={index}
+                  className="description-item"
+                  style={{
+                    transitionDelay: `${index * 100}ms`
+                  }}
+                >
+                  <div className="description-text">{item}</div>
+                  {index < description.length - 1 && (
+                    <div className="separator" />
+                  )}
+                </div>
+              ))}
+            </div>
+          </figcaption>
+  
+          {/* Gradient overlay */}
+          <div className="gradient-overlay" />
+        </div>
       </figure>
     );
   };

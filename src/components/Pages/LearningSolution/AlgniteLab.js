@@ -14,7 +14,8 @@ const AlgniteLab = () => {
           <img 
             src="/Aboutus.gif" 
             alt="Developer working on laptop" 
-            className="hero-image"
+            className="hero-image "
+            
           />
         </div>
         
