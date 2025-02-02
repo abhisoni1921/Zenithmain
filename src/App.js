@@ -2,6 +2,7 @@
 import './App.css';
 // import Navbar from './Navbar';
 
+
 import AnimatedBackground from './AnimatedBackground';
 import {  Routes, Route } from 'react-router-dom';
 // import { Home, About, Learning, Assessment, Content, Careers } from './components/Pages/Pages';
@@ -27,6 +28,7 @@ import LearningContentSolution from './components/Pages/ContentSolution/Learning
 import InteractiveContentSolution from './components/Pages/ContentSolution/InteractiveContentSolution';
 import AssessmentContentSolution from './components/Pages/ContentSolution/AssessmentContentSolution';
 import Home from './components/Pages/Home/Home';
+import DiscoverUs from './components/Pages/AboutUs/DiscoverUs';
 
 
 
@@ -46,10 +48,13 @@ function App() {
       {/* <data /> */}
       {/* <CustomizedList /> */}
       {/* <firenav /> */}
+      
       <Navbar />
       <AnimatedBackground />
       <Routes>
-        <Route path='/' element= {<Home/>}/>
+      <Route path='/' element= {<Home/>}/>
+        <Route path='/Home' element= {<Home/>}/>
+        <Route path='/DiscoverUs' element={<DiscoverUs/>}/>
         <Route path='/about' element={<AboutZESPL/>}/>
         <Route path='/leadership' element={<Leadership/>}/>
         <Route path='/visionMission' element={<VisionMission/>}/>

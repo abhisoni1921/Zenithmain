@@ -95,6 +95,7 @@ const bannerData = [
 
 ];
 
+
 const Home = () => {
   const zesplRef = useIntersectionObserver();
   const visionRef = useIntersectionObserver();

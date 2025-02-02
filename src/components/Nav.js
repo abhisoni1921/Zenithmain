@@ -36,10 +36,10 @@ const Navbar = () => {
       <div className="nav-links-container">
         <ul className="navbar-list">
           <li className="navbar-item">
-            <Link to="/" style={{ textDecoration: 'none' }} className="navbar-link">Home</Link>
+            <Link to="/Home" style={{ textDecoration: 'none' }} className="navbar-link">Home</Link>
           </li>
           <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">About Us</a>
+          <Link to="/DiscoverUs" style={{ textDecoration: 'none' }} className="navbar-link">Discover Us</Link>
             <div className="dropdown-content">
               <Link to="/about" style={{ textDecoration: 'none' }}>
               <span className="special">About ZESPL</span></Link>
@@ -53,20 +53,20 @@ const Navbar = () => {
             <a  style={{ textDecoration: 'none' }} className="navbar-link">Learning</a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Apti Forge</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Apti </span>
               </Link>
               <Link to="/AlgniteTechForge" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Tech Forge</span>
               </Link>
               <Link to="/AlgniteSoftSkillsForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> SoftSkills</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> SmartSkills</span>
               </Link>
-              <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
+              {/* <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Apti Boost</span>
-              </Link>
-              <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
+              </Link> */}
+              {/* <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Soft Boost</span>
-              </Link>
+              </Link> */}
               <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-lg font-semibold ">gnite</span> Company Specific Pulse</span>
               </Link>
@@ -101,6 +101,21 @@ const Navbar = () => {
               <span className="special">Learning Content Solutions</span></Link>
               <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
               <span className="special">Interactive Content Solutions</span></Link>
+              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
+              <span className="special">Translation Solutions</span></Link>
+            </div>
+          </li>
+          <li className="navbar-item dropdown">
+            <a  style={{ textDecoration: 'none' }} className="navbar-link">Resources</a>
+            <div className="dropdown-content">
+              <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
+              <span className="special"> Subject-Matter Experts</span></Link>
+              <Link to="/LearningContentSolution" style={{ textDecoration: 'none' }}>
+              <span className="special">Language translators </span></Link>
+              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
+              <span className="special"> Content editors </span></Link>
+              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
+              <span className="special"> Content proofreaders</span></Link>
             </div>
           </li>
           <li className="navbar-item">
