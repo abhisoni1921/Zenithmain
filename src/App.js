@@ -25,10 +25,13 @@ import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTech
 import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE';
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360';
 import LearningContentSolution from './components/Pages/ContentSolution/LearningContentSolution';
-import InteractiveContentSolution from './components/Pages/ContentSolution/InteractiveContentSolution';
+import InteractiveContentSolution from './components/Pages/ContentSolution/Interactive/InteractiveContentSolution';
 import AssessmentContentSolution from './components/Pages/ContentSolution/AssessmentContentSolution';
 import Home from './components/Pages/Home/Home';
 import DiscoverUs from './components/Pages/AboutUs/DiscoverUs';
+import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
+import Learningmanagementsystem from './components/Pages/LearningSolution/Learningmanagementsystem/Learningmanagementsystem';
+import Talentdevelopment from './components/Pages/LearningSolution/Talentdevelopment/Talentdevelopment';
 
 
 
@@ -55,6 +58,7 @@ function App() {
       <Route path='/' element= {<Home/>}/>
         <Route path='/Home' element= {<Home/>}/>
         <Route path='/DiscoverUs' element={<DiscoverUs/>}/>
+        <Route path='/Whoweserve' element={<Whoweserve/>}/>
         <Route path='/about' element={<AboutZESPL/>}/>
         <Route path='/leadership' element={<Leadership/>}/>
         <Route path='/visionMission' element={<VisionMission/>}/>
@@ -62,6 +66,8 @@ function App() {
         <Route path='/AlgniteAptiForge' element={<AlgniteAptiForge/>}/>
         <Route path='/AlgniteCompanySpecificPulse' element={<AlgniteCompanySpecificPulse/>}/>
         <Route path='/AlgniteLab' element={<AlgniteLab/>}/>
+        <Route path='/Learningmanagementsystem' element={<Learningmanagementsystem/>}/>
+        <Route path='/Talentdevelopment' element={<Talentdevelopment/>}/>
         <Route path='/AlgniteSoftSkillsBoost' element={<AlgniteSoftSkillsBoost/>}/>
         <Route path='/AlgniteSoftSkillsForge' element={<AlgniteSoftSkillsForge/>}/>
         <Route path='/AlgniteTechForge' element={<AlgniteTechForge/>}/>

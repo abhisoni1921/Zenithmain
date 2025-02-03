@@ -57,18 +57,18 @@ const DiscoverUs = () => {
     }
   ];
   const categories = [
-    { icon: <Lightbulb />, name: 'Business Management' },
+    { icon: <Lightbulb />, name: 'Business' },
     { icon: <PenTool />, name: 'Arts & Design' },
-    { icon: <Brain />, name: 'Personal Development' },
+    { icon: <Brain />, name: 'Development' },
     { icon: <Activity />, name: 'Health & Fitness' },
     { icon: <BarChart2 />, name: 'Marketing' },
     { icon: <DollarSign />, name: 'Business & Finance' },
     { icon: <Monitor />, name: 'Computer Science' },
-    { icon: <Camera />, name: 'Video & Photography' },
+    { icon: <Camera />, name: 'Photography' },
     { icon: <Database />, name: 'Data Science' },
     { icon: <Code />, name: 'IT Startup Agency' },
     { icon: <Server />, name: 'Software Company' },
-    { icon: <Cpu />, name: 'High-Tech Company' }
+    { icon: <Cpu />, name: 'High-Tech' }
   
   ];
   
@@ -111,13 +111,7 @@ const DiscoverUs = () => {
         <p>Zenith thrives through excellence by providing excellent services in the Education sphere. Our journey began in the year 2011 and since then we have seen ourselves making a significant mark in the aptitude training industry and content development, thereby justifying our company name "Zenith" - the highest point.</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 </p>
-<div className="image-section">
-      <div className="image-grid">
-        <img src="/img1.jpg" alt="Office workspace" className="grid-item" />
-        <img src="/img2.jpg" alt="Team meeting" className="grid-item" />
-        <img src="/img3.jpg" alt="Education session" className="grid-item" />
-      </div>
-    </div>
+
         </div>
         
 

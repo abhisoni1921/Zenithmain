@@ -243,7 +243,7 @@
   max-width: 100%;
   margin: 0 auto;
   margin-top: 0%;
-  background: linear-gradient(rgba(2, 89, 64, 0.588), rgba(84, 30, 51, 0.5));
+  background: linear-gradient(45deg, #00c6fb, #005bea);
   width: 100%;
   height: 60vh;
   animation: fadeIn 0.8s ease-in-out;
@@ -382,7 +382,12 @@
 .about-content {
   margin-bottom: 3rem;
 }
-
+.Dis-image-section {
+  flex: 1;
+  position: relative;
+  opacity: 0;
+  transform: translateX(20px);
+}
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -582,6 +587,7 @@
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #11998e, #38ef7d);
 }
 
 .icon-container {
@@ -602,8 +608,10 @@
 
 .category-card span {
   font-size: 1rem;
-  color: #1a1a1a;
-  font-weight: 500;
+  font-family: 'Inter', sans-serif;  /* Use Inter, Arial, or Roboto for a clean look */
+  font-weight: 600;  /* Semi-bold */  
+  color: #000000;  /* Black text */
+  letter-spacing: normal;
 }
 
 @media (max-width: 768px) {
@@ -620,7 +628,7 @@
   }
 }
 
-.D-hero-container {
+.A-hero-container {
   display: flex;
   gap: 4rem;
   max-width: 1200px;
@@ -628,12 +636,12 @@
   padding: 2rem;
 }
 
-.D-left-section {
+.A-left-section {
   flex: 1;
   position: relative;
 }
 
-.D-video-card {
+.A-video-card {
   position: relative;
   border-radius: 2rem;
   overflow: hidden;
@@ -641,18 +649,18 @@
   bottom: -5rem;
 }
 
-.D-video-thumbnail {
+.A-video-thumbnail {
   position: relative;
   cursor: pointer;
 }
 
-.D-thumbnail-image {
+.A-thumbnail-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.D-play-button {
+.A-play-button {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -668,11 +676,11 @@
   transition: all 0.3s ease;
 }
 
-.D-play-button:hover {
+.A-play-button:hover {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-.D-support-card {
+.A-support-card {
   position: absolute;
   left: 0rem;
   bottom: 8rem;
@@ -686,22 +694,22 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.D-phone-icon {
+.A-phone-icon {
   background-color: rgba(255, 255, 255, 0.2);
   padding: 0.5rem;
   border-radius: 50%;
 }
 
-.D-support-text {
+.A-support-text {
   font-size: 0.9rem;
 }
 
-.D-phone-number {
+.A-phone-number {
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-.D-students-image {
+.A-students-image {
   position: absolute;
   right: -2rem;
   bottom: 2rem;
@@ -711,22 +719,22 @@
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.D-collaboration-image {
+.A-collaboration-image {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.D-right-section {
+.A-right-section {
   flex: 1;
   padding: 2rem 0;
 }
 
-.D-header-badge {
+.A-header-badge {
   margin-bottom: 2rem;
 }
 
-.D-badge {
+.A-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -736,7 +744,7 @@
   font-weight: 500;
 }
 
-.D-badge-icon {
+.A-badge-icon {
   background-color: white;
   padding: 0.25rem;
   border-radius: 50%;
@@ -744,49 +752,48 @@
 
 h1 {
   font-size: 3rem;
-  font-weight: bold;
   color: #1f2937;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
-.D-description {
+.A-description {
   color: #6b7280;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
-.D-stats-container {
+.A-stats-container {
   display: flex;
   gap: 2rem;
   margin-bottom: 2rem;
 }
 
-.D-stat-card {
+.A-stat-card {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
 }
 
-.D-stat-icon {
+.A-stat-icon {
   color: rgb(0, 183, 155);
   background-color: rgba(0, 183, 155, 0.1);
   padding: 0.75rem;
   border-radius: 50%;
 }
 
-.D-stat-number {
+.A-stat-number {
   font-size: 1.5rem;
   font-weight: bold;
   color: #1f2937;
 }
 
-.D-stat-label {
+.A-stat-label {
   color: #6b7280;
   font-size: 0.9rem;
 }
 
-.D-cta-button {
+.A-cta-button {
   background-color: rgb(0, 183, 155);
   color: white;
   padding: 1rem 2rem;
@@ -798,30 +805,30 @@ h1 {
   bottom: 1rem;
 }
 
-.D-cta-button:hover {
+.A-cta-button:hover {
   background-color: rgb(0, 163, 137);
   transform: translateY(-2px);
 }
 
 @media (max-width: 1024px) {
-  .D-hero-container {
+  .A-hero-container {
     flex-direction: column;
     gap: 2rem;
   }
 
-  .D-support-card {
+  .A-support-card {
     left: 1rem;
     bottom: 4rem;
   }
 
-  .D-students-image {
+  .A-students-image {
     right: 1rem;
     bottom: -1rem;
   }
 }
 
 @media (max-width: 768px) {
-  .D-stats-container {
+  .A-stats-container {
     flex-direction: column;
   }
 
@@ -829,12 +836,12 @@ h1 {
     font-size: 2.25rem;
   }
 
-  .D-support-card {
+  .A-support-card {
     position: static;
     margin: 1rem 0;
   }
 
-  .D-students-image {
+  .A-students-image {
     position: static;
     width: 100%;
     margin-top: 1rem;

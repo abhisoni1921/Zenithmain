@@ -74,7 +74,7 @@
 
 .navbar-list {
   display: flex;
-  gap: 3rem;
+  gap: 2.5rem;
   align-items: center;
   margin: 0;
   padding: 0;
@@ -137,7 +137,7 @@
   position: absolute;
   top: 100%;
   left: 0; /* Changed from 100% to 0 to align with parent */
-  transform: translateY(10px); /* Removed translateX to keep left alignment */
+  transform: translateY(10px);
   min-width: 220px;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05),
@@ -151,6 +151,7 @@
   backdrop-filter: blur(8px);
   background: rgb(46, 101, 189);
   margin-top: 0.5rem;
+  
 }
 
 .dropdown:hover .dropdown-content {

@@ -4,7 +4,9 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight ,ArrowRight} from 'lucide-react';
 // import { ArrowRight } from 'lucide-react';
 import MailIcon from '@mui/icons-material/Mail';
-
+import { Lightbulb, PenTool, Brain, Activity, 
+  BarChart2, DollarSign, Monitor, Camera, 
+  Database, Code, Server, Cpu } from 'lucide-react';
 
 const useIntersectionObserver = (options = {}) => {
   const elementRef = useRef(null);
@@ -309,7 +311,22 @@ const handlePrev = () => {
       ]
     }
   ];
+  const categories = [
+    { icon: <Lightbulb />, name: 'Business' },
+    { icon: <PenTool />, name: 'Arts & Design' },
+    { icon: <Brain />, name: 'Development' },
+    { icon: <Activity />, name: 'Health & Fitness' },
+    { icon: <BarChart2 />, name: 'Marketing' },
+    { icon: <DollarSign />, name: 'Business & Finance' },
+    { icon: <Monitor />, name: 'Computer Science' },
+    { icon: <Camera />, name: 'Photography' },
+    { icon: <Database />, name: 'Data Science' },
+    { icon: <Code />, name: 'IT Startup Agency' },
+    { icon: <Server />, name: 'Software Company' },
+    { icon: <Cpu />, name: 'High-Tech' }
   
+  ];
+
   const Snip1273Card = ({ image, title, description }) => {
     return (
       <figure className="card-figure">
@@ -579,38 +596,31 @@ const handlePrev = () => {
       
     </div>
 
-        
-
-
-        {/* Vision & Mission Section */}
-        <section className="vision-section" ref={visionRef}>
-      <SectionTitle>Vision & Mission</SectionTitle>
-      <div className="vision-grid">
-        <Card className="vision-card">
-          <div className="vision-header">
-            <span className="vision-icon">💫</span>
-            <h3 className="vision-title">Vision</h3>
-          </div>
-          <p className="vision-description">
-            To revolutionize global education by creating an interconnected
-            learning ecosystem that transcends traditional boundaries and
-            empowers learners to reach their full potential.
-          </p>
-        </Card>
-        
-        <Card className="vision-card">
-          <div className="vision-header">
-            <span className="vision-icon">🎯</span>
-            <h3 className="vision-title">Mission</h3>
-          </div>
-          <p className="vision-description">
-            To deliver innovative, accessible, and effective educational
-            solutions that enhance learning outcomes while fostering
-            collaboration between educators and students worldwide.
-          </p>
-        </Card>
+    <div className="course-categories">
+      <div className="header">
+        <div className="icon-wrapper">
+          <Lightbulb className="header-icon" />
+        </div>
+        <h2>Our Course Categories</h2>
       </div>
-    </section>
+      
+      <h1>Select The Industry Where You Want To Learn</h1>
+      
+      <div className="categories-grid">
+        {categories.map((category, index) => (
+          <div key={index} className="category-card">
+            <div className="icon-container">
+              {category.icon}
+            </div>
+            <span>{category.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+
+
+
+
     <section className="training-services-section" ref={useIntersectionObserver()}>
   <SectionTitle>Training Services Offered</SectionTitle>
   <div class="ag-format-container">
