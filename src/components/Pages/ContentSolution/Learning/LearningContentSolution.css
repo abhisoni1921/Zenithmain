@@ -1,0 +1,368 @@
+.Learning-hero-container {
+    height: 70vh;
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    margin-top: -62px;
+    background: transparent;
+    max-width: 100%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.Learning-hero-content {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10rem;
+    max-width: 100%;
+    margin: 0 auto;
+    background: linear-gradient(rgba(208, 6, 195, 0.5), rgba(56, 2, 104, 0.5));
+    width: 100%;
+    height: 60vh;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.Learning-hero-image-container {
+    flex: 0 0 40%;
+    max-width: 400px;
+    transform: translateX(-100%);
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+.Learning-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.Learning-hero-image:hover {
+    transform: scale(1.05);
+}
+
+.Learning-hero-text {
+    flex: 0 0 50%;
+    padding-top: 0;
+    transform: translateX(100%);
+    animation: slideInRight 1s ease-out forwards;
+}
+
+.Learning-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.5s forwards;
+}
+
+.Learning-logo-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2d3748;
+    transition: color 0.3s ease;
+}
+
+.Learning-logo-badge {
+    background-color: #553C9A;
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.5rem;
+    font-size: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.Learning-logo-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Learning-hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    animation: fadeIn 0.8s ease-out 0.7s forwards;
+}
+
+
+
+
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.landing-container {
+    display: flex;
+    padding: 2rem;
+    max-width: 100%;
+    margin: 1rem;
+    min-height: 100vh;
+    background-color: transparent;
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .content-section {
+    flex: 1;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  
+  .fade-in {
+    animation: fadeIn 0.8s ease forwards;
+  }
+  
+  .welcome-badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 186, 166, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    color: #00baa6;
+    font-weight: 500;
+  }
+  
+  .lightning {
+    margin-right: 0.5rem;
+  }
+  
+  .main-heading {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+  }
+  
+  .highlight {
+    color: #00baa6;
+  }
+  
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .get-started-btn {
+    background-color: #00baa6;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .get-started-btn:hover {
+    background-color: #008f7f;
+  }
+  
+  .video-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: none;
+    border: none;
+    color: #1a1a1a;
+    cursor: pointer;
+    padding: 0.8rem 1rem;
+  }
+  
+  .play-icon {
+    color: #00baa6;
+  }
+  
+  .enrollment-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-stack {
+    display: flex;
+  }
+  
+  .profile-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .enrollment-text {
+    color: #666;
+  }
+  
+  .courses-heading {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    padding: 2rem;
+    margin: 0rem;
+  }
+  
+  .image-section {
+    flex: 1;
+    position: relative;
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  
+  .slide-in {
+    animation: slideIn 0.8s ease forwards;
+  }
+  
+  .main-image {
+    width: 390px;
+    height: 40vh;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 5rem;
+    /* padding: 1rem; */
+    top: 0rem;
+    bottom: 0rem;
+  }
+  
+  .stats-card {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stats-number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00baa6;
+  }
+  
+  .stats-label {
+    font-size: 0.8rem;
+    color: #666;
+  }
+  
+  .decorative-dots {
+    position: absolute;
+    right: 4rem;
+    bottom: 11rem;
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(#00baa6 2px, transparent 2px);
+    background-size: 10px 10px;
+  }
+  
+  .video-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .video-placeholder {
+    aspect-ratio: 16/9;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .landing-container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+  
+    .main-heading {
+      font-size: 2rem;
+    }
+  
+    .action-buttons {
+      flex-direction: column;
+    }
+  
+    .stats-card {
+      position: static;
+      margin-bottom: 1rem;
+    }
+  }
