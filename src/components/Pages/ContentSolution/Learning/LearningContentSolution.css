@@ -256,6 +256,7 @@
     /* padding: 1rem; */
     top: 0rem;
     bottom: 0rem;
+    
   }
   
   .stats-card {
@@ -364,5 +365,70 @@
     .stats-card {
       position: static;
       margin-bottom: 1rem;
+    }
+  }
+  
+
+  .f-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    border-radius: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: -10rem;
+  }
+  
+  .f-card {
+    flex: 1;
+    min-width: 250px;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .f-card:hover {
+    background: #000;
+    transform: translateY(-50px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .f-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+  }
+  
+  .f-title {
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+  }
+  
+  .f-description {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .f-card {
+      min-width: calc(50% - 1rem);
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .f-card {
+      min-width: 100%;
+    }
+    
+    .f-container {
+      padding: 1rem;
     }
   }

@@ -17,6 +17,30 @@ const LearningContentSolution = () => {
     '/img3.jpg',
     '/img4.jpg'
   ];
+  const features = [
+    {
+      icon: "⚙️",
+      title: "Fast Performance",
+      description: "Optimized for a smaller build size, faster dev compilation and dozens of other improvements."
+    },
+    {
+      icon: "📱",
+      title: "Perfect Responsive",
+      description: "Our Theme is full perfect for all device. You can visit our Theme all device easily."
+    },
+    {
+      icon: "💬",
+      title: "Fast & Friendly Support",
+      description: "We are provide 24 hours support for all clients.You can purchase without hesitation."
+    },
+    {
+      icon: "👆",
+      title: "Easy to Use",
+      description: "Create your own custom Theme or section by copying, pasting, and assembling."
+    }
+  ];
+
+
 
   return (
     <div className="Learning-container">
@@ -57,7 +81,7 @@ const LearningContentSolution = () => {
         </h1>
         
 
-        <div className="action-buttons">
+        {/* <div className="action-buttons">
           <button className="get-started-btn">
             Get Started
           </button>
@@ -69,9 +93,9 @@ const LearningContentSolution = () => {
             <Play className="play-icon" size={20} />
             Watch the video
           </button>
-        </div>
+        </div> */}
 
-        <div className="enrollment-section">
+        {/* <div className="enrollment-section">
           <div className="profile-stack">
             {enrollmentProfiles.map((profile, index) => (
               <img
@@ -87,7 +111,7 @@ const LearningContentSolution = () => {
             <strong>10k</strong> Enrolment
           </span>
           
-        </div>
+        </div> */}
 
         <h2 className="courses-heading">
           Explore <span className="highlight">1350+</span> Courses within Subject
@@ -105,7 +129,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
           <span className="stats-label">CRASHED COURSES</span>
         </div>
         <img
-          src="/dark.gif"
+          src="/img11.jpg"
           alt="Student studying"
           className="main-image"
         />
@@ -128,7 +152,19 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
         </div>
       )}
     </div>
+    
+
       
+    <div className="f-container">
+      {features.map((feature, index) => (
+        <div key={index} className="f-card">
+          <div className="f-icon">{feature.icon}</div>
+          <h3 className="f-title">{feature.title}</h3>
+          <p className="f-description">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+
     </div>
   );
 };

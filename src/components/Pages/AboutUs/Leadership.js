@@ -45,6 +45,28 @@ import { ArrowRight } from 'lucide-react';
       link: '#'
     }
   ];
+  const features = [
+    {
+      icon: "⚙️",
+      title: "Fast Performance",
+      description: "Optimized for a smaller build size, faster dev compilation and dozens of other improvements."
+    },
+    {
+      icon: "📱",
+      title: "Perfect Responsive",
+      description: "Our Theme is full perfect for all device. You can visit our Theme all device easily."
+    },
+    {
+      icon: "💬",
+      title: "Fast & Friendly Support",
+      description: "We are provide 24 hours support for all clients.You can purchase without hesitation."
+    },
+    {
+      icon: "👆",
+      title: "Easy to Use",
+      description: "Create your own custom Theme or section by copying, pasting, and assembling."
+    }
+  ];
 
   const handleNext = () => {
     if (translateX > -(offerings.length - 3) * 100) {
