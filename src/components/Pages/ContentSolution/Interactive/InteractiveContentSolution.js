@@ -242,8 +242,54 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
 
         <button className="A-cta-button">Start Free Trial</button>
       </div>
+      <div
+      ></div>
     </div>
-    
+    <div className="game-container">
+      <div className="game-content">
+        <div className="game-left">
+          <div className="ninja-icon">
+            <img 
+              src="/img4.jpg" 
+              alt="Ninja mascot" 
+              className="ninja-image"
+            />
+          </div>
+          <div className="product-display">
+            <img 
+              src="/img8.jpg" 
+              alt="WooCommerce store preview" 
+              className="laptop-mockup"
+            />
+          </div>
+          <div className="solar-panel">
+            <img 
+              src="/img1.jpg" 
+              alt="Solar panel" 
+              className="panel-image"
+            />
+          </div>
+        </div>
+        
+        <div className="game-right">
+          <div className="woo-logo">
+            <img 
+              src="/img2.jpg" 
+              alt="WooCommerce logo" 
+              className="woo-image"
+            />
+          </div>
+          <div className="game-text">
+            <h2 className="game-small-heading">GET YOUR OWN ONLINE STORE</h2>
+            <h1 >Gamification</h1>
+            <p className="A-description">
+              Build your online store with WooCommerce — the most popular WordPress plugin that lets you create a digital shop for free!
+            </p>
+            <button className="game-cta">View Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
     
 
 

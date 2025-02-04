@@ -750,3 +750,129 @@
     }
   }
   
+  .game-container {
+    background: transparent;
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .game-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    margin-top: -7rem;
+  }
+  
+  .game-left {
+    flex: 1;
+    position: relative;
+  }
+  
+  .ninja-icon {
+    position: absolute;
+    top: -20px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    z-index: 2;
+  }
+  
+  .laptop-mockup {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .solar-panel {
+    position: absolute;
+    bottom: -60px;
+    left: -40px;
+    width: 200px;
+    height: auto;
+    transform: rotate(-15deg);
+    z-index: 1;
+  }
+  
+  .game-right {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+  }
+  
+  .woo-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #7f54b3;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .game-small-heading {
+    color: #7f54b3;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+  
+  .game-heading {
+    color: white;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  
+  .game-description {
+    color: #a0a0b8;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+    max-width: 500px;
+  }
+  
+  .game-cta {
+    background: #4169e1;
+    color: white;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .game-cta:hover {
+    background: #3154c4;
+  }
+  
+  @media (max-width: 968px) {
+    .game-content {
+      flex-direction: column;
+    }
+  
+    .game-right {
+      text-align: center;
+    }
+  
+    .game-heading {
+      font-size: 36px;
+    }
+  
+    .game-panel {
+      display: none;
+    }
+  }
