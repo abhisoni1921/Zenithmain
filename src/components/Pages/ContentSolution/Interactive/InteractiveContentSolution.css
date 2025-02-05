@@ -423,7 +423,7 @@
     transform: translateX(-50%);
     width: 60px;
     height: 3px;
-    background-color: #E5A853;
+    background-color: #00baa6;
     animation: expandWidth 0.6s ease-out 0.3s forwards;
   }
   
@@ -493,7 +493,7 @@
   }
   
   .Adaptive-view-features-button {
-    background-color: #E5A853;
+    background-color: #00baa6;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -501,12 +501,14 @@
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s;
-    align-self: flex-start;
+    align-self: center;
     margin-top: 1rem;
+    border-radius: 4px;
+
   }
   
   .Adaptive-view-features-button:hover {
-    background-color: #d49642;
+    background-color: #008f7f;
   }
   
   @media (max-width: 768px) {
@@ -844,7 +846,7 @@
   }
   
   .game-cta {
-    background: #4169e1;
+    background: #00baa6;
     color: white;
     padding: 12px 32px;
     border: none;
@@ -856,7 +858,7 @@
   }
   
   .game-cta:hover {
-    background: #3154c4;
+    background: #008f7f;
   }
   
   @media (max-width: 968px) {
@@ -887,7 +889,7 @@
     color: white;
     max-width: 100%;
     margin: 0 auto;
-    margin-top: -3rem;
+    margin-top: 8rem;
   }
   
   .stat-item {
@@ -959,7 +961,7 @@
 
 .LMS-container{
   margin-top: -9rem;
-  margin-bottom: 5rem;
+  margin-bottom: 0rem;
 }
 
 /* Custom transitions */
@@ -999,6 +1001,69 @@
   }
   
   .plugin-card {
+    padding: 1rem;
+  }
+}
+.f-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background: linear-gradient(135deg, #6e8efb, #a777e3);
+  border-radius: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 8rem;
+}
+
+.f-card {
+  flex: 1;
+  min-width: 250px;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0.5rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.f-card:hover {
+  background: #000;
+  transform: translateY(-50px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.f-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+}
+
+.f-title {
+  color: white;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.f-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .f-card {
+    min-width: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 640px) {
+  .f-card {
+    min-width: 100%;
+  }
+  
+  .f-container {
     padding: 1rem;
   }
 }

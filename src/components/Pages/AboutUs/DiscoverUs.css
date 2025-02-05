@@ -529,7 +529,7 @@
   margin: 0 auto;
 }
 
-.header {
+.header1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -554,7 +554,7 @@
 
 .course-categories h1 {
   font-size: 2.5rem;
-  font-weight: 500;
+  font-weight: 400;
   color: #1e1f21;
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -576,7 +576,7 @@
 .category-card {
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 0.7rem 1.1rem;
   background-color: white;
   border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);

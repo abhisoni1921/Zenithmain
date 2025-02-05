@@ -14,6 +14,9 @@ const InteractiveContentSolution = () => {
   useEffect(() => {
     setAnimate(true);
   }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const enrollmentProfiles = [
     '/img1.jpg',
@@ -105,6 +108,28 @@ const InteractiveContentSolution = () => {
       logo: '/lifterlms-logo.png',
       status: 'Coming Soon',
       className: 'bg-blue-500'
+    }
+  ];
+  const feature = [
+    {
+      icon: "⚙️",
+      title: "Fast Performance",
+      description: "Optimized for a smaller build size, faster dev compilation and dozens of other improvements."
+    },
+    {
+      icon: "📱",
+      title: "Perfect Responsive",
+      description: "Our Theme is full perfect for all device. You can visit our Theme all device easily."
+    },
+    {
+      icon: "💬",
+      title: "Fast & Friendly Support",
+      description: "We are provide 24 hours support for all clients.You can purchase without hesitation."
+    },
+    {
+      icon: "👆",
+      title: "Easy to Use",
+      description: "Create your own custom Theme or section by copying, pasting, and assembling."
     }
   ];
 
@@ -437,6 +462,15 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
         ))}
       </motion.div>
     </div>
+    </div>
+    <div className="f-container">
+      {feature.map((feature, index) => (
+        <div key={index} className="f-card">
+          <div className="f-icon">{feature.icon}</div>
+          <h3 className="f-title">{feature.title}</h3>
+          <p className="f-description">{feature.description}</p>
+        </div>
+      ))}
     </div>
     <div className="stats-container">
       {statsData.map((stat, index) => (

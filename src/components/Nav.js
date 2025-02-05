@@ -23,8 +23,8 @@ const Navbar = () => {
           <img 
             src="/Zenith.png" 
             alt="Logo" 
-            width={isScrolled ? "80" : "120"} 
-            height={isScrolled ? "24" : "30"}
+            width={isScrolled ? "80" : "80"} 
+            height={isScrolled ? "24" : "24"}
           />
         </a>
       </div>
@@ -55,20 +55,20 @@ const Navbar = () => {
             <a  style={{ textDecoration: 'none' }} className="navbar-link">Learning</a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Apti </span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti </span>
               </Link>
               <Link to="/AlgniteTechForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Tech </span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech </span>
               </Link>
               <Link to="/AlgniteSoftSkillsForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span><span> Communication</span> </span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Communication</span> </span>
               </Link>
 
               <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Company Specific Pulse</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Company Specific Pulse</span>
               </Link>
               <Link to="/AlgniteLab" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Lab</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Lab</span>
               </Link>
               <Link to="/Learningmanagementsystem" style={{ textDecoration: 'none' }}>
                 <span className="special">Learning management system </span>
@@ -85,20 +85,20 @@ const Navbar = () => {
             <a  style={{ textDecoration: 'none' }} className="navbar-link">Assessment</a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiAssess" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Apti Assess</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti Assess</span>
               </Link>
               <Link to="/AlgniteTechAssess" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Tech Assess</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech Assess</span>
               </Link>
               <Link to="/AlgniteHIRE" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Personality Access</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Personality Access</span>
               </Link>
               
               <Link to="/AlgniteHIRE" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> HIRE</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> HIRE</span>
               </Link>
               <Link to="/AlgniteAssess360" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Assess360</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Assess360</span>
               </Link>
               
             </div>

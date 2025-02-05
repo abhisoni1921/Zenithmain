@@ -580,21 +580,9 @@ const handlePrev = () => {
       </div>
     </div> */}
          
-         <div className="talent-page">
-      <div className="header">
-        <h1>Comprehensive Training Programs</h1>
-        <p className="description">
-              We believe in the power of personalized learning experiences and
-              data-driven decision making to enhance educational outcomes. Our
-              solutions are designed to meet the evolving needs of modern
-              educational institutions while maintaining the highest standards of
-              academic excellence.
-        </p>
-      </div>
-      
+    
 
-      
-    </div>
+    
 
     <div className="course-categories">
       <div className="header">
@@ -813,6 +801,8 @@ const handlePrev = () => {
             ))}
           </div>
         </section>
+
+        
         
 
 
