@@ -751,8 +751,8 @@ body {
 
   overflow: hidden;
 
-  font-weight: bold;
-  font-size: 30px;
+  font-weight: 400;
+  font-size: 2rem;
   color: #FFF;
 
   z-index: 2;
@@ -1339,6 +1339,7 @@ header p {
 
 .feature-card:hover {
   transform: translateY(-5px);
+  box-shadow: #0f2027;
 }
 
 .M-header{
@@ -1412,15 +1413,19 @@ header p {
 }
 
 .premium-design {
-  border: 1px solid rgba(52, 152, 219, 0.3);
+  border: 0px solid rgba(52, 152, 219, 0.3);
+  background: linear-gradient(to bottom, #04345F, #020A12);
 }
 
 .premium-images {
-  border: 1px solid rgba(46, 204, 113, 0.3);
+  border: 0px solid rgba(46, 204, 113, 0.3);
+  background: linear-gradient(to bottom, #123617, #070D07);
+
 }
 
 .rapid-build {
-  border: 1px solid rgba(230, 126, 34, 0.3);
+  border: 0px solid rgba(230, 126, 34, 0.3);
+  background: linear-gradient(to bottom, #4A2C22, #0D0B0A);
 }
 
 @media (max-width: 768px) {

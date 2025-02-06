@@ -77,13 +77,7 @@ const AboutZESPL = () => {
             About Zenith India
           </h1>
           
-          <p className="hero-description">
-            Reliable Developer Upskilling Platform to speed up the learning curve of entry-level developers.
-          </p>
           
-          <button className="view-solutions-btn">
-            View Solutions
-          </button>
         </div>
       </div>
     </div>
