@@ -31,6 +31,9 @@ const AboutZESPL = () => {
 
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
+        useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   const timelineData = [
     {
       year: "2015",

@@ -69,11 +69,12 @@
 
 /* Gradient Backgrounds */
 .bg-gradient-1 {
-  background: linear-gradient(140deg, #321575 0%, #8D0B93 50%, #FF0080 100%);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 .bg-gradient-2 {
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+ 
+  background: linear-gradient(140deg, #321575 0%, #8D0B93 50%, #FF0080 100%);
 }
 
 .bg-gradient-3 {
@@ -166,7 +167,7 @@
 
 .slide-title {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 400;
   color: #ffffff;
   line-height: 1.15;
   margin-bottom: 1rem;
@@ -918,8 +919,9 @@ body {
 }
 
 .new-banner-header h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
 }
 
 .new-offerings-container {
@@ -1332,3 +1334,152 @@ body {
   justify-content: center;
 }
 
+
+.landing-page {
+  background-color: #0a0b14;
+  color: #fff;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #a0a0a0;
+}
+
+.features-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+
+.feature-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease;
+  height: 50vh;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.M-header{
+  color: #fff;
+  font-size: 2rem;
+}
+.feature-content {
+  flex: 1;
+  padding-right: 2rem;
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.feature-card h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.feature-card p {
+  color: #a0a0a0;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.learn-more {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+  color: #2980b9;
+}
+
+.feature-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feature-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.premium-design {
+  border: 1px solid rgba(52, 152, 219, 0.3);
+}
+
+.premium-images {
+  border: 1px solid rgba(46, 204, 113, 0.3);
+}
+
+.rapid-build {
+  border: 1px solid rgba(230, 126, 34, 0.3);
+}
+
+@media (max-width: 768px) {
+  .feature-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-content {
+    padding-right: 0;
+    padding-bottom: 2rem;
+  }
+
+  .feature-header {
+    justify-content: center;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}

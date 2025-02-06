@@ -21,6 +21,7 @@ const DiscoverUs = () => {
         }
       });
     };
+    
 
     const observer = new IntersectionObserver(observerCallback, {
       threshold: 0.1
@@ -34,7 +35,9 @@ const DiscoverUs = () => {
 
     return () => sections.forEach(section => observer.unobserve(section));
   }, []);
-  
+      useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
   const categories = [
     { icon: <Lightbulb />, name: 'Business' },
     { icon: <PenTool />, name: 'Arts & Design' },

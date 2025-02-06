@@ -133,6 +133,9 @@ const Home = () => {
     const autoplayTimer = setInterval(nextSlide, 5000);
     return () => clearInterval(autoplayTimer);
   }, []);
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
   const [translateX, setTranslateX] = useState(0);
 const offerings = [
   {
@@ -369,7 +372,19 @@ const handlePrev = () => {
       </figure>
     );
   };
-
+  const FeatureCard = ({ icon, title, description, image, learnMoreLink, className }) => (
+    <div className={`feature-card ${className}`}>
+      <div className="feature-content">
+        <div className="feature-header">
+          {icon && <span className="feature-icon">{icon}</span>}
+          <h2>{title}</h2>
+        </div>
+        <p>{description}</p>
+        <a href={learnMoreLink} className="learn-more">Learn more</a>
+      </div>
+      {image && <div className="feature-image">{image}</div>}
+    </div>
+  );
 
   return (
     <motion.div
@@ -740,7 +755,6 @@ const handlePrev = () => {
 </section>
 <div className="new-banner-container">
       <div className="new-banner-header">
-        <h3>Our Advantage</h3>
         <h2>What We Also Offer</h2>
       </div>
       
@@ -801,7 +815,46 @@ const handlePrev = () => {
             ))}
           </div>
         </section>
+        <div className="landing-page">
+      <header>
+        <h1 className="M-header">Laser focused on WordPress</h1>
+        <p>Unleash the full potential of your tech-oriented website with Stratus!</p>
+      </header>
 
+      <div className="features-container">
+        <FeatureCard
+          icon="💎"
+          title=" Visuals and user-friendly layouts"
+          description="Crafted with innovation in mind, Stratus boasts a sleek and futuristic design that captivates your visitors from the moment they land on your site. Impress with stunning visuals and user-friendly layouts that scream modernity and sophistication."
+          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          learnMoreLink="#"
+          className="premium-design"
+        />
+
+        <FeatureCard
+          icon="🖼️"
+          title=" large selection of curated images"
+          description="A premium WordPress theme that transforms your website into a visual masterpiece. Immerse your audience in a captivating online experience with our exceptional collection of curated images. Elevate your content effortlessly with a vast selection of stunning visuals that resonate with your brand and message."
+          image={
+            <div className="image-grid">
+              <img src="/img11.jpg" alt="Person using phone" />
+              <img src="/img9.jpg" alt="Person working" />
+            </div>
+          }
+          learnMoreLink="#"
+          className="premium-images"
+        />
+
+        <FeatureCard
+          icon="🚀"
+          title="Pre-designed templates in seconds"
+          description="You can now access a stunning array of pre-designed templates that can be applied to your website in a matter of seconds. Choose from a rich collection of meticulously crafted templates, each designed to exude professionalism and captivate your audience's attention."
+          image={<img src="/img8.jpg" alt="Templates preview" className="templates-preview" />}
+          learnMoreLink="#"
+          className="rapid-build"
+        />
+      </div>
+    </div>
         
         
 
