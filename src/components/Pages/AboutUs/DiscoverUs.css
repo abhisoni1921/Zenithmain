@@ -538,7 +538,7 @@
 }
 
 .icon-wrapper {
-  background-color: #e6f7f5;
+  background-color: transparent;
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;

@@ -822,11 +822,14 @@
   }
   
   .game-small-heading {
-    color: #7f54b3;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 1px;
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 186, 166, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-bottom: 1.5rem;
+    color: #00baa6;
+    font-weight: 400;
   }
   
   .game-heading {
