@@ -8,7 +8,7 @@
   max-width: 100%;
   max-height: 1600px;
   margin: 0 auto;
-  padding: 0% 0.1rem;
+  padding: 0% 0rem;
   scroll-behavior: smooth;
   
 }
@@ -194,7 +194,7 @@
   position: relative;
   padding: 0.75rem 1rem;
   margin: auto;
-  background: linear-gradient(45deg, #2563EB, #4F46E5, #2563EB);
+  background: linear-gradient(45deg, #2563EB,  #00baa6);
   background-size: 200% 200%;
   color: white;
   border-radius: 0.5rem;
@@ -511,48 +511,7 @@ section.visible {
 
 
 /* Feature Component */
-.feature-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1.5rem;
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.4s ease-out;
-}
 
-.feature-item.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.feature-icon {
-  font-size: 2rem;
-  margin-right: 1rem;
-  padding: 1rem;
-  background-color: rgba(34, 207, 181, 0.5);
-  border-radius: 0.5rem;
-  color: #1976d2;
-  transition: all 0.3s ease;
-}
-
-.feature-item:hover .feature-icon {
-  transform: scale(1.1);
-  background-color: rgba(25, 118, 210, 0.6);
-  color: white;
-}
-
-.feature-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin: 0;
-  color: #1a237e;
-}
-
-.feature-subtitle {
-  margin: 0;
-  font-size: 0.875rem;
-  color: #4a5568;
-}
 
 .course-categories {
   padding: 2rem;
@@ -901,7 +860,7 @@ body {
   margin: 0rem;
   margin-top: -4rem;
   padding: 2rem 2rem;
-  background-color: #1a1a1a;
+  background-color: rgba(10, 11, 20, 0.9);
   color: white;
   overflow: hidden;
   height: 80vh;
@@ -1336,7 +1295,7 @@ body {
 
 
 .landing-page {
-  background-color: #0a0b14;
+  background-color: rgba(10, 11, 20, 0.9);
   color: #fff;
   min-height: 100vh;
   padding: 2rem;

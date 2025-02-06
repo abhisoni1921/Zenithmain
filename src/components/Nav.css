@@ -25,7 +25,7 @@
 }
 
 /* Gradient top border with animation */
-.navbar::before {
+/* .navbar::before {
   content: '';
   position: absolute;
   top: 0;
@@ -47,7 +47,7 @@
 @keyframes gradientShift {
   0% { background-position: 0 0; }
   100% { background-position: 200% 0; }
-}
+} */
 
 .logo-container {
   display: flex;

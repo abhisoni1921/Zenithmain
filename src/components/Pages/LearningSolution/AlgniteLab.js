@@ -1,11 +1,13 @@
-import React from 'react';
+import React  from 'react';
 import { useLocation } from 'react-router-dom';
 import './AlgniteLab.css'
-
+import { useEffect } from 'react';
 const AlgniteLab = () => {
   const location = useLocation();
   const hash = location.hash;
-
+        useEffect(() => {
+          window.scrollTo(0, 0);
+        }, []);
   return (
     <div className="Lab-container">
 

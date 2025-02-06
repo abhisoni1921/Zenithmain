@@ -10,7 +10,9 @@ const LearningContentSolution = () => {
   useEffect(() => {
     setAnimate(true);
   }, []);
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const enrollmentProfiles = [
     '/img1.jpg',
     '/img2.jpg',

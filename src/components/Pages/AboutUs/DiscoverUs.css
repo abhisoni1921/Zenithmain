@@ -587,7 +587,7 @@
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #11998e, #38ef7d);
+  background: linear-gradient(45deg, #11998e, #00baa6);
 }
 
 .icon-container {

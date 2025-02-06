@@ -73,7 +73,7 @@ const bannerData = [
     id: 1,
     title: "Comprehensive Training ",
     description: "Learn skills with 120k+ video courses taught by industry experts",
-    image: "/pink.gif",
+    image: "/blue.gif",
     buttonText: "Start Learning Today",
     gradient: "bg-gradient-1"
     
@@ -82,7 +82,7 @@ const bannerData = [
     id: 2,
     title: "Full-Stack Development",
     description: "Master modern web development with hands-on projects",
-    image: "/blue.gif",
+    image: "/pink.gif",
     buttonText: "Explore Courses",
     gradient: "bg-gradient-2"
   },
@@ -800,21 +800,7 @@ const handlePrev = () => {
       </div>
     </div>
 
-        {/* Features Section */}
-        <section className="features-section" ref={featuresRef}>
-          <SectionTitle>Key Features</SectionTitle>
-          <div className="features-grid">
-            {features.map((feature, index) => (
-              <Card key={index}>
-                <div className="feature-header">
-                  <span className="feature-icon">{feature.icon}</span>
-                  <h3 className="feature-title">{feature.title}</h3>
-                </div>
-                <p className="feature-description">{feature.description}</p>
-              </Card>
-            ))}
-          </div>
-        </section>
+
         <div className="landing-page">
       <header>
         <h1 className="M-header">Laser focused on WordPress</h1>
