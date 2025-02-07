@@ -87,7 +87,7 @@ const AboutZESPL = () => {
    
       
       <section className="about-section">
-        <div><h2>About <span></span>Zenith India</h2>
+        <div><h1>About <span></span>Zenith India</h1>
         
         <p>Zenith thrives through excellence by providing excellent services in the Education sphere. Our journey began in the year 2011 and since then we have seen ourselves making a significant mark in the aptitude training industry and content development, thereby justifying our company name "Zenith" - the highest point.</p>
         
