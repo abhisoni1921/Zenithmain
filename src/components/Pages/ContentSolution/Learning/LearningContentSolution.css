@@ -223,6 +223,7 @@
     height: 40px;
     border-radius: 50%;
     border: 2px solid white;
+    
   }
   
   .enrollment-text {
@@ -256,6 +257,7 @@
     /* padding: 1rem; */
     top: 0rem;
     bottom: 0rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
     
   }
   
@@ -369,3 +371,122 @@
   }
   
 
+.consulting-container {
+  padding: 2rem;
+  background-color: transparent;
+  min-height: 90vh;
+  margin-top: -10rem;
+}
+
+.C-services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.C-service-card {
+  background: #8684F0B3;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease-out forwards;
+  opacity: 0;
+}
+
+.C-service-card:nth-child(2),
+.C-service-card:nth-child(3),
+.C-service-card:nth-child(4) {
+  background: #8684F0B3;
+  color: white;
+}
+
+.C-service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+}
+
+.C-icon-wrapper {
+  background: #fff;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  color: #003366;
+}
+
+.C-service-card:nth-child(2) .icon-wrapper,
+.C-service-card:nth-child(3) .icon-wrapper,
+.C-service-card:nth-child(4) .icon-wrapper {
+  background: white;
+  color: #004488;
+}
+
+.C-title {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.C-subtitle {
+  color: #1c1b1b;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.C-description {
+  color: #1c1b1b;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.C-consultation-button {
+  padding: 0.5rem 1.1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.C-consultation-button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.C-consultation-button.blue {
+  background-color: #00baa6;
+  color: white;
+}
+
+.C-consultation-button.green {
+  background-color: #00baa6;
+  color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .C-services-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .C-service-card {
+    margin-bottom: 1rem;
+  }
+}

@@ -2,6 +2,7 @@ import React from 'react';
 import  { useState, useEffect } from 'react';
 import { Play } from 'lucide-react';
 import './LearningContentSolution.css'
+import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
 
 const LearningContentSolution = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -41,7 +42,29 @@ const LearningContentSolution = () => {
       description: "Create your own custom Theme or section by copying, pasting, and assembling."
     }
   ];
-
+  const services = [
+    {
+      icon: <Phone />,
+      title: "Test Prep Material",
+      subtitle: "Let's start right from the beginning by outlining the core model of your business, and any pain points.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus suscipit justo, non malesuada est euismod a. Etiam elementum vitae libero vel gravida.",
+      buttonColor: "blue"
+    },
+    {
+      icon: <Target />,
+      title: "Textbook Solutions",
+      subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
+      description: "Ut lacitis laoreet maximus, integer cursus quam eleifend, tristique enim sit amet, porttitor eros. Integer fringilla erat tortor.",
+      buttonColor: "green"
+    },
+    {
+      icon: <TargetIcon />,
+      title: "Custom exam content",
+      subtitle: "It's time to look at the pain points of your business and craft a method of relieving those issues efficiently.",
+      description: "Nunc pellentesque orci vel dapibus tincidunt. Nam in urna orci. Curabitur nibh est, elementum quis dignissim vehicula.",
+      buttonColor: "green"
+    } 
+  ];
 
 
   return (
@@ -154,7 +177,29 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
         </div>
       )}
     </div>
-    
+    <div className="consulting-container">
+      <div className="C-services-grid">
+        {services.map((service, index) => (
+          <div 
+            key={index} 
+            className="C-service-card"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
+            <div className="C-icon-wrapper">
+              {service.icon}
+            </div>
+            <h1 className="C-title">{service.title}</h1>
+            <p className="C-subtitle">{service.subtitle}</p>
+            <p className="C-description">{service.description}</p>
+            <button 
+              className={`C-consultation-button ${service.buttonColor}`}
+            >
+              view more
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
 
       
     <div className="f-container">

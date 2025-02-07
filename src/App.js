@@ -33,6 +33,7 @@ import DiscoverUs from './components/Pages/AboutUs/DiscoverUs';
 import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
 import Learningmanagementsystem from './components/Pages/LearningSolution/Learningmanagementsystem/Learningmanagementsystem';
 import Talentdevelopment from './components/Pages/LearningSolution/Talentdevelopment/Talentdevelopment';
+import K2education from './components/Pages/ContentSolution/K2education/K2education';
 
 
 
@@ -80,6 +81,7 @@ function App() {
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
+        <Route path='/K2education' element={<K2education/>}/>
         
 
 

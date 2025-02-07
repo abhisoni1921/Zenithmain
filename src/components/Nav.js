@@ -112,7 +112,7 @@ const Navbar = () => {
               <span className="special">Learning Content Solutions</span></Link>
               <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
               <span className="special">Interactive Content Solutions</span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
+              <Link to="/K2education" style={{ textDecoration: 'none' }}>
               <span className="special">K12 education</span></Link>
               <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
               <span className="special">Translation Solutions</span></Link>
