@@ -375,7 +375,8 @@
   padding: 2rem;
   background-color: transparent;
   min-height: 90vh;
-  margin-top: -10rem;
+  margin-top: -3rem;
+  margin-bottom: -5rem;
 }
 
 .C-services-grid {
@@ -387,7 +388,7 @@
 }
 
 .C-service-card {
-  background: #8684F0B3;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
@@ -399,7 +400,7 @@
 .C-service-card:nth-child(2),
 .C-service-card:nth-child(3),
 .C-service-card:nth-child(4) {
-  background: #8684F0B3;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
 }
 
@@ -434,13 +435,13 @@
 }
 
 .C-subtitle {
-  color: #1c1b1b;
+  color: #fff;
   margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 .C-description {
-  color: #1c1b1b;
+  color: #fff;
   margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0.9;
@@ -461,12 +462,12 @@
 }
 
 .C-consultation-button.blue {
-  background-color: #00baa6;
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   color: white;
 }
 
 .C-consultation-button.green {
-  background-color: #00baa6;
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   color: white;
 }
 

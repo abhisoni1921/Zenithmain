@@ -16,6 +16,7 @@
   right: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  height: 75px;
 }
 
 .navbar-scrolled {
@@ -69,7 +70,7 @@
 .nav-links-container {
   flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
 }
 
 .navbar-list {
@@ -264,6 +265,7 @@ body {
 /* Smooth transition for logo size */
 .navbar-logo img {
   transition: all 0.3s ease;
+  
 }
 
 

@@ -7,7 +7,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Lightbulb, PenTool, Brain, Activity, 
   BarChart2, DollarSign, Monitor, Camera, 
   Database, Code, Server, Cpu } from 'lucide-react';
-
+  import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
 const useIntersectionObserver = (options = {}) => {
   const elementRef = useRef(null);
 
@@ -189,24 +189,7 @@ const handlePrev = () => {
 };
 
 
-  const features = [
-    {
-      icon: "🎓",
-      title: "Smart Learning",
-      description: "Adaptive learning pathways tailored to individual student needs and learning styles."
-    },
-    {
-      icon: "📊",
-      title: "Analytics & Insights",
-      description: "Comprehensive analytics providing real-time insights into student performance and engagement."
-    },
-    {
-      icon: "👥",
-      title: "Collaboration Tools",
-      description: "Enhanced collaboration features enabling seamless interaction between educators and students."
-    }
-    
-  ];
+
 
   const achievements = [
     {
@@ -225,39 +208,62 @@ const handlePrev = () => {
       label: "Success Rate"
     }
   ];
+  // const services = [
+  //   {
+  //     icon: "💻",
+  //     title: "Full Stack Web Development"
+  //   },
+  //   {
+  //     icon: "📱",
+  //     title: "Mobile App Development"
+  //   },
+  //   {
+  //     icon: "🤖",
+  //     title: "Artificial Intelligence & Machine Learning"
+  //   },
+  //   {
+  //     icon: "📊",
+  //     title: "Data Science & Analytics"
+  //   },
+  //   {
+  //     icon: "☁️",
+  //     title: "Cloud Computing"
+  //   },
+  //   {
+  //     icon: "♾️",
+  //     title: "DevOps"
+  //   },
+  //   {
+  //     icon: "🎨",
+  //     title: "UI/UX Design"
+  //   },
+  //   {
+  //     icon: "🗄️",
+  //     title: "Database Management System"
+  //   }
+  // ];
   const services = [
     {
-      icon: "💻",
-      title: "Full Stack Web Development"
+      icon: <Phone />,
+      title: "Test Prep Material",
+      subtitle: "Let's start right from the beginning by outlining the core model of your business, and any pain points.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus suscipit justo, non malesuada est euismod a. Etiam elementum vitae libero vel gravida.",
+      buttonColor: "blue"
     },
     {
-      icon: "📱",
-      title: "Mobile App Development"
+      icon: <Target />,
+      title: "Textbook Solutions",
+      subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
+      description: "Ut lacitis laoreet maximus, integer cursus quam eleifend, tristique enim sit amet, porttitor eros. Integer fringilla erat tortor.",
+      buttonColor: "green"
     },
     {
-      icon: "🤖",
-      title: "Artificial Intelligence & Machine Learning"
-    },
-    {
-      icon: "📊",
-      title: "Data Science & Analytics"
-    },
-    {
-      icon: "☁️",
-      title: "Cloud Computing"
-    },
-    {
-      icon: "♾️",
-      title: "DevOps"
-    },
-    {
-      icon: "🎨",
-      title: "UI/UX Design"
-    },
-    {
-      icon: "🗄️",
-      title: "Database Management System"
-    }
+      icon: <TargetIcon />,
+      title: "Custom exam content",
+      subtitle: "It's time to look at the pain points of your business and craft a method of relieving those issues efficiently.",
+      description: "Nunc pellentesque orci vel dapibus tincidunt. Nam in urna orci. Curabitur nibh est, elementum quis dignissim vehicula.",
+      buttonColor: "green"
+    } 
   ];
   const workonnectMenu = [
     'Overview',
@@ -329,7 +335,28 @@ const handlePrev = () => {
     { icon: <Cpu />, name: 'High-Tech' }
   
   ];
-
+  const features = [
+    {
+      icon: "⚙️",
+      title: "Fast Performance",
+      description: "Optimized for a smaller build size, faster dev compilation and dozens of other improvements."
+    },
+    {
+      icon: "📱",
+      title: "Perfect Responsive",
+      description: "Our Theme is full perfect for all device. You can visit our Theme all device easily."
+    },
+    {
+      icon: "💬",
+      title: "Fast & Friendly Support",
+      description: "We are provide 24 hours support for all clients.You can purchase without hesitation."
+    },
+    {
+      icon: "👆",
+      title: "Easy to Use",
+      description: "Create your own custom Theme or section by copying, pasting, and assembling."
+    }
+  ];
   const Snip1273Card = ({ image, title, description }) => {
     return (
       <figure className="card-figure">
@@ -620,8 +647,16 @@ const handlePrev = () => {
         ))}
       </div>
     </div>
-
-
+    <div className="f-container">
+      {features.map((feature, index) => (
+        <div key={index} className="f-card">
+          <div className="f-icon">{feature.icon}</div>
+          <h3 className="f-title">{feature.title}</h3>
+          <p className="f-description">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+   
 
 
     <section className="training-services-section" ref={useIntersectionObserver()}>
@@ -753,6 +788,29 @@ const handlePrev = () => {
   </div>
 </div>
 </section>
+<div className="consulting-container">
+      <div className="C-services-grid">
+        {services.map((service, index) => (
+          <div 
+            key={index} 
+            className="C-service-card"
+            style={{ animationDelay: `${index * 0.2}s` }}
+          >
+            <div className="C-icon-wrapper">
+              {service.icon}
+            </div>
+            <h1 className="C-title">{service.title}</h1>
+            <p className="C-subtitle">{service.subtitle}</p>
+            <p className="C-description">{service.description}</p>
+            <button 
+              className={`C-consultation-button ${service.buttonColor}`}
+            >
+              view more
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
 <div className="new-banner-container">
       <div className="new-banner-header">
         <h2>What We Also Offer</h2>
@@ -841,7 +899,7 @@ const handlePrev = () => {
         />
       </div>
     </div>
-        
+
         
 
 

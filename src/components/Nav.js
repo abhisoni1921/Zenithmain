@@ -23,8 +23,8 @@ const Navbar = () => {
           <img 
             src="/Zenith.png" 
             alt="Logo" 
-            width={isScrolled ? "80" : "80"} 
-            height={isScrolled ? "24" : "24"}
+            width={isScrolled ? "125" : "125"} 
+            height={isScrolled ? "36" : "36"}
           />
         </a>
       </div>
@@ -44,9 +44,9 @@ const Navbar = () => {
               <Link to="/about" style={{ textDecoration: 'none' }}>
               <span className="special">About ZESPL</span></Link>
               <Link to="/visionMission" style={{ textDecoration: 'none' }}>
-              <span className="special">Our Vision</span></Link>
-              <Link to="/Whoweserve" style={{ textDecoration: 'none' }}>
-              <span className="special">Who We Serve</span></Link>
+              <span className="special">Our Vision & Mission</span></Link>
+              {/* <Link to="/Whoweserve" style={{ textDecoration: 'none' }}>
+              <span className="special">Who We Serve</span></Link> */}
               <Link to="/leadership" style={{ textDecoration: 'none' }}>
               <span className="special">Leadership</span></Link>
             </div>
@@ -61,21 +61,21 @@ const Navbar = () => {
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech </span>
               </Link>
               <Link to="/AlgniteSoftSkillsForge" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Communication</span> </span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Commune</span> </span>
               </Link>
 
               <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Company Specific Pulse</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Company Specific </span>
               </Link>
               <Link to="/AlgniteLab" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Lab</span>
               </Link>
               <Link to="/Learningmanagementsystem" style={{ textDecoration: 'none' }}>
-                <span className="special">Learning management system </span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> LMS </span>
               </Link>
-              <Link to="/Talentdevelopment" style={{ textDecoration: 'none' }}>
+              {/* <Link to="/Talentdevelopment" style={{ textDecoration: 'none' }}>
                 <span className="special">Talent development </span>
-              </Link>
+              </Link> */}
               {/* <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Soft Boost</span>
               </Link> */}
@@ -107,18 +107,18 @@ const Navbar = () => {
             <a  style={{ textDecoration: 'none' }} className="navbar-link">Content</a>
             <div className="dropdown-content">
               <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Assessment Content Solutions</span></Link>
+              <span className="special">Assessment Content </span></Link>
               <Link to="/LearningContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Learning Content Solutions</span></Link>
+              <span className="special">Learning Content </span></Link>
               <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Interactive Content Solutions</span></Link>
+              <span className="special">Interactive Content </span></Link>
               <Link to="/K2education" style={{ textDecoration: 'none' }}>
-              <span className="special">K12 education</span></Link>
+              <span className="special">K12 Solutions</span></Link>
               <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Translation Solutions</span></Link>
+              <span className="special">Translation Services</span></Link>
             </div>
           </li>
-          <li className="navbar-item dropdown">
+          {/* <li className="navbar-item dropdown">
             <a  style={{ textDecoration: 'none' }} className="navbar-link">Resources</a>
             <div className="dropdown-content">
               <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
@@ -133,10 +133,10 @@ const Navbar = () => {
               <span className="special"> Digital Content Designer</span></Link>
               
             </div>
-          </li>
-          <li className="navbar-item">
+          </li> */}
+          {/* <li className="navbar-item">
             <a href="/careers" style={{ textDecoration: 'none' }} className="navbar-link">Careers</a>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

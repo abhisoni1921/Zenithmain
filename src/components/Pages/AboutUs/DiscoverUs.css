@@ -556,14 +556,14 @@
 .course-categories h1 {
   font-size: 2.5rem;
   font-weight: 400;
-  color: #1e1f21;
+  color: #333;
   margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .course-categories h2 {
-  color: #1a1a1a;
-  font-size: 1.25rem;
+  color: #333;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -578,7 +578,7 @@
   display: flex;
   align-items: center;
   padding: 0.7rem 1.1rem;
-  background-color: white;
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
@@ -588,7 +588,7 @@
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #11998e, #00baa6);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 .icon-container {
@@ -611,7 +611,7 @@
   font-size: 1rem;
   font-family: 'Inter', sans-serif;  /* Use Inter, Arial, or Roboto for a clean look */
   font-weight: 600;  /* Semi-bold */  
-  color: #000000;  /* Black text */
+  color: #fff;  /* Black text */
   letter-spacing: normal;
 }
 

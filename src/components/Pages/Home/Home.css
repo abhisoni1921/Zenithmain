@@ -1,12 +1,12 @@
 /* Base Layout */
 .home-wrapper {
-  min-height: 100vh;
+  min-height: 85vh;
   /* background-color: rgba(207, 34, 34, 0.5); */
 }
 
 .home-container {
   max-width: 100%;
-  max-height: 1600px;
+  max-height: 200px;
   margin: 0 auto;
   padding: 0% 0rem;
   scroll-behavior: smooth;
@@ -411,7 +411,7 @@
   max-width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  background-color: transparent;
+  
 }
 
 .header {
@@ -429,7 +429,7 @@
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.6;
-  color: #666;
+  color: #333;
 }
 /* Section Styling */
 section {
@@ -450,7 +450,7 @@ section.visible {
 /* Section Title */
 .section-title-container {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: -3rem;
 }
 
 .section-title {
@@ -574,7 +574,7 @@ h2 {
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(45deg, #11998e, #38ef7d);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: #fff !important;
 }
 
@@ -725,7 +725,7 @@ body {
 .ag-courses-item_link {
   display: block;
   padding: 30px 20px;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: #1E2C3D;
 
   overflow: hidden;
 
@@ -856,7 +856,7 @@ body {
   margin: 0rem;
   margin-top: -4rem;
   padding: 2rem 2rem;
-  background-color: rgba(10, 11, 20, 0.9);
+  background-color: transparent;
   color: white;
   overflow: hidden;
   height: 80vh;
@@ -876,7 +876,7 @@ body {
 .new-banner-header h2 {
   font-size: 2rem;
   font-weight: 400;
-  color: #fff;
+  color: #333;
 }
 
 .new-offerings-container {
@@ -955,7 +955,7 @@ body {
 }
 
 .new-nav-button {
-  background: rgba(255, 255, 255, 0.1);
+  background: #000;
   border: none;
   border-radius: 50%;
   width: 40px;
@@ -970,7 +970,7 @@ body {
 }
 
 .new-nav-button:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.2);
+  background: #000;
 }
 
 .new-nav-button:disabled {
@@ -1291,7 +1291,7 @@ body {
 
 
 .landing-page {
-  background-color: rgba(10, 11, 20, 0.9);
+  background-color: transparent;
   color: #fff;
   min-height: 100vh;
   padding: 2rem;
@@ -1309,7 +1309,7 @@ header h1 {
 
 header p {
   font-size: 1.2rem;
-  color: #a0a0a0;
+  color: #333;
 }
 
 .features-container {
@@ -1339,7 +1339,7 @@ header p {
 }
 
 .M-header{
-  color: #fff;
+  color: #333;
   font-size: 2rem;
 }
 .feature-content {
@@ -1365,13 +1365,13 @@ header p {
 }
 
 .feature-card p {
-  color: #a0a0a0;
+  color: #fff;
   line-height: 1.6;
   margin-bottom: 1.5rem;
 }
 
 .learn-more {
-  color: #3498db;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -1389,7 +1389,7 @@ header p {
 }
 
 .feature-image img {
-  max-width: 100%;
+  max-width: 80%;
   height: auto;
   border-radius: 0.5rem;
 }
@@ -1410,18 +1410,18 @@ header p {
 
 .premium-design {
   border: 0px solid rgba(52, 152, 219, 0.3);
-  background: linear-gradient(to bottom, #04345F, #020A12);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 .premium-images {
   border: 0px solid rgba(46, 204, 113, 0.3);
-  background: linear-gradient(to bottom, #123617, #070D07);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 
 }
 
 .rapid-build {
   border: 0px solid rgba(230, 126, 34, 0.3);
-  background: linear-gradient(to bottom, #4A2C22, #0D0B0A);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 @media (max-width: 768px) {
