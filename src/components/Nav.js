@@ -23,7 +23,7 @@ const Navbar = () => {
           <img 
             src="/Zenith.png" 
             alt="Logo" 
-            width={isScrolled ? "125" : "125"} 
+            width={isScrolled ? "150" : "150"} 
             height={isScrolled ? "36" : "36"}
           />
         </a>

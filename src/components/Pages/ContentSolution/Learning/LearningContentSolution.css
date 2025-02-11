@@ -388,7 +388,7 @@
 }
 
 .C-service-card {
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);;
   border-radius: 10px;
   padding: 2rem;
   text-align: center;
@@ -400,7 +400,8 @@
 .C-service-card:nth-child(2),
 .C-service-card:nth-child(3),
 .C-service-card:nth-child(4) {
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  
   color: white;
 }
 
@@ -456,19 +457,25 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.C-consultation-button:hover {
-  transform: scale(1.05);
-  opacity: 0.9;
+.C-consultation-button.blue:hover {
+  
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+}
+.C-consultation-button.green:hover {
+  
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 .C-consultation-button.blue {
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   color: white;
+  font-weight: 400;
 }
 
 .C-consultation-button.green {
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   color: white;
+  font-weight: 400;
 }
 
 @keyframes fadeIn {

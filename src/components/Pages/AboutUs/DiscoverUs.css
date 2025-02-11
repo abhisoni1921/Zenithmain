@@ -635,6 +635,11 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
+  
+}
+.bag {
+  max-width: 100%;
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
 }
 
 .A-left-section {
@@ -666,7 +671,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 183, 155, 0.9);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -685,7 +690,7 @@
   position: absolute;
   left: 0rem;
   bottom: 8rem;
-  background-color: rgb(0, 183, 155);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
   padding: 1rem 2rem;
   border-radius: 1rem;
@@ -729,6 +734,7 @@
 .A-right-section {
   flex: 1;
   padding: 2rem 0;
+  
 }
 
 .A-header-badge {
@@ -738,31 +744,33 @@
 .A-badge {
   display: inline-flex;
   align-items: center;
-  background-color: rgba(0, 186, 166, 0.1);
+  background: rgba(0, 186, 166, 0.1);
   padding: 0.5rem 1rem;
   border-radius: 20px;
-  margin-bottom: 1.5rem;
-  color: #00baa6;
+  margin-bottom: -2rem;
+  color: #86898b;
   font-weight: 500;
 }
 
 .A-badge-icon {
-  background-color: white;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   padding: 0.25rem;
   border-radius: 50%;
 }
 
 h1 {
   font-size: 3rem;
-  color: #1f2937;
+  color: #fff;
   margin-bottom: 1.5rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 .A-description {
-  color: #6b7280;
+  color: #8b8686;
   margin-bottom: 2rem;
   line-height: 1.6;
+  text-align: left;
 }
 
 .A-stats-container {
@@ -779,15 +787,15 @@ h1 {
 
 .A-stat-icon {
   color: rgb(0, 183, 155);
-  background-color: rgba(0, 183, 155, 0.1);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   padding: 0.75rem;
   border-radius: 50%;
 }
 
 .A-stat-number {
   font-size: 1.5rem;
-  font-weight: bold;
-  color: #1f2937;
+  font-weight: 400;
+  color: #d5d8dc;
 }
 
 .A-stat-label {
@@ -796,19 +804,20 @@ h1 {
 }
 
 .A-cta-button {
-  background-color: rgb(0, 183, 155);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 500;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
   bottom: 1rem;
+  margin-left: 2rem;
 }
 
 .A-cta-button:hover {
-  background-color: rgb(0, 163, 137);
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   transform: translateY(-2px);
 }
 

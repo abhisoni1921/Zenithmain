@@ -264,7 +264,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
               </div>
               <div className="Adaptive-Adaptive-feature-text">
                 <h3 className="Adaptive-feature-title">{feature.title}</h3>
-                <p className="Adaptive-Adaptive-feature-description">{feature.description}</p>
+                <p className="Adaptive-feature-description">{feature.description}</p>
               </div>
             </div>
           ))}
@@ -275,6 +275,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
         </div>
       </div>
     </div>
+    <div className="bag">
     <div className="A-hero-container">
       <div className="A-left-section">
         <div className="A-video-card">
@@ -346,6 +347,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
       <div
       ></div>
     </div>
+    
     <div className="game-container">
       <div className="game-content">
         
@@ -461,6 +463,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
           </motion.div>
         ))}
       </motion.div>
+    </div>
     </div>
     </div>
     <div className="f-container">

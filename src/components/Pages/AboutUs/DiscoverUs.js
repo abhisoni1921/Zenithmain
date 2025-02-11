@@ -114,27 +114,7 @@ const DiscoverUs = () => {
         </div>
       </div>
     </div>
-    <div className="course-categories">
-      <div className="header">
-        <div className="icon-wrapper">
-          <Lightbulb className="header-icon" />
-        </div>
-        <h2>Our Course Categories</h2>
-      </div>
-      
-      <h1>Select The Industry Where You Want To Learn</h1>
-      
-      <div className="categories-grid">
-        {categories.map((category, index) => (
-          <div key={index} className="category-card">
-            <div className="icon-container">
-              {category.icon}
-            </div>
-            <span>{category.name}</span>
-          </div>
-        ))}
-      </div>
-    </div>
+   
     <div className="D-hero-container">
       <div className="D-left-section">
         <div className="D-video-card">

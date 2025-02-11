@@ -403,6 +403,7 @@
     padding: 4rem 1rem;
     margin-top: -8rem;
     animation: fadeIn 0.8s ease-out forwards;
+    
   }
   
   .Adaptive-title {
@@ -485,11 +486,13 @@
     color: #333;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
+    text-align: left;
   }
   
   .Adaptive-feature-description {
     color: #666;
     line-height: 1.6;
+    text-align: left;
   }
   
   .Adaptive-view-features-button {
@@ -538,6 +541,7 @@
     max-width: 1200px;
     margin: 0 auto;
     padding: 2rem;
+    
   }
   
   .D-left-section {
@@ -698,7 +702,7 @@
   }
   
   .D-cta-button {
-    background-color: rgb(0, 183, 155);
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
     color: white;
     padding: 1rem 2rem;
     border-radius: 0.5rem;
@@ -710,7 +714,7 @@
   }
   
   .D-cta-button:hover {
-    background-color: rgb(0, 163, 137);
+    background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
     transform: translateY(-2px);
   }
   
@@ -828,7 +832,7 @@
     padding: 0.5rem 1rem;
     border-radius: 20px;
     margin-bottom: 1.5rem;
-    color: #00baa6;
+    color: #c3bebe;
     font-weight: 400;
   }
   
@@ -849,7 +853,7 @@
   }
   
   .game-cta {
-    background: #00baa6;
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
     color: white;
     padding: 12px 32px;
     border: none;
@@ -861,7 +865,7 @@
   }
   
   .game-cta:hover {
-    background: #008f7f;
+    background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   }
   
   @media (max-width: 968px) {
@@ -886,13 +890,14 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,32,16,0.8) 100%);
+    background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
     padding: 2rem;
     border-radius: 12px;
     color: white;
     max-width: 100%;
     margin: 0 auto;
-    margin-top: 8rem;
+    margin-top: -8rem;
+    margin-bottom: 8rem;
   }
   
   .stat-item {
@@ -1011,7 +1016,7 @@
   display: flex;
   justify-content: space-between;
   padding: 2rem;
-  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   border-radius: 1rem;
   gap: 1rem;
   flex-wrap: wrap;
@@ -1030,7 +1035,7 @@
 }
 
 .f-card:hover {
-  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   transform: translateY(-30px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }

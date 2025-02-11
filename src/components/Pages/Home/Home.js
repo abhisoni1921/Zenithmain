@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Home.css';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight ,ArrowRight} from 'lucide-react';
+import { Star } from 'lucide-react';
 // import { ArrowRight } from 'lucide-react';
 import MailIcon from '@mui/icons-material/Mail';
 import { Lightbulb, PenTool, Brain, Activity, 
@@ -412,7 +413,42 @@ const handlePrev = () => {
       {image && <div className="feature-image">{image}</div>}
     </div>
   );
+  const statsData = [
+    {
+      value: '80k+',
+      label: 'Theme Sales'
+    },
+    {
+      value: '4.92',
+      label: 'Customer Rating',
+      showStars: true
+    },
+    {
+      value: '400+',
+      label: 'Page Templates'
+    },
+    {
+      value: '85+',
+      label: 'Prebuilt Websites'
+    },
+    {
+      value: '',
+      label: 'Elementor-Enabled',
+      icon: 'E'
+    }
+  ];
 
+  const renderStars = () => {
+    return [...Array(5)].map((_, index) => (
+      <Star 
+        key={index}
+        className="star-icon"
+        size={16}
+        fill="#FFD700"
+        color="#FFD700"
+      />
+    ));
+  };
   return (
     <motion.div
       className="home-wrapper"
@@ -800,7 +836,7 @@ const handlePrev = () => {
               {service.icon}
             </div>
             <h1 className="C-title">{service.title}</h1>
-            <p className="C-subtitle">{service.subtitle}</p>
+            {/* <p className="C-subtitle">{service.subtitle}</p> */}
             <p className="C-description">{service.description}</p>
             <button 
               className={`C-consultation-button ${service.buttonColor}`}
@@ -900,7 +936,21 @@ const handlePrev = () => {
       </div>
     </div>
 
-        
+    <div className="stats-container">
+      {statsData.map((stat, index) => (
+        <div key={index} className="stat-item">
+          {stat.icon ? (
+            <div className="elementor-icon">{stat.icon}</div>
+          ) : (
+            <div className="stat-value">
+              {stat.value}
+              {stat.showStars && <div className="stars">{renderStars()}</div>}
+            </div>
+          )}
+          <div className="stat-label">{stat.label}</div>
+        </div>
+      ))}
+    </div>
 
 
         <footer className="footer-container">
