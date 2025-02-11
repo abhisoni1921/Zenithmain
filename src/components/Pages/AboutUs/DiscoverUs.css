@@ -640,6 +640,7 @@
 .bag {
   max-width: 100%;
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  margin-top: 8rem;
 }
 
 .A-left-section {
@@ -689,15 +690,19 @@
 .A-support-card {
   position: absolute;
   left: 0rem;
-  bottom: 8rem;
+  bottom: 1rem;
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   gap: 1rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.A-support-card:hover{
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+
 }
 
 .A-phone-icon {
@@ -806,7 +811,7 @@ h1 {
 .A-cta-button {
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
   font-weight: 500;
   border: none;

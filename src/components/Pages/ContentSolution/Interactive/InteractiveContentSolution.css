@@ -466,7 +466,7 @@
     animation-delay: 0.6s;
 }
   .Adaptive-feature-icon {
-    background-color: #00baa6;
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
     border-radius: 50%;
     width: 48px;
     height: 48px;
@@ -477,29 +477,32 @@
     color: white;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
+  .Adaptive-feature-icon:hover{
+    background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  }
   
   .Adaptive-feature-text {
     flex: 1;
   }
   
   .Adaptive-feature-title {
-    color: #333;
+    color: #fff;
     font-size: 1.25rem;
     margin-bottom: 0.5rem;
     text-align: left;
   }
   
   .Adaptive-feature-description {
-    color: #666;
+    color: #8b8686;
     line-height: 1.6;
     text-align: left;
   }
   
   .Adaptive-view-features-button {
-    background-color: #00baa6;
+    background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
     color: white;
     border: none;
-    padding: 1rem 2rem;
+    padding: 0.6rem 1.2rem;
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
@@ -511,7 +514,7 @@
   }
   
   .Adaptive-view-features-button:hover {
-    background-color: #008f7f;
+    background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   }
   
   @media (max-width: 768px) {
@@ -855,7 +858,7 @@
   .game-cta {
     background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
     color: white;
-    padding: 12px 32px;
+    padding: 0.6rem 1.2rem;
     border: none;
     border-radius: 4px;
     font-size: 16px;
