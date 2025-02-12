@@ -34,6 +34,7 @@ import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
 import Learningmanagementsystem from './components/Pages/LearningSolution/Learningmanagementsystem/Learningmanagementsystem';
 import Talentdevelopment from './components/Pages/LearningSolution/Talentdevelopment/Talentdevelopment';
 import K2education from './components/Pages/ContentSolution/K2education/K2education';
+import Content from './components/Pages/ContentSolution/Content/Content';
 
 
 
@@ -77,11 +78,14 @@ function App() {
         <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
         <Route path='/AlgniteHIRE' element={<AlgniteHIRE/>}/>
         <Route path='/AlgniteAssess360' element={<AlgniteAssess360/>}/>
+
+        <Route path='/Content' element={<Content/>}/>
         <Route path='/AssessmentContentSolution' element={<AssessmentContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/K2education' element={<K2education/>}/>
+
         
 
 

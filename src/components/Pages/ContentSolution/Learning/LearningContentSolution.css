@@ -411,7 +411,7 @@
 }
 
 .C-icon-wrapper {
-  background: #fff;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -422,17 +422,19 @@
   color: #003366;
 }
 
+
 .C-service-card:nth-child(2) .icon-wrapper,
 .C-service-card:nth-child(3) .icon-wrapper,
 .C-service-card:nth-child(4) .icon-wrapper {
-  background: white;
-  color: #004488;
+   
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
 }
 
 .C-title {
   color: #fff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
+  text-align: left;
 }
 
 .C-subtitle {
@@ -446,6 +448,7 @@
   margin-bottom: 2rem;
   line-height: 1.6;
   opacity: 0.9;
+  text-align: left;
 }
 
 .C-consultation-button {

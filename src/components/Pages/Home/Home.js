@@ -138,56 +138,68 @@ const Home = () => {
       window.scrollTo(0, 0);
     }, []);
   const [translateX, setTranslateX] = useState(0);
-const offerings = [
-  {
-    title: 'Skill Exchange',
-    image: '/img1.jpg',
-    cta: 'Explore Jobs',
-    link: '#'
-  },
-  {
-    title: 'Engineers Ensemble',
-    image: '/img2.jpg',
-    cta: 'Join Community',
-    link: '#'
-  },
-  {
-    title: 'Micro Learning',
-    image: '/img3.jpg',
-    cta: 'Know More',
-    link: '#'
-  },
-  {
-    title: 'Expert Network',
-    image: '/img4.jpg',
-    cta: 'Connect Now',
-    link: '#'
-  },
-  {
-    title: 'Career Growth',
-    image: '/img5.jpg',
-    cta: 'Learn More',
-    link: '#'
-  },
-  {
-    title: 'Tech Workshops',
-    image: '/img6.jpg',
-    cta: 'Register Now',
-    link: '#'
-  }
-];
 
-const handleNext = () => {
-  if (translateX > -(offerings.length - 2) * 100) {
-    setTranslateX(prev => prev - 100);
-  }
-};
+const originalCards = [
+            {
+              imageUrl: "/img1.jpg",
+              title: "Mountain Adventure",
+              description: "Explore the majestic peaks and valleys",
+              link: "#",
+              viewMore: "https://example.com/mountains"
+            },
+            {
+              imageUrl: "/img2.jpg",
+              title: "Ocean Escape",
+              description: "Discover hidden beaches and coral reefs",
+              link: "#",
+              viewMore: "https://example.com/ocean"
+            },
+            {
+              imageUrl: "/img3.jpg",
+              title: "Urban Explorer",
+              description: "Navigate through city landscapes",
+              link: "#",
+              viewMore: "https://example.com/urban"
+            }
+          ];
+        
+          const originalLength = originalCards.length;
+          const extendedCards = [
+            originalCards[originalLength - 1],
+            ...originalCards,
+            originalCards[0]
+          ];
+        
+          const [currentIndex, setCurrentIndex] = useState(2);
+          const [transitionEnabled, setTransitionEnabled] = useState(true);
+        
+          useEffect(() => {
+            if (currentIndex === 1) {
+              setTimeout(() => {
+                setTransitionEnabled(false);
+                setCurrentIndex(originalLength + 1);
+              }, 500);
+            } else if (currentIndex === originalLength + 2) {
+              setTimeout(() => {
+                setTransitionEnabled(false);
+                setCurrentIndex(2);
+              }, 500);
+            }
+          }, [currentIndex, originalLength]);
+        
+          const handleNext = () => {
+            if (currentIndex >= originalLength + 2) return;
+            setTransitionEnabled(true);
+            setCurrentIndex(prev => prev + 1);
+          };
+        
+          const handlePrev = () => {
+            if (currentIndex <= 1) return;
+            setTransitionEnabled(true);
+            setCurrentIndex(prev => prev - 1);
+          };
+  
 
-const handlePrev = () => {
-  if (translateX < 0) {
-    setTranslateX(prev => prev + 100);
-  }
-};
 
 
 
@@ -209,40 +221,7 @@ const handlePrev = () => {
       label: "Success Rate"
     }
   ];
-  // const services = [
-  //   {
-  //     icon: "💻",
-  //     title: "Full Stack Web Development"
-  //   },
-  //   {
-  //     icon: "📱",
-  //     title: "Mobile App Development"
-  //   },
-  //   {
-  //     icon: "🤖",
-  //     title: "Artificial Intelligence & Machine Learning"
-  //   },
-  //   {
-  //     icon: "📊",
-  //     title: "Data Science & Analytics"
-  //   },
-  //   {
-  //     icon: "☁️",
-  //     title: "Cloud Computing"
-  //   },
-  //   {
-  //     icon: "♾️",
-  //     title: "DevOps"
-  //   },
-  //   {
-  //     icon: "🎨",
-  //     title: "UI/UX Design"
-  //   },
-  //   {
-  //     icon: "🗄️",
-  //     title: "Database Management System"
-  //   }
-  // ];
+
   const services = [
     {
       icon: <Phone />,
@@ -357,6 +336,54 @@ const handlePrev = () => {
       title: "Easy to Use",
       description: "Create your own custom Theme or section by copying, pasting, and assembling."
     }
+  ];
+  const logos = [
+    { 
+      name: 'Cloudways',
+      url: 'https://www.zarla.com/images/amazon-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'HubSpot',
+      url: 'https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Envato',
+      url: 'https://www.zarla.com/images/hyundai-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Awwwards',
+      url: 'https://www.zarla.com/images/facebook-logo-2400x2400-20220518.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Hongkiat',
+      url: 'https://www.zarla.com/images/google-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Tem',
+      url: 'https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-24'
+    },
+    { 
+      name: 'Hongkiat',
+      url: 'https://www.zarla.com/images/microsoft-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Hongkiat',
+      url: 'https://www.zarla.com/images/toyota-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    },
+    { 
+      name: 'Hongkiat',
+      url: 'https://www.zarla.com/images/nestle-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+      className: 'w-32'
+    }
+    
   ];
   const Snip1273Card = ({ image, title, description }) => {
     return (
@@ -683,6 +710,21 @@ const handlePrev = () => {
         ))}
       </div>
     </div>
+    <div className="marquee-container">
+      <div className="marquee-content">
+        {logos.map((logo, index) => (
+          <div key={`logo-${index}`} className={`logo-item ${logo.className}`}>
+            <img src={logo.url} alt={logo.name} />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {logos.map((logo, index) => (
+          <div key={`logo-dup-${index}`} className={`logo-item ${logo.className}`}>
+            <img src={logo.url} alt={logo.name} />
+          </div>
+        ))}
+      </div>
+    </div>
     <div className="f-container">
       {features.map((feature, index) => (
         <div key={index} className="f-card">
@@ -847,53 +889,60 @@ const handlePrev = () => {
         ))}
       </div>
     </div>
-<div className="new-banner-container">
-      <div className="new-banner-header">
-        <h2>What We Also Offer</h2>
-      </div>
+
+    <div className="carousel-container">
+      <button 
+        className="carousel-button carousel-button-prev"
+        onClick={handlePrev}
+      >
+        ←
+      </button>
       
-      <div className="new-offerings-container">
-        <button 
-          className="new-nav-button new-prev" 
-          onClick={handlePrev}
-          disabled={translateX >= 0}
+      <div className="carousel-wrapper">
+        <div
+          className="carousel-track"
+          style={{
+            transform: `translateX(-${(currentIndex - 2) * (100 / 3)}%)`,
+            transition: transitionEnabled ? 'transform 0.5s ease' : 'none',
+          }}
         >
-          <ArrowRight className="rotate-180" />
-        </button>
-        
-        <div className="new-offerings-wrapper">
-          <div 
-            className="new-offerings-grid"
-            style={{
-              transform: `translateX(${translateX}%)`,
-            }}
-          >
-            {offerings.slice(0,6).map((offering, index) => (
-              <div key={index} className="new-offering-card">
-                <div className="new-card-content">
-                  <img src={offering.image} alt={offering.title} />
-                  <div className="new-overlay">
-                    <h3>{offering.title}</h3>
-                    <a href={offering.link} className="new-cta-link">
-                      {offering.cta} <ArrowRight className="new-arrow-icon" />
+          {extendedCards.map((card, index) => (
+            <div key={index} className="carousel-item">
+              <div className="carousel-card">
+                <div className="carousel-image-container">
+                  <img 
+                    src={card.imageUrl} 
+                    alt={card.title} 
+                    className="carousel-image"
+                  />
+                  <div className="carousel-image-overlay" />
+                </div>
+                <div className="carousel-content">
+                  <h3 className="carousel-title">{card.title}</h3>
+                  <p className="carousel-description">{card.description}</p>
+                  <div className="carousel-actions">
+                    <a 
+                      href={card.viewMore}
+                      className="carousel-link"
+                    >
+                       View More  
                     </a>
+                    
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
-        
-        <button 
-          className="new-nav-button new-next" 
-          onClick={handleNext}
-          disabled={translateX <= -(offerings.length - 3) * 100}
-        >
-          <ArrowRight />
-        </button>
       </div>
-    </div>
 
+      <button 
+        className="carousel-button carousel-button-next"
+        onClick={handleNext}
+      >
+        →
+      </button>
+    </div>
 
         <div className="landing-page">
       <header>

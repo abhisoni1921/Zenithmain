@@ -104,7 +104,7 @@ const Navbar = () => {
             </div>
           </li>
           <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Content</a>
+          <Link to="/Content" style={{ textDecoration: 'none' }} className="navbar-link">Content</Link>
             <div className="dropdown-content">
               <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
               <span className="special">Assessment Content </span></Link>

@@ -1,78 +1,3 @@
-.Lab-hero-container {
-    height: 70vh;
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    margin: 0;
-    padding: 0;
-    margin-top: -62px;
-    background: transparent;
-    max-width: 100%;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-.Lab-hero-content {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 100%;
-    margin: 0 auto;
-    background: linear-gradient(rgba(2, 29, 92, 0.5), rgba(0, 204, 255, 0.5));
-    width: 100%;
-    height: 85vh;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-.Lab-hero-image-container {
-    flex: 0 0 40%;
-    max-width: 100%;
-    transform: translateX(-100%);
-    animation: slideInLeft 1s ease-out forwards;
-}
-
-.Lab-hero-image {
-    width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    transition: transform 0.3s ease;
-}
-
-.Lab-hero-image:hover {
-    transform: scale(1.05);
-}
-
-
-
-/* Animation Keyframes */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes slideInLeft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slideInRight {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
 
 .header-container {
     position: relative;
@@ -106,6 +31,8 @@
     /* background: linear-gradient(135deg, rgba(26, 31, 53, 0.9) 0%, rgba(19, 23, 37, 0.95) 100%); */
     z-index: 1;
   }
+  
+
   
 
   
@@ -193,4 +120,83 @@
     }
   }
   
-  
+  .marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: transparent;
+    padding: 2rem 0;
+    position: relative;
+    margin-bottom: -6rem;
+}
+
+.marquee-content {
+    display: inline-flex;
+    animation: marquee 30s linear infinite;  /* Slowed down for smoother effect */
+    white-space: nowrap;
+    will-change: transform;  /* Optimizes animation performance */
+    transform: translateZ(0);  /* Hardware acceleration */
+    background: transparent;
+
+}
+
+.logo-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2rem;  /* Increased spacing between logos */
+    transition: transform 0.3s ease;  /* Smooth hover transition */
+}
+
+.logo-item img {
+    height: 7rem;
+    object-fit: contain;
+    transition: all 0.3s ease;
+    
+}
+
+.logo-item:hover img {
+    opacity: 1;
+    filter: grayscale(0%);  /* Remove grayscale on hover */
+    transform: scale(1.05);  /* Slight zoom on hover */
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 2rem));  /* Adjusted for smoother loop */
+    }
+}
+
+/* Smooth pause on hover */
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+/* Added smooth transitions for pause/resume */
+.marquee-content {
+    transition: animation-play-state 0.3s ease;
+}
+
+/* Optional: Add subtle fade edges */
+.marquee-container::before,
+.marquee-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    z-index: 2;
+}
+
+.marquee-container::before {
+    left: 0;
+    background: linear-gradient(to right, white, transparent);
+}
+
+.marquee-container::after {
+    right: 0;
+    background: linear-gradient(to left, white, transparent);
+}
+
