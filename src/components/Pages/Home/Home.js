@@ -465,6 +465,10 @@ const originalCards = [
     }
   ];
 
+
+      
+
+
   const renderStars = () => {
     return [...Array(5)].map((_, index) => (
       <Star 
@@ -889,6 +893,8 @@ const originalCards = [
         ))}
       </div>
     </div>
+
+ 
 
     <div className="carousel-container">
       <button 

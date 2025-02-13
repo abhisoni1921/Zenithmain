@@ -2,6 +2,7 @@ import React  from 'react';
 import './Content.css'
 import { useEffect , useRef } from 'react';
 import  { useState  } from 'react';
+import { motion } from 'framer-motion';
 
 
 
@@ -130,7 +131,15 @@ const Content = () => {
 
         
 
-          
+          const brands = [
+            { name: 'IC Solutions', logo: 'https://s3-us-west-2.amazonaws.com/naspovaluepoint/1652128715_ICSolutions%20Logo.jpg' },
+            { name: 'Exotec', logo: 'https://mma.prnewswire.com/media/2072473/Exotec_Logo_2023_Logo.jpg?w=600' },
+            { name: 'Proview', logo: 'https://www.vhv.rs/dpng/d/88-881545_proview-logo-hd-png-download.png' },
+            { name: 'Uniqa', logo: 'https://www.uniqagroup.com/grp/newsroom/UNIQA_mainlogo_blue_V1_4c.png' },
+            { name: 'Clutch', logo: 'https://www.teralogistics.com/wp-content/uploads/2024/02/Movex-Logo-gmail.png' },
+            { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
+            { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
+          ];    
 
   return (
     <div className="-container">
@@ -207,8 +216,101 @@ const Content = () => {
         </div>
       </div>
     </div>
-    
-   
+    <div className="ct-features-container">
+      <motion.h1 
+        className="ct-features-title"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Our Content <span>Feature</span>
+      </motion.h1>
+
+      <div className="ct-features-grid">
+        {/* First Feature Card */}
+        <motion.div
+          className="ct-feature-card1"
+          initial={{ opacity: 0, x: -30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="ct-feature-content">
+            <h2>One Click Demo Import</h2>
+            <p>Instantly install demos, plugins, a child theme with Techco Import's few clicks.Lorem ipsum dolor sit amet, consectetur adipiscing elit, Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className="ct-feature-image">
+            <img src="/img7.jpg" alt="Demo import interface" className="ct-main-image" />
+            <div className="ct-feature-icon">
+              <svg viewBox="0 0 24 24" className="ct-icon">
+                <path d="M13 5l7 7-7 7M5 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Second Feature Card */}
+        <motion.div
+          className="ct-feature-card1"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="ct-feature-content">
+            <h2>Front-end Real-time Editing</h2>
+            <p>Techco beautiful pages effortlessly with drag & drop builders and over 60 custom widgets Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className="ct-feature-image">
+            <img src="/img8.jpg" alt="Real-time editing interface" className="ct-main-image" />
+            <div className="ct-elementor-icon">
+              <svg viewBox="0 0 24 24" className="ct-icon">
+                <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
+        {/* 3rd Feature Card */}
+        <motion.div
+          className="ct-feature-card1"
+          initial={{ opacity: 0, x: 30 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <div className="ct-feature-content">
+            <h2>Back-end Real-time Editing</h2>
+            <p>Techco beautiful pages effortlessly with drag & drop builders and over 60 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className="ct-feature-image">
+            <img src="/img11.jpg" alt="Real-time editing interface" className="ct-main-image" />
+            <div className="ct-elementor-icon">
+              <svg viewBox="0 0 24 24" className="ct-icon">
+                <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
+              </svg>
+            </div>
+          </div>
+        </motion.div>
+      </div>
+    </div>
+    <div className="brands-section">
+    <h2 class="text-3xl font-400 text-center bg-gradient-to-tr from-blue-600 to-teal-500 text-transparent bg-clip-text uppercase">
+    Our Partners
+</h2>
+
+
+
+      <div className="mar-container">
+        <div className="mar-content">
+          {[...brands, ...brands].map((brand, index) => (
+            <div key={index} className="brand-card">
+              <img 
+                src={brand.logo} 
+                alt={brand.name}
+                className="brand-logo"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
 
     </div>
   );

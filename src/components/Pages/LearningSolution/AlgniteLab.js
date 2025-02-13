@@ -83,7 +83,15 @@ const AlgniteLab = () => {
     setTransitionEnabled(true);
     setCurrentIndex(prev => prev - 1);
   };
-
+  const brands = [
+    { name: 'IC Solutions', logo: 'https://s3-us-west-2.amazonaws.com/naspovaluepoint/1652128715_ICSolutions%20Logo.jpg' },
+    { name: 'Exotec', logo: 'https://mma.prnewswire.com/media/2072473/Exotec_Logo_2023_Logo.jpg?w=600' },
+    { name: 'Proview', logo: 'https://www.vhv.rs/dpng/d/88-881545_proview-logo-hd-png-download.png' },
+    { name: 'Uniqa', logo: 'https://www.uniqagroup.com/grp/newsroom/UNIQA_mainlogo_blue_V1_4c.png' },
+    { name: 'Clutch', logo: 'https://www.teralogistics.com/wp-content/uploads/2024/02/Movex-Logo-gmail.png' },
+    { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
+    { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
+  ];
       
   return (
     <div className="Lab-container">
@@ -133,6 +141,23 @@ const AlgniteLab = () => {
         </button>
       </div>
     </div>
+    <div className="brands-section">
+      
+      
+      <div className="marquee-container">
+        <div className="marquee-content">
+          {[...brands, ...brands].map((brand, index) => (
+            <div key={index} className="brand-card">
+              <img 
+                src={brand.logo} 
+                alt={brand.name}
+                className="brand-logo"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
     <div className="Lab-hero-container">
       <div className="Lab-hero-content">
 
@@ -141,52 +166,9 @@ const AlgniteLab = () => {
       </div>
       
     </div>
-    <div className="relative max-w-6xl mx-auto p-5">
-      <button 
-        className="absolute top-1/2 -left-16 -translate-y-1/2 bg-white border-2 border-gray-800 rounded-full w-10 h-10 cursor-pointer text-xl z-10 hover:bg-gray-800 hover:text-white"
-        onClick={handlePrev}
-      >
-        &lt;
-      </button>
-      
-      <div className="overflow-hidden relative">
-        <div
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{
-            transform: `translateX(-${(currentIndex - 2) * (100 / 3)}%)`,
-            transition: transitionEnabled ? 'transform 0.5s ease' : 'none',
-          }}
-        >
-          {extendedCards.map((card, index) => (
-            <div key={index} className="flex-none w-1/3 px-2">
-              <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                <img 
-                  src={card.imageUrl} 
-                  alt={card.description} 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-4">
-                  <p className="text-gray-600 text-sm mb-4">{card.description}</p>
-                  <a 
-                    href={card.link}
-                    className="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <button 
-        className="absolute top-1/2 -right-16 -translate-y-1/2 bg-white border-2 border-gray-800 rounded-full w-10 h-10 cursor-pointer text-xl z-10 hover:bg-gray-800 hover:text-white"
-        onClick={handleNext}
-      >
-        &gt;
-      </button>
-    </div>
+     
+   
+    
 
     </div>
   );

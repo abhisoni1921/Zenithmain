@@ -53,51 +53,105 @@ const DiscoverUs = () => {
     { icon: <Cpu />, name: 'High-Tech' }
   
   ];
-  
+  useEffect(() => {
+    // Add animation class after component mounts
+    const elements = document.querySelectorAll('.animate-on-mount');
+    elements.forEach((element, index) => {
+      setTimeout(() => {
+        element.classList.add('visible');
+      }, index * 200);
+    });
+  }, []);
   return (
     // a
     <div  className="about-container">
-    <div className="Dis-hero-container">
-      <div className="Dis-hero-content">
-        <div className="Dis-hero-image-container">
-          <img 
-            src="/Aboutus.gif" 
-            alt="Developer working on laptop" 
-            className="Dis-hero-image"
+      <div className="header-container">
+      <video 
+        className="background-video" 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+      >
+        <source 
+          src="/video7.mp4" 
+          type="video/mp4" 
+        />
+      </video>
+      <div className="overlay"></div>
+      <div className="background-animation">
+        {[...Array(50)].map((_, index) => (
+          <div 
+            key={index} 
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${5 + Math.random() * 5}s`
+            }}
           />
-        </div>
+        ))}
+      </div>
+      <div className="content">
         
-        <div className="Dis-hero-text">
-
-          
-          <h1 className="Dis-hero-title">
-          Get to Know Us!
-          </h1>
-          
-          <p className="Dis-hero-description">
-            Reliable Developer Upskilling Platform to speed up the learning curve of entry-level developers.
-          </p>
-          
-
-        </div>
+        <h1 className="title">
+          Get to know us
+        </h1>
+        {/* <p className="subtitle">
+          The premium WordPress theme designed to elevate your online<br />
+          presence to unparalleled heights.
+        </p> */}
+       
       </div>
     </div>
 
+
     
 
-   
-      
-    <section className="about-section">
-        <div><h1 className="academy-title">About ZESPL</h1>
-        
-        <p>Zenith thrives through excellence by providing excellent services in the Education sphere. Our journey began in the year 2011 and since then we have seen ourselves making a significant mark in the aptitude training industry and content development, thereby justifying our company name "Zenith" - the highest point.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-
+    <div className="ab-container">
+      <div className="content-wrapper">
+        <div className="left-section animate-on-mount">
+          <div className="lt-container">
+            <img 
+              src="https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?t=st=1739438706~exp=1739442306~hmac=428245df16c5ff70f60f234743acfe903e07a39e88fac771e3e5de46c1411425&w=740" 
+              alt="Dashboard Preview" 
+              className="lt-image"
+            />
+            <div className="decorative-shape"></div>
+            <div className="decorative-glasses"></div>
+          </div>
         </div>
         
+        <div className="right-section">
+          <h1 className="title animate-on-mount">
+            <span className="ab">ABOUT</span>
+            <span className="us">US</span>
+          </h1>
+          
+        
+          
+         
+          
+          <p className="sub-text animate-on-mount">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+          sed do eiusmod tempor incididunt ut labore
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
+            enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore quis nostrud exercitation ullamco laboris 
+            nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+            sed do eiusmod tempor incididunt ut labore
+          </p>
+          
+          <button className="learn-more-btn animate-on-mount">
+            Learn more
+          </button>
+        </div>
+      </div>
+    </div>
+      
 
-      </section>
       <div className="academy-container">
       <div className="academy-content">
         <h1 className="academy-title">Our Vision how to work smarter</h1>
