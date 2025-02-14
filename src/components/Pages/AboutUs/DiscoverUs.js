@@ -62,6 +62,42 @@ const DiscoverUs = () => {
       }, index * 200);
     });
   }, []);
+
+  const abtCards = [
+    {
+      icon: "🎯",
+      title: "Our Mission",
+      description: "To deliver innovative solutions that transform businesses and enrich customer experiences through cutting-edge technology."
+    },
+    {
+      icon: "👁️",
+      title: "Our Vision",
+      description: "To become the global leader in digital transformation, setting new standards for excellence and innovation."
+    },
+    {
+      icon: "🌟",
+      title: "Core Values",
+      description: "Excellence, Integrity, Innovation, and Customer-First approach drive everything we do."
+    },
+    {
+      icon: "📈",
+      title: "Our Growth",
+      description: "Starting from humble beginnings, we've grown into a dynamic organization serving clients worldwide."
+    },
+    {
+      icon: "🤝",
+      title: "Our Team",
+      description: "A diverse group of passionate professionals working together to bring creative solutions to complex challenges."
+    },
+    {
+      icon: "🎯",
+      title: "Our Impact",
+      description: "Making a difference through sustainable practices, community engagement, and transformative solutions."
+    }
+  ];
+
+
+
   return (
     // a
     <div  className="about-container">
@@ -151,6 +187,25 @@ const DiscoverUs = () => {
       </div>
     </div>
       
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>Leadership Ideas Into Digital Reality</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              <div className="abt-icon">{card.icon}</div>
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
 
       <div className="academy-container">
       <div className="academy-content">

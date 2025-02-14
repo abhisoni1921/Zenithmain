@@ -959,7 +959,6 @@ html {
 
 .learn-more-btn {
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-  border: 2px solid #1a237e;
   color: #fff;
   padding: 0.4rem 1rem;
   font-size: 1rem;
@@ -968,6 +967,7 @@ html {
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  border-radius: 4px;
 }
 
 .learn-more-btn:hover {
@@ -1025,5 +1025,136 @@ html {
   
   .main-text {
     font-size: 1.2rem;
+  }
+}
+
+.ABT{
+  max-width: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.abt-container {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: transparent;
+}
+
+.abt-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.abt-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+ 
+
+.abt-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.abt-card {
+  background: transparent;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  min-height: 140px;
+  border: #0d1f3c 2px solid;
+}
+.abt-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 102, 255, 0.15);
+  border-color: #0066ff;
+}
+.abt-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.abt-card:hover::before {
+  transform: scaleX(1);
+}
+
+.abt-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.abt-header-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.abt-icon {
+  background: #f0f7ff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.abt-card:hover .abt-icon {
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  transform: scale(1.1) rotate(5deg);
+}
+
+.abt-title {
+  font-size: 1.5rem;
+  color: #333;
+  transition: color 0.3s ease;
+  margin: 0;
+  font-weight: 400;
+}
+
+.abt-card:hover .abt-title {
+  color: #12100E;
+}
+
+.abt-description {
+  color: #666;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .abt-container {
+    padding: 2rem 1rem;
+  }
+  
+  .abt-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .abt-header h1 {
+    font-size: 2rem;
+  }
+  
+ 
+  
+  .abt-card {
+    padding: 1.25rem;
   }
 }
