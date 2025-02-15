@@ -4,6 +4,7 @@ import { useEffect , useRef } from 'react';
 import  { useState  } from 'react';
 import { motion } from 'framer-motion';
 import MailIcon from '@mui/icons-material/Mail';
+import { Pencil, Key } from 'lucide-react';
 
 
 
@@ -140,7 +141,20 @@ const Content = () => {
             { name: 'Clutch', logo: 'https://www.teralogistics.com/wp-content/uploads/2024/02/Movex-Logo-gmail.png' },
             { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
             { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
-          ];    
+          ];  
+          
+          const features = [
+            {
+              icon: <Pencil size={24} />,
+              title: "Carefully Crafted Design",
+              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio dolorem obcaecati assumenda voluptatem, quod illum ab blanditiis nostrum ex fugiat."
+            },
+            {
+              icon: <Key size={24} />,
+              title: "Free Updates & Support",
+              description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio dolorem obcaecati assumenda voluptatem, quod illum ab blanditiis nostrum ex fugiat."
+            }
+          ];
 
   return (
     <div className="-container">
@@ -184,6 +198,7 @@ const Content = () => {
   
       </div>
     </div>
+    
     <div className="CT-container">
       <div className="CT-content">
         <div className="illustration-container">
@@ -312,7 +327,47 @@ const Content = () => {
         </div>
       </div>
     </div>
-
+    
+    <div className="Adaptive-container">
+    <motion.h1 
+        className="ct-features-title"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+      >
+        Virtual <span>Instructor</span>
+      </motion.h1>
+      
+      
+      <div className="Adaptive-content">
+        <div className="Adaptive-image">
+          <img 
+            src="./img7.jpg"
+            alt="Responsive devices showing website"
+            className="Adaptive-image"
+          />
+        </div>
+        
+        <div className="Adaptive-features-list">
+          {features.map((feature, index) => (
+            <div key={index} className="Adaptive-feature-item">
+              <div className="Adaptive-feature-icon">
+                {feature.icon}
+              </div>
+              <div className="Adaptive-Adaptive-feature-text">
+                <h3 className="Adaptive-feature-title">{feature.title}</h3>
+                <p className="Adaptive-feature-description">{feature.description}</p>
+              </div>
+            </div>
+          ))}
+          
+          <button className="discover-button1 ">
+            View More
+          </button>
+        </div>
+      </div>
+    </div>
+    
 
 <footer className="footer-container">
       <div className="top-section">
