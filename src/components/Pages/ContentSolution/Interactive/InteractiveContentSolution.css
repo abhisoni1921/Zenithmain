@@ -538,7 +538,7 @@
     }
   }
 
-  .D-hero-container {
+  /* .D-hero-container {
     display: flex;
     gap: 4rem;
     max-width: 1200px;
@@ -757,7 +757,7 @@
       width: 100%;
       margin-top: 1rem;
     }
-  }
+  } */
   
   .game-container {
     background: transparent;

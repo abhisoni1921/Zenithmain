@@ -477,8 +477,8 @@
   padding: 2rem 0;
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   overflow: hidden;
-  margin-top: 0rem;
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 11rem;
 }
 
 .brand-header {

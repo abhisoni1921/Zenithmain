@@ -503,10 +503,10 @@ h2 {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Hero Section */
+ 
 
 
-/* Feature Component */
+/* course-categories */
 
 
 .course-categories {
@@ -515,8 +515,8 @@ h2 {
   margin: 0 auto;
 }
 
-.header {
-
+.header1 {
+  display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -524,7 +524,7 @@ h2 {
 }
 
 .icon-wrapper {
-  background-color: #e6f7f5;
+  background-color: transparent;
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
@@ -539,16 +539,16 @@ h2 {
 }
 
 .course-categories h1 {
-  text-align: center;
   font-size: 2.5rem;
-  color: #1a1a1a;
-  margin-bottom: 3rem;
-  font-weight: 600;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
 }
 
 .course-categories h2 {
-  color: #1a1a1a;
-  font-size: 1.25rem;
+  color: #333;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -562,20 +562,18 @@ h2 {
 .category-card {
   display: flex;
   align-items: center;
-  padding: 1rem 1.5rem;
-  background-color: white;
+  padding: 0.6rem 1.1rem;
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease;
   cursor: pointer;
-  color: #000000;
 }
 
 .category-card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-  color: #fff !important;
 }
 
 .icon-container {
@@ -598,7 +596,7 @@ h2 {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;  /* Use Inter, Arial, or Roboto for a clean look */
   font-weight: 600;  /* Semi-bold */  
-  color: #000000;  /* Black text */
+  color: #fff;  /* Black text */
   letter-spacing: normal;
 }
 
@@ -615,6 +613,8 @@ h2 {
     grid-template-columns: 1fr;
   }
 }
+
+
 
 
 /* Training Services Section */
@@ -1042,7 +1042,8 @@ body {
 }
 
 .lt-logo {
-  height: 40px;
+  height: 80px;
+  width: 200px;
 }
 
 .social-icons {

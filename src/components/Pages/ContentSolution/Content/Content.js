@@ -3,12 +3,13 @@ import './Content.css'
 import { useEffect , useRef } from 'react';
 import  { useState  } from 'react';
 import { motion } from 'framer-motion';
+import MailIcon from '@mui/icons-material/Mail';
 
 
 
 const Content = () => {
 
-
+  const currentYear = new Date().getFullYear();
         useEffect(() => {
           window.scrollTo(0, 0);
         }, []);
@@ -312,6 +313,97 @@ const Content = () => {
       </div>
     </div>
 
+
+<footer className="footer-container">
+      <div className="top-section">
+        <div className="logo-section">
+          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
+          <div className="social-icons">
+            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-youtube"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>CollegeConnect</h3>
+            <ul>
+              <li>Integrated Degree Programs</li>
+              <li>Employability Skilling Programs</li>
+              <li>Courses - Core Engineering & IT</li>
+              <li>IITM Parvartak Joint Certification Programs</li>
+              <li>Certification Courses - Commerce & Science</li>
+              <li>Specialization Stacks - Commerce & Science</li>
+              <li>Assessment Solutions</li>
+              <li>Immersion</li>
+              <li>Academic Partners</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Workonnect</h3>
+            <ul>
+              <li>Before Joining Programme</li>
+              <li>Hire Train Deploy Model</li>
+              <li>Role/Product Based-Skilling</li>
+              <li>Assessment Solutions</li>
+              <li>Enterprise Partners</li>
+            </ul>
+            <h3>Other Initiatives</h3>
+            <ul>
+              <li>Emerging Tech</li>
+              <li>Skill Exchange</li>
+              <li>Engineers Ensemble</li>
+              <li>Micro Learning</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li>About Us</li>
+              <li>Capabilities</li>
+              <li>Core Solutions</li>
+              <li>Leadership</li>
+              <li>Mentors</li>
+              <li>Experts</li>
+              <li>Blogs</li>
+              <li>EduTech Connect</li>
+              <li>Newsroom</li>
+              <li>Events</li>
+              <li>Testimonials</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Contact</h3>
+            <p>Address: 207, 1st floor, Sainik Vihar,</p>
+            <p>Pitampura, Delhi, India - 110034</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+
+            <h3>Support</h3>
+            <p>Learning Management System:</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bottom-section">
+        <img src="" alt="CMMI Logo" className="cmmi-logo" />
+        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
+        <div className="bottom-links">
+          <a href="#">Support</a>
+          <span>|</span>
+          <a href="#">Disclaimer</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 };

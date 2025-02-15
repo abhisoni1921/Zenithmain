@@ -272,12 +272,7 @@ drawing, creating a sense of motion when viewed in succession. </p></span>
       </div>
 
       <div className="A-right-section">
-        <div className="A-header-badge">
-          <div className="A-badge">
-            <div className="A-badge-icon">⚡</div>
-            Get More About Us
-          </div>
-        </div>
+         
 
         <h1>Adaptive learning</h1>
 

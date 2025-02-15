@@ -1,7 +1,7 @@
 import React from 'react';
 
 import  { useEffect } from 'react';
-
+import MailIcon from '@mui/icons-material/Mail';
 import './DiscoverUs.css';
 
 import { Lightbulb, PenTool, Brain, Activity, 
@@ -12,7 +12,7 @@ import { Lightbulb, PenTool, Brain, Activity,
 
 
 const DiscoverUs = () => {
-  
+  const currentYear = new Date().getFullYear();
   useEffect(() => {
     const observerCallback = (entries) => {
       entries.forEach(entry => {
@@ -207,94 +207,164 @@ const DiscoverUs = () => {
     </div>
     </div>
 
-      <div className="academy-container">
-      <div className="academy-content">
-        <h1 className="academy-title">Our Vision how to work smarter</h1>
-        <p className="academy-description">
-          Asana Academy is here to guide you through all the basics and more
-          —so you and your team can work better together.
-        </p>
-        <button className="get-started-button">Get started</button>
-      </div>
-      <div className="academy-image">
-        <div className="circle-graphic">
-          <div className="inner-circle"></div>
-          <div className="lines"></div>
-        </div>
-      </div>
-    </div>
-   
-    <div className="D-hero-container">
-      <div className="D-left-section">
-        <div className="D-video-card">
-          <div className="D-video-thumbnail">
-            <div className="D-play-button">
-              <Play fill="white" size={24} />
+     
+   <div className="bag">
+    <div className="A-hero-container">
+          <div className="A-left-section">
+            <div className="A-video-card">
+              <div className="A-video-thumbnail">
+                <div className="A-play-button">
+                  <Play fill="white" size={24} />
+                </div>
+                <img 
+                  src="/img6.jpg" 
+                  alt="Students learning"
+                  className="A-thumbnail-image"
+                />
+              </div>
             </div>
-            <img 
-              src="/img9.jpg" 
-              alt="Students learning"
-              className="D-thumbnail-image"
-            />
-          </div>
-        </div>
-        
-        <div className="D-support-card">
-          <Phone className="D-phone-icon" />
-          <div className="D-support-text">
-            <div>ONLINE SUPPORT</div>
-            <div className="D-phone-number">+258 152 3659</div>
-          </div>
-        </div>
-        
-        <div className="D-students-image">
-          <img 
-            src="/img10.jpg" 
-            alt="Students collaborating"
-            className="D-collaboration-image"
-          />
-        </div>
-      </div>
-
-      <div className="D-right-section">
-        <div className="D-header-badge">
-          <div className="D-badge">
-            <div className="D-badge-icon">⚡</div>
-            Get More About Us
-          </div>
-        </div>
-
-        <h1>Leadership </h1>
-
-        <p className="D-description">
-          Compellingly procrastinate equity invested markets with efficient process improvements, 
-          actualize mission-critical partnerships with integrated portals. Authoritatively optimize 
-          low-risk high-yield metrics and plug-and-play potentialities.
-        </p>
-
-        <div className="D-stats-container">
-          <div className="D-stat-card">
-            <Laptop className="D-stat-icon" />
-            <div className="D-stat-content">
-              <div className="D-stat-number">9.5K+</div>
-              <div className="D-stat-label">Total active students taking gifted courses</div>
+            
+            
+            
+            <div className="A-students-image">
+              <img 
+                src="/img5.jpg" 
+                alt="Students collaborating"
+                className="A-collaboration-image"
+              />
             </div>
           </div>
-
-          <div className="D-stat-card">
-            <GraduationCap className="D-stat-icon" />
-            <div className="D-stat-content">
-              <div className="D-stat-number">6.7K+</div>
-              <div className="D-stat-label">Total active students taking gifted courses</div>
-            </div>
-          </div>
-        </div>
-
-        <button className="D-cta-button">Start Free Trial</button>
-      </div>
-    </div>
     
-      
+          <div className="A-right-section">
+             
+    
+          <h1 className="title animate-on-mount">
+            <span className="ab">Leadership</span>
+            <span className="us">Skills</span>
+          </h1>
+    
+            <p className="A-description">
+              Compellingly procrastinate equity invested markets with efficient process improvements, 
+              actualize mission-critical partnerships with integrated portals. Authoritatively optimize 
+              low-risk high-yield metrics and plug-and-play potentialities.
+            </p>
+    
+            <div className="A-stats-container">
+              <div className="A-stat-card">
+                <Laptop className="A-stat-icon" />
+                <div className="A-stat-content">
+                  <div className="A-stat-number">9.5K+</div>
+                  <div className="A-stat-label">Total active students taking gifted courses</div>
+                </div>
+              </div>
+    
+              <div className="A-stat-card">
+                <GraduationCap className="A-stat-icon" />
+                <div className="A-stat-content">
+                  <div className="A-stat-number">6.7K+</div>
+                  <div className="A-stat-label">Total active students taking gifted courses</div>
+                </div>
+              </div>
+            </div>
+    
+            <button className="learn-more-btn animate-on-mount">
+            View More
+          </button>
+          </div>
+          <div
+          ></div>
+        </div>
+        </div>
+    <footer className="footer-container">
+      <div className="top-section">
+        <div className="logo-section">
+          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
+          <div className="social-icons">
+            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-youtube"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>CollegeConnect</h3>
+            <ul>
+              <li>Integrated Degree Programs</li>
+              <li>Employability Skilling Programs</li>
+              <li>Courses - Core Engineering & IT</li>
+              <li>IITM Parvartak Joint Certification Programs</li>
+              <li>Certification Courses - Commerce & Science</li>
+              <li>Specialization Stacks - Commerce & Science</li>
+              <li>Assessment Solutions</li>
+              <li>Immersion</li>
+              <li>Academic Partners</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Workonnect</h3>
+            <ul>
+              <li>Before Joining Programme</li>
+              <li>Hire Train Deploy Model</li>
+              <li>Role/Product Based-Skilling</li>
+              <li>Assessment Solutions</li>
+              <li>Enterprise Partners</li>
+            </ul>
+            <h3>Other Initiatives</h3>
+            <ul>
+              <li>Emerging Tech</li>
+              <li>Skill Exchange</li>
+              <li>Engineers Ensemble</li>
+              <li>Micro Learning</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li>About Us</li>
+              <li>Capabilities</li>
+              <li>Core Solutions</li>
+              <li>Leadership</li>
+              <li>Mentors</li>
+              <li>Experts</li>
+              <li>Blogs</li>
+              <li>EduTech Connect</li>
+              <li>Newsroom</li>
+              <li>Events</li>
+              <li>Testimonials</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Contact</h3>
+            <p>Address: 207, 1st floor, Sainik Vihar,</p>
+            <p>Pitampura, Delhi, India - 110034</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+
+            <h3>Support</h3>
+            <p>Learning Management System:</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bottom-section">
+        <img src="" alt="CMMI Logo" className="cmmi-logo" />
+        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
+        <div className="bottom-links">
+          <a href="#">Support</a>
+          <span>|</span>
+          <a href="#">Disclaimer</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 };
