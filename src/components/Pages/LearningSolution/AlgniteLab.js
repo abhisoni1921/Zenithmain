@@ -92,7 +92,36 @@ const AlgniteLab = () => {
     { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
     { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
   ];
-      
+  const cardsData = [
+    {
+      title: 'Web Development',
+      image: 'https://img.freepik.com/free-photo/3d-render-low-poly-plexus-design-network-communications_1048-14542.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'Frontend Projects', url: '#' },
+        { text: 'Backend Projects', url: '#' },
+        { text: 'Full Stack Projects', url: '#' }
+      ]
+    },
+    {
+      title: 'Mobile Apps',
+      image: 'https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'iOS Projects', url: '#' },
+        { text: 'Android Projects', url: '#' },
+        { text: 'Cross Platform', url: '#' }
+      ]
+    },
+    {
+      title: 'Cloud Solutions',
+      image: 'https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'AWS Projects', url: '#' },
+        { text: 'Azure Projects', url: '#' },
+        { text: 'Google Cloud', url: '#' }
+      ]
+    }
+  ];
+
   return (
     <div className="Lab-container">
 
@@ -160,13 +189,36 @@ const AlgniteLab = () => {
     </div>
     <div className="Lab-hero-container">
       <div className="Lab-hero-content">
+      
 
         
  
       </div>
       
     </div>
-     
+    <div className="HI-cards-container">
+      {cardsData.map((card, index) => (
+        <div key={index} className="HI-card-container">
+          <img 
+            src={card.image} 
+            alt={card.title} 
+            className="HI-card-image"
+          />
+          <div className="HI-overlay">
+            <h3 className="HI-overlay-title">{card.title}</h3>
+            <ul className="HI-links-list">
+              {card.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a href={link.url} className="HI-link-item">
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
    
     
 

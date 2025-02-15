@@ -337,6 +337,46 @@ const originalCards = [
       description: "Create your own custom Theme or section by copying, pasting, and assembling."
     }
   ];
+  const cardsData = [
+    {
+      title: 'Learning',
+      image: 'https://img.freepik.com/free-photo/3d-render-low-poly-plexus-design-network-communications_1048-14542.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'Algnite Apti', url: '#' },
+        { text: 'Algnite Tech', url: '#' },
+        { text: 'Algnite Commune', url: '#' },
+        { text: 'Algnite Company Specific', url: '#' },
+        { text: 'Algnite Lab', url: '#' },
+        { text: 'Algnite LMS', url: '#' }
+      ]
+    },
+    {
+      title: 'Assessment',
+      image: 'https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'Algnite Apti Assess', url: '#' },
+        { text: 'Algnite Tech Assess', url: '#' },
+        { text: 'Algnite Personality Access', url: '#' },
+        { text: 'Algnite HIRE', url: '#' },
+        { text: 'Algnite Assess360', url: '#' }
+      ]
+    },
+    {
+      title: 'Content',
+      image: 'https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?semt=ais_hybrid',
+      links: [
+        { text: 'Assessment Content', url: '#' },
+        { text: 'Learning Content', url: '#' },
+        { text: 'Interactive Content', url: '/InteractiveContentSolution' },
+        { text: 'K12 Solutions', url: '#' },
+        { text: 'Translation Services', url: '#' }
+      ]
+    }
+  ];
+  // Assessment Content 
+  // Learning Content 
+  // Interactive Content
+  //  K12 Solutions  Translation Services
   const logos = [
     { 
       name: 'Cloudways',
@@ -628,8 +668,30 @@ const originalCards = [
         </p>
       </div>
       
-
-      <div className="flex flex-wrap justify-center">
+      <div className="HI-cards-container">
+      {cardsData.map((card, index) => (
+        <div key={index} className="HI-card-container">
+          <img 
+            src={card.image} 
+            alt={card.title} 
+            className="HI-card-image"
+          />
+          <div className="HI-overlay">
+            <h3 className="HI-overlay-title">{card.title}</h3>
+            <ul className="HI-links-list">
+              {card.links.map((link, linkIndex) => (
+                <li key={linkIndex}>
+                  <a href={link.url} className="HI-link-item">
+                    {link.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+      {/* <div className="flex flex-wrap justify-center">
       {cards.map((card, index) => (
         <Snip1273Card
           key={index}
@@ -638,7 +700,7 @@ const originalCards = [
           description={card.description}
         />
       ))}
-    </div>
+    </div> */}
     </div>
 
     {/* <div className="new-banner-container">
