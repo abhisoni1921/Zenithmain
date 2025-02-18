@@ -83,7 +83,7 @@ const bannerData = [
     id: 2,
     title: "Full-Stack Development",
     description: "Master modern web development with hands-on projects",
-    image: "/pink.gif",
+    image: "/dblue.gif",
     buttonText: "Explore Courses",
     gradient: "bg-gradient-2"
   },
