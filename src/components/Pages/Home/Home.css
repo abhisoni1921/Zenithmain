@@ -74,7 +74,12 @@
 
 .bg-gradient-2 {
  
-  background: linear-gradient(140deg, #321575 0%, #8D0B93 50%, #FF0080 100%);
+  background: linear-gradient(to right, #0d47a1, #0b3c91);
+  /* background: linear-gradient(to right, #0d47a1, #8e24aa); */
+  /* background: linear-gradient(to right, #0a1e39, #0b3c91); */
+
+
+
 }
 
 .bg-gradient-3 {
@@ -542,7 +547,7 @@ h2 {
   color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   opacity: 0;
   transition: opacity 0.3s ease;
@@ -559,8 +564,8 @@ h2 {
   font-size: 2rem;
   color: #FFF;
   text-align: left;
-  margin: 1rem;
-  padding: 1rem;
+  margin: -2rem;
+  padding: 3rem;
 }
 
 .HI-links-list {
