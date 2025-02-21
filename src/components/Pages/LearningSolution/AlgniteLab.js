@@ -121,7 +121,30 @@ const AlgniteLab = () => {
       ]
     }
   ];
+  const [activePanel, setActivePanel] = useState(null);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
 
+  const togglePanel = (panel) => {
+    setActivePanel(activePanel === panel ? null : panel);
+  };
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prevState => ({
+      ...prevState,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form submitted:', formData);
+    // Add your form submission logic here
+  };
   return (
     <div className="Lab-container">
 
@@ -220,7 +243,100 @@ const AlgniteLab = () => {
       ))}
     </div>
    
-    
+    <div className="contact-container">
+      <div className="sidebar">
+        <h2 className="us">Navigation</h2>
+        <div className="accordion">
+          <div className="accordion-item">
+            <button 
+              className={`accordion-button ${activePanel === 'howLong' ? 'active' : ''}`}
+              onClick={() => togglePanel('howLong')}
+            >
+              How long does it take to respond?
+            </button>
+            {activePanel === 'howLong' && (
+              <div className="panel">
+                <p>We typically respond within 24-48 hours during business days.</p>
+              </div>
+            )}
+          </div>
+
+          <div className="accordion-item">
+            <button 
+              className={`accordion-button ${activePanel === 'accordion' ? 'active' : ''}`}
+              onClick={() => togglePanel('accordion')}
+            >
+              Additional Information
+            </button>
+            {activePanel === 'accordion' && (
+              <div className="panel">
+                <p>Explore more about our services and offerings here.</p>
+              </div>
+            )}
+          </div>
+
+          <div className="accordion-item">
+            <button 
+              className={`accordion-button ${activePanel === 'add' ? 'active' : ''}`}
+              onClick={() => togglePanel('add')}
+            >
+              Custom Options
+            </button>
+            {activePanel === 'add' && (
+              <div className="panel">
+                <p>Add your custom content or requests here.</p>
+              </div>
+            )}
+          </div>
+
+          <div className="accordion-item">
+            <button 
+              className={`accordion-button ${activePanel === 'research' ? 'active' : ''}`}
+              onClick={() => togglePanel('research')}
+            >
+              Research Resources
+            </button>
+            {activePanel === 'research' && (
+              <div className="panel">
+                <p>Access our latest research papers and studies.</p>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      <div className="form-section">
+        <h2 className="us" >Get in Touch</h2>
+        <p className="form-subtitle">We'd love to hear from you! Fill out the form below.</p>
+        
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email Address"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          ></textarea>
+          <button type="submit" className="submit-btn">Send Message</button>
+        </form>
+      </div>
+    </div>
 
     </div>
   );

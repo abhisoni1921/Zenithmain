@@ -756,12 +756,7 @@ const originalCards = [
     
 
     <div className="course-categories">
-      <div className="header">
-        <div className="icon-wrapper">
-          <Lightbulb className="header-icon" />
-        </div>
-        <h2>Our Course Categories</h2>
-      </div>
+      
       
       <h1>Select The Industry Where You Want To Learn</h1>
       
@@ -932,7 +927,10 @@ const originalCards = [
   </div>
 </div>
 </section>
+
+
 <div className="consulting-container">
+  
       <div className="C-services-grid">
         {services.map((service, index) => (
           <div 
@@ -957,8 +955,9 @@ const originalCards = [
     </div>
 
  
-
+    <h1 className="M-header">Laser focused on WordPress</h1>
     <div className="carousel-container">
+    
       <button 
         className="carousel-button carousel-button-prev"
         onClick={handlePrev}

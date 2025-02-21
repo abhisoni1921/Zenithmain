@@ -370,6 +370,11 @@
 }
 
 /* Responsive Design */
+/* Existing styles remain unchanged unless modified below */
+
+/* Responsive Design */
+
+/* Tablet and Small Desktop (max-width: 1024px) - Already good, keeping as is */
 @media (max-width: 1024px) {
   .slide-content {
     grid-template-columns: 1fr;
@@ -391,23 +396,234 @@
   }
 }
 
+/* Mobile Devices (max-width: 768px) - Enhanced */
 @media (max-width: 768px) {
   .banner-container {
     height: auto;
     min-height: 100vh;
+    margin-top: -60px; /* Reduced for smaller screens */
   }
 
-  .slide-title {
-    font-size: 2rem;
+  .navigation-buttons {
+    inset: 40px 0 0 0; /* Adjusted for better positioning */
+    padding: 0 0.75rem;
+  }
+
+  .nav-button {
+    padding: 0.4rem; /* Slightly smaller padding */
+  }
+
+  .nav-icon {
+    width: 1.25rem; /* Slightly smaller icons */
+    height: 1.25rem;
+  }
+
+  .slide {
+    padding: 3rem 1.5rem; /* Reduced padding for mobile */
   }
 
   .slide-content {
-    margin-top: 60px;
-    padding: 1rem;
+    margin-top: 50px; /* Adjusted margin */
+    padding: 0 1rem;
+    gap: 1rem; /* Smaller gap between elements */
+  }
+
+  .slide-text {
+    gap: 1rem; /* Reduced gap */
+  }
+
+  .slide-title {
+    font-size: 1.75rem; /* Further reduced for mobile */
+    margin-bottom: 0.75rem;
+  }
+
+  .slide-description {
+    font-size: 0.9rem; /* Smaller text for readability */
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .slide-button {
+    padding: 0.6rem 1rem; /* Slightly smaller button */
+    font-size: 0.9rem;
   }
 
   .slide-image-container {
     max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .image-wrapper {
+    width: 100%; /* Full width on mobile */
+    height: auto;
+  }
+
+  .slide-image {
+    border-radius: 0.75rem; /* Slightly smaller radius */
+  }
+
+  .pagination {
+    bottom: 0.75rem; /* Closer to bottom */
+    gap: 0.4rem;
+  }
+
+  .pagination-dot {
+    width: 0.6rem;
+    height: 0.6rem;
+  }
+
+  .pagination-dot.active {
+    width: 1.25rem;
+  }
+}
+
+/* Small Mobile Devices (max-width: 480px) - Extra detail for smaller screens */
+@media (max-width: 480px) {
+  .banner-container {
+    margin-top: -40px; /* Further reduced */
+  }
+
+  .navigation-buttons {
+    inset: 30px 0 0 0; /* Adjusted for smaller screens */
+    padding: 0 0.5rem;
+  }
+
+  .nav-button {
+    padding: 0.3rem;
+  }
+
+  .nav-icon {
+    width: 1rem; /* Even smaller icons */
+    height: 1rem;
+  }
+
+  .slide {
+    padding: 2rem 1rem; /* Further reduced padding */
+  }
+
+  .slide-content {
+    margin-top: 40px;
+    padding: 0 0.75rem;
+  }
+
+  .slide-text {
+    gap: 0.75rem;
+  }
+
+  .slide-title {
+    font-size: 1.5rem; /* Smaller title */
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .animated-char {
+    animation: charZoomIn 0.3s forwards; /* Faster animation */
+  }
+
+  .slide-description {
+    font-size: 0.85rem; /* Even smaller text */
+    line-height: 1.4;
+  }
+
+  .slide-button {
+    padding: 0.5rem 0.75rem; /* Smaller button */
+    font-size: 0.85rem;
+    border-radius: 0.4rem;
+  }
+
+  .slide-image-container {
+    max-width: 90%; /* Slightly less than full width for balance */
+  }
+
+  .slide-image {
+    border-radius: 0.5rem; /* Smaller radius */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Lighter shadow */
+  }
+
+  .pagination {
+    bottom: 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .pagination-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .pagination-dot.active {
+    width: 1rem;
+  }
+
+  /* Adjust animations for faster loading on mobile */
+  @keyframes slideZoomIn {
+    from {
+      opacity: 0;
+      transform: scale(1.05); /* Reduced scale for performance */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes textZoomIn {
+    from {
+      opacity: 0;
+      transform: scale(0.9) translateY(20px); /* Adjusted */
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+
+  @keyframes imageZoomPulse {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.02); /* Reduced pulse */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+/* Very Small Devices (max-width: 360px) - Extra refinement */
+@media (max-width: 360px) {
+  .slide-title {
+    font-size: 1.25rem;
+  }
+
+  .slide-description {
+    font-size: 0.8rem;
+  }
+
+  .slide-button {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-button {
+    padding: 0.25rem;
+  }
+
+  .nav-icon {
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+
+  .pagination-dot {
+    width: 0.45rem;
+    height: 0.45rem;
+  }
+
+  .pagination-dot.active {
+    width: 0.9rem;
   }
 }
 
@@ -1424,6 +1640,7 @@ header p {
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 10rem;
+  padding: 0 1rem;
 }
 
 .feature-card {
@@ -1435,18 +1652,20 @@ header p {
   background-color: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   transition: transform 0.3s ease;
-  height: 50vh;
+  height: auto; /* Changed from 50vh to auto for better content visibility */
+  min-height: 300px; /* Ensures a minimum height for consistency */
 }
 
 .feature-card:hover {
   transform: translateY(-5px);
-  box-shadow: #0f2027;
+  box-shadow: 0 4px 15px #0f2027;
 }
 
-.M-header{
+.M-header {
   color: #333;
   font-size: 2rem;
 }
+
 .feature-content {
   flex: 1;
   padding-right: 2rem;
@@ -1461,12 +1680,14 @@ header p {
 
 .feature-icon {
   font-size: 1.5rem;
+  color: #fff; /* Ensure icon is visible against background */
 }
 
 .feature-card h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added for better contrast */
 }
 
 .feature-card p {
@@ -1474,17 +1695,22 @@ header p {
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: left;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added for readability */
 }
 
 .learn-more {
-  color: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  color: #26d0ce; /* Adjusted to a visible color from gradient */
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
+  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
+  -webkit-background-clip: text; /* Gradient text effect */
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
 }
 
 .learn-more:hover {
-  color: #2980b9;
+  color: #2980b9; /* Solid color on hover for simplicity */
+  -webkit-text-fill-color: #2980b9; /* Override gradient on hover */
 }
 
 .feature-image {
@@ -1498,6 +1724,7 @@ header p {
   max-width: 80%;
   height: auto;
   border-radius: 0.5rem;
+  object-fit: contain; /* Ensures image is fully visible */
 }
 
 .image-grid {
@@ -1514,26 +1741,26 @@ header p {
   object-fit: cover;
 }
 
-.premium-design {
-  border: 0px solid rgba(52, 152, 219, 0.3);
-  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
-}
-
-.premium-images {
-  border: 0px solid rgba(46, 204, 113, 0.3);
-  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
-
-}
-
+/* Improved background contrast */
+.premium-design,
+.premium-images,
 .rapid-build {
-  border: 0px solid rgba(230, 126, 34, 0.3);
-  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  border: 0px solid rgba(52, 152, 219, 0.3);
+  background: linear-gradient(135deg, #2b4162 0%, #12100e 100%);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4); /* Subtle inset shadow for depth */
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
+  .features-container {
+    padding: 0 0.5rem;
+  }
+
   .feature-card {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem;
+    min-height: 250px; /* Adjusted for smaller screens */
   }
 
   .feature-content {
@@ -1545,8 +1772,50 @@ header p {
     justify-content: center;
   }
 
+  .feature-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+  }
+
+  .feature-image img {
+    max-width: 100%;
+  }
+
   .image-grid {
     grid-template-columns: 1fr;
   }
 }
 
+@media (max-width: 480px) {
+  .feature-card {
+    padding: 1rem;
+    min-height: 200px; /* Further reduced for small screens */
+  }
+
+  .feature-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
+  }
+
+  .feature-icon {
+    font-size: 1.2rem;
+  }
+
+  .learn-more {
+    font-size: 0.9rem;
+  }
+
+  .feature-image img {
+    max-width: 90%;
+  }
+}
+
+.con-title{
+  top: 5rem;
+}
