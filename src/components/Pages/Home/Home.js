@@ -301,18 +301,18 @@ const originalCards = [
     }
   ];
   const categories = [
-    { icon: <Lightbulb />, name: 'Business' },
-    { icon: <PenTool />, name: 'Arts & Design' },
-    { icon: <Brain />, name: 'Development' },
-    { icon: <Activity />, name: 'Health & Fitness' },
-    { icon: <BarChart2 />, name: 'Marketing' },
-    { icon: <DollarSign />, name: 'Business & Finance' },
-    { icon: <Monitor />, name: 'Computer Science' },
-    { icon: <Camera />, name: 'Photography' },
-    { icon: <Database />, name: 'Data Science' },
-    { icon: <Code />, name: 'IT Startup Agency' },
-    { icon: <Server />, name: 'Software Company' },
-    { icon: <Cpu />, name: 'High-Tech' }
+    { icon: <Lightbulb />, name: 'Schools and Colleges ' },
+    { icon: <PenTool />, name: 'Corporates' },
+    { icon: <Brain />, name: 'Healthcare and Medical Education ' },
+    { icon: <Activity />, name: 'Media and Entertainment ' },
+    { icon: <BarChart2 />, name: 'IT and Software Development ' },
+    { icon: <DollarSign />, name: 'Finance and Banking ' },
+    { icon: <Monitor />, name: 'Legal and Compliance ' },
+    { icon: <Camera />, name: 'Hospitality and Tourism ' },
+    { icon: <Database />, name: 'Marketing' },
+    { icon: <Code />, name: 'Arts and Science ' },
+    { icon: <Server />, name: 'High-Tech' },
+    { icon: <Cpu />, name: 'Teaching Science' }
   
   ];
   const features = [
@@ -658,13 +658,14 @@ const originalCards = [
     </div>
     <div className="talent-page">
       <div className="header">
-        <h1>Advancing Career-Ready Expertise</h1>
+        <h1>Are You Ready to Revolutionize Learning and Recruitment?
+        </h1>
         <p className="description">
-          We cultivate globally employable, industry ready talent through state-of-the-art, 
-          application-oriented learning, skilling, assessment, and certification programmes, 
-          powered by L&T's decades-long expertise in engineering and technology. We partner 
-          with universities, colleges, corporates, NGOs, and government to expand access to 
-          technical and skill-driven education.
+        We're redefining the landscape of Assessments, Recruitment, and Learning with state-of-the-art solutions.
+         Our innovative platforms leverage advanced technology to create efficient, accurate, and engaging experiences.
+          From intelligent assessments that adapt to individual abilities to recruitment tools that identify the perfect fit, 
+          and learning solutions that inspire curiosity and growth .
+
         </p>
       </div>
       
@@ -758,7 +759,7 @@ const originalCards = [
     <div className="course-categories">
       
       
-      <h1>Select The Industry Where You Want To Learn</h1>
+      <h1>Empowering Every Industry with Tailored Learning Solutions</h1>
       
       <div className="categories-grid">
         {categories.map((category, index) => (
@@ -799,7 +800,7 @@ const originalCards = [
 
 
     <section className="training-services-section" ref={useIntersectionObserver()}>
-  <SectionTitle>Training Services Offered</SectionTitle>
+  <SectionTitle>Transforming Possibilities with Next-Gen Solutions</SectionTitle>
   <div class="ag-format-container">
   <div class="ag-courses_box">
     <div class="ag-courses_item">
@@ -807,15 +808,16 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          UI/Web&amp;Graph design for teenagers 11-17&#160;years old
+        K-12 Education
         </div>
+        <p class="ag-courses-item_dis" >Fostering curiosity and engagement, we empower students to take charge of their learning journey.</p>
 
-        <div class="ag-courses-item_date-box">
+        {/* <div class="ag-courses-item_date-box">
           Start:
           <span class="ag-courses-item_date">
             04.11.2022
           </span>
-        </div>
+        </div> */}
       </a>
     </div>
 
@@ -824,15 +826,16 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          UX/UI Web-Design&#160;+ Mobile Design
+        Talent Acquisition
         </div>
+        <p class="ag-courses-item_dis" >Streamlining hiring process with intelligent assessments and data-driven insights.</p>
 
-        <div class="ag-courses-item_date-box">
+        {/* <div class="ag-courses-item_date-box">
           Start:
           <span class="ag-courses-item_date">
             04.11.2022
           </span>
-        </div>
+        </div> */}
       </a>
     </div>
 
@@ -841,15 +844,9 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          Annual package "Product+UX/UI+Graph designer&#160;2022"
+        Career Skills Cultivation
         </div>
-
-        <div class="ag-courses-item_date-box">
-          Start:
-          <span class="ag-courses-item_date">
-            04.11.2022
-          </span>
-        </div>
+        <p class="ag-courses-item_dis" >We equip students with the skills and confidence they need to excel in campus placements.</p>
       </a>
     </div>
 
@@ -858,15 +855,11 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          Graphic Design
-        </div>
+        Engaging Content Solutions
 
-        <div class="ag-courses-item_date-box">
-          Start:
-          <span class="ag-courses-item_date">
-            04.11.2022
-          </span>
         </div>
+        <p class="ag-courses-item_dis" >Transform learning experiences with gamification, adaptive learning, and immersive multimedia, driving student engagement and retention.
+        </p>
       </a>
     </div>
 
@@ -875,15 +868,11 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          Motion Design
-        </div>
+        Smart LMS Solutions
 
-        <div class="ag-courses-item_date-box">
-          Start:
-          <span class="ag-courses-item_date">
-            30.11.2022
-          </span>
         </div>
+        <p class="ag-courses-item_dis" >Streamline education with intuitive learning management systems, offering personalized learning paths and advanced analytics for better outcomes.
+        </p>
       </a>
     </div>
 
@@ -892,8 +881,11 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          Front-end development&#160;+ jQuery&#160;+ CMS
+        AI-Driven Content Creation
+
         </div>
+        <p class="ag-courses-item_dis" >Leverage cutting-edge AI to create dynamic, customized educational content that resonates with learners and meets curriculum needs.
+        </p>
       </a>
     </div>
 
@@ -902,8 +894,10 @@ const originalCards = [
         <div class="ag-courses-item_bg">
         </div>
         <div class="ag-courses-item_title">
-          Digital Marketing
+        Behavioral Assessments
         </div>
+        <p class="ag-courses-item_dis" >Gain deep insights into candidate behaviors with AI-driven assessments, ensuring the right fit for roles and enhancing recruitment success.
+        </p>
       </a>
     </div>
 
@@ -912,15 +906,10 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-          Interior Design
-        </div>
+        Skill Gap Analysis
 
-        <div class="ag-courses-item_date-box">
-          Start:
-          <span class="ag-courses-item_date">
-            31.10.2022
-          </span>
         </div>
+        <p class="ag-courses-item_dis" >Bridging skill gaps by analyzing  candidate’s performance data and recommending targeted learning modules, ensuring they are industry-ready.</p>
       </a>
     </div>
 

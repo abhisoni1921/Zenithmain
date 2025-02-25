@@ -60,7 +60,14 @@ const Navbar = () => {
             <Link to="/Home" style={{ textDecoration: 'none' }} className="navbar-link">Home</Link>
           </li>
           <li className="navbar-item dropdown">
-          <Link to="/DiscoverUs" style={{ textDecoration: 'none' }} className="navbar-link">Discover Us</Link>
+          <Link to="/DiscoverUs" style={{ textDecoration: 'none' }} className="navbar-link">
+  Discover Us
+  <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
+      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
+    </svg>
+  </span>
+</Link>
             <div className="dropdown-content">
               <Link to="/about" style={{ textDecoration: 'none' }}>
               <span className="special">About ZESPL</span></Link>
@@ -73,7 +80,13 @@ const Navbar = () => {
             </div>
           </li>
           <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Learning</a>
+            <a  style={{ textDecoration: 'none' }} className="navbar-link">Learning
+            <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
+      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
+    </svg>
+  </span>
+            </a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiForge" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti </span>
@@ -85,9 +98,9 @@ const Navbar = () => {
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Commune</span> </span>
               </Link>
 
-              <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
+              {/* <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Company Specific </span>
-              </Link>
+              </Link> */}
               <Link to="/AlgniteLab" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Lab</span>
               </Link>
@@ -103,7 +116,13 @@ const Navbar = () => {
             </div>
           </li>
           <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Assessment</a>
+            <a  style={{ textDecoration: 'none' }} className="navbar-link">Assessment
+            <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
+      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
+    </svg>
+  </span>
+            </a>
             <div className="dropdown-content">
               <Link to="/AlgniteAptiAssess" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti Assess</span>
@@ -125,7 +144,12 @@ const Navbar = () => {
             </div>
           </li>
           <li className="navbar-item dropdown">
-          <Link to="/Content" style={{ textDecoration: 'none' }} className="navbar-link">Content</Link>
+          <Link to="/Content" style={{ textDecoration: 'none' }} className="navbar-link">Content
+          <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
+      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
+    </svg>
+  </span></Link>
             <div className="dropdown-content">
               <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
               <span className="special">Assessment Content </span></Link>

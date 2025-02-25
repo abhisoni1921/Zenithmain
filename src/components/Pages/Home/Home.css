@@ -1044,13 +1044,27 @@ body {
   transform: scale(10);
 }
 .ag-courses-item_title {
-  min-height: 87px;
-  margin: 0 0 25px;
+  min-height: 35px;
+  margin: 0 0 5px;
+  text-align: left;
 
   overflow: hidden;
 
   font-weight: 400;
   font-size: 1.5rem;
+  color: #FFF;
+
+  z-index: 2;
+  position: relative;
+}
+.ag-courses-item_dis {
+  min-height: 87px;
+  margin: 0 0 5px;
+  text-align: left;
+  overflow: hidden;
+
+  font-weight: 400;
+  font-size: 1rem;
   color: #FFF;
 
   z-index: 2;
