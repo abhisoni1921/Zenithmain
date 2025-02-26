@@ -162,16 +162,19 @@
 
 /* Text Section */
 .slide-text {
+  margin-right: -9rem;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 0.5rem;
   opacity: 0;
   transform: scale(0.8);
   animation: textZoomIn 1s forwards 0.3s;
 }
 
 .slide-title {
-  font-size: 3rem;
+  text-align: left;
+  font-size: 2.8rem;
   font-weight: 400;
   color: #ffffff;
   line-height: 1.15;
@@ -211,6 +214,46 @@
   opacity: 0;
   transform: scale(0.8);
   animation: buttonZoomIn 0.8s forwards 0.7s;
+}
+.slide-button {
+  background: linear-gradient(135deg, #1a2980 0%, #c63c27 100%);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.slide-button:hover {
+  background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
+  
+  color: white;
+}
+
+.slide-button::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  top: 0;
+  left: -100%;
+  transition: 0.5s;
+}
+
+.slide-button:hover::after {
+  left: 100%;
+}
+
+/* Animation classes */
+.animate-on-mount {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
 }
 
 .button-text {
@@ -924,7 +967,7 @@ h2 {
   background-color: transparent; /* Light Green */
   padding: 3rem 2rem;
   border-radius: 1rem;
-  margin: 4rem 0;
+  margin: 0rem 0;
 }
 
 .training-services-grid {

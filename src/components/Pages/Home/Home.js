@@ -72,27 +72,27 @@ const Card = ({ children, className = "" }) => {
 const bannerData = [
   {
     id: 1,
-    title: "Comprehensive Training ",
-    description: "Learn skills with 120k+ video courses taught by industry experts",
+    title: "Shaping the Future of Assessments with Cutting-Edge Innovation ",
+    description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
     image: "/blue.gif",
-    buttonText: "Start Learning Today",
+    buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-1"
     
   },
   {
     id: 2,
-    title: "Full-Stack Development",
-    description: "Master modern web development with hands-on projects",
+    title: "Shaping the Future of Contents with Cutting-Edge Innovation",
+    description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
     image: "/dblue.gif",
-    buttonText: "Explore Courses",
+    buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-2"
   },
   {
     id: 3,
-    title: "AI/ML Training",
-    description: "dive into the world of artificial intelligence and machine learning",
+    title: "Shaping the Future of Learning with Cutting-Edge Innovation",
+    description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
     image: "/dark.gif",
-    buttonText: "Get Started",
+    buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-3"
   }
 
@@ -224,24 +224,45 @@ const originalCards = [
 
   const services = [
     {
-      icon: <Phone />,
-      title: "Test Prep Material",
+      icon: <Target />,
+      title: "AI-Powered Analytics and Insights",
       subtitle: "Let's start right from the beginning by outlining the core model of your business, and any pain points.",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed luctus suscipit justo, non malesuada est euismod a. Etiam elementum vitae libero vel gravida.",
+      description: "Leverage AI-driven insights to track student progress, analyze performance, and provide data-driven recommendations for enhanced learning outcomes.",
       buttonColor: "blue"
     },
     {
       icon: <Target />,
-      title: "Textbook Solutions",
+      title: "High-Quality Content Assurance",
       subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
-      description: "Ut lacitis laoreet maximus, integer cursus quam eleifend, tristique enim sit amet, porttitor eros. Integer fringilla erat tortor.",
+      description: "Our rigorous quality control processes ensure that all learning materials and assessments are accurate, relevant, and aligned with industry standards.",
+      buttonColor: "green"
+    },
+    {
+      icon: <Target />,
+      title: "Innovative Question Authoring Tool",
+      subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
+      description: "Streamline the creation, review, and management of questions with our advanced question authoring tool.",
+      buttonColor: "green"
+    },
+    {
+      icon: <Target />,
+      title: "Robust Data Security and Confidentiality",
+      subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
+      description: "We prioritize data protection with stringent security protocols, safeguarding user information and ensuring complete confidentiality",
+      buttonColor: "green"
+    },
+    {
+      icon: <Target />,
+      title: "Multi-Language Support for Global Reach",
+      subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
+      description: "Cater to diverse linguistic needs with our multi-language support, including translation and localization services.",
       buttonColor: "green"
     },
     {
       icon: <TargetIcon />,
-      title: "Custom exam content",
+      title: "Expert Team of Educators and SMEs",
       subtitle: "It's time to look at the pain points of your business and craft a method of relieving those issues efficiently.",
-      description: "Nunc pellentesque orci vel dapibus tincidunt. Nam in urna orci. Curabitur nibh est, elementum quis dignissim vehicula.",
+      description: "Our team comprises experienced educators and subject matter experts who bring deep knowledge and real-world insights.",
       buttonColor: "green"
     } 
   ];
@@ -482,26 +503,26 @@ const originalCards = [
   );
   const statsData = [
     {
-      value: '80k+',
-      label: 'Theme Sales'
+      value: '10+Years ',
+      label: 'Industry Experience'
     },
     {
-      value: '4.92',
-      label: 'Customer Rating',
-      showStars: true
+      value: '1 Million+ ',
+      label: 'Learning items Developed'
+      
     },
     {
-      value: '400+',
-      label: 'Page Templates'
+      value: '10k+',
+      label: 'Students trained'
     },
     {
-      value: '85+',
-      label: 'Prebuilt Websites'
+      value: '100+',
+      label: 'Clients Served'
     },
     {
-      value: '',
-      label: 'Elementor-Enabled',
-      icon: 'E'
+      value: '50+',
+      label: 'Team of Experts',
+      icon: 'T'
     }
   ];
 
@@ -621,7 +642,7 @@ const originalCards = [
                   ))}
                 </h1>
                 <p className="slide-description">{slide.description}</p>
-                <button className="slide-button">
+                <button className="slide-button animate-on-mount">
                   <span className="button-text">{slide.buttonText}</span>
                   <span className="button-shine"></span>
                 </button>
@@ -868,6 +889,19 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
+        Seamless Translation Services
+
+        </div>
+        <p class="ag-courses-item_dis" >Break language barriers with accurate and culturally adapted translations, we can enhance learning accessibility for diverse audiences.
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a href="#" class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
         Smart LMS Solutions
 
         </div>
@@ -934,7 +968,7 @@ const originalCards = [
             {/* <p className="C-subtitle">{service.subtitle}</p> */}
             <p className="C-description">{service.description}</p>
             <button 
-              className={`C-consultation-button ${service.buttonColor}`}
+              className="learn-more-btn animate-on-mount visible"
             >
               view more
             </button>

@@ -131,7 +131,7 @@ const Navbar = () => {
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech Assess</span>
               </Link>
               <Link to="/AlgniteHIRE" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Personality Access</span>
+                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Personality Assess</span>
               </Link>
               
               <Link to="/AlgniteHIRE" style={{ textDecoration: 'none' }}>

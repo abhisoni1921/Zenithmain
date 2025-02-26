@@ -895,7 +895,7 @@
     align-items: center;
     background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
     padding: 2rem;
-    border-radius: 12px;
+    border-radius: 0px;
     color: white;
     max-width: 100%;
     margin: 0 auto;
@@ -912,7 +912,7 @@
   }
   
   .stat-value {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
