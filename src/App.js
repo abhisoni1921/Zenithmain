@@ -14,6 +14,9 @@ import Navbar from './components/Nav';
 import AboutZESPL from './components/Pages/AboutUs/AboutZESPL';
 import Leadership from './components/Pages/AboutUs/Leadership';
 import VisionMission from './components/Pages/AboutUs/VisionMission';
+
+
+
 import AlgniteSoftSkillsBoost from './components/Pages/LearningSolution/AlgniteSoftSkillsBoost';
 import AlgniteSoftSkillsForge from './components/Pages/LearningSolution/AlgniteSoftSkillsForge';
 import AlgniteTechForge from './components/Pages/LearningSolution/AlgniteTechForge';
@@ -25,6 +28,8 @@ import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteApti
 import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTechAssess';
 import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE';
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360';
+
+import AlgniteApti from './components/Pages/LearningSolution/AlgniteApti/AlgniteApti';
 // import LearningContentSolution from './components/Pages/ContentSolution/LearningContentSolution';
 import InteractiveContentSolution from './components/Pages/ContentSolution/Interactive/InteractiveContentSolution';
 import LearningContentSolution from './components/Pages/ContentSolution/Learning/LearningContentSolution';
@@ -79,6 +84,9 @@ function App() {
         <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
         <Route path='/AlgniteHIRE' element={<AlgniteHIRE/>}/>
         <Route path='/AlgniteAssess360' element={<AlgniteAssess360/>}/>
+        <Route path='/AlgniteApti' element={<AlgniteApti/>}/>
+
+
 
         <Route path='/Content' element={<Content/>}/>
         <Route path='/AssessmentContentSolution' element={<AssessmentContentSolution/>}/>

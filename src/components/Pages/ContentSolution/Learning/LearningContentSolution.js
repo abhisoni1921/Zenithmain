@@ -103,32 +103,110 @@ const LearningContentSolution = () => {
       className: 'bg-blue-500'
     }
   ];
-
+  const FeatureCard = ({ icon, title, description, image, learnMoreLink, className }) => (
+    <div className={`feature-card ${className}`}>
+      <div className="feature-content">
+        <div className="feature-header">
+          {icon && <span className="feature-icon">{icon}</span>}
+          <h2>{title}</h2>
+        </div>
+        <p>{description}</p>
+        <a href={learnMoreLink} className="learn-more">Learn more</a>
+      </div>
+      {image && <div className="feature-image">{image}</div>}
+    </div>
+  );
 
   return (
     <div className="Learning-container">
-      <div className="Learning-hero-container">
-      <div className="Learning-hero-content">
-        <div className="Learning-hero-image-container">
-          <img 
-            src="/pink.gif" 
-            alt="Developer working on laptop" 
-            className="Learning-hero-image "
-            
+      <div className="header-container">
+      <video 
+        className="background-video" 
+        autoPlay 
+        loop 
+        muted 
+        playsInline
+      >
+        <source 
+          src="/video6.mp4" 
+          type="video/mp4" 
+        />
+      </video>
+      <div className="overlay"></div>
+      <div className="background-animation">
+        {[...Array(50)].map((_, index) => (
+          <div 
+            key={index} 
+            className="particle"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 5}s`,
+              animationDuration: `${5 + Math.random() * 5}s`
+            }}
           />
-        </div>
+        ))}
+      </div>
+      <div className="content">
+
+        <h1 className="title">
+          Learning Content
+        </h1>
+        {/* <p className="subtitle">
+          The premium WordPress theme designed to elevate your online<br />
+          presence to unparalleled heights.
+        </p> */}
+  
+      </div>
+    </div>
+
+    <div className="header">
+        <h1>Drive Learning with Interactive Content
+        </h1>
+        <p className="description">
+        In today’s digital learning environment, engaging students requires more than just traditional content delivery. Our Interactive Content Solutions are designed to create immersive learning experiences that enhance understanding and retention. By leveraging cutting-edge technology, we provide dynamic and adaptive content that caters to every learner's needs.
+
+
+        </p>
+      </div>
+
+      <div className="landing-page">
+      <header>
+        <h1 className="M-header">Curious About Effective Learning? </h1>
         
-        <div className="Learning-hero-text">
+      </header>
 
-          
-          <h1 className="Learning-hero-title">
-            Learning Content Solution!
-          </h1>
-          
+      <div className="features-container">
+        <FeatureCard
+          icon="💎"
+          title=" Adaptive Learning"
+          description="Our Adaptive Learning platform uses AI to tailor content to each student’s learning pace and style. By analyzing performance data, it customizes lessons, quizzes, and practice exercises, ensuring an optimized learning path that maximizes understanding and minimizes frustration."
+          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          learnMoreLink="#"
+          className="premium-design"
+        />
 
-          
+        <FeatureCard
+          icon="🖼️"
+          title=" Virtual Instructor-Led Training"
+          description="Experience the effectiveness of classroom learning with the convenience of virtual access through our Virtual Instructor-Led Training (VILT). We provide live sessions with expert instructors, interactive Q&A, and collaborative discussions, ensuring an engaging and connected learning environment."
+          image={
+            <div className="image-grid">
+              <img src="/img11.jpg" alt="Person using phone" />
+              <img src="/img9.jpg" alt="Person working" />
+            </div>
+          }
+          learnMoreLink="#"
+          className="premium-images"
+        />
 
-        </div>
+        <FeatureCard
+          icon="🚀"
+          title="Animated Video Learning"
+          description="Simplify complex ideas with our Animated Video Learning modules. Using high-quality animations and storytelling techniques, we make abstract or difficult topics easier to understand. These visually appealing videos boost engagement and enhance memory retention."
+          image={<img src="/img8.jpg" alt="Templates preview" className="templates-preview" />}
+          learnMoreLink="#"
+          className="rapid-build"
+        />
       </div>
     </div>
 

@@ -642,7 +642,7 @@ const originalCards = [
                   ))}
                 </h1>
                 <p className="slide-description">{slide.description}</p>
-                <button className="slide-button animate-on-mount">
+                <button className="slide-button animate-on-mount visible">
                   <span className="button-text">{slide.buttonText}</span>
                   <span className="button-shine"></span>
                 </button>
@@ -779,8 +779,9 @@ const originalCards = [
 
     <div className="course-categories">
       
-      
-      <h1>Empowering Every Industry with Tailored Learning Solutions</h1>
+      <div className="header">
+      <h1 >Empowering Every Industry with Tailored Learning Solutions</h1>
+      </div>
       
       <div className="categories-grid">
         {categories.map((category, index) => (
