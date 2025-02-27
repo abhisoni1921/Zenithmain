@@ -143,6 +143,55 @@ const Content = () => {
             { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
           ];  
           
+          const logos = [
+            { 
+              name: 'Cloudways',
+              url: 'https://www.zarla.com/images/amazon-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'HubSpot',
+              url: 'https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Envato',
+              url: 'https://www.zarla.com/images/hyundai-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Awwwards',
+              url: 'https://www.zarla.com/images/facebook-logo-2400x2400-20220518.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Hongkiat',
+              url: 'https://www.zarla.com/images/google-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Tem',
+              url: 'https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-24'
+            },
+            { 
+              name: 'Hongkiat',
+              url: 'https://www.zarla.com/images/microsoft-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Hongkiat',
+              url: 'https://www.zarla.com/images/toyota-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            },
+            { 
+              name: 'Hongkiat',
+              url: 'https://www.zarla.com/images/nestle-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
+              className: 'w-32'
+            }
+            
+          ];
+
           const features = [
             {
               icon: <Pencil size={24} />,
@@ -306,6 +355,23 @@ const Content = () => {
         </motion.div>
       </div>
     </div>
+
+    <div className="marquee-container">
+      <div className="marquee-content">
+        {logos.map((logo, index) => (
+          <div key={`logo-${index}`} className={`logo-item ${logo.className}`}>
+            <img src={logo.url} alt={logo.name} />
+          </div>
+        ))}
+        {/* Duplicate set for seamless loop */}
+        {logos.map((logo, index) => (
+          <div key={`logo-dup-${index}`} className={`logo-item ${logo.className}`}>
+            <img src={logo.url} alt={logo.name} />
+          </div>
+        ))}
+      </div>
+    </div>
+
     <div className="brands-section">
     <h2 class="text-3xl font-400 text-center bg-gradient-to-tr from-blue-600 to-teal-500 text-transparent bg-clip-text uppercase">
     Our Partners

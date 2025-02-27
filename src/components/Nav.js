@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom';
 
 
 const Navbar = () => {
+
+  
+
+
+
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -91,10 +96,10 @@ const Navbar = () => {
               <Link to="/AlgniteApti" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti </span>
               </Link>
-              <Link to="/AlgniteTechForge" style={{ textDecoration: 'none' }}>
+              <Link to="/AlgniteTech" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech </span>
               </Link>
-              <Link to="/AlgniteSoftSkillsForge" style={{ textDecoration: 'none' }}>
+              <Link to="/AlgniteCommune" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Commune</span> </span>
               </Link>
 
@@ -104,7 +109,7 @@ const Navbar = () => {
               <Link to="/AlgniteLab" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Lab</span>
               </Link>
-              <Link to="/Learningmanagementsystem" style={{ textDecoration: 'none' }}>
+              <Link to="/AlgniteLMS" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> LMS </span>
               </Link>
               {/* <Link to="/Talentdevelopment" style={{ textDecoration: 'none' }}>

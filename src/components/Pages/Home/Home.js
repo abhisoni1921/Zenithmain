@@ -241,7 +241,7 @@ const originalCards = [
       icon: <Target />,
       title: "Innovative Question Authoring Tool",
       subtitle: "So you need to hit a wider more targeted audience? Let's explore how to do that and develop a plan of action.",
-      description: "Streamline the creation, review, and management of questions with our advanced question authoring tool.",
+      description: "Streamline the creation, review, and management of questions with our advanced question authoring tool. Enhance efficiency with AI-powered suggestions, seamless collaboration, and intuitive customization options.",
       buttonColor: "green"
     },
     {
@@ -363,10 +363,10 @@ const originalCards = [
       title: 'Learning',
       image: 'https://img.freepik.com/free-photo/3d-render-low-poly-plexus-design-network-communications_1048-14542.jpg?semt=ais_hybrid',
       links: [
-        { text: 'Algnite Apti', url: '#' },
-        { text: 'Algnite Tech', url: '#' },
+        { text: 'Algnite Apti', url: '/AlgniteApti' },
+        { text: 'Algnite Tech', url: '/AlgniteTech' },
         { text: 'Algnite Commune', url: '#' },
-        { text: 'Algnite Company Specific', url: '#' },
+        // { text: 'Algnite Company Specific', url: '#' },
         { text: 'Algnite Lab', url: '#' },
         { text: 'Algnite LMS', url: '#' }
       ]
@@ -398,54 +398,16 @@ const originalCards = [
   // Learning Content 
   // Interactive Content
   //  K12 Solutions  Translation Services
-  const logos = [
-    { 
-      name: 'Cloudways',
-      url: 'https://www.zarla.com/images/amazon-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'HubSpot',
-      url: 'https://www.zarla.com/images/nike-logo-2400x2400-20220504.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Envato',
-      url: 'https://www.zarla.com/images/hyundai-logo-2400x2400-20220516.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Awwwards',
-      url: 'https://www.zarla.com/images/facebook-logo-2400x2400-20220518.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Hongkiat',
-      url: 'https://www.zarla.com/images/google-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Tem',
-      url: 'https://www.zarla.com/images/disney-logo-2400x2400-20220513-2.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-24'
-    },
-    { 
-      name: 'Hongkiat',
-      url: 'https://www.zarla.com/images/microsoft-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Hongkiat',
-      url: 'https://www.zarla.com/images/toyota-logo-2400x2400-20220519-1.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    },
-    { 
-      name: 'Hongkiat',
-      url: 'https://www.zarla.com/images/nestle-logo-2400x2400-20223105.png?crop=1:1,smart&width=150&dpr=2',
-      className: 'w-32'
-    }
-    
-  ];
+  
+  const brands = [
+    { name: 'IC Solutions', logo: 'https://s3-us-west-2.amazonaws.com/naspovaluepoint/1652128715_ICSolutions%20Logo.jpg' },
+    { name: 'Exotec', logo: 'https://mma.prnewswire.com/media/2072473/Exotec_Logo_2023_Logo.jpg?w=600' },
+    { name: 'Proview', logo: 'https://www.vhv.rs/dpng/d/88-881545_proview-logo-hd-png-download.png' },
+    { name: 'Uniqa', logo: 'https://www.uniqagroup.com/grp/newsroom/UNIQA_mainlogo_blue_V1_4c.png' },
+    { name: 'Clutch', logo: 'https://www.teralogistics.com/wp-content/uploads/2024/02/Movex-Logo-gmail.png' },
+    { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
+    { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
+  ]; 
   const Snip1273Card = ({ image, title, description }) => {
     return (
       <figure className="card-figure">
@@ -778,9 +740,10 @@ const originalCards = [
     
 
     <div className="course-categories">
-      
+      <div className="cour-title">
       <div className="header">
       <h1 >Empowering Every Industry with Tailored Learning Solutions</h1>
+      </div>
       </div>
       
       <div className="categories-grid">
@@ -794,21 +757,34 @@ const originalCards = [
         ))}
       </div>
     </div>
-    <div className="marquee-container">
-      <div className="marquee-content">
-        {logos.map((logo, index) => (
-          <div key={`logo-${index}`} className={`logo-item ${logo.className}`}>
-            <img src={logo.url} alt={logo.name} />
-          </div>
-        ))}
-        {/* Duplicate set for seamless loop */}
-        {logos.map((logo, index) => (
-          <div key={`logo-dup-${index}`} className={`logo-item ${logo.className}`}>
-            <img src={logo.url} alt={logo.name} />
-          </div>
-        ))}
+
+    <div className="brands-section">
+    <h2 class="text-3xl font-400 text-center bg-gradient-to-tr from-blue-600 to-teal-500 text-transparent bg-clip-text uppercase">
+    Our Partners
+</h2>
+
+
+
+      <div className="mar-container">
+        <div className="mar-content">
+          {[...brands, ...brands].map((brand, index) => (
+            <div key={index} className="brand-card">
+              <img 
+                src={brand.logo} 
+                alt={brand.name}
+                className="brand-logo"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
+
+    <div className="F-Title">
+<div className="header">
+      <h1 >Optimized Theme Features and Benefits</h1>
+      </div>
+      </div>
     <div className="f-container">
       {features.map((feature, index) => (
         <div key={index} className="f-card">
@@ -944,15 +920,18 @@ const originalCards = [
         Skill Gap Analysis
 
         </div>
-        <p class="ag-courses-item_dis" >Bridging skill gaps by analyzing  candidate’s performance data and recommending targeted learning modules, ensuring they are industry-ready.</p>
+        <p class="ag-courses-item_dis" >Bridging skill gaps by analyzing  candidate’s performance data and recommending targeted learning modules. </p>
       </a>
     </div>
 
   </div>
 </div>
 </section>
-
-
+<div className="Cons-Title">
+<div className="header">
+      <h1 >Educational Solutions and Services Overview</h1>
+      </div>
+      </div>
 <div className="consulting-container">
   
       <div className="C-services-grid">
@@ -1037,8 +1016,10 @@ const originalCards = [
 
         <div className="landing-page">
       <header>
+        <div className="M-title">
         <h1 className="M-header">Laser focused on WordPress</h1>
         <p>Unleash the full potential of your tech-oriented website with Stratus!</p>
+        </div>
       </header>
 
       <div className="features-container">

@@ -78,6 +78,7 @@
     color: #fff;
   }
   
+  
   .subtitle {
     font-size: 1.2rem;
     line-height: 1.6;
@@ -301,6 +302,7 @@
   background: transparent;
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .ct-features-title {
@@ -360,7 +362,9 @@
 .ct-feature-content h2 {
   font-size: 1.5rem;
   font-weight: 400;
-  color: #0d1f3c;
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
+    -webkit-background-clip: text;
+    color: transparent;
   margin-bottom: 1rem;
   text-align: left;
   transition: transform 0.3s ease;

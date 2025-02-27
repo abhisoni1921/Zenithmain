@@ -58,7 +58,7 @@
 .navbar-logo {
   display: flex;
   align-items: center;
-  margin: 0rem;
+  margin-bottom: -2rem;
   padding: 0.6rem;
   transition: transform 0.3s ease;
 }

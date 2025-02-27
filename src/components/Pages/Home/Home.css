@@ -685,17 +685,19 @@
 
 .header h1 {
   font-size: 2.5rem;
+  font-weight: 500;
   /* color: #333; */
-  margin-bottom: 1.2rem;
-  background: linear-gradient(135deg, #01145b 0%, #58026e 100%);
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
     -webkit-background-clip: text;
     color: transparent;
+
 }
 
 .description {
   max-width: 900px;
   margin: 0 auto;
-  line-height: 1.6;
+  line-height: 1.5;
   color: #333;
 }
 /* Section Styling */
@@ -721,9 +723,11 @@ section.visible {
 }
 
 .section-title {
-  font-weight: 490;
+  font-weight: 500;
   font-size: 2.5rem;
-  color: #333;
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
+    -webkit-background-clip: text;
+    color: transparent;
   margin-bottom: 1.5rem;
   padding-bottom: 1rem;
   position: relative;
@@ -775,7 +779,7 @@ h2 {
   display: flex;
   justify-content: center;
   gap: 2rem;
-  padding: 2rem;
+  padding: 0rem;
   flex-wrap: wrap;
 }
 
@@ -856,6 +860,10 @@ h2 {
 
 /* course-categories */
 
+.cour-title{
+  margin-top: 0rem;
+  margin-bottom: -2rem;
+}
 
 .course-categories {
   padding: 2rem;
@@ -890,7 +898,7 @@ h2 {
   font-size: 2.5rem;
   /* color: #333; */
   margin-bottom: 1.2rem;
-  background: linear-gradient(135deg, #01145b 0%, #58026e 100%);
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
     -webkit-background-clip: text;
     color: transparent;
 }
@@ -1106,13 +1114,13 @@ body {
 }
 .ag-courses-item_dis {
   min-height: 87px;
-  margin: 0 0 5px;
+  margin: 0 auto;
   text-align: left;
   overflow: hidden;
 
-  font-weight: 400;
-  font-size: 1rem;
-  color: #FFF;
+  line-height: 1.5;
+  font-size: 1.1rem;
+  color: #f5f5f5;
 
   z-index: 2;
   position: relative;
@@ -1201,14 +1209,20 @@ body {
   }
 }
 
-
+.F-Title{
+  margin-top: -9rem;
+  margin-bottom: -5rem;
+}
+.Cons-Title{
+  margin-top: -5rem;
+  margin-bottom: 5rem;
+}
 
 .consulting-container {
   padding: 2rem;
   background-color: transparent;
   min-height: 90vh;
-  margin-top: -4rem;
-  margin-bottom: 0rem;
+  
 }
 
 .C-services-grid {
@@ -1278,7 +1292,7 @@ body {
 .C-description {
   color: #fff;
   margin-bottom: 2rem;
-  line-height: 1.6;
+  line-height: 1.5;
   opacity: 0.9;
   text-align: left;
 }
@@ -1852,9 +1866,18 @@ header p {
   box-shadow: 0 4px 15px #0f2027;
 }
 
+.M-title{
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+}
 .M-header {
-  color: #333;
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
+    -webkit-background-clip: text;
+    color: transparent;
   font-size: 2.5em;
+  font-weight: 500;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .feature-content {
@@ -1883,7 +1906,8 @@ header p {
 
 .feature-card p {
   color: #fff;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.5;
   margin-bottom: 1.5rem;
   text-align: left;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Added for readability */
