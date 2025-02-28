@@ -49,6 +49,7 @@ import Content from './components/Pages/ContentSolution/Content/Content';
 
 import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteAptiAssess/AlgniteAptiAssess';
 import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTechAssess/AlgniteTechAssess';
+import AlgniteMindAssess from './components/Pages/AssessmentSolution/AlgniteMindAssess/AlgniteMindAssess';
 
 
 
@@ -98,6 +99,7 @@ function App() {
 
         <Route path='/AlgniteAptiAssess' element={<AlgniteAptiAssess/>}/>
         <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
+        <Route path='/AlgniteMindAssess' element={<AlgniteMindAssess/>}/>
 
 
 
