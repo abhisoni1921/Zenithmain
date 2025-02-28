@@ -129,7 +129,7 @@ const Navbar = () => {
   </span>
             </a>
             <div className="dropdown-content">
-              <Link to="/AlgniteApti" style={{ textDecoration: 'none' }}>
+              <Link to="/AlgniteAptiAssess" style={{ textDecoration: 'none' }}>
                 <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti Assess</span>
               </Link>
               <Link to="/AlgniteTechAssess" style={{ textDecoration: 'none' }}>

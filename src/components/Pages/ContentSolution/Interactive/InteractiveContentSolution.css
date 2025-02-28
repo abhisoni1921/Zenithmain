@@ -1020,7 +1020,7 @@
   justify-content: space-between;
   padding: 2rem;
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
-  border-radius: 1rem;
+  
   gap: 1rem;
   flex-wrap: wrap;
   margin-top: 8rem;
@@ -1029,9 +1029,9 @@
 .f-card {
   flex: 1;
   min-width: 250px;
-  padding: 1.5rem;
+  padding: 1rem;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 0.5rem;
+  border-radius: 10px;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   cursor: pointer;
@@ -1045,21 +1045,22 @@
 
 .f-icon {
   font-size: 2rem;
-  margin-bottom: 1rem;
   display: inline-block;
 }
 
 .f-title {
   color: white;
   font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  font-weight: 600;
+  padding: 5px 0;
+  font-weight: 500;
+  text-align: left;
 }
 
 .f-description {
   color: rgba(255, 255, 255, 0.8);
   font-size: 1.1rem;
   line-height: 1.5;
+  text-align: left;
 }
 
 /* Responsive Design */

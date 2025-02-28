@@ -129,14 +129,16 @@
   max-width: 1200px;
   margin: 0 auto;
   background-color: transparent;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  box-shadow: #01145b 4px 4px 12px;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .aptitude-section .content {
   width: 100%;
   max-width: 600px;
   text-align: left;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .aptitude-section h1 {
@@ -177,6 +179,7 @@
   width: 100%;
   max-width: 600px;
   margin-top: 20px;
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .aptitude-section .image img {

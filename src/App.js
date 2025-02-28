@@ -24,8 +24,8 @@ import AlgniteAptiBoost from './components/Pages/LearningSolution/AlgniteAptiBoo
 import AlgniteLab from './components/Pages/LearningSolution/AlgniteLab';
 import AlgniteCompanySpecificPulse from './components/Pages/LearningSolution/AlgniteCompanySpecificPulse';
 import AlgniteAptiForge from './components/Pages/LearningSolution/AlgniteAptiForge';
-import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteAptiAssess';
-import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTechAssess';
+
+
 import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE';
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360';
 
@@ -45,6 +45,10 @@ import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
 import Talentdevelopment from './components/Pages/LearningSolution/Talentdevelopment/Talentdevelopment';
 import K2education from './components/Pages/ContentSolution/K2education/K2education';
 import Content from './components/Pages/ContentSolution/Content/Content';
+
+
+import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteAptiAssess/AlgniteAptiAssess';
+import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTechAssess/AlgniteTechAssess';
 
 
 
@@ -87,10 +91,17 @@ function App() {
         <Route path='/AlgniteSoftSkillsBoost' element={<AlgniteSoftSkillsBoost/>}/>
         <Route path='/AlgniteSoftSkillsForge' element={<AlgniteSoftSkillsForge/>}/>
         <Route path='/AlgniteTechForge' element={<AlgniteTechForge/>}/>
-        <Route path='/AlgniteAptiAssess' element={<AlgniteAptiAssess/>}/>
-        <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
+        
+        
         <Route path='/AlgniteHIRE' element={<AlgniteHIRE/>}/>
         <Route path='/AlgniteAssess360' element={<AlgniteAssess360/>}/>
+
+        <Route path='/AlgniteAptiAssess' element={<AlgniteAptiAssess/>}/>
+        <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
+
+
+
+
         <Route path='/AlgniteApti' element={<AlgniteApti/>}/>
         <Route path='/AlgniteTech' element={<AlgniteTech/>}/>
         <Route path='/AlgniteCommune' element={<AlgniteCommune/>}/>
