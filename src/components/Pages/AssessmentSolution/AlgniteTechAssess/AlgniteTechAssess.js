@@ -72,7 +72,7 @@ const AlgniteTechAssess = () => {
         playsInline
       >
         <source 
-          src="/AptiAssess.webm" 
+          src="/Tech1.webm" 
           type="video/webm" 
         />
       </video>

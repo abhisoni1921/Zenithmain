@@ -110,7 +110,7 @@ const AlgniteLMS = () => {
         AIgnite LMS is a powerful learning management system that allows flexible and self-paced learning. Access a vast library of resources at your convenience, powered by AI recommendations.
         </p>
         <h2>Key highlights</h2>
-        <ul>
+        <ul className="li-list">
           <li>Interactive videos and learning modules          </li>
           <li>Self-paced learning with flexible schedules          </li>
           <li>AI-driven performance tracking and personalized recommendations           </li>
