@@ -26,8 +26,8 @@ import AlgniteCompanySpecificPulse from './components/Pages/LearningSolution/Alg
 import AlgniteAptiForge from './components/Pages/LearningSolution/AlgniteAptiForge';
 
 
-import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE';
-import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360';
+ 
+
 
 
 import AlgniteApti from './components/Pages/LearningSolution/AlgniteApti/AlgniteApti';
@@ -50,6 +50,8 @@ import Content from './components/Pages/ContentSolution/Content/Content';
 import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteAptiAssess/AlgniteAptiAssess';
 import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTechAssess/AlgniteTechAssess';
 import AlgniteMindAssess from './components/Pages/AssessmentSolution/AlgniteMindAssess/AlgniteMindAssess';
+import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE/AlgniteHIRE';
+import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360/AlgniteAssess360';
 
 
 
@@ -94,12 +96,14 @@ function App() {
         <Route path='/AlgniteTechForge' element={<AlgniteTechForge/>}/>
         
         
-        <Route path='/AlgniteHIRE' element={<AlgniteHIRE/>}/>
-        <Route path='/AlgniteAssess360' element={<AlgniteAssess360/>}/>
+        
+        
 
         <Route path='/AlgniteAptiAssess' element={<AlgniteAptiAssess/>}/>
         <Route path='/AlgniteTechAssess' element={<AlgniteTechAssess/>}/>
         <Route path='/AlgniteMindAssess' element={<AlgniteMindAssess/>}/>
+        <Route path='/AlgniteHIRE' element={<AlgniteHIRE/>}/>
+        <Route path='/AlgniteAssess360' element={<AlgniteAssess360/>}/>
 
 
 

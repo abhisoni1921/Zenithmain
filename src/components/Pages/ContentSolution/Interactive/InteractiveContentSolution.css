@@ -1039,7 +1039,7 @@
 
 .f-card:hover {
   background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
-  transform: translateY(-30px);
+  transform: translateY(-15px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
