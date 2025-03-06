@@ -5,7 +5,19 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
-  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openSubMenus, setOpenSubMenus] = useState({});
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleSubMenu = (menuId) => {
+    setOpenSubMenus(prev => ({
+      ...prev,
+      [menuId]: !prev[menuId]
+    }));
+  };
 
 
 
@@ -189,7 +201,15 @@ const Navbar = () => {
           </li> */}
         </ul>
       </div>
+
+      
+
+
+
     </nav>
+
+    
+
   );
 };
 

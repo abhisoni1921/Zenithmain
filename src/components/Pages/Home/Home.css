@@ -443,12 +443,12 @@
 @media (max-width: 768px) {
   .banner-container {
     height: auto;
-    min-height: 100vh;
+    min-height: 53vh;
     margin-top: -60px; /* Reduced for smaller screens */
   }
 
   .navigation-buttons {
-    inset: 40px 0 0 0; /* Adjusted for better positioning */
+    inset: 40px 0 0 0;  
     padding: 0 0.75rem;
   }
 
@@ -523,7 +523,7 @@
 /* Small Mobile Devices (max-width: 480px) - Extra detail for smaller screens */
 @media (max-width: 480px) {
   .banner-container {
-    margin-top: -40px; /* Further reduced */
+    margin-top: -64px; /* Further reduced */
   }
 
   .navigation-buttons {
@@ -551,10 +551,12 @@
 
   .slide-text {
     gap: 0.75rem;
+    margin-right: -1rem;
   }
 
   .slide-title {
     font-size: 1.5rem; /* Smaller title */
+    vertical-align: middle;
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
@@ -564,7 +566,7 @@
   }
 
   .slide-description {
-    font-size: 0.85rem; /* Even smaller text */
+    font-size: 1rem; /* Even smaller text */
     line-height: 1.4;
   }
 
@@ -916,6 +918,102 @@ h2 {
   text-decoration: none;
 }
 
+/* Responsive Design */
+/* For tablets and smaller desktops */
+@media (max-width: 1024px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .HI-card-container {
+    width: 300px;
+    height: 400px;
+  }
+
+  .HI-overlay-title {
+    font-size: 1.8rem;
+    padding: 2rem;
+  }
+
+  .HI-link-item {
+    font-size: 1rem;
+  }
+}
+
+/* For tablets */
+@media (max-width: 768px) {
+  .talent-page {
+    padding: 1.5rem;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .HI-card-container {
+    width: 250px;
+    height: 350px;
+  }
+
+  .HI-overlay-title {
+    font-size: 1.5rem;
+    padding: 1.5rem;
+  }
+
+  .HI-link-item {
+    font-size: 0.9rem;
+  }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+  .talent-page {
+    padding: 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+    padding: 5px 10px;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .HI-cards-container {
+    gap: 1rem;
+  }
+
+  .HI-card-container {
+    width: 100%;
+    height: 300px;
+  }
+
+  .HI-overlay-title {
+    font-size: 1.5rem;
+    padding: 3rem;
+  }
+
+  .HI-link-item {
+    font-size: 0.8rem;
+  }
+}
 /* course-categories */
 
 .cour-title{
@@ -1234,38 +1332,76 @@ body {
 
 
 
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: 1200px) {
+  .ag-format-container {
+    max-width: 960px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .ag-format-container {
+    max-width: 720px;
+  }
+
   .ag-courses_item {
-    -ms-flex-preferred-size: calc(50% - 30px);
     flex-basis: calc(50% - 30px);
   }
-  .ag-courses-item_title {
-    font-size: 24px;
-  }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .ag-format-container {
-    width: 96%;
+    max-width: 540px;
   }
 
-}
-@media only screen and (max-width: 639px) {
   .ag-courses_item {
-    -ms-flex-preferred-size: 100%;
-    flex-basis: 100%;
+    flex-basis: calc(50% - 30px);
   }
-  .ag-courses-item_title {
-    min-height: 72px;
-    line-height: 1;
 
-    font-size: 24px;
+  .ag-courses-item_title {
+    font-size: 1.25rem;
   }
+
+  .ag-courses-item_dis {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .ag-format-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .ag-courses_item {
+    flex-basis: 100%;
+    margin: 0 0 15px;
+  }
+
+  .ag-courses-item_title {
+    min-height: auto;
+    font-size: 1.5rem;
+  }
+
   .ag-courses-item_link {
-    padding: 22px 40px;
+    padding: 20px;
   }
+
   .ag-courses-item_date-box {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .ag-courses-item_title {
+    font-size: 1.5rem;
+  }
+
+  .ag-courses-item_dis {
+    font-size: 1rem;
+  }
+
+  .ag-courses-item_link {
+    padding: 15px;
   }
 }
 
