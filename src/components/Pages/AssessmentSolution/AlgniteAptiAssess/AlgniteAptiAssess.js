@@ -53,6 +53,30 @@ const AlgniteAptiAssess = () => {
     }
   ];
 
+  const abtCards = [
+    {
+      
+      title: "Logical Reasoning",
+      description: "This section measures critical thinking, problem-solving, and the ability to interpret complex information."
+    },
+    {
+      
+      title: "Spatial Reasoning",
+      description: "Examine visualization, pattern recognition, and spatial orientation through figure-related questions."
+    },
+    {
+      
+      title: "Numerical Aptitude",
+      description: "This section gauges speed, accuracy, and the ability to work with numerical data."
+    },
+    {
+      
+      title: "Verbal Ability",
+      description: "Test communication proficiency through grammar, vocabulary, reading comprehension, and sentence correction exercises."
+    },
+    
+  ];
+
 
   
 
@@ -138,6 +162,30 @@ const AlgniteAptiAssess = () => {
         </div>
       </div>
     </div>
+
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>What We Cover?</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
+
+
+
+
 
 <div className="F-con">
     <div className="F-Title">
