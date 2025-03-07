@@ -1,215 +1,223 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './Nav.css';
-import { Link } from 'react-router-dom';
-
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const mobileMenuRef = useRef(null);
+  const hamburgerRef = useRef(null);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openSubMenus, setOpenSubMenus] = useState({});
-
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const toggleSubMenu = (menuId) => {
-    setOpenSubMenus(prev => ({
-      ...prev,
-      [menuId]: !prev[menuId]
-    }));
-  };
-
-
-
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  // Handle scrolling effect
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      setIsScrolled(scrollPosition > 50);
-    };
-
-    const handleKeyDown = (e) => {
-      if (e.key === 'Escape') {
-        setIsMobileMenuOpen(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    window.addEventListener('keydown', handleKeyDown);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-      window.removeEventListener('keydown', handleKeyDown);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Handle clicks outside the mobile menu
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (
+        mobileMenuOpen && 
+        mobileMenuRef.current && 
+        !mobileMenuRef.current.contains(e.target) && 
+        !hamburgerRef.current.contains(e.target)
+      ) {
+        setMobileMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+
+    // Handle ESC key press
+    const handleEscKey = (e) => {
+      if (e.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('keydown', handleEscKey);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscKey);
+    };
+  }, [mobileMenuOpen]);
+
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    setMobileMenuOpen(!mobileMenuOpen);
+    if (mobileMenuOpen) {
+      setActiveDropdown(null);
+    }
   };
 
-  const handleBackdropClick = () => {
-    setIsMobileMenuOpen(false);
+  const toggleMobileDropdown = (index, e) => {
+    e.preventDefault();
+    setActiveDropdown(activeDropdown === index ? null : index);
   };
+
+  // Navigation data
+  const navItems = [
+    {
+      title: 'Home',
+      link: '/Home',
+      dropdown: false
+    },
+    {
+      title: 'Discover Us',
+      link: '/DiscoverUs',
+      dropdown: true,
+      items: [
+        { title: 'About ZESPL', link: '/about' },
+        { title: 'Our Vision & Mission', link: '/visionMission' },
+        { title: 'Leadership', link: '/leadership' }
+      ]
+    },
+    {
+      title: 'Learning',
+      link: '#',
+      dropdown: true,
+      items: [
+        { title: 'Algnite Apti', link: '/AlgniteApti', styled: true },
+        { title: 'Algnite Tech', link: '/AlgniteTech', styled: true },
+        { title: 'Algnite Commune', link: '/AlgniteCommune', styled: true },
+        { title: 'Algnite Lab', link: '/AlgniteLab', styled: true },
+        { title: 'Algnite LMS', link: '/AlgniteLMS', styled: true }
+      ]
+    },
+    {
+      title: 'Assessment',
+      link: '#',
+      dropdown: true,
+      items: [
+        { title: 'Algnite Apti Assess', link: '/AlgniteAptiAssess', styled: true },
+        { title: 'Algnite Tech Assess', link: '/AlgniteTechAssess', styled: true },
+        { title: 'Algnite Mind Assess', link: '/AlgniteMindAssess', styled: true },
+        { title: 'Algnite HIRE', link: '/AlgniteHIRE', styled: true },
+        { title: 'Algnite Assess360', link: '/AlgniteAssess360', styled: true }
+      ]
+    },
+    {
+      title: 'Content',
+      link: '/Content',
+      dropdown: true,
+      items: [
+        { title: 'Assessment Content', link: '/AssessmentContentSolution' },
+        { title: 'Learning Content', link: '/LearningContentSolution' },
+        { title: 'Interactive Content', link: '/InteractiveContentSolution' },
+        { title: 'K12 Solutions', link: '/K2education' },
+        { title: 'Translation Services', link: '/InteractiveContentSolution' }
+      ]
+    }
+  ];
+
+  // Helper to render styled Algnite text
+  const renderStyledText = (text) => {
+    if (!text.includes('Algnite')) return text;
+    
+    return (
+      <>
+        <span className="text-green-400 text-xl font-bold">Al</span>
+        <span className="text-green-400 text-m font-semibold">gnite</span>
+        {" " + text.replace('Algnite', '')}
+      </>
+    );
+  };
+
+  // SVG dropdown icon
+  const DropdownIcon = () => (
+    <span className="dropdown-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
+        <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
+      </svg>
+    </span>
+  );
 
   return (
-    <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="logo-container">
-        <a href="/" className="navbar-logo">
-          <img 
-            src="/Zenith.png" 
-            alt="Logo" 
-            width={isScrolled ? "170" : "170"} 
-            height={isScrolled ? "40" : "40"}
-          />
-        </a>
-      </div>
-      <div>
-
+    <>
+      <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
+        <div className="logo-container">
+          <a href="/" className="navbar-logo">
+            <img src="/Zenith.png" alt="Logo" />
+          </a>
+        </div>
         
-        {/* <button className="px-6 py-1 bg-gradient-to-r from-green-600 to-indigo-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-blue-500/30 transition-all duration-300 hover:-translate-y-0.5">
-          Zenith
-        </button> */}
-      </div>
-      <div className="nav-links-container">
-        <ul className="navbar-list">
-          <li className="navbar-item">
-            <Link to="/Home" style={{ textDecoration: 'none' }} className="navbar-link">Home</Link>
-          </li>
-          <li className="navbar-item dropdown">
-          <Link to="/DiscoverUs" style={{ textDecoration: 'none' }} className="navbar-link">
-  Discover Us
-  <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
-      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
-    </svg>
-  </span>
-</Link>
-            <div className="dropdown-content">
-              <Link to="/about" style={{ textDecoration: 'none' }}>
-              <span className="special">About ZESPL</span></Link>
-              <Link to="/visionMission" style={{ textDecoration: 'none' }}>
-              <span className="special">Our Vision & Mission</span></Link>
-              {/* <Link to="/Whoweserve" style={{ textDecoration: 'none' }}>
-              <span className="special">Who We Serve</span></Link> */}
-              <Link to="/leadership" style={{ textDecoration: 'none' }}>
-              <span className="special">Leadership</span></Link>
-            </div>
-          </li>
-          <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Learning
-            <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
-      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
-    </svg>
-  </span>
-            </a>
-            <div className="dropdown-content">
-              <Link to="/AlgniteApti" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti </span>
-              </Link>
-              <Link to="/AlgniteTech" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech </span>
-              </Link>
-              <Link to="/AlgniteCommune" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span><span> Commune</span> </span>
-              </Link>
+        <div className="nav-links-container">
+          <ul className="navbar-list">
+            {navItems.map((item, index) => (
+              <li key={index} className={`navbar-item ${item.dropdown ? 'dropdown' : ''}`}>
+                <a href={item.link} className="navbar-link">
+                  {item.title}
+                  {item.dropdown && <DropdownIcon />}
+                </a>
+                
+                {item.dropdown && (
+                  <div className="dropdown-content">
+                    {item.items.map((subItem, subIndex) => (
+                      <a key={subIndex} href={subItem.link}>
+                        <span className="special">
+                          {subItem.styled ? renderStyledText(subItem.title) : subItem.title}
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-              {/* <Link to="/AlgniteCompanySpecificPulse" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Company Specific </span>
-              </Link> */}
-              <Link to="/AlgniteLab" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Lab</span>
-              </Link>
-              <Link to="/AlgniteLMS" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> LMS </span>
-              </Link>
-              {/* <Link to="/Talentdevelopment" style={{ textDecoration: 'none' }}>
-                <span className="special">Talent development </span>
-              </Link> */}
-              {/* <Link to="/AlgniteSoftSkillsBoost" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-pink-400 text-m font-semibold ">gnite</span> Soft Boost</span>
-              </Link> */}
-            </div>
-          </li>
-          <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Assessment
-            <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
-      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
-    </svg>
-  </span>
-            </a>
-            <div className="dropdown-content">
-              <Link to="/AlgniteAptiAssess" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Apti Assess</span>
-              </Link>
-              <Link to="/AlgniteTechAssess" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Tech Assess</span>
-              </Link>
-              <Link to="/AlgniteMindAssess" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Mind Assess</span>
-              </Link>
+        <div 
+          ref={hamburgerRef}
+          className={`hamburger ${mobileMenuOpen ? 'active' : ''}`} 
+          onClick={toggleMobileMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+
+      <div 
+        ref={mobileMenuRef}
+        className={`mobile-menu ${mobileMenuOpen ? 'active' : ''}`}
+      >
+        <ul className="mobile-navbar-list">
+          {navItems.map((item, index) => (
+            <li 
+              key={index} 
+              className={`mobile-navbar-item ${item.dropdown ? 'dropdown' : ''} ${activeDropdown === index ? 'active' : ''}`}
+            >
+              <a 
+                href={item.link} 
+                className="mobile-navbar-link"
+                onClick={item.dropdown ? (e) => toggleMobileDropdown(index, e) : undefined}
+              >
+                {item.title}
+                {item.dropdown && <DropdownIcon />}
+              </a>
               
-              <Link to="/AlgniteHIRE" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> HIRE</span>
-              </Link>
-              <Link to="/AlgniteAssess360" style={{ textDecoration: 'none' }}>
-                <span className="special"><span className="text-green-400 text-xl font-bold ">Al</span><span className="text-green-400 text-m font-semibold ">gnite</span> Assess360</span>
-              </Link>
-              
-            </div>
-          </li>
-          <li className="navbar-item dropdown">
-          <Link to="/Content" style={{ textDecoration: 'none' }} className="navbar-link">Content
-          <span className="dropdown-icon" style={{ marginLeft: '2px', display: 'inline-flex', alignItems: 'center' }}>
-    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 16 16">
-      <path fill="#FFFFFF" d="M4.94 5.72L8 8.78l3.06-3.06L12 6.66l-4 4-4-4 0.94-0.94z" />
-    </svg>
-  </span></Link>
-            <div className="dropdown-content">
-              <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Assessment Content </span></Link>
-              <Link to="/LearningContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Learning Content </span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Interactive Content </span></Link>
-              <Link to="/K2education" style={{ textDecoration: 'none' }}>
-              <span className="special">K12 Solutions</span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Translation Services</span></Link>
-            </div>
-          </li>
-          {/* <li className="navbar-item dropdown">
-            <a  style={{ textDecoration: 'none' }} className="navbar-link">Resources</a>
-            <div className="dropdown-content">
-              <Link to="/AssessmentContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special"> Subject-Matter Experts</span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special"> Content proofreaders</span></Link>
-              <Link to="/LearningContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special">Language translators </span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special"> Content editors </span></Link>
-              <Link to="/InteractiveContentSolution" style={{ textDecoration: 'none' }}>
-              <span className="special"> Digital Content Designer</span></Link>
-              
-            </div>
-          </li> */}
-          {/* <li className="navbar-item">
-            <a href="/careers" style={{ textDecoration: 'none' }} className="navbar-link">Careers</a>
-          </li> */}
+              {item.dropdown && (
+                <div className="dropdown-content">
+                  {item.items.map((subItem, subIndex) => (
+                    <a key={subIndex} href={subItem.link}>
+                      <span className="special">
+                        {subItem.styled ? renderStyledText(subItem.title) : subItem.title}
+                      </span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
         </ul>
       </div>
-
-      
-
-
-
-    </nav>
-
-    
-
+    </>
   );
 };
 

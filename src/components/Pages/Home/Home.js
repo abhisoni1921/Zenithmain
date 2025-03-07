@@ -329,7 +329,7 @@ const originalCards = [
   const categories = [
     { icon: <Lightbulb />, name: 'Schools and Colleges ' },
     { icon: <PenTool />, name: 'Corporates' },
-    { icon: <Brain />, name: 'Healthcare and Medical Education ' },
+    { icon: <Brain />, name: 'Medical Education ' },
     { icon: <Activity />, name: 'Media and Entertainment ' },
     { icon: <BarChart2 />, name: 'IT and Software Development ' },
     { icon: <DollarSign />, name: 'Finance and Banking ' },
@@ -370,21 +370,21 @@ const originalCards = [
       links: [
         { text: 'Algnite Apti', url: '/AlgniteApti' },
         { text: 'Algnite Tech', url: '/AlgniteTech' },
-        { text: 'Algnite Commune', url: '#' },
+        { text: 'Algnite Commune', url: '/AlgniteCommune' },
         // { text: 'Algnite Company Specific', url: '#' },
-        { text: 'Algnite Lab', url: '#' },
-        { text: 'Algnite LMS', url: '#' }
+        { text: 'Algnite Lab', url: '/AlgniteLab' },
+        { text: 'Algnite LMS', url: '/AlgmiteLMS' }
       ]
     },
     {
       title: 'Assessment',
       image: 'https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?semt=ais_hybrid',
       links: [
-        { text: 'Algnite Apti Assess', url: '#' },
-        { text: 'Algnite Tech Assess', url: '#' },
-        { text: 'Algnite Personality Access', url: '#' },
-        { text: 'Algnite HIRE', url: '#' },
-        { text: 'Algnite Assess360', url: '#' }
+        { text: 'Algnite Apti Assess', url: '/AlgniteAptiAssess' },
+        { text: 'Algnite Tech Assess', url: '/AlgniteTechAssess' },
+        { text: 'Algnite Personality Access', url: '/AlgniteMindAssess' },
+        { text: 'Algnite HIRE', url: '/AlgniteHIRE' },
+        { text: 'Algnite Assess360', url: '/AlgniteAssess360' }
       ]
     },
     {

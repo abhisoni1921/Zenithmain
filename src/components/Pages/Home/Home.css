@@ -692,9 +692,7 @@
   transition: all 0.6s ease-out; /* Smooth transition */
 }
 
-.header:hover {
-  transform: scale(1.02); /* Subtle scale on hover */
-}
+
 
 .header h1 {
   font-size: 2.5rem;
@@ -704,14 +702,12 @@
   -webkit-background-clip: text;
   color: transparent;
   transition: all 0.4s ease-out; /* Transition for h1 */
-  transform: translateY(10px); /* Initial state for animation */
+   /* Initial state for animation */
   opacity: 0; /* Initial state for animation */
   animation: slideUp 0.8s ease-out 0.2s forwards; /* Entrance animation with delay */
 }
 
-.header h1:hover {
-  transform: translateY(-2px); /* Slight lift on hover */
-}
+
 
 .description {
   max-width: 900px;
@@ -720,7 +716,7 @@
   color: #333;
   transition: all 0.6s ease-out; /* Smooth transition */
   opacity: 0; /* Initial state for animation */
-  transform: translateY(20px); /* Initial state for animation */
+   /* Initial state for animation */
   animation: fadeInUp 1s ease-out 0.4s forwards; /* Entrance animation with delay */
 }
 
@@ -1006,12 +1002,13 @@ h2 {
   }
 
   .HI-overlay-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     padding: 3rem;
+    margin-top: -50px;
   }
 
   .HI-link-item {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 }
 /* course-categories */
@@ -1070,14 +1067,14 @@ h2 {
 .categories-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 3rem;
 }
 
 .category-card {
   display: flex;
   align-items: center;
-  padding: 0.6rem 1.1rem;
+  padding: 0.4rem 1rem;
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   border-radius: 100px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -1425,7 +1422,7 @@ body {
 .C-services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
+  gap: 1.5rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -2040,7 +2037,7 @@ header p {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 10rem;
   padding: 0 1rem;
 }
@@ -2059,7 +2056,7 @@ header p {
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(0px);
   box-shadow: 0 4px 15px #0f2027;
 }
 
@@ -2073,8 +2070,8 @@ header p {
     color: transparent;
   font-size: 2.5em;
   font-weight: 500;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: -1rem;
+  margin-bottom: -1rem;
 }
 
 .feature-content {
@@ -2092,6 +2089,7 @@ header p {
 .feature-icon {
   font-size: 1.5rem;
   color: #fff; /* Ensure icon is visible against background */
+  margin-top: -17px; /* Adjusted for better alignment */
 }
 
 .feature-card h2 {

@@ -438,17 +438,18 @@
 .abt-card {
     background: transparent;
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 8px;
+    margin: -5px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    min-height: 140px;
+    min-height: 150px;
     border: #0d1f3c 2px solid;
 }
 
 .abt-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(0px);
     box-shadow: 0 15px 35px rgba(0, 102, 255, 0.15);
     border-color: #0066ff;
 }
@@ -489,6 +490,7 @@
 
 @media (max-width: 480px) {
   .abt-grid {
+      gap: 25px; /* Larger gap on very small screens */
       margin: 0 1rem; /* Add some side margin on very small screens */
   }
   

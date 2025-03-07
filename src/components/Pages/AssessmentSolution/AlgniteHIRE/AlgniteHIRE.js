@@ -53,6 +53,30 @@ const AlgniteHIRE = () => {
     }
   ];
 
+  const abtCards = [
+    {
+      
+      title: "Screening Tests",
+      description: "Automated shortlisting based on aptitude, technical, and personality assessments."
+    },
+    {
+      
+      title: "Skill-Based Assessments",
+      description: " Role-specific skill evaluations to identify the most qualified candidates."
+    },
+    {
+      
+      title: "Automated Shortlisting",
+      description: " AI-powered scoring and ranking for efficient candidate selection."
+    },
+    {
+      
+      title: "Video Interviews",
+      description: "Conduct AI-enhanced video interviews with facial recognition and speech analysis."
+    },
+    
+  ];
+
 
   
 
@@ -137,6 +161,26 @@ const AlgniteHIRE = () => {
           </div>
         </div>
       </div>
+    </div>
+
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>What We Cover?</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
 
 <div className="F-con">

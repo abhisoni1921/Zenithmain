@@ -54,7 +54,29 @@ const AlgniteMindAssess = () => {
   ];
 
 
-  
+  const abtCards = [
+    {
+      
+      title: "General Personality Assessment",
+      description: "Measures the Big Five personality traits, including emotional stability, openness to experience, extraversion, agreeableness, and conscientiousness."
+    },
+    {
+      
+      title: "Situational Judgment Tests (SJT) ",
+      description: " Evaluates decision-making and problem-solving skills by presenting hypothetical scenarios."
+    },
+    {
+      
+      title: "Work Style Assessment",
+      description: "Assesses work preferences, such as teamwork, leadership, and adaptability."
+    },
+    {
+      
+      title: "Basic Skills Tests",
+      description: "Measures skills such as communication skills, problem-solving abilities, and time management."
+    },
+    
+  ];
 
 
 
@@ -137,6 +159,27 @@ const AlgniteMindAssess = () => {
           </div>
         </div>
       </div>
+    </div>
+
+
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>What We Cover?</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
 
 <div className="F-con">

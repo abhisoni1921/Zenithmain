@@ -53,6 +53,30 @@ const AlgniteTechAssess = () => {
     }
   ];
 
+  const abtCards = [
+    {
+      
+      title: "Coding Challenges",
+      description: "Assess programming skills with real-world coding tasks and algorithm challenges."
+    },
+    {
+      
+      title: "Domain-Specific Tests",
+      description: "Evaluate knowledge in specific technical domains like software development, data science, and cybersecurity."
+    },
+    {
+      
+      title: "Technical MCQs",
+      description: "Measure core technical knowledge with multiple-choice questions across various technologies."
+    },
+    {
+      
+      title: "System Design",
+      description: "Test problem-solving and architectural design skills for tech leadership roles."
+    },
+    
+  ];
+
 
   
 
@@ -139,6 +163,30 @@ const AlgniteTechAssess = () => {
         </div>
       </div>
     </div>
+
+
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>What We Cover?</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
+
+
+
 
 <div className="F-con">
     <div className="F-Title">

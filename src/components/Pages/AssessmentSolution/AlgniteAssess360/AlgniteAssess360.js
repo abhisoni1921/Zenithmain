@@ -53,6 +53,30 @@ const AlgniteAssess360 = () => {
     }
   ];
 
+  const abtCards = [
+    {
+      
+      title: "Peer Feedback",
+      description: "Collect constructive feedback from colleagues for balanced evaluations."
+    },
+    {
+      
+      title: "Manager Reviews",
+      description: "Gain leadership insights on employee performance and growth potential."
+    },
+    {
+      
+      title: "Customer Feedback",
+      description: "Include external client feedback for roles involving direct customer interactions."
+    },
+    {
+      
+      title: "Self-Assessments",
+      description: "Empower individuals to reflect on their strengths and areas of improvement."
+    },
+    
+  ];
+
 
   
 
@@ -137,6 +161,27 @@ const AlgniteAssess360 = () => {
           </div>
         </div>
       </div>
+    </div>
+
+
+    <div className="ABT">
+    <div className="abt-container">
+      <div className="abt-header">
+        <h1>What We Cover?</h1>
+        
+      </div>
+      <div className="abt-grid">
+        {abtCards.map((card, index) => (
+          <div key={index} className="abt-card">
+            <div className="abt-header-group">
+              
+              <h3 className="abt-title">{card.title}</h3>
+            </div>
+            <p className="abt-description">{card.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
     </div>
 
 <div className="F-con">
