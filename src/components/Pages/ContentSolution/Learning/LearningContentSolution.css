@@ -1,4 +1,6 @@
 
+
+
 .header-container {
   position: relative;
   min-height: 85vh;
@@ -119,6 +121,16 @@
     font-size: 1rem;
   }
 }
+
+
+.tss{
+  margin-top: -8rem;
+}
+
+.Learning-container{
+  background: rgba(255, 255, 255, 0.5);
+}
+
 
 
 .Learning-hero-container {

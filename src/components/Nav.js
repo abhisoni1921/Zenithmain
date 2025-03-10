@@ -80,7 +80,6 @@ const Navbar = () => {
     },
     {
       title: 'Learning',
-      link: '#',
       dropdown: true,
       items: [
         { title: 'Algnite Apti', link: '/AlgniteApti', styled: true },
@@ -92,7 +91,6 @@ const Navbar = () => {
     },
     {
       title: 'Assessment',
-      link: '#',
       dropdown: true,
       items: [
         { title: 'Algnite Apti Assess', link: '/AlgniteAptiAssess', styled: true },
@@ -111,7 +109,7 @@ const Navbar = () => {
         { title: 'Learning Content', link: '/LearningContentSolution' },
         { title: 'Interactive Content', link: '/InteractiveContentSolution' },
         { title: 'K12 Solutions', link: '/K2education' },
-        { title: 'Translation Services', link: '/InteractiveContentSolution' }
+        { title: 'Translation Services', link: '/Translation' }
       ]
     }
   ];

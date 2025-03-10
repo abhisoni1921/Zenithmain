@@ -1,9 +1,36 @@
 import React from 'react';
-import  { useState, useEffect } from 'react';
+import  { useState,useRef, useEffect } from 'react';
+import MailIcon from '@mui/icons-material/Mail';
+import { Star } from 'lucide-react';
 import { Play } from 'lucide-react';
 import './LearningContentSolution.css'
 import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
 import { motion } from 'framer-motion';
+
+const useIntersectionObserver = (options = {}) => {
+  const elementRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    }, options);
+
+    const currentElement = elementRef.current;
+    if (currentElement) {
+      observer.observe(currentElement);
+    }
+
+    return () => {
+      if (currentElement) {
+        observer.unobserve(currentElement);
+      }
+    };
+  }, [options]);
+
+  return elementRef;
+};
 
 const LearningContentSolution = () => {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
@@ -21,6 +48,88 @@ const LearningContentSolution = () => {
     '/img3.jpg',
     '/img4.jpg'
   ];
+  const currentYear = new Date().getFullYear();
+  const statsData = [
+    {
+      value: '10+Years ',
+      label: 'Industry Experience'
+    },
+    {
+      value: '1 Million+ ',
+      label: 'Learning items Developed'
+      
+    },
+    {
+      value: '10k+',
+      label: 'Students trained'
+    },
+    {
+      value: '100+',
+      label: 'Clients Served'
+    },
+    {
+      value: '50+',
+      label: 'Team of Experts',
+      icon: 'T'
+    }
+  ];
+
+  const renderStars = () => {
+    return [...Array(5)].map((_, index) => (
+      <Star 
+        key={index}
+        className="star-icon"
+        size={16}
+        fill="#FFD700"
+        color="#FFD700"
+      />
+    ));
+  };
+
+  const useIntersectionObserver = (options = {}) => {
+    const elementRef = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver(([entry]) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      }, options);
+  
+      const currentElement = elementRef.current;
+      if (currentElement) {
+        observer.observe(currentElement);
+      }
+  
+      return () => {
+        if (currentElement) {
+          observer.unobserve(currentElement);
+        }
+      };
+    }, [options]);
+  
+    return elementRef;
+  };
+
+  const SectionTitle = ({ children }) => {
+    const titleRef = useIntersectionObserver();
+    
+    return (
+      <div className="section-title-container">
+        <h2 className="section-title" ref={titleRef}>
+          {children}
+        </h2>
+      </div>
+    );
+  };
+
+  
+
+  
+
+
+
+
   const features = [
     {
       icon: "⚙️",
@@ -231,8 +340,250 @@ const LearningContentSolution = () => {
       </div>
     </div>
 
-    
+    <div className="stats-container">
+      {statsData.map((stat, index) => (
+        <div key={index} className="stat-item">
+          {stat.icon ? (
+            <div className="elementor-icon">{stat.icon}</div>
+          ) : (
+            <div className="stat-value">
+              {stat.value}
+              {stat.showStars && <div className="stars">{renderStars()}</div>}
+            </div>
+          )}
+          <div className="stat-label">{stat.label}</div>
+        </div>
+      ))}
+    </div>
 
+<div className='tss'>
+    <section className="training-services-section" ref={useIntersectionObserver()}>
+  <SectionTitle>Powerful Features Driving Educational Excellence
+  </SectionTitle>
+  <div class="ag-format-container">
+  <div class="ag-courses_box">
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Robust Data Security 
+        </div>
+        <p class="ag-courses-item_dis" >We prioritize the confidentiality of your educational data with advanced security measures, safeguarding intellectual property and sensitive information.        </p>
+
+        {/* <div class="ag-courses-item_date-box">
+          Start:
+          <span class="ag-courses-item_date">
+            04.11.2022
+          </span>
+        </div> */}
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Scalable and Flexible Solutions
+        </div>
+        <p class="ag-courses-item_dis" >Whether you need large-scale academic content or niche test prep materials, our solutions are designed to grow with your needs.        </p>
+
+        {/* <div class="ag-courses-item_date-box">
+          Start:
+          <span class="ag-courses-item_date">
+            04.11.2022
+          </span>
+        </div> */}
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Advanced Question Authoring Tool
+        </div>
+        <p class="ag-courses-item_dis" >Easily create, edit, and organize questions with our user-friendly authoring tool. Collaborate in real-time and maintain quality with built-in review workflows.        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Expert-Curated and Relevant 
+
+        </div>
+        
+        <p class="ag-courses-item_dis" >Developed by industry experts, our content is always up-to-date with the latest educational trends and exam patterns.
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Quality Assurance and Accuracy 
+
+        </div>
+        <p class="ag-courses-item_dis" >Every question and learning module goes through rigorous quality checks to maintain high standards of accuracy and relevance.
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Multi-Platform Compatibility 
+
+        </div>
+        <p class="ag-courses-item_dis" > Seamlessly integrate our content across various learning management systems, ensuring a smooth and consistent learning experience.
+
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Multi-Language Translation
+
+        </div>
+        <p class="ag-courses-item_dis" >Reach a broader audience with our multilingual support, ensuring accurate and context-sensitive translations for diverse learners.
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg">
+        </div>
+        <div class="ag-courses-item_title">
+        Seamless Integration
+        </div>
+        <p class="ag-courses-item_dis" >Our learning solutions easily integrate with existing learning systems, ensuring a smooth transition and uninterrupted learning experience
+        </p>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a  class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+        Student-Centric Approach
+
+        </div>
+        <p class="ag-courses-item_dis" >We design content that adapts to different learning styles, ensuring each student grasps concepts at their own pace.</p>
+      </a>
+    </div>
+
+  </div>
+</div>
+</section>
+</div>
+
+
+    
+<footer className="footer-container">
+      <div className="top-section">
+        <div className="logo-section">
+          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
+          <div className="social-icons">
+            <a href="#"><i className="fab fa-linkedin"></i></a>
+            <a href="#"><i className="fab fa-facebook"></i></a>
+            <a href="#"><i className="fab fa-youtube"></i></a>
+            <a href="#"><i className="fab fa-instagram"></i></a>
+            <a href="#"><i className="fab fa-twitter"></i></a>
+          </div>
+        </div>
+
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>CollegeConnect</h3>
+            <ul>
+              <li>Integrated Degree Programs</li>
+              <li>Employability Skilling Programs</li>
+              <li>Courses - Core Engineering & IT</li>
+              <li>IITM Parvartak Joint Certification Programs</li>
+              <li>Certification Courses - Commerce & Science</li>
+              <li>Specialization Stacks - Commerce & Science</li>
+              <li>Assessment Solutions</li>
+              <li>Immersion</li>
+              <li>Academic Partners</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Workonnect</h3>
+            <ul>
+              <li>Before Joining Programme</li>
+              <li>Hire Train Deploy Model</li>
+              <li>Role/Product Based-Skilling</li>
+              <li>Assessment Solutions</li>
+              <li>Enterprise Partners</li>
+            </ul>
+            <h3>Other Initiatives</h3>
+            <ul>
+              <li>Emerging Tech</li>
+              <li>Skill Exchange</li>
+              <li>Engineers Ensemble</li>
+              <li>Micro Learning</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>About</h3>
+            <ul>
+              <li>About Us</li>
+              <li>Capabilities</li>
+              <li>Core Solutions</li>
+              <li>Leadership</li>
+              <li>Mentors</li>
+              <li>Experts</li>
+              <li>Blogs</li>
+              <li>EduTech Connect</li>
+              <li>Newsroom</li>
+              <li>Events</li>
+              <li>Testimonials</li>
+              <li>Careers</li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Contact</h3>
+            <p>Address: 207, 1st floor, Sainik Vihar,</p>
+            <p>Pitampura, Delhi, India - 110034</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+
+            <h3>Support</h3>
+            <p>Learning Management System:</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bottom-section">
+        <img src="" alt="CMMI Logo" className="cmmi-logo" />
+        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
+        <div className="bottom-links">
+          <a href="#">Support</a>
+          <span>|</span>
+          <a href="#">Disclaimer</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
     
 
     </div>

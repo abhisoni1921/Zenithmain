@@ -785,7 +785,7 @@ const originalCards = [
       </div>
     </div>
 
-    <div className="F-Title">
+    {/* <div className="F-Title">
 <div className="header">
       <h1 >Optimized Theme Features and Benefits</h1>
       </div>
@@ -798,7 +798,7 @@ const originalCards = [
           <p className="f-description">{feature.description}</p>
         </div>
       ))}
-    </div>
+    </div> */}
    
 
 
@@ -1023,7 +1023,7 @@ const originalCards = [
       <header>
         <div className="M-title">
         <h1 className="M-header">Laser focused on WordPress</h1>
-        <p>Unleash the full potential of your tech-oriented website with Stratus!</p>
+        
         </div>
       </header>
 

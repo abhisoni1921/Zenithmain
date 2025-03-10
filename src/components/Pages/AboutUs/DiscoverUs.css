@@ -414,6 +414,7 @@ a:hover {
 
   .logo-container {
       justify-content: center;
+      margin-left: 50px;
   }
 
   .hero-title {

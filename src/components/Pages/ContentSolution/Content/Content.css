@@ -306,22 +306,17 @@
 }
 
 .ct-features-title {
-
   color: #0d1f3c;
   font-weight: 400;
   font-size: 2.5rem;
   margin-bottom: 2rem;
   line-height: 1.2;
   text-align: center;
-  
-  
 }
 
 .ct-features-title span {
   color: #193e75;
 }
-
-
 
 .ct-features-grid {
   display: grid;
@@ -363,8 +358,8 @@
   font-size: 1.5rem;
   font-weight: 400;
   background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
-    -webkit-background-clip: text;
-    color: transparent;
+  -webkit-background-clip: text;
+  color: transparent;
   margin-bottom: 1rem;
   text-align: left;
   transition: transform 0.3s ease;
@@ -448,33 +443,173 @@
   height: 24px;
 }
 
-@media (max-width: 1024px) {
-  .ct-features-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .ct-features-title {
-    font-size: 2.5rem;
-  }
-  
-  .ct-feature-card {
-    padding: 1.5rem;
-  }
-}
+/* Responsive Design */
 
-@media (max-width: 640px) {
+/* Tablets and smaller desktops (max-width: 1024px) */
+@media (max-width: 1024px) {
   .ct-features-container {
-    padding: 2rem 1rem;
+    padding: 3rem 1.5rem;
   }
-  
+
   .ct-features-title {
     font-size: 2rem;
   }
-  
+
+  .ct-features-grid {
+    grid-template-columns: repeat(2, 1fr); /* Switch to 2 columns */
+    padding: 0 2rem;
+    gap: 1.5rem;
+  }
+
+  .ct-feature-card1 {
+    width: 100%; /* Full width of grid cell */
+    height: 450px; /* Slightly reduce height */
+    padding: 1.5rem;
+  }
+
+  .ct-feature-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .ct-feature-content p {
+    font-size: 0.95rem;
+  }
+
+  .ct-feature-icon,
+  .ct-elementor-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ct-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media (max-width: 768px) {
+  .ct-features-container {
+    padding: 2rem 1rem;
+  }
+
+  .ct-features-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ct-features-grid {
+    grid-template-columns: 1fr; /* Single column */
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+
+  .ct-feature-card1 {
+    width: 100%;
+    height: auto; /* Allow height to adjust based on content */
+    min-height: 400px; /* Minimum height for consistency */
+    padding: 1.5rem;
+  }
+
+  .ct-feature-content h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .ct-feature-content p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .ct-feature-image {
+    aspect-ratio: 4/3; /* Adjust aspect ratio for smaller screens */
+  }
+
+  .ct-feature-icon,
+  .ct-elementor-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .ct-icon {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Disable hover effects on touch devices */
+  .ct-feature-card1:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 102, 255, 0.1);
+    border-color: #0d1f3c;
+  }
+
+  .ct-feature-card1:hover .ct-feature-content h2,
+  .ct-feature-card1:hover .ct-feature-content p {
+    transform: none;
+  }
+
+  .ct-feature-card1:hover .ct-feature-image {
+    transform: none;
+  }
+
+  .ct-feature-card1:hover .ct-feature-icon {
+    transform: none;
+  }
+
+  .ct-feature-card1:hover .ct-elementor-icon {
+    transform: none;
+  }
+}
+
+/* Small mobile devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .ct-features-container {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .ct-features-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .ct-features-grid {
+    padding: 0 0.5rem;
+    gap: 0.75rem;
+  }
+
+  .ct-feature-card1 {
+    padding: 1rem;
+    min-height: 350px;
+    border-radius: 16px;
+  }
+
   .ct-feature-content h2 {
     font-size: 1.5rem;
   }
+
+  .ct-feature-content p {
+    font-size: 17px;
+  }
+
+  .ct-feature-icon,
+  .ct-elementor-icon {
+    width: 32px;
+    height: 32px;
+    top: 0.75rem;
+    right: 0.75rem;
+  }
+
+  .ct-elementor-icon {
+    bottom: 0.75rem;
+  }
+
+  .ct-icon {
+    width: 16px;
+    height: 16px;
+  }
 }
+
+
 
 .brands-section {
   width: 100%;
@@ -482,7 +617,7 @@
   background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
   overflow: hidden;
   margin-top: 3rem;
-  margin-bottom: 11rem;
+  margin-bottom: 0rem;
 }
 
 .brand-header {
@@ -500,7 +635,7 @@
 
 .mar-content {
   display: flex;
-  animation: scroll 15s linear infinite;
+  animation: scroll 10s linear infinite;
   gap: 2rem;
 }
 

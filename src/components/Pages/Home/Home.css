@@ -556,7 +556,7 @@
 
   .slide-title {
     font-size: 1.5rem; /* Smaller title */
-    vertical-align: middle;
+    
     line-height: 1.2;
     margin-bottom: 0.5rem;
   }
@@ -682,9 +682,7 @@
   opacity: 0; /* Initial state for animation */
 }
 
-.talent-page:hover {
-  transform: translateY(-5px); /* Slight lift on hover */
-}
+
 
 .header {
   text-align: center;
@@ -720,10 +718,7 @@
   animation: fadeInUp 1s ease-out 0.4s forwards; /* Entrance animation with delay */
 }
 
-.description:hover {
-  color: #01145b; /* Color change on hover */
-  transform: translateY(0); /* Reset transform on hover */
-}
+
 
 /* Keyframe Animations */
 @keyframes fadeIn {
@@ -760,7 +755,7 @@
 section {
   margin-bottom: 4rem;
   opacity: 0;
-  transform: translateY(20px);
+  
   transition: all 0.6s ease-out;
   padding: 2rem;
   border-radius: 0.5rem;
@@ -834,7 +829,7 @@ h2 {
 .HI-cards-container {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   padding: 0rem;
   flex-wrap: wrap;
 }
@@ -849,9 +844,7 @@ h2 {
   transition: transform 0.3s ease;
 }
 
-.HI-card-container:hover {
-  transform: translateY(-5px);
-}
+
 
 .HI-card-image {
   width: 100%;
@@ -980,16 +973,16 @@ h2 {
   }
 
   .header h1 {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding: 5px 10px;
   }
 
   .section-title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .description {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .HI-cards-container {
@@ -1111,7 +1104,33 @@ h2 {
   color: #fff;  /* Black text */
   letter-spacing: normal;
 }
+@media (max-width: 480px) {
+  .course-categories {
+    padding: 0.5rem; /* Minimal padding for small mobile devices */
+  }
 
+  .categories-grid {
+    grid-template-columns: 1fr; /* Single column for very small screens */
+    gap: 0.5rem;
+    padding: 0.75rem;
+  }
+
+  .category-card {
+    padding: 0.3rem 0.6rem; /* Even smaller padding */
+    width: 280px;
+    margin-left: 25px;
+  }
+
+  .icon-container {
+    padding: 0.4rem;
+    margin-right: 0.5rem;
+  }
+
+  .icon-container svg {
+    width: 0.875rem; /* Smaller icons for tiny screens */
+    height: 0.875rem;
+  }
+}
 @media (max-width: 768px) {
   .course-categories {
     padding: 1rem;
@@ -1126,6 +1145,8 @@ h2 {
     gap: 10px;
   }
 }
+
+
 
 
 
@@ -1558,6 +1579,8 @@ body {
   max-width: 72rem;
   margin: 0 auto;
   padding: 1.25rem;
+  max-width: 1250px;
+  margin-top: 3rem;
   
 }
 

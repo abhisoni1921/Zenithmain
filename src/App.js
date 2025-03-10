@@ -52,6 +52,7 @@ import AlgniteTechAssess from './components/Pages/AssessmentSolution/AlgniteTech
 import AlgniteMindAssess from './components/Pages/AssessmentSolution/AlgniteMindAssess/AlgniteMindAssess';
 import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE/AlgniteHIRE';
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360/AlgniteAssess360';
+import Translation from './components/Pages/ContentSolution/Translation/Translation';
 
 
 
@@ -121,6 +122,7 @@ function App() {
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/K2education' element={<K2education/>}/>
+        <Route path='/Translation' element={<Translation/>}/>
 
         
 
