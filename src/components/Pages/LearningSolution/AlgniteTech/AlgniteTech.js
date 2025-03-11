@@ -53,8 +53,8 @@ const AlgniteTech = () => {
         playsInline
       >
         <source 
-          src="/TECH.mp4" 
-          type="video/mp4" 
+          src="/TECH.webm" 
+          type="video/webm" 
         />
       </video>
       <div className="overlay"></div>

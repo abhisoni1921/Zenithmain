@@ -110,8 +110,8 @@ const DiscoverUs = () => {
         playsInline
       >
         <source 
-          src="/video7.mp4" 
-          type="video/mp4" 
+          src="/video7.webm" 
+          type="video/webm" 
         />
       </video>
       <div className="overlay"></div>

@@ -77,8 +77,8 @@ const AlgniteLMS = () => {
         playsInline
       >
         <source 
-          src="/LMS.mp4" 
-          type="video/mp4" 
+          src="/LMS.webm" 
+          type="video/webm" 
         />
       </video>
       <div className="overlay"></div>

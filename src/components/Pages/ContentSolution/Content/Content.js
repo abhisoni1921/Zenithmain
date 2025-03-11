@@ -224,8 +224,8 @@ const Content = () => {
         playsInline
       >
         <source 
-          src="/video6.mp4" 
-          type="video/mp4" 
+          src="/video6.webm" 
+          type="video/webm" 
         />
       </video>
       <div className="overlay"></div>
