@@ -9,6 +9,16 @@ import { Lightbulb, PenTool, Brain, Activity,
   BarChart2, DollarSign, Monitor, Camera, 
   Database, Code, Server, Cpu } from 'lucide-react';
   import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
+
+
+  import { 
+    FaLinkedin, 
+    FaFacebook, 
+    FaYoutube, 
+    FaInstagram, 
+    FaTwitter 
+  } from 'react-icons/fa';
+
 const useIntersectionObserver = (options = {}) => {
   const elementRef = useRef(null);
 
@@ -72,8 +82,8 @@ const Card = ({ children, className = "" }) => {
 const bannerData = [
   {
     id: 1,
-    title: "Shaping the Future of Assessments with Cutting-Edge Innovation ",
-    description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
+    title: "Transforming Education with AI-Driven Personalization       Smart Insights and Adaptive Learning",
+    description: "Experience personalized, AI-powered learning that adapts to your progress and maximizes success.",
     image: "/blue.gif",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-1"
@@ -81,7 +91,7 @@ const bannerData = [
   },
   {
     id: 2,
-    title: "Shaping the Future of Contents with Cutting-Edge Innovation",
+    title: "Shaping the Future of           Assessment with Cutting        Edge Innovation",
     description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
     image: "/dblue.gif",
     buttonText: "Explore Our Solutions",
@@ -89,8 +99,8 @@ const bannerData = [
   },
   {
     id: 3,
-    title: "Shaping the Future of Learning with Cutting-Edge Innovation",
-    description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
+    title: "Future-Ready Content           Curated by Experts and          Enhanced with Cutting           Edge AI",
+    description: "Access expert-crafted, AI-optimized content designed for better understanding and retention.",
     image: "/dark.gif",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-3"
@@ -813,7 +823,8 @@ const originalCards = [
         <div class="ag-courses-item_title">
         K-12 Education
         </div>
-        <p class="ag-courses-item_dis" >Fostering curiosity and engagement, we empower students to take charge of their learning journey.</p>
+        <p class="ag-courses-item_dis" >Comprehensive curriculum development and academic support to enhance student learning. We provide interactive content, assessments, and resources for effective education.
+        </p>
 
         {/* <div class="ag-courses-item_date-box">
           Start:
@@ -831,7 +842,8 @@ const originalCards = [
         <div class="ag-courses-item_title">
         Talent Acquisition
         </div>
-        <p class="ag-courses-item_dis" >Streamlining hiring process with intelligent assessments and data-driven insights.</p>
+        <p class="ag-courses-item_dis" >Empowering organizations to find, attract, and hire top talent through strategic recruitment solutions, streamlined processes, and expert guidance.
+        </p>
 
         {/* <div class="ag-courses-item_date-box">
           Start:
@@ -849,7 +861,8 @@ const originalCards = [
         <div class="ag-courses-item_title">
         Career Skills Cultivation
         </div>
-        <p class="ag-courses-item_dis" >We equip students with the skills and confidence they need to excel in campus placements.</p>
+        <p class="ag-courses-item_dis" >Equipping learners with essential soft skills, industry-relevant expertise, and real-world training to enhance employability and long-term career success.
+        </p>
       </a>
     </div>
 
@@ -932,6 +945,23 @@ const originalCards = [
   </div>
 </div>
 </section>
+
+<div className="stats-container">
+      {statsData.map((stat, index) => (
+        <div key={index} className="stat-item">
+          {stat.icon ? (
+            <div className="elementor-icon">{stat.icon}</div>
+          ) : (
+            <div className="stat-value">
+              {stat.value}
+              {stat.showStars && <div className="stars">{renderStars()}</div>}
+            </div>
+          )}
+          <div className="stat-label">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+
 <div className="Cons-Title">
 <div className="header">
       <h1 >Educational Solutions and Services Overview</h1>
@@ -1019,7 +1049,7 @@ const originalCards = [
       </button>
     </div>
 
-        <div className="landing-page">
+        {/* <div className="landing-page">
       <header>
         <div className="M-title">
         <h1 className="M-header">Laser focused on WordPress</h1>
@@ -1060,23 +1090,9 @@ const originalCards = [
           className="rapid-build"
         />
       </div>
-    </div>
+    </div> */}
 
-    <div className="stats-container">
-      {statsData.map((stat, index) => (
-        <div key={index} className="stat-item">
-          {stat.icon ? (
-            <div className="elementor-icon">{stat.icon}</div>
-          ) : (
-            <div className="stat-value">
-              {stat.value}
-              {stat.showStars && <div className="stars">{renderStars()}</div>}
-            </div>
-          )}
-          <div className="stat-label">{stat.label}</div>
-        </div>
-      ))}
-    </div>
+    
 
 
         <footer className="footer-container">
@@ -1084,63 +1100,63 @@ const originalCards = [
         <div className="logo-section">
           <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
           <div className="social-icons">
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
+            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
+            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
           </div>
         </div>
 
         <div className="footer-content">
           <div className="footer-section">
-            <h3>CollegeConnect</h3>
+            <h3>Content Solutions</h3>
             <ul>
-              <li>Integrated Degree Programs</li>
-              <li>Employability Skilling Programs</li>
-              <li>Courses - Core Engineering & IT</li>
-              <li>IITM Parvartak Joint Certification Programs</li>
-              <li>Certification Courses - Commerce & Science</li>
-              <li>Specialization Stacks - Commerce & Science</li>
-              <li>Assessment Solutions</li>
-              <li>Immersion</li>
-              <li>Academic Partners</li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
-            <h3>Workonnect</h3>
-            <ul>
-              <li>Before Joining Programme</li>
-              <li>Hire Train Deploy Model</li>
-              <li>Role/Product Based-Skilling</li>
-              <li>Assessment Solutions</li>
-              <li>Enterprise Partners</li>
-            </ul>
-            <h3>Other Initiatives</h3>
-            <ul>
-              <li>Emerging Tech</li>
-              <li>Skill Exchange</li>
-              <li>Engineers Ensemble</li>
+            <li><a href='/LearningContentSolution'>Learning Content Solution</a></li>
+              <li>Adaptive Learning</li>
+              <li>Virtual Instructor-Led Learning</li>
+              <li>Animated Learning</li>
+              <li>Gamification</li>
+              <li>K12 Learning</li>
               <li>Micro Learning</li>
+              <li>Assessment Content Solutions</li>
+              <li><a href='/Translation'>Translation Services</a></li>
             </ul>
           </div>
 
           <div className="footer-section">
-            <h3>About</h3>
+            <h3>Learning</h3>
             <ul>
-              <li>About Us</li>
-              <li>Capabilities</li>
-              <li>Core Solutions</li>
+              <li><a href='/AlgniteApti'>Algnite Apti</a></li>
+              <li><a href='/AlgniteTech'>Algnite Tech</a></li>
+              <li><a href='/AlgniteCommune'>Algnite Commune</a></li>
+              <li><a href='/AlgniteLab'>Algnite Lab</a></li>
+              <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
+            </ul>
+            <h3>Assessment</h3>
+            <ul>
+            <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
+            <li><a href='/AlgniteTechAssess'>Algnite Tech Assess</a></li>
+            <li><a href='/AlgniteMindAssess'>Algnite Mind Assess</a></li>
+            <li><a href='/AlgniteHIRE'>Algnite HIRE</a></li>             
+            <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h3>Discover Us</h3>
+            <ul>
+              <li>About ZESPL</li>
               <li>Leadership</li>
-              <li>Mentors</li>
-              <li>Experts</li>
-              <li>Blogs</li>
-              <li>EduTech Connect</li>
-              <li>Newsroom</li>
-              <li>Events</li>
-              <li>Testimonials</li>
-              <li>Careers</li>
+
+            </ul>
+            <h3>Resources</h3>
+            <ul>
+              <li>Subject-Matter Expert</li>
+              <li>Translators</li>
+              <li>Editors</li>
+              <li>Copywriters</li>
+              <li>Digital Design Providers</li>
             </ul>
           </div>
 
@@ -1158,8 +1174,8 @@ const originalCards = [
       </div>
 
       <div className="bottom-section">
-        <img src="" alt="CMMI Logo" className="cmmi-logo" />
-        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
+        {/* <img src="" alt="CMMI Logo" className="cmmi-logo" /> */}
+        <p>© {currentYear} All rights reserved. Zenith Education Sol. Pvt. Ltd.</p>
         <div className="bottom-links">
           <a href="#">Support</a>
           <span>|</span>

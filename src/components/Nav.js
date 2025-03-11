@@ -74,7 +74,7 @@ const Navbar = () => {
       dropdown: true,
       items: [
         { title: 'About ZESPL', link: '/about' },
-        { title: 'Our Vision & Mission', link: '/visionMission' },
+        // { title: 'Our Vision & Mission', link: '/visionMission' },
         { title: 'Leadership', link: '/leadership' }
       ]
     },
@@ -107,8 +107,8 @@ const Navbar = () => {
       items: [
         { title: 'Assessment Content', link: '/AssessmentContentSolution' },
         { title: 'Learning Content', link: '/LearningContentSolution' },
-        { title: 'Interactive Content', link: '/InteractiveContentSolution' },
-        { title: 'K12 Solutions', link: '/K2education' },
+        // { title: 'Interactive Content', link: '/InteractiveContentSolution' },
+        // { title: 'K12 Solutions', link: '/K2education' },
         { title: 'Translation Services', link: '/Translation' }
       ]
     }
