@@ -1,154 +1,50 @@
-import React  from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
+import  { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Pencil, Key } from 'lucide-react';
+import MailIcon from '@mui/icons-material/Mail';
+import { 
+  FaLinkedin, 
+  FaFacebook, 
+  FaYoutube, 
+  FaInstagram, 
+  FaTwitter 
+} from 'react-icons/fa';
 import './AlgniteLab.css'
-import { useEffect,useState } from 'react';
-import { ArrowRight } from 'lucide-react';
-// import Slider from "react-slick";
-
-
-const cards = [
-  { title: 'Card 1', content: 'Content for card 1', image:'/img1.jpg' },
-  { title: 'Card 2', content: 'Content for card 2',image:'/img2.jpg' },
-  { title: 'Card 3', content: 'Content for card 3',image:'/img3.jpg' },
-  { title: 'Card 4', content: 'Content for card 4',image:'/img4.jpg' },
-  { title: 'Card 5', content: 'Content for card 5',image:'/img5.jpg' },
-];
-const cardsData = [
-  {
-    imageUrl: "/img1.jpg",
-    description: "Experience the beauty of nature with our guided mountain tours",
-    link: "/tours/mountain"
-  },
-  {
-    imageUrl: "/img2.jpg",
-    description: "Discover hidden beaches and coastal treasures",
-    link: "/tours/beach"
-  },
-  {
-    imageUrl: "/img3.jpg",
-    description: "Explore ancient ruins and historical landmarks",
-    link: "/tours/historical"
-  },
-  {
-    imageUrl: "/img4.jpg",
-    description: "Immerse yourself in local culture and traditions",
-    link: "/tours/cultural"
-  },
-  {
-    imageUrl: "/img5.jpg",
-    description: "Adventure through pristine wilderness",
-    link: "/tours/wilderness"
-  }
-];
+ 
 
 const AlgniteLab = () => {
-  const location = useLocation();
-  const hash = location.hash;
-        useEffect(() => {
-          window.scrollTo(0, 0);
-        }, []);
-        const originalLength = cards.length;
-  
-  const extendedCards = [
-    ...cards.slice(-2),
-    ...cards,
-    ...cards.slice(0, 2),
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(2);
-  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const currentYear = new Date().getFullYear();
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    if (currentIndex === 1) {
-      setTimeout(() => {
-        setTransitionEnabled(false);
-        setCurrentIndex(originalLength + 1);
-      }, 500);
-    } else if (currentIndex === originalLength + 2) {
-      setTimeout(() => {
-        setTransitionEnabled(false);
-        setCurrentIndex(2);
-      }, 500);
-    }
-  }, [currentIndex, originalLength]);
+    setAnimate(true);
+  }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
-  const handleNext = () => {
-    if (currentIndex >= originalLength + 2) return;
-    setTransitionEnabled(true);
-    setCurrentIndex(prev => prev + 1);
-  };
 
-  const handlePrev = () => {
-    if (currentIndex <= 1) return;
-    setTransitionEnabled(true);
-    setCurrentIndex(prev => prev - 1);
-  };
-  const brands = [
-    { name: 'IC Solutions', logo: 'https://s3-us-west-2.amazonaws.com/naspovaluepoint/1652128715_ICSolutions%20Logo.jpg' },
-    { name: 'Exotec', logo: 'https://mma.prnewswire.com/media/2072473/Exotec_Logo_2023_Logo.jpg?w=600' },
-    { name: 'Proview', logo: 'https://www.vhv.rs/dpng/d/88-881545_proview-logo-hd-png-download.png' },
-    { name: 'Uniqa', logo: 'https://www.uniqagroup.com/grp/newsroom/UNIQA_mainlogo_blue_V1_4c.png' },
-    { name: 'Clutch', logo: 'https://www.teralogistics.com/wp-content/uploads/2024/02/Movex-Logo-gmail.png' },
-    { name: 'Gartner', logo: 'https://companieslogo.com/img/orig/IT_BIG-36956903.png?t=1597269509' },
-    { name: 'Movex', logo: 'https://logosrated.net/wp-content/uploads/2016/08/Proview-Technology-Logo-1-247x179.jpg' }
-  ];
-  const cardsData = [
+  const features = [
     {
-      title: 'Web Development',
-      image: 'https://img.freepik.com/free-photo/3d-render-low-poly-plexus-design-network-communications_1048-14542.jpg?semt=ais_hybrid',
-      links: [
-        { text: 'Frontend Projects', url: '#' },
-        { text: 'Backend Projects', url: '#' },
-        { text: 'Full Stack Projects', url: '#' }
-      ]
+      // icon: <Pencil size={24} />,
+      title: "Master Aptitude Skills with AI-Powered Insights",
+      description: "Crack the toughest placement and competitive exams with ease. Our AIgnite Apti program leverages AI-powered analytics to enhance your problem-solving abilities and analytical thinking."
     },
     {
-      title: 'Mobile Apps',
-      image: 'https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?semt=ais_hybrid',
-      links: [
-        { text: 'iOS Projects', url: '#' },
-        { text: 'Android Projects', url: '#' },
-        { text: 'Cross Platform', url: '#' }
-      ]
-    },
-    {
-      title: 'Cloud Solutions',
-      image: 'https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?semt=ais_hybrid',
-      links: [
-        { text: 'AWS Projects', url: '#' },
-        { text: 'Azure Projects', url: '#' },
-        { text: 'Google Cloud', url: '#' }
-      ]
+      icon: <Key size={24} />,
+      title: "Key highlights",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio dolorem obcaecati assumenda voluptatem, quod illum ab blanditiis nostrum ex fugiat.",
+      description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio dolorem obcaecati assumenda voluptatem, quod illum ab blanditiis nostrum ex fugiat."   
     }
   ];
-  const [activePanel, setActivePanel] = useState(null);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
+  
 
-  const togglePanel = (panel) => {
-    setActivePanel(activePanel === panel ? null : panel);
-  };
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Add your form submission logic here
-  };
   return (
-    <div className="Lab-container">
-
-    <div className="header-container">
+    <div className="Learning-container">
+      <div className="header-container">
       <video 
         className="background-video" 
         autoPlay 
@@ -157,8 +53,8 @@ const AlgniteLab = () => {
         playsInline
       >
         <source 
-          src="/video3.mp4" 
-          type="video/mp4" 
+          src="/video3.webm" 
+          type="video/webm" 
         />
       </video>
       <div className="overlay"></div>
@@ -176,168 +72,213 @@ const AlgniteLab = () => {
         ))}
       </div>
       <div className="content">
-        <div className="version-badge">
-          Version 4.2 just landed!
-        </div>
+
         <h1 className="title">
-          Stratus is a better way<br />
-          to build websites
+          Algnite Lab 
         </h1>
         {/* <p className="subtitle">
           The premium WordPress theme designed to elevate your online<br />
           presence to unparalleled heights.
         </p> */}
-        <button className="cta-button">
-          Get started
-          <span className="arrow">→</span>
-        </button>
+  
       </div>
     </div>
-    <div className="brands-section">
-      
-      
-      <div className="marquee-container">
-        <div className="marquee-content">
-          {[...brands, ...brands].map((brand, index) => (
-            <div key={index} className="brand-card">
-              <img 
-                src={brand.logo} 
-                alt={brand.name}
-                className="brand-logo"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-    <div className="Lab-hero-container">
-      <div className="Lab-hero-content">
-      
 
+    
+    <div className="aptitude-section">
+      <div className="content">
+        <h1>Practical Learning with AI-Driven Simulations</h1>
+        <p>
+        AIgnite Lab bridges the gap between theory and practice through hands-on labs and AI-powered projects. Gain industry-ready skills by working on real-world scenarios.</p>
+        <h2>Key highlights</h2>
+        <ul>
+          <li>Project-based learning with AI-guided live coding sessions   </li>
+          <li>Exposure to industry tools and technologies </li>
+          <li>Guided mentorship and performance feedback   </li>
+          
+        </ul>
+      </div>
+      <div className="image">
+        <img src="./img7.jpg" alt="Relevant Image" />
+      </div>
+    </div>
+
+    <div className="ct-features-container">
+          {/* <motion.h1 
+            className="ct-features-title"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Our Content <span>Feature</span>
+          </motion.h1> */}
+          <div className="header">
+          <h1>Our Learning Feature</h1>
+          </div>
+    
+          <div className="ct-features-grid">
+            {/* First Feature Card */}
+            <motion.div
+              className="ct-feature-card1"
+              initial={{ opacity: 0, x: -30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="ct-feature-content">
+                <h2>Wide Variety of Questions  </h2>
+                <p>AIgnite Lab provides you more than 10,000+ questions for hands-on lab practice.
+
+It offers a comprehensive platform to enhance your skills through interactive exercises.
+
+Designed for learners and professionals, it supports a wide range of topics and difficulty levels.</p>
+              </div>
+              <div className="ct-feature-image">
+                <img src="/img7.jpg" alt="Demo import interface" className="ct-main-image" />
+                <div className="ct-feature-icon">
+                  <svg viewBox="0 0 24 24" className="ct-icon">
+                    <path d="M13 5l7 7-7 7M5 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+    
+            {/* Second Feature Card */}
+            <motion.div
+              className="ct-feature-card1"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="ct-feature-content">
+                <h2>Modular Learning Made Easy </h2>
+                <p>AIgnite Lab organizes the syllabus into manageable modules, allowing students to learn step by step and track their progress more effectively. This structured approach ensures that learners can build on their knowledge incrementally, fostering a deeper understanding of the material.
+                </p>
+              </div>
+              <div className="ct-feature-image">
+                <img src="/img8.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <div className="ct-elementor-icon">
+                  <svg viewBox="0 0 24 24" className="ct-icon">
+                    <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+            {/* 3rd Feature Card */}
+            <motion.div
+              className="ct-feature-card1"
+              initial={{ opacity: 0, x: 30 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <div className="ct-feature-content">
+                <h2>Instant Debugging Assistance </h2>
+                <p>Receive real-time feedback and debugging tips to optimize your code efficiently, all while improving your programming skills with practical insights and boosting your confidence as a developer.</p>
+              </div>
+              <div className="ct-feature-image">
+                <img src="/img11.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <div className="ct-elementor-icon">
+                  <svg viewBox="0 0 24 24" className="ct-icon">
+                    <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
+                  </svg>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+
+    
+
+        <div className="Footer-gap"></div>
+        <footer className="footer-container">
+              <div className="top-section">
+                <div className="logo-section">
+                  <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
+                  <div className="social-icons">
+                    <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+                    <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
+                    <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+                    <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
+                    <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
+                  </div>
+                </div>
         
- 
-      </div>
-      
-    </div>
-    <div className="HI-cards-container">
-      {cardsData.map((card, index) => (
-        <div key={index} className="HI-card-container">
-          <img 
-            src={card.image} 
-            alt={card.title} 
-            className="HI-card-image"
-          />
-          <div className="HI-overlay">
-            <h3 className="HI-overlay-title">{card.title}</h3>
-            <ul className="HI-links-list">
-              {card.links.map((link, linkIndex) => (
-                <li key={linkIndex}>
-                  <a href={link.url} className="HI-link-item">
-                    {link.text}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
-    </div>
-   
-    <div className="contact-container">
-      <div className="sidebar">
-        <h2 className="us">Navigation</h2>
-        <div className="accordion">
-          <div className="accordion-item">
-            <button 
-              className={`accordion-button ${activePanel === 'howLong' ? 'active' : ''}`}
-              onClick={() => togglePanel('howLong')}
-            >
-              How long does it take to respond?
-            </button>
-            {activePanel === 'howLong' && (
-              <div className="panel">
-                <p>We typically respond within 24-48 hours during business days.</p>
-              </div>
-            )}
-          </div>
-
-          <div className="accordion-item">
-            <button 
-              className={`accordion-button ${activePanel === 'accordion' ? 'active' : ''}`}
-              onClick={() => togglePanel('accordion')}
-            >
-              Additional Information
-            </button>
-            {activePanel === 'accordion' && (
-              <div className="panel">
-                <p>Explore more about our services and offerings here.</p>
-              </div>
-            )}
-          </div>
-
-          <div className="accordion-item">
-            <button 
-              className={`accordion-button ${activePanel === 'add' ? 'active' : ''}`}
-              onClick={() => togglePanel('add')}
-            >
-              Custom Options
-            </button>
-            {activePanel === 'add' && (
-              <div className="panel">
-                <p>Add your custom content or requests here.</p>
-              </div>
-            )}
-          </div>
-
-          <div className="accordion-item">
-            <button 
-              className={`accordion-button ${activePanel === 'research' ? 'active' : ''}`}
-              onClick={() => togglePanel('research')}
-            >
-              Research Resources
-            </button>
-            {activePanel === 'research' && (
-              <div className="panel">
-                <p>Access our latest research papers and studies.</p>
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-
-      <div className="form-section">
-        <h2 className="us" >Get in Touch</h2>
-        <p className="form-subtitle">We'd love to hear from you! Fill out the form below.</p>
+                <div className="footer-content">
+                  <div className="footer-section">
+                    <h3>Content Solutions</h3>
+                    <ul>
+                    <li><a href='/LearningContentSolution'>Learning Content Solution</a></li>
+                      <li>Adaptive Learning</li>
+                      <li>Virtual Instructor-Led Learning</li>
+                      <li>Animated Learning</li>
+                      <li>Gamification</li>
+                      <li>K12 Learning</li>
+                      <li>Micro Learning</li>
+                      <li>Assessment Content Solutions</li>
+                      <li><a href='/Translation'>Translation Services</a></li>
+                    </ul>
+                  </div>
         
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Full Name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-          <button type="submit" className="submit-btn">Send Message</button>
-        </form>
-      </div>
-    </div>
-
+                  <div className="footer-section">
+                    <h3>Learning</h3>
+                    <ul>
+                      <li><a href='/AlgniteApti'>Algnite Apti</a></li>
+                      <li><a href='/AlgniteTech'>Algnite Tech</a></li>
+                      <li><a href='/AlgniteCommune'>Algnite Commune</a></li>
+                      <li><a href='/AlgniteLab'>Algnite Lab</a></li>
+                      <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
+                    </ul>
+                    <h3>Assessment</h3>
+                    <ul>
+                    <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
+                    <li><a href='/AlgniteTechAssess'>Algnite Tech Assess</a></li>
+                    <li><a href='/AlgniteMindAssess'>Algnite Mind Assess</a></li>
+                    <li><a href='/AlgniteHIRE'>Algnite HIRE</a></li>             
+                    <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
+                    </ul>
+                  </div>
+        
+                  <div className="footer-section">
+                    <h3>Discover Us</h3>
+                    <ul>
+                      <li>About ZESPL</li>
+                      <li>Leadership</li>
+        
+                    </ul>
+                    <h3>Resources</h3>
+                    <ul>
+                      <li>Subject-Matter Expert</li>
+                      <li>Translators</li>
+                      <li>Editors</li>
+                      <li>Copywriters</li>
+                      <li>Digital Design Providers</li>
+                    </ul>
+                  </div>
+        
+                  <div className="footer-section">
+                    <h3>Contact</h3>
+                    <p>Address: 207, 1st floor, Sainik Vihar,</p>
+                    <p>Pitampura, Delhi, India - 110034</p>
+                    <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+        
+                    <h3>Support</h3>
+                    <p>Learning Management System:</p>
+                    <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+                  </div>
+                </div>
+              </div>
+        
+              <div className="bottom-section">
+                {/* <img src="" alt="CMMI Logo" className="cmmi-logo" /> */}
+                <p>© {currentYear} All rights reserved. Zenith Education Sol. Pvt. Ltd.</p>
+                <div className="bottom-links">
+                  <a href="#">Support</a>
+                  <span>|</span>
+                  <a href="#">Disclaimer</a>
+                  <span>|</span>
+                  <a href="#">Privacy Policy</a>
+                </div>
+              </div>
+            </footer>
     </div>
   );
 };

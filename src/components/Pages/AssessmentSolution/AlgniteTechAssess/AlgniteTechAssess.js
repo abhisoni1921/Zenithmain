@@ -224,7 +224,7 @@ const AlgniteTechAssess = () => {
 <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
+          <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>

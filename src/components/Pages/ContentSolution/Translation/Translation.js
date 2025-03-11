@@ -69,6 +69,30 @@ const Translation = () => {
     );
   };
 
+
+  const features = [
+    {
+      icon: "⚙️",
+      title: "Expert Translators  ",
+      description: "Collaborations with native-speaking professionals for accurate context."
+    },
+    {
+      icon: "📱",
+      title: "Multi-Stage Review ",
+      description: "Content goes through translation, editing, and proofreading."
+    },
+    {
+      icon: "💬",
+      title: "Secure and Confidential ",
+      description: "We prioritize data security with encrypted workflows, ensuring the safety and confidentiality of your content."
+    },
+    {
+      icon: "👆",
+      title: "Cultural Sensitivity and Relevance",
+      description: "We adapt content to suit cultural nuances, ensuring learners from different backgrounds connect with the material."
+    }
+  ];
+
   const categories = [
     { icon: <Lightbulb />, name: 'Hindi' },
     { icon: <PenTool />, name: 'English' },
@@ -175,6 +199,25 @@ const Translation = () => {
       </div>
     </div>
 
+
+    <div className="F-con">
+    <div className="F-Title">
+<div className="header">
+      <h1 >360-Degree Assessment Features for Holistic Evaluation
+      </h1>
+      </div>
+      </div>
+    <div className="f-container">
+      {features.map((feature, index) => (
+        <div key={index} className="f-card">
+          <div className="f-icon">{feature.icon}</div>
+          <h3 className="f-title">{feature.title}</h3>
+          <p className="f-description">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+    </div>
+
     
 
     
@@ -183,7 +226,7 @@ const Translation = () => {
         <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" />
+          <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
