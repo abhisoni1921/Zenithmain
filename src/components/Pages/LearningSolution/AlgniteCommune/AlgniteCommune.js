@@ -113,7 +113,7 @@ const AlgniteCommune = () => {
             Our Content <span>Feature</span>
           </motion.h1> */}
           <div className="header">
-          <h1>Our Content Feature</h1>
+          <h1>Our Learning Feature</h1>
           </div>
     
           <div className="ct-features-grid">

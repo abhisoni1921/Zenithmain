@@ -225,6 +225,7 @@
     height: auto;
     border-radius: 10px;
     transition: transform 0.5s ease-out;
+    margin-top: 10px;
   }
   
   .aptitude-section .image:hover img {
@@ -275,6 +276,8 @@
       transform: scale(1);
     }
   }
+
+  
   
   @media (min-width: 768px) {
     .aptitude-section {

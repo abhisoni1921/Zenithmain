@@ -2120,12 +2120,30 @@ header p {
 }
 .M-header {
   background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
-    -webkit-background-clip: text;
-    color: transparent;
-  font-size: 2.5em;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: clamp(1.5em, 6vw, 2.5em); /* Scales between 1.5em and 2.5em based on viewport */
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: -1rem;
+  line-height: 1.2; /* Improves readability on smaller screens */
+}
+
+/* Media query for smaller devices */
+@media screen and (max-width: 768px) {
+  .M-header {
+    margin-top: 0.75rem; /* Slightly reduced margin for smaller screens */
+    margin-bottom: -0.75rem;
+  }
+}
+
+/* Extra small devices (e.g., very small phones) */
+@media screen and (max-width: 480px) {
+  .M-header {
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+    font-size: 1.5;
+  }
 }
 
 .feature-content {
