@@ -108,29 +108,168 @@ const AlgniteAssess360 = () => {
         />
       </video>
       <div className="overlay"></div>
-      <div className="background-animation">
-        {[...Array(50)].map((_, index) => (
-          <div 
-            key={index} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 5}s`
-            }}
-          />
-        ))}
+      
+      {/* Animated shapes */}
+      <div className="animated-shapes">
+        <div className="shape shape1"></div>
+        <div className="shape shape2"></div>
+        <div className="shape shape3"></div>
+        <div className="shape shape4"></div>
       </div>
-      <div className="content">
 
+      <div className="content">
+      <style>
+        {`
+          @keyframes gradientText {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%; 
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          @keyframes slideInFromBottom {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes morphShape {
+            0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+          }
+
+          .animated-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+          }
+
+          .shape {
+            position: absolute;
+            opacity: 0.15;
+            pointer-events: none;
+            animation: morphShape 8s ease-in-out infinite;
+          }
+
+          .shape1 {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            top: 20%;
+            left: 10%;
+          }
+
+          .shape2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #4E65FF, #92EFFD);
+            top: 40%;
+            right: 15%;
+          }
+
+          .shape3 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #A17FE0, #5D26C1);
+            bottom: 20%;
+            left: 20%;
+          }
+
+          .shape4 {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(45deg, #59C173, #5D26C1);
+            bottom: 30%;
+            right: 20%;
+          }
+
+          .title {
+            font-size: 4rem !important;
+            font-weight: 700;
+            background: linear-gradient(
+              90deg,
+              #0d47a1,
+              #4a90e2,
+              #03a2ca,
+              #0d47a1
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 6s ease infinite,
+                       slideInFromBottom 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+            left: 5rem;
+          }
+
+          .title:hover {
+            transform: scale(1.05);
+          }
+
+          .divider {
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, #000000, #4E65FF, #A17FE0);
+            margin: 20px auto;
+            border-radius: 2px;
+          }
+
+          .subtitle {
+            font-size: 1.2rem;
+            color: #f8fafe;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: slideInFromBottom 1.5s ease-out 0.3s forwards;
+            opacity: 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          @media (max-width: 768px) {
+            .title {
+              font-size: 2.5rem !important;
+            }
+            .subtitle {
+              font-size: 1rem;
+              padding: 0 20px;
+            }
+            .divider {
+              width: 150px;
+            }
+          }
+        `}
+      </style>
         <h1 className="title">
-        Algnite Assess360
+          Algnite Assess360
         </h1>
-        {/* <p className="subtitle">
-          The premium WordPress theme designed to elevate your online<br />
-          presence to unparalleled heights.
-        </p> */}
-  
+        <div className="divider"></div>
+        <p className="subtitle">
+          Transform your performance evaluation process with our comprehensive 360-degree feedback system.
+          Leverage AI-powered insights to drive meaningful employee development and organizational growth.
+        </p>
       </div>
     </div>
 
@@ -152,13 +291,13 @@ const AlgniteAssess360 = () => {
           to foster employee development. Elevate talent management with a holistic, data-driven perspective.
           </p>
           
-          <div className='assess-btn'>
+          {/* <div className='assess-btn'>
           <button 
               className="learn-more-btn animate-on-mount visible"
             >
-              Learn more
+              view more
             </button>
-            </div>
+            </div> */}
           </div>
         </div>
         

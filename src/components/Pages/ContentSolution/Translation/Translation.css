@@ -128,7 +128,7 @@
     max-width: 1200px;
     margin: 0 auto;
     background-color: transparent;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: #01145b 4px 4px 12px;
     transition: all 0.8s ease-out;
     animation: fadeInUp 1s ease-out forwards;

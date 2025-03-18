@@ -12,7 +12,7 @@
 .abt-description li {
   position: relative;
   padding-left: 25px;
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   color: #333;
   font-size: 17px;
   line-height: 1.5;
@@ -60,7 +60,7 @@
 }
 
 .stage-title {
-  background: linear-gradient(135deg, #505781, #c6caca);
+  background: linear-gradient(135deg, #a2a7c6, #c6caca);
   color: white;
   padding: 5px;
   border-radius: 12px;

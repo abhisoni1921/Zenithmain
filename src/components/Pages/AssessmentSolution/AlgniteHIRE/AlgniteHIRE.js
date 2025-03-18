@@ -108,19 +108,66 @@ const AlgniteHIRE = () => {
         />
       </video>
       <div className="overlay"></div>
-      <div className="background-animation">
-        {[...Array(50)].map((_, index) => (
-          <div 
-            key={index} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+      <style>
+        {`
+          @keyframes gradientText {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%; 
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          @keyframes slideInFromBottom {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .title {
+            font-size: 4rem !important;
+            font-weight: 700;
+            background: linear-gradient(
+              90deg,
+              #0d47a1,
+              #4a90e2,
+              #03a2ca,
+              #0d47a1
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 6s ease infinite,
+                       slideInFromBottom 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+          }
+
+          .title:hover {
+            transform: scale(1.05);
+          }
+
+          @media (max-width: 768px) {
+            .title {
+              font-size: 2.5rem !important;
+            }
+          }
+        `}
+      </style>
       <div className="content">
 
         <h1 className="title">
@@ -152,13 +199,13 @@ const AlgniteHIRE = () => {
           build high-performing teams effortlessly.
           </p>
           
-          <div className='assess-btn'>
+          {/* <div className='assess-btn'>
           <button 
               className="learn-more-btn animate-on-mount visible"
             >
-              Learn more
+              view more
             </button>
-            </div>
+            </div> */}
           </div>
         </div>
         

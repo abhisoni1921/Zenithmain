@@ -168,21 +168,21 @@ const originalCards = [
             {
               imageUrl: "/img1.jpg",
               title: "Mountain Adventure",
-              description: "Explore the majestic peaks and valleys",
+              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
               link: "#",
               viewMore: "https://example.com/mountains"
             },
             {
               imageUrl: "/img2.jpg",
               title: "Ocean Escape",
-              description: "Discover hidden beaches and coral reefs",
+              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
               link: "#",
               viewMore: "https://example.com/ocean"
             },
             {
               imageUrl: "/img3.jpg",
               title: "Urban Explorer",
-              description: "Navigate through city landscapes",
+              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
               link: "#",
               viewMore: "https://example.com/urban"
             }
@@ -356,7 +356,7 @@ const originalCards = [
   const currentYear = new Date().getFullYear();
   const cards = [
     {
-      image: "https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/sample72.jpg",
+      image: "/img2.jpg",
       title: "Learning",
       description: [
         "AIgnite Apti Forge",
@@ -428,7 +428,7 @@ const originalCards = [
   const cardsData = [
     {
       title: 'Learning',
-      image: 'https://img.freepik.com/free-photo/3d-render-low-poly-plexus-design-network-communications_1048-14542.jpg?semt=ais_hybrid',
+      image: '/Learning (2)_enhanced.jpg',
       links: [
         { text: 'Algnite Apti', url: '/AlgniteApti' },
         { text: 'Algnite Tech', url: '/AlgniteTech' },
@@ -440,7 +440,7 @@ const originalCards = [
     },
     {
       title: 'Assessment',
-      image: 'https://img.freepik.com/free-photo/medium-shot-man-wearing-vr-glasses_23-2149126949.jpg?semt=ais_hybrid',
+      image: '/assessment_enhanced.jpg',
       links: [
         { text: 'Algnite Apti Assess', url: '/AlgniteAptiAssess' },
         { text: 'Algnite Tech Assess', url: '/AlgniteTechAssess' },
@@ -451,13 +451,13 @@ const originalCards = [
     },
     {
       title: 'Content',
-      image: 'https://img.freepik.com/free-photo/abstract-background-with-low-poly-design_1048-8478.jpg?semt=ais_hybrid',
+      image: '/content_enhanced.jpg',
       links: [
-        { text: 'Assessment Content', url: '#' },
-        { text: 'Learning Content', url: '#' },
-        { text: 'Interactive Content', url: '/InteractiveContentSolution' },
-        { text: 'K12 Solutions', url: '#' },
-        { text: 'Translation Services', url: '#' }
+        { text: 'Assessment Content', url: '/AssessmentContent' },
+        { text: 'Learning Content', url: '/LearningContentSolution' },
+        // { text: 'Interactive Content', url: '/InteractiveContentSolution' },
+        // { text: 'K12 Solutions', url: '#' },
+        { text: 'Translation Services', url: '/Translation' }
       ]
     }
   ];
@@ -631,6 +631,7 @@ const originalCards = [
           </div>
         </div> */}
          <div className="banner-container">
+          
       <div className="navigation-buttons">
         <button 
           onClick={prevSlide} 
@@ -659,7 +660,66 @@ const originalCards = [
             className={`slide ${slide.gradient} ${index === currentSlide ? 'active' : ''}`}
           >
             <div className="slide-content">
+              
               <div className="slide-text">
+              <div className="slide-badge">
+                <div className="badge-content">
+                  <span className="badge-icon">⭐</span>
+                  <span className="badge-text">Professional Solutions</span>
+                </div>
+              </div>
+              <style jsx>{`
+                .slide-badge {
+                  width: 250px;
+                  text-align: center;
+                  margin-left: 175px;
+                  display: inline-flex;
+                  padding: 8px 16px;
+                  background: rgba(255, 255, 255, 0.1);
+                  backdrop-filter: blur(10px);
+                  border-radius: 50px;
+                  margin-bottom: 24px;
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                  animation: badgeSlideIn 0.6s ease-out forwards;
+                  transform: translateY(20px);
+                  opacity: 0;
+                }
+
+                @keyframes badgeSlideIn {
+                  to {
+                    transform: translateY(0);
+                    opacity: 1;
+                  }
+                }
+
+                .badge-content {
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                }
+
+                .badge-icon {
+                  font-size: 1.2em;
+                  animation: starPulse 2s infinite;
+                }
+
+                @keyframes starPulse {
+                  0% { transform: scale(1); }
+                  50% { transform: scale(1.2); }
+                  100% { transform: scale(1); }
+                }
+
+                .badge-text {
+                  font-weight: 600;
+                  font-size: 0.95em;
+                  letter-spacing: 0.5px;
+                  background: linear-gradient(120deg, #fff, #e0e0e0);
+                  -webkit-background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+                }
+              `}</style>
               <h1 className="slide-title">
                 
                   {slide.title.split('').map((char, charIndex) => (
@@ -794,7 +854,7 @@ const originalCards = [
                 .HI-overlay {
                   background: linear-gradient(
                     to bottom,
-                    rgba(0, 0, 0, 0.7) 0%,
+                    rgb(17 44 178 / 80%) 0%,
                     rgba(0, 0, 0, 0.9) 100%
                   );
                   padding: 2rem;
@@ -1359,9 +1419,111 @@ const originalCards = [
     </div>
 
  
-    <h1 className="M-header">Laser focused on WordPress</h1>
-    <div className="carousel-container">
     
+    
+    <div className="carousel-container">
+    <h1 className="M-header">Laser focused on WordPress</h1>
+      <style>
+        {`
+          .carousel-container {
+            background: #1a1a1a;
+            padding: 4rem 2rem;
+            position: relative;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+          }
+
+          .carousel-button {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            backdrop-filter: blur(8px);
+          }
+
+          .carousel-button:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-50%) scale(1.1);
+          }
+
+          .carousel-button-prev { left: 20px; }
+          .carousel-button-next { right: 20px; }
+
+          .carousel-card {
+            background: #2a2a2a;
+            
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+          }
+
+          
+
+          .carousel-image-container {
+            position: relative;
+            height: 250px;
+          }
+
+          .carousel-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .carousel-image-overlay {
+            background: linear-gradient(to bottom, transparent, rgba(42,42,42,0.9));
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+          }
+
+          .carousel-content {
+            padding: 2rem;
+          }
+
+          .carousel-title {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+          }
+
+          .carousel-description {
+            color: #b3b3b3;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+          }
+
+          .carousel-link {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #2196f3, #1565c0);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+          }
+
+          .carousel-link:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(33,150,243,0.3);
+          }
+        `}
+      </style>
+
       <button 
         className="carousel-button carousel-button-prev"
         onClick={handlePrev}
@@ -1390,16 +1552,18 @@ const originalCards = [
                 </div>
                 <div className="carousel-content">
                   <h3 className="carousel-title">{card.title}</h3>
-                  <p className="carousel-description">{card.description}</p>
-                  <div className="carousel-actions">
+                  <p className="carousel-description">
+                    {card.description}
+                    
+                  </p>
+                  {/* <div className="carousel-actions">
                     <a 
                       href={card.viewMore}
                       className="carousel-link"
                     >
-                       View More  
+                      Explore More →
                     </a>
-                    
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

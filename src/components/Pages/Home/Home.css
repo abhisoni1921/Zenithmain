@@ -2130,13 +2130,13 @@ header p {
   margin-bottom: -2rem;
 }
 .M-header {
-  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
+  background: linear-gradient(135deg, #018047 0%, #037e4f 100%);
   -webkit-background-clip: text;
   color: transparent;
   font-size: clamp(1.5em, 6vw, 2.5em); /* Scales between 1.5em and 2.5em based on viewport */
   font-weight: 500;
-  margin-top: 1rem;
-  margin-bottom: -1rem;
+  margin-top: -1rem;
+  margin-bottom: 3rem;
   line-height: 1.2; /* Improves readability on smaller screens */
 }
 

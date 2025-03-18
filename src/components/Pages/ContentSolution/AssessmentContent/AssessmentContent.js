@@ -271,19 +271,66 @@ const AssessmentContent = () => {
         />
       </video>
       <div className="overlay"></div>
-      <div className="background-animation">
-        {[...Array(50)].map((_, index) => (
-          <div 
-            key={index} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+      <style>
+        {`
+          @keyframes gradientText {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%; 
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          @keyframes slideInFromBottom {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .title {
+            font-size: 4rem !important;
+            font-weight: 700;
+            background: linear-gradient(
+              90deg,
+              #0d47a1,
+              #4a90e2,
+              #03a2ca,
+              #0d47a1
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 6s ease infinite,
+                       slideInFromBottom 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+          }
+
+          .title:hover {
+            transform: scale(1.05);
+          }
+
+          @media (max-width: 768px) {
+            .title {
+              font-size: 2.5rem !important;
+            }
+          }
+        `}
+      </style>
       <div className="content">
 
         <h1 className="title">
@@ -314,13 +361,13 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
 
           </p>
           
-          <div className='assess-btn'>
+          {/* <div className='assess-btn'>
           <button 
               className="learn-more-btn animate-on-mount visible"
             >
               view more
             </button>
-            </div>
+            </div> */}
           </div>
         </div>
         
@@ -442,7 +489,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
       <div className="stage-content">
         <div className="process-box requirement">
           <h3>
-            <span className="process-number">1</span>
+            <span className="process-number"></span>
             Requirement Analysis
           </h3>
           <p>Understanding the requirements and communication of the same with the SME's through detailed consultation and planning sessions.</p>
@@ -452,7 +499,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="process-box development">
           <h3>
-            <span className="process-number">2</span>
+            <span className="process-number"></span>
             Development Phase
           </h3>
           <p>Development of questions by SME's either in office premises or on secure QMAT tool with rigorous quality standards.</p>
@@ -471,7 +518,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
       <div className="stage-content">
         <div className="process-box review">
           <h3>
-            <span className="process-number">3</span>
+            <span className="process-number"></span>
             Initial Review
           </h3>
           <p>Items are reviewed by an independent SME through the secure QMAT tool, with comprehensive feedback and necessary modifications.</p>
@@ -481,7 +528,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="process-box review">
           <h3>
-            <span className="process-number">4</span>
+            <span className="process-number"></span>
             Secondary Review
           </h3>
           <p>Items undergo another round of review by an independent SME to ensure complete accuracy and eliminate any ambiguity.</p>
@@ -500,7 +547,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
       <div className="stage-content">
         <div className="process-box translation">
           <h3>
-            <span className="process-number">5</span>
+            <span className="process-number"></span>
             Translation Process
           </h3>
           <p>Reviewed items are shared with expert translators through the secure QMAT tool for precise language conversion.</p>
@@ -510,7 +557,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="process-box translation">
           <h3>
-            <span className="process-number">6</span>
+            <span className="process-number"></span>
             Translation Review 1
           </h3>
           <p>Translated items are shared with an independent translator through QMAT tool to verify the authenticity and accuracy of translations.</p>
@@ -520,7 +567,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="process-box translation">
           <h3>
-            <span className="process-number">7</span>
+            <span className="process-number"></span>
             Translation Review 2
           </h3>
           <p>Items undergo a second review cycle by another independent translator to ensure 100% language correctness and cultural appropriateness.</p>
@@ -539,7 +586,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
       <div className="stage-content">
         <div className="process-box quality">
           <h3>
-            <span className="process-number">8</span>
+            <span className="process-number"></span>
             Final Quality Check
           </h3>
           <p>Comprehensive quality assessment by senior SMEs using advanced QMAT tools to ensure excellence in every aspect.</p>
@@ -549,7 +596,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="process-box quality">
           <h3>
-            <span className="process-number">9</span>
+            <span className="process-number"></span>
             Secure Delivery
           </h3>
           <p>Content is securely packaged and delivered in client-specified formats through encrypted channels for maximum security.</p>
@@ -590,7 +637,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
 
       <div className="cour-title">
       <div className="header">
-      <h1 >Empowering Every Industry with Tailored Learning Solutions</h1>
+      <h1 >Languages Supported</h1>
       </div>
       </div>
       
