@@ -105,7 +105,7 @@ const Navbar = () => {
       link: '/Content',
       dropdown: true,
       items: [
-        { title: 'Assessment Content', link: '/AssessmentContentSolution' },
+        { title: 'Assessment Content', link: '/AssessmentContent' },
         { title: 'Learning Content', link: '/LearningContentSolution' },
         // { title: 'Interactive Content', link: '/InteractiveContentSolution' },
         // { title: 'K12 Solutions', link: '/K2education' },

@@ -15,7 +15,54 @@ import { Pencil, Key } from 'lucide-react';
 
 
 
+
+
 const Content = () => {
+  const [activeTab, setActiveTab] = useState('Learning');
+  
+  const tabContent = {
+    Learning: {
+      title: "Learning",
+      description: "Industry-leading learning platform for technical skill development with support for 40+ programming languages and customizable learning paths Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "AI-Driven Candidate Matching", icon: "brain" },
+        { title: "Automated Shortlisting", icon: "list" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Integrated Video Interviews", icon: "video" }
+      ]
+    },
+    Assessment: {
+      title: "Assessment",
+      description: "Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "Skill-Based Assessments", icon: "target" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Customizable Recruitment Pipelines", icon: "settings" }
+      ]
+    },
+    Content: {
+      title: "Content",
+      description: "Comprehensive content platform with rich media resources, customizable materials, and deep analytics for technical and non-technical roles Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "Real-time Performance Analytics", icon: "chart" },
+        { title: "Multi-format Question Banks", icon: "database" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Advanced Fraud Detection", icon: "alert" }
+      ]
+    }
+  };
+  
+  const currentContent = tabContent[activeTab];
+
+  const heading = "Featured Products";
+  const description = "At Amypo, we focus on overcoming business challenges rather than pushing pre-set products. With our suite of custom solutions for educational and corporate needs, we offer AI-driven platforms that effortlessly mesh with your operational structure.";
 
   const currentYear = new Date().getFullYear();
         useEffect(() => {
@@ -211,6 +258,7 @@ const Content = () => {
               description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit odio dolorem obcaecati assumenda voluptatem, quod illum ab blanditiis nostrum ex fugiat."
             }
           ];
+
 
   return (
     <div className="-container">
@@ -437,6 +485,368 @@ const Content = () => {
           <button className="discover-button1 ">
             View More
           </button>
+        </div>
+      </div>
+    </div>
+
+    <div className="dotrecruit-container">
+      <div className="content-container1" style={{
+        background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(0, 0, 0, 0.2))',
+        padding: '3rem',
+        borderRadius: '20px',
+        boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)',
+        backdropFilter: 'blur(10px)'
+      }}>
+        <h1 className="content-title1" style={{
+          background: 'linear-gradient(90deg, #4ade80, #22c55e)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          fontSize: '2.5rem',
+          fontWeight: '600',
+          marginBottom: '2rem',
+          textAlign: 'center'
+        }}>Discover Our Powerful Features</h1>
+        <p className="content-description1" style={{
+          fontSize: '17px',
+          lineHeight: '1.8',
+          color: '#ede9e9',
+          textAlign: 'center',
+          maxWidth: '800px',
+          margin: '0 auto'
+        }}>Experience a comprehensive suite of cutting-edge recruitment tools designed to streamline your hiring process. Our platform combines intelligent automation, advanced candidate matching, and seamless collaboration features to help you find and secure the best talent efficiently. From AI-powered screening to interactive assessment tools, we provide everything you need to transform your recruitment workflow.</p>
+      </div>
+      {/* Navigation Bar */}
+      <div className="navigation-bar" style={{
+        background: 'transparent',
+        padding: '1rem',
+        borderRadius: '15px',
+        margin: '0rem 0'
+      }}>
+        <div className="nav-tabs" style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          gap: '1rem'
+        }}>
+          {Object.keys(tabContent).map((tab) => (
+            <button
+              key={tab}
+              className={`nav-tab ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab)}
+              
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+        <div className="nav-indicator-container" style={{
+          position: 'relative',
+          height: '3px',
+          background: 'rgba(74, 222, 128, 0.2)',
+          borderRadius: '3px',
+          marginTop: '0rem'
+        }}>
+          <div 
+            className="nav-indicator" 
+            style={{
+              position: 'absolute',
+              height: '100%',
+              background: '#4ade80',
+              borderRadius: '3px',
+              transition: 'all 0.3s ease',
+              width: `${100 / Object.keys(tabContent).length}%`,
+              left: `${Object.keys(tabContent).indexOf(activeTab) * (100 / Object.keys(tabContent).length)}%`,
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <div className="content-left">
+          
+
+          {/* Description */}
+          <div className="description-container">
+            <h1 className="content-title" style={{
+              fontSize: '2.5rem',
+              fontWeight: '700',
+              background: 'linear-gradient(90deg, #4ade80, #60a5fa)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              marginBottom: '1.5rem',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
+              letterSpacing: '1px',
+              animation: 'fadeIn 0.8s ease-out'
+            }}>{currentContent.title}</h1>
+            <p className="content-description" style={{
+              fontSize: '17px',
+              lineHeight: '1.5',
+              color: '#f3f4f6',
+              textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+              letterSpacing: '0.5px',
+              opacity: '0.95',
+              transition: 'all 0.4s ease',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+              padding: '1.5rem',
+              borderRadius: '12px',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+            }}>{currentContent.description}</p>
+            
+          </div>
+
+          {/* Feature Icons */}
+          <div className="features-grid">
+            {currentContent.features.map((feature, index) => (
+              <div key={index} className="feature-item">
+                <div className="feature-icon-container" style={{
+                  background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(96, 165, 250, 0.2))',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  boxShadow: '0 4px 12px rgba(74, 222, 128, 0.15)',
+                  transform: 'scale(1)',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  animation: 'scaleIn 0.5s ease-out'
+                }}>
+                  <div className="feature-icon" style={{
+                    background: 'linear-gradient(135deg, #4ade80, #60a5fa)',
+                    borderRadius: '50%',
+                    padding: '0.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 2px 8px rgba(74, 222, 128, 0.3)',
+                    transform: 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }}>
+                    <div className="feature-icon-inner" style={{
+                      width: '1.5rem',
+                      height: '1.5rem',
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      borderRadius: '50%',
+                      backdropFilter: 'blur(4px)'
+                    }}></div>
+                  </div>
+                </div>
+                <div className="feature-title" >{feature.title}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Illustration */}
+        <div className="content-right">
+          <div className="illustration-container">
+            <div className="illustration-outer" style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '24px',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
+              padding: '2rem',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <div className="illustration-middle" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+                borderRadius: '20px',
+                padding: '1.5rem'
+              }}>
+                <div className="illustration-inner" style={{
+                  background: 'rgba(0,0,0,0.2)',
+                  borderRadius: '16px',
+                  padding: '2rem'
+                }}>
+                  <div className="illustration-content">
+                    <div className="illustration-title" style={{
+                      fontSize: '2.5rem',
+                      fontWeight: '700',
+                      background: 'linear-gradient(90deg, #4ade80, #60a5fa)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      marginBottom: '1rem'
+                    }}>Interactive Demo</div>
+                    <div className="illustration-subtitle" style={{
+                      fontSize: '1.25rem',
+                      color: '#ede9e9',
+                      textShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                    }}>View {activeTab} Features</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements with animations */}
+              <div className="decorative-element element-1" style={{
+                position: 'absolute',
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                animation: 'spin 4s linear infinite',
+                filter: 'blur(2px)',
+                backgroundColor: activeTab === 'Learning' ? 'rgba(74, 222, 128, 0.2)' :
+                               activeTab === 'Assessment' ? 'rgba(96, 165, 250, 0.2)' :
+                               activeTab === 'Content' ? 'rgba(244, 114, 182, 0.2)' : 'rgba(255, 255, 255, 0.2)',
+                top: '10%',
+                right: '10%'
+              }}></div>
+              <div className="decorative-element element-2" style={{
+                position: 'absolute',
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                animation: 'bounce 2s ease-in-out infinite',
+                filter: 'blur(2px)',
+                backgroundColor: activeTab === 'Learning' ? 'rgba(74, 222, 128, 0.3)' :
+                               activeTab === 'Assessment' ? 'rgba(96, 165, 250, 0.3)' :
+                               activeTab === 'Content' ? 'rgba(244, 114, 182, 0.3)' : 'rgba(255, 255, 255, 0.3)',
+                bottom: '10%',
+                left: '10%'
+              }}></div>
+              <div className="decorative-element element-3" style={{
+                position: 'absolute',
+                width: '120px',
+                height: '120px',
+                borderRadius: '50%',
+                animation: 'pulse 3s ease-in-out infinite, colorChange 12s infinite',
+                background: 'linear-gradient(225deg, #f472b6, #a855f7, #fb923c, #ec4899, #4ade80, #60a5fa)',
+                backgroundSize: '600% 600%',
+                filter: 'blur(3px)',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)'
+              }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="workflow-container">
+      <h1 className="workflow-heading">Item Development Process</h1>
+      {/* Stage 1 */}
+      <div className="stage-header">
+        <div className="stage-title">
+          <h2>Stage 1</h2>
+          <h3>Development</h3>
+        </div>
+        <div className="stage-line"></div>
+      </div>
+      
+      <div className="stage-content">
+        <div className="process-box requirement">
+          <h3>
+            <span className="process-number">1</span>
+            Requirement Analysis
+          </h3>
+          <p>Understanding the requirements and communication of the same with the SME's through detailed consultation and planning sessions.</p>
+        </div>
+        
+        <div className="arrow" aria-hidden="true"></div>
+        
+        <div className="process-box development">
+          <h3>
+            <span className="process-number">2</span>
+            Development Phase
+          </h3>
+          <p>Development of questions by SME's either in office premises or on secure QMAT tool with rigorous quality standards.</p>
+        </div>
+      </div>
+      
+      {/* Stage 2 */}
+      <div className="stage-header">
+        <div className="stage-title">
+          <h2>Stage 2</h2>
+          <h3>Review Process</h3>
+        </div>
+        <div className="stage-line"></div>
+      </div>
+      
+      <div className="stage-content">
+        <div className="process-box review">
+          <h3>
+            <span className="process-number">3</span>
+            Initial Review
+          </h3>
+          <p>Items are reviewed by an independent SME through the secure QMAT tool, with comprehensive feedback and necessary modifications.</p>
+        </div>
+        
+        <div className="arrow" aria-hidden="true"></div>
+        
+        <div className="process-box review">
+          <h3>
+            <span className="process-number">4</span>
+            Secondary Review
+          </h3>
+          <p>Items undergo another round of review by an independent SME to ensure complete accuracy and eliminate any ambiguity.</p>
+        </div>
+      </div>
+      
+      {/* Stage 3 */}
+      <div className="stage-header">
+        <div className="stage-title">
+          <h2>Stage 3</h2>
+          <h3>Translation</h3>
+        </div>
+        <div className="stage-line"></div>
+      </div>
+      
+      <div className="stage-content">
+        <div className="process-box translation">
+          <h3>
+            <span className="process-number">5</span>
+            Translation Process
+          </h3>
+          <p>Reviewed items are shared with expert translators through the secure QMAT tool for precise language conversion.</p>
+        </div>
+        
+        <div className="arrow" aria-hidden="true"></div>
+        
+        <div className="process-box translation">
+          <h3>
+            <span className="process-number">6</span>
+            Translation Review 1
+          </h3>
+          <p>Translated items are shared with an independent translator through QMAT tool to verify the authenticity and accuracy of translations.</p>
+        </div>
+        
+        <div className="arrow" aria-hidden="true"></div>
+        
+        <div className="process-box translation">
+          <h3>
+            <span className="process-number">7</span>
+            Translation Review 2
+          </h3>
+          <p>Items undergo a second review cycle by another independent translator to ensure 100% language correctness and cultural appropriateness.</p>
+        </div>
+      </div>
+      
+      {/* Stage 4 */}
+      <div className="stage-header">
+        <div className="stage-title">
+          <h2>Stage 4</h2>
+          <h3>Quality & Delivery</h3>
+        </div>
+        <div className="stage-line"></div>
+      </div>
+      
+      <div className="stage-content">
+        <div className="process-box quality">
+          <h3>
+            <span className="process-number">8</span>
+            Final Quality Check
+          </h3>
+          <p>Comprehensive quality assessment by senior SMEs using advanced QMAT tools to ensure excellence in every aspect.</p>
+        </div>
+        
+        <div className="arrow" aria-hidden="true"></div>
+        
+        <div className="process-box quality">
+          <h3>
+            <span className="process-number">9</span>
+            Secure Delivery
+          </h3>
+          <p>Content is securely packaged and delivered in client-specified formats through encrypted channels for maximum security.</p>
         </div>
       </div>
     </div>

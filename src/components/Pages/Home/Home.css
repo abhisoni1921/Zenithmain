@@ -179,6 +179,7 @@
   color: #ffffff;
   line-height: 1.15;
   margin-bottom: 1rem;
+  
 }
 
 .animated-char {
@@ -187,7 +188,6 @@
   transform: scale(0.8);
   animation: charZoomIn 0.4s forwards;
   animation-delay: calc(var(--char-index) * 0.05s);
-  white-space: nowrap;
 }
 
 .slide-description {
@@ -1016,8 +1016,10 @@ h2 {
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  box-shadow: #01145b 4px 4px 12px;
-    border-radius: 5px;
+  background: linear-gradient(135deg, rgba(43, 65, 98, 0.05), rgba(18, 16, 14, 0.05));
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
 }
 
 .header1 {
@@ -1060,7 +1062,7 @@ h2 {
 
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
   padding: 3rem;
 }
@@ -1101,7 +1103,7 @@ h2 {
 .category-card span {
   font-size: 1rem;
   font-family: 'Inter', sans-serif;  /* Use Inter, Arial, or Roboto for a clean look */
-  font-weight: 600;  /* Semi-bold */  
+  font-weight: 500;  /* Semi-bold */  
   color: #fff;  /* Black text */
   letter-spacing: normal;
 }
@@ -1566,6 +1568,15 @@ body {
   }
 }
 
+.content-title2{
+  background: linear-gradient(90deg, #4ade80, #22c55e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    text-align: center;
+}
 
 .services-container {
   display: grid;

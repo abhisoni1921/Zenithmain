@@ -8,16 +8,26 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Lightbulb, PenTool, Brain, Activity, 
   BarChart2, DollarSign, Monitor, Camera, 
   Database, Code, Server, Cpu } from 'lucide-react';
-  import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
+import { Phone, Target, Target as TargetIcon, Clipboard } from 'lucide-react';
+import SchoolIcon from '@mui/icons-material/School';
+import BusinessIcon from '@mui/icons-material/Business';
+import LocalHospitalIcon from '@mui/icons-material/LocalHospital';
+import ChatIcon from '@mui/icons-material/Chat';
+import ComputerIcon from '@mui/icons-material/Computer';
+import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
+import GavelIcon from '@mui/icons-material/Gavel';
+import HotelIcon from '@mui/icons-material/Hotel';
+import CampaignIcon from '@mui/icons-material/Campaign';
+import ScienceIcon from '@mui/icons-material/Science';
+import MemoryIcon from '@mui/icons-material/Memory';
 
-
-  import { 
-    FaLinkedin, 
-    FaFacebook, 
-    FaYoutube, 
-    FaInstagram, 
-    FaTwitter 
-  } from 'react-icons/fa';
+import { 
+  FaLinkedin, 
+  FaFacebook, 
+  FaYoutube, 
+  FaInstagram, 
+  FaTwitter 
+} from 'react-icons/fa';
 
 const useIntersectionObserver = (options = {}) => {
   const elementRef = useRef(null);
@@ -82,7 +92,7 @@ const Card = ({ children, className = "" }) => {
 const bannerData = [
   {
     id: 1,
-    title: "Transforming Education with AI-Driven Personalization       Smart Insights and Adaptive Learning",
+    title: "Transforming Education with AI-Driven Personalization Smart Insights and Adaptive Learning",
     description: "Experience personalized, AI-powered learning that adapts to your progress and maximizes success.",
     image: "/blue.gif",
     buttonText: "Explore Our Solutions",
@@ -91,7 +101,7 @@ const bannerData = [
   },
   {
     id: 2,
-    title: "Shaping the Future of           Assessment with Cutting        Edge Innovation",
+    title: "Shaping the Future of Assessment with Cutting Edge Innovation",
     description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
     image: "/dblue.gif",
     buttonText: "Explore Our Solutions",
@@ -99,7 +109,7 @@ const bannerData = [
   },
   {
     id: 3,
-    title: "Future-Ready Content           Curated by Experts and          Enhanced with Cutting           Edge AI",
+    title: "Future-Ready Content Curated by Experts and Enhanced with Cutting Edge AI",
     description: "Access expert-crafted, AI-optimized content designed for better understanding and retention.",
     image: "/dark.gif",
     buttonText: "Explore Our Solutions",
@@ -237,6 +247,49 @@ const originalCards = [
     }
   ];
 
+  const [activeTab, setActiveTab] = useState('Learning');
+  
+  const tabContent = {
+    Learning: {
+      title: "Learning",
+      description: "Industry-leading learning platform for technical skill development with support for 40+ programming languages and customizable learning paths Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "AI-Driven Candidate Matching", icon: "brain" },
+        { title: "Automated Shortlisting", icon: "list" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Integrated Video Interviews", icon: "video" }
+      ]
+    },
+    Assessment: {
+      title: "Assessment",
+      description: "Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "Skill-Based Assessments", icon: "target" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Customizable Recruitment Pipelines", icon: "settings" }
+      ]
+    },
+    Content: {
+      title: "Content",
+      description: "Comprehensive content platform with rich media resources, customizable materials, and deep analytics for technical and non-technical roles Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      features: [
+        { title: "Real-time Performance Analytics", icon: "chart" },
+        { title: "Multi-format Question Banks", icon: "database" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Secure AI Proctoring Tools", icon: "shield" },
+        { title: "Advanced Fraud Detection", icon: "alert" }
+      ]
+    }
+  };
+  
+  const currentContent = tabContent[activeTab];
+
   const services = [
     {
       icon: <Target />,
@@ -337,19 +390,18 @@ const originalCards = [
     }
   ];
   const categories = [
-    { icon: <Lightbulb />, name: 'Schools and Colleges ' },
-    { icon: <PenTool />, name: 'Corporates' },
-    { icon: <Brain />, name: 'Medical Education ' },
-    { icon: <Activity />, name: 'Media and Entertainment ' },
-    { icon: <BarChart2 />, name: 'IT and Software Development ' },
-    { icon: <DollarSign />, name: 'Finance and Banking ' },
-    { icon: <Monitor />, name: 'Legal and Compliance ' },
-    { icon: <Camera />, name: 'Hospitality and Tourism ' },
-    { icon: <Database />, name: 'Marketing' },
-    { icon: <Code />, name: 'Arts and Science ' },
-    { icon: <Server />, name: 'High-Tech' },
-    { icon: <Cpu />, name: 'Teaching Science' }
-  
+    { icon: <SchoolIcon />, name: 'Schools/Colleges' },
+    { icon: <BusinessIcon />, name: 'Corporates' },
+    { icon: <LocalHospitalIcon />, name: 'Healthcare' },
+    { icon: <ChatIcon />, name: 'Communication' },
+    { icon: <ComputerIcon />, name: 'Computer Science' },
+    { icon: <AccountBalanceIcon />, name: 'Finance & Banking' },
+    { icon: <GavelIcon />, name: 'Legal Compliance' },
+    { icon: <HotelIcon />, name: 'Hospitality Sector' },
+    { icon: <CampaignIcon />, name: 'Marketing' },
+    { icon: <ScienceIcon />, name: 'Arts and Science' },
+    { icon: <MemoryIcon />, name: 'High-Tech' },
+    { icon: <SchoolIcon />, name: 'Teaching Science' }
   ];
   const features = [
     {
@@ -383,7 +435,7 @@ const originalCards = [
         { text: 'Algnite Commune', url: '/AlgniteCommune' },
         // { text: 'Algnite Company Specific', url: '#' },
         { text: 'Algnite Lab', url: '/AlgniteLab' },
-        { text: 'Algnite LMS', url: '/AlgmiteLMS' }
+        { text: 'Algnite LMS', url: '/AlgniteLMS' }
       ]
     },
     {
@@ -596,6 +648,7 @@ const originalCards = [
         </button>
       </div>
 
+
       <div 
         className={`slider-container ${direction} ${isAnimating ? 'animating' : ''}`}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -608,6 +661,7 @@ const originalCards = [
             <div className="slide-content">
               <div className="slide-text">
               <h1 className="slide-title">
+                
                   {slide.title.split('').map((char, charIndex) => (
                     <span
                       key={charIndex}
@@ -639,6 +693,7 @@ const originalCards = [
       </div>
 
       <div className="pagination">
+        
         {bannerData.map((_, index) => (
           <button
             key={index}
@@ -670,12 +725,82 @@ const originalCards = [
       <div className="HI-cards-container">
       {cardsData.map((card, index) => (
         <div key={index} className="HI-card-container">
+          
           <img 
             src={card.image} 
             alt={card.title} 
             className="HI-card-image"
           />
           <div className="HI-overlay">
+            <style>
+              {`
+                .HI-overlay-title {
+                  font-size: 1.8rem;
+                  font-weight: 600;
+                  color: #fff;
+                  margin-bottom: 1.5rem;
+                  position: relative;
+                  padding-bottom: 0.8rem;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                  transition: all 0.3s ease;
+                }
+
+                .HI-overlay-title::after {
+                  content: '';
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  width: 50px;
+                  height: 3px;
+                  background: #fff;
+                  transition: width 0.3s ease;
+                }
+
+                .HI-overlay:hover .HI-overlay-title::after {
+                  width: 100px;
+                }
+
+                .HI-links-list {
+                
+                  list-style: none;
+                  padding: 0;
+                  margin: 0;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.8rem;
+                }
+
+                .HI-link-item {
+                
+                  color: #fff;
+                  text-decoration: none;
+                  font-size: 1.1rem;
+                  font-weight: 400;
+                  transition: all 0.3s ease;
+                  position: relative;
+                  padding: 0.5rem 1rem;
+                  border-radius: 4px;
+                  background: rgba(255, 255, 255, 0.1);
+                }
+
+                .HI-link-item:hover {
+                  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);;
+                  transform: translateX(0px);
+                  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                }
+
+                .HI-overlay {
+                  background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.7) 0%,
+                    rgba(0, 0, 0, 0.9) 100%
+                  );
+                  padding: 2rem;
+                }
+              `}
+            </style>
             <h3 className="HI-overlay-title">{card.title}</h3>
             <ul className="HI-links-list">
               {card.links.map((link, linkIndex) => (
@@ -774,13 +899,13 @@ const originalCards = [
     </div>
 
     <div className="brands-section">
-    <h2 class="text-3xl font-400 text-center bg-gradient-to-tr from-blue-600 to-teal-500 text-transparent bg-clip-text uppercase">
-    Our Partners
-</h2>
+      <h1 className="content-title2">Our Partners</h1>
+
 
 
 
       <div className="mar-container">
+        
         <div className="mar-content">
           {[...brands, ...brands].map((brand, index) => (
             <div key={index} className="brand-card">
@@ -810,6 +935,247 @@ const originalCards = [
       ))}
     </div> */}
    
+   <div className="dotrecruit-container">
+      <div className="content-container1" style={{
+        // background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(0, 0, 0, 0.2))',
+        
+      }}>
+        <h1 className="content-title1" style={{
+          background: 'linear-gradient(90deg, #4ade80, #22c55e)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          fontSize: '2.5rem',
+          fontWeight: '600',
+          marginBottom: '2rem',
+          textAlign: 'center'
+        }}>Discover Our Powerful Features</h1>
+        <p className="content-description1" style={{
+          fontSize: '17px',
+          lineHeight: '1.8',
+          color: '#ede9e9',
+          textAlign: 'center',
+          maxWidth: '800px',
+          margin: '0 auto'
+        }}>Experience a comprehensive suite of cutting-edge recruitment tools designed to streamline your hiring process. Our platform combines intelligent automation, advanced candidate matching, and seamless collaboration features to help you find and secure the best talent efficiently. From AI-powered screening to interactive assessment tools, we provide everything you need to transform your recruitment workflow.</p>
+      </div>
+      {/* Navigation Bar */}
+      <div className="navigation-bar" style={{
+        background: 'transparent',
+        padding: '1rem',
+        borderRadius: '15px',
+        margin: '0rem 0'
+      }}>
+        <div className="nav-tabs" style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          gap: '1rem'
+        }}>
+          {Object.keys(tabContent).map((tab) => (
+            <button
+              key={tab}
+              className={`nav-tab ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab)}
+              
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
+        <div className="nav-indicator-container" style={{
+          position: 'relative',
+          height: '3px',
+          background: 'rgba(74, 222, 128, 0.2)',
+          borderRadius: '3px',
+          marginTop: '0rem'
+        }}>
+          <div 
+            className="nav-indicator" 
+            style={{
+              position: 'absolute',
+              height: '100%',
+              background: '#4ade80',
+              borderRadius: '3px',
+              transition: 'all 0.3s ease',
+              width: `${100 / Object.keys(tabContent).length}%`,
+              left: `${Object.keys(tabContent).indexOf(activeTab) * (100 / Object.keys(tabContent).length)}%`,
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <div className="content-left">
+          
+
+          {/* Description */}
+          <div className="description-container">
+            <h1 className="content-title" style={{
+              fontSize: '2.5rem',
+              fontWeight: '700',
+              background: 'linear-gradient(90deg, #4ade80, #60a5fa)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              marginBottom: '1.5rem',
+              textShadow: '2px 2px 4px rgba(0,0,0,0.2)',
+              letterSpacing: '1px',
+              animation: 'fadeIn 0.8s ease-out'
+            }}>{currentContent.title}</h1>
+            <p className="content-description" style={{
+              fontSize: '17px',
+              lineHeight: '1.5',
+              color: '#f3f4f6',
+              textShadow: '0 2px 4px rgba(0,0,0,0.3)',
+              letterSpacing: '0.5px',
+              opacity: '0.95',
+              transition: 'all 0.4s ease',
+              background: 'linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05))',
+              padding: '1.5rem',
+              borderRadius: '12px',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(255,255,255,0.1)',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.1)'
+            }}>{currentContent.description}</p>
+            
+          </div>
+
+          {/* Feature Icons */}
+          <div className="features-grid">
+            <style>
+              {`
+                .features-grid {
+                  display: grid;
+                  grid-template-columns: repeat(2, 1fr);
+                  grid-template-rows: repeat(3, 1fr);
+                  gap: 1.5rem;
+                  margin-top: 2rem;
+                }
+              `}
+            </style>
+            {currentContent.features.map((feature, index) => (
+              <div key={index} className="feature-item">
+                <div className="feature-icon-container" style={{
+                  background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.2), rgba(96, 165, 250, 0.2))',
+                  border: '1px solid rgba(255, 255, 255, 0.1)',
+                  boxShadow: '0 4px 12px rgba(74, 222, 128, 0.15)',
+                  transform: 'scale(1)',
+                  transition: 'all 0.3s ease',
+                  cursor: 'pointer',
+                  animation: 'scaleIn 0.5s ease-out'
+                }}>
+                  <div className="feature-icon" style={{
+                    background: 'linear-gradient(135deg, #4ade80, #60a5fa)',
+                    borderRadius: '50%',
+                    padding: '0.5rem',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 2px 8px rgba(74, 222, 128, 0.3)',
+                    transform: 'rotate(0deg)',
+                    transition: 'transform 0.3s ease'
+                  }}>
+                    <div className="feature-icon-inner" style={{
+                      width: '1.5rem',
+                      height: '1.5rem',
+                      background: 'rgba(255, 255, 255, 0.9)',
+                      borderRadius: '50%',
+                      backdropFilter: 'blur(4px)'
+                    }}></div>
+                  </div>
+                </div>
+                <div className="feature-title" >{feature.title}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Illustration */}
+        <div className="content-right">
+          
+          <div className="illustration-container">
+            <div className="illustration-outer" style={{
+              background: 'rgba(255, 255, 255, 0.05)',
+              borderRadius: '24px',
+              backdropFilter: 'blur(10px)',
+              border: '1px solid rgba(255, 255, 255, 0.1)',
+              boxShadow: '0 20px 40px rgba(0, 0, 0, 0.2)',
+              padding: '2rem',
+              position: 'relative',
+              overflow: 'hidden'
+            }}>
+              <div className="illustration-middle" style={{
+                background: 'linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%)',
+                borderRadius: '20px',
+                padding: '1.5rem'
+              }}>
+                <div className="illustration-inner" style={{
+                  background: 'rgba(0,0,0,0.2)',
+                  borderRadius: '16px',
+                  padding: '2rem'
+                }}>
+                  <div className="illustration-content">
+                    <div className="illustration-title" style={{
+                      fontSize: '2.5rem',
+                      fontWeight: '700',
+                      background: 'linear-gradient(90deg, #4ade80, #60a5fa)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      marginBottom: '1rem'
+                    }}>Interactive Demo</div>
+                    <div className="illustration-subtitle" style={{
+                      fontSize: '1.25rem',
+                      color: '#ede9e9',
+                      textShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                    }}>View {activeTab} Features</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative elements with animations */}
+              <div className="decorative-element element-1" style={{
+                position: 'absolute',
+                width: '100px',
+                height: '100px',
+                borderRadius: '50%',
+                animation: 'spin 4s linear infinite',
+                filter: 'blur(2px)',
+                backgroundColor: activeTab === 'Learning' ? 'rgba(74, 222, 128, 0.2)' :
+                               activeTab === 'Assessment' ? 'rgba(96, 165, 250, 0.2)' :
+                               activeTab === 'Content' ? 'rgba(244, 114, 182, 0.2)' : 'rgba(255, 255, 255, 0.2)',
+                top: '10%',
+                right: '10%'
+              }}></div>
+              <div className="decorative-element element-2" style={{
+                position: 'absolute',
+                width: '80px',
+                height: '80px',
+                borderRadius: '50%',
+                animation: 'bounce 2s ease-in-out infinite',
+                filter: 'blur(2px)',
+                backgroundColor: activeTab === 'Learning' ? 'rgba(74, 222, 128, 0.3)' :
+                               activeTab === 'Assessment' ? 'rgba(96, 165, 250, 0.3)' :
+                               activeTab === 'Content' ? 'rgba(244, 114, 182, 0.3)' : 'rgba(255, 255, 255, 0.3)',
+                bottom: '10%',
+                left: '10%'
+              }}></div>
+              <div className="decorative-element element-3" style={{
+                position: 'absolute',
+                width: '120px',
+                height: '120px',
+                borderRadius: '50%',
+                animation: 'pulse 3s ease-in-out infinite, colorChange 12s infinite',
+                background: 'linear-gradient(225deg, #f472b6, #a855f7, #fb923c, #ec4899, #4ade80, #60a5fa)',
+                backgroundSize: '600% 600%',
+                filter: 'blur(3px)',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)'
+              }}></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
     <section className="training-services-section" ref={useIntersectionObserver()}>
@@ -938,7 +1304,7 @@ const originalCards = [
         Skill Gap Analysis
 
         </div>
-        <p class="ag-courses-item_dis" >Bridging skill gaps by analyzing  candidate’s performance data and recommending targeted learning modules. </p>
+        <p class="ag-courses-item_dis" >Bridging skill gaps by analyzing  candidate's performance data and recommending targeted learning modules. </p>
       </a>
     </div>
 

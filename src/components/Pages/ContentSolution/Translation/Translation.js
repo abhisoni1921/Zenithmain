@@ -7,13 +7,30 @@ import MailIcon from '@mui/icons-material/Mail';
 import { Lightbulb, PenTool, Brain, Activity, 
     BarChart2, DollarSign, Monitor, Camera, 
     Database, Code, Server, Cpu } from 'lucide-react';
-    import { 
-      FaLinkedin, 
-      FaFacebook, 
-      FaYoutube, 
-      FaInstagram, 
-      FaTwitter 
-    } from 'react-icons/fa';
+import { 
+  FaLanguage,
+  FaGlobe,
+  FaBookOpen,
+  FaBook,
+  FaFileAlt,
+  FaFont,
+  FaPenNib,
+  FaScroll,
+  FaFeather,
+  FaPen,
+  FaQuoteRight,
+  FaAlignRight,
+  FaBookReader,
+  FaParagraph,
+  FaAlignLeft
+} from 'react-icons/fa';
+import { 
+  FaLinkedin, 
+  FaFacebook, 
+  FaYoutube, 
+  FaInstagram, 
+  FaTwitter 
+} from 'react-icons/fa';
 import './Translation.css'
  
 
@@ -94,23 +111,21 @@ const Translation = () => {
   ];
 
   const categories = [
-    { icon: <Lightbulb />, name: 'Hindi' },
-    { icon: <PenTool />, name: 'English' },
-    { icon: <Brain />, name: 'Malayalam' },
-    { icon: <Activity />, name: 'Telugu' },
-    { icon: <BarChart2 />, name: 'Kannada' },
-    { icon: <DollarSign />, name: 'Assamese' },
-    { icon: <Monitor />, name: 'Bengali' },
-    { icon: <Camera />, name: 'Gujarati' },
-    { icon: <Database />, name: 'Konkani' },
-    { icon: <Code />, name: 'Manipuri' },
-    { icon: <Server />, name: 'Marathi' },
-    { icon: <Cpu />, name: 'Odia' },
-    { icon: <Server />, name: 'Panjabi' },
-    { icon: <Cpu />, name: 'Urdu' },
-    { icon: <Cpu />, name: 'Tamil' }
-    
-  
+    { icon: <FaLanguage size={20} />, name: 'Hindi' },
+    { icon: <FaGlobe size={20} />, name: 'English' },
+    { icon: <FaBookOpen size={20} />, name: 'Malayalam' },
+    { icon: <FaBook size={20} />, name: 'Telugu' },
+    { icon: <FaParagraph size={20} />, name: 'Kannada' },
+    { icon: <FaFileAlt size={20} />, name: 'Assamese' },
+    { icon: <FaFont size={20} />, name: 'Bengali' },
+    { icon: <FaPenNib size={20} />, name: 'Gujarati' },
+    { icon: <FaScroll size={20} />, name: 'Konkani' },
+    { icon: <FaFeather size={20} />, name: 'Manipuri' },
+    { icon: <FaBookReader size={20} />, name: 'Marathi' },
+    { icon: <FaPen size={20} />, name: 'Odia' },
+    { icon: <FaQuoteRight size={20} />, name: 'Punjabi' },
+    { icon: <FaAlignRight size={20} />, name: 'Urdu' },
+    { icon: <FaAlignLeft size={20} />, name: 'Tamil' }
   ];
   
 
@@ -118,6 +133,7 @@ const Translation = () => {
   return (
     <div className="Learning-container">
       <div className="header-container">
+        
       <video 
         className="background-video" 
         autoPlay 
@@ -131,24 +147,216 @@ const Translation = () => {
         />
       </video>
       <div className="overlay"></div>
-      <div className="background-animation">
-        {[...Array(50)].map((_, index) => (
-          <div 
-            key={index} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+      
       <div className="content">
+        <div className="animated-text-container">
+          <div className="animated-text">
+            <span className="text-gradient">Translation</span>
+            <span className="text-gradient">Services</span>
+            <div className="subtitle-text">Breaking Language Barriers</div>
+          </div>
+          <div className="animated-underline"></div>
+          <div className="floating-elements">
+            <span>🌍</span>
+            <span>💬</span>
+            <span>📝</span>
+            <span>🔄</span>
+            <span>📚</span>
+          </div>
+          <div className="glowing-orbs">
+            <div className="orb orb1"></div>
+            <div className="orb orb2"></div>
+            <div className="orb orb3"></div>
+          </div>
+          <style jsx>{`
+            .animated-text-container {
+              text-align: center;
+              margin-bottom: 2rem;
+              opacity: 0;
+              animation: fadeIn 1s ease-out forwards;
+              position: relative;
+              padding: 2rem;
+              border-radius: 15px;
+              background: rgba(0, 0, 0, 0.2);
+              backdrop-filter: blur(10px);
+            }
 
-        <h1 className="title">
-          Translation Services
-        </h1>
+            .animated-text {
+              font-size: 4.5rem;
+              font-weight: bold;
+              line-height: 1.2;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 0.5rem;
+              text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            }
+
+            .subtitle-text {
+              font-size: 1.5rem;
+              color: #fff;
+              margin-top: 1rem;
+              opacity: 0;
+              animation: slideIn 1s ease-out 1s forwards;
+              text-shadow: 0 0 10px rgba(255,255,255,0.5);
+            }
+
+            .text-gradient {
+              background: linear-gradient(135deg, #FF6B6B, #4ECDC4, #45B7D1, #9B5DE5);
+              -webkit-background-clip: text;
+              background-clip: text;
+              color: transparent;
+              animation: shimmer 3s infinite linear;
+              background-size: 300% 100%;
+              transition: transform 0.3s ease;
+              position: relative;
+            }
+
+            .text-gradient:hover {
+              transform: scale(1.05);
+              filter: brightness(1.2);
+            }
+
+            .text-gradient::after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+              transform: translateX(-100%);
+              animation: shine 3s infinite;
+            }
+
+            .animated-underline {
+              width: 0;
+              height: 4px;
+              background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #45B7D1, #9B5DE5);
+              margin: 1rem auto 0;
+              animation: expandLine 1.5s ease-out forwards;
+              border-radius: 2px;
+              box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+
+            .floating-elements {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              pointer-events: none;
+            }
+
+            .floating-elements span {
+              position: absolute;
+              font-size: 2.5rem;
+              animation: float 3s infinite ease-in-out;
+              opacity: 0.8;
+              filter: drop-shadow(0 0 10px rgba(255,255,255,0.3));
+            }
+
+            .floating-elements span:nth-child(1) { left: 10%; animation-delay: 0s; }
+            .floating-elements span:nth-child(2) { left: 30%; animation-delay: 0.5s; }
+            .floating-elements span:nth-child(3) { left: 50%; animation-delay: 1s; }
+            .floating-elements span:nth-child(4) { left: 70%; animation-delay: 1.5s; }
+            .floating-elements span:nth-child(5) { left: 90%; animation-delay: 2s; }
+
+            .glowing-orbs {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              overflow: hidden;
+              z-index: -1;
+            }
+
+            .orb {
+              position: absolute;
+              border-radius: 50%;
+              filter: blur(30px);
+              opacity: 0.5;
+              animation: orbFloat 8s infinite ease-in-out;
+            }
+
+            .orb1 {
+              width: 150px;
+              height: 150px;
+              background: #FF6B6B;
+              left: 10%;
+              top: 20%;
+            }
+
+            .orb2 {
+              width: 200px;
+              height: 200px;
+              background: #4ECDC4;
+              right: 10%;
+              top: 40%;
+              animation-delay: -2s;
+            }
+
+            .orb3 {
+              width: 120px;
+              height: 120px;
+              background: #9B5DE5;
+              left: 50%;
+              bottom: 20%;
+              animation-delay: -4s;
+            }
+
+            @keyframes fadeIn {
+              from { opacity: 0; transform: translateY(-30px); }
+              to { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes shimmer {
+              0% { background-position: 0% 50%; }
+              50% { background-position: 100% 50%; }
+              100% { background-position: 0% 50%; }
+            }
+
+            @keyframes shine {
+              0% { transform: translateX(-100%); }
+              100% { transform: translateX(100%); }
+            }
+
+            @keyframes expandLine {
+              from { width: 0; opacity: 0; }
+              to { width: 400px; opacity: 1; }
+            }
+
+            @keyframes float {
+              0%, 100% { transform: translateY(0) rotate(0deg); }
+              50% { transform: translateY(-20px) rotate(5deg); }
+            }
+
+            @keyframes orbFloat {
+              0%, 100% { transform: translateY(0) scale(1); }
+              50% { transform: translateY(-30px) scale(1.1); }
+            }
+
+            @keyframes slideIn {
+              from { opacity: 0; transform: translateX(-30px); }
+              to { opacity: 1; transform: translateX(0); }
+            }
+
+            @media (max-width: 768px) {
+              .animated-text {
+                font-size: 3rem;
+              }
+              .subtitle-text {
+                font-size: 1.2rem;
+              }
+              .animated-underline {
+                width: 200px;
+              }
+            }
+          `}</style>
+        </div>
+
+        
         {/* <p className="subtitle">
           The premium WordPress theme designed to elevate your online<br />
           presence to unparalleled heights.
@@ -175,12 +383,13 @@ const Translation = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="/img7.jpg" alt="Relevant Image" />
       </div>
     </div>
 
-
+    <div className='T-container'>
     <div className="course-categories">
+
       <div className="cour-title">
       <div className="header">
       <h1 >Empowering Every Industry with Tailored Learning Solutions</h1>
@@ -197,6 +406,7 @@ const Translation = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
 
 

@@ -36,8 +36,10 @@ import AlgniteCommune from './components/Pages/LearningSolution/AlgniteCommune/A
 import AlgniteLMS from './components/Pages/LearningSolution/AlgniteLMS/AlgniteLMS';
 // import LearningContentSolution from './components/Pages/ContentSolution/LearningContentSolution';
 import InteractiveContentSolution from './components/Pages/ContentSolution/Interactive/InteractiveContentSolution';
+
+
 import LearningContentSolution from './components/Pages/ContentSolution/Learning/LearningContentSolution';
-import AssessmentContentSolution from './components/Pages/ContentSolution/AssessmentContentSolution';
+
 import Home from './components/Pages/Home/Home';
 import DiscoverUs from './components/Pages/AboutUs/DiscoverUs';
 import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
@@ -53,6 +55,7 @@ import AlgniteMindAssess from './components/Pages/AssessmentSolution/AlgniteMind
 import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE/AlgniteHIRE';
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360/AlgniteAssess360';
 import Translation from './components/Pages/ContentSolution/Translation/Translation';
+import AssessmentContent from './components/Pages/ContentSolution/AssessmentContent/AssessmentContent';
 
 
 
@@ -117,7 +120,7 @@ function App() {
 
 
         <Route path='/Content' element={<Content/>}/>
-        <Route path='/AssessmentContentSolution' element={<AssessmentContentSolution/>}/>
+        <Route path='/AssessmentContent' element={<AssessmentContent/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
