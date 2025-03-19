@@ -237,95 +237,84 @@ const AlgniteTech = () => {
 
         <div className="Footer-gap"></div>
         <footer className="footer-container">
-              <div className="top-section">
-                <div className="logo-section">
-                  <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
-                  <div className="social-icons">
-                    <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
-                    <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
-                    <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
-                    <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
-                    <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
-                  </div>
-                </div>
-        
-                <div className="footer-content">
-                  <div className="footer-section">
-                    <h3>Content Solutions</h3>
-                    <ul>
-                    <li><a href='/LearningContentSolution'>Learning Content Solution</a></li>
-                      <li>Adaptive Learning</li>
-                      <li>Virtual Instructor-Led Learning</li>
-                      <li>Animated Learning</li>
-                      <li>Gamification</li>
-                      <li>K12 Learning</li>
-                      <li>Micro Learning</li>
-                      <li>Assessment Content Solutions</li>
-                      <li><a href='/Translation'>Translation Services</a></li>
-                    </ul>
-                  </div>
-        
-                  <div className="footer-section">
-                    <h3>Learning</h3>
-                    <ul>
-                      <li><a href='/AlgniteApti'>Algnite Apti</a></li>
-                      <li><a href='/AlgniteTech'>Algnite Tech</a></li>
-                      <li><a href='/AlgniteCommune'>Algnite Commune</a></li>
-                      <li><a href='/AlgniteLab'>Algnite Lab</a></li>
-                      <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
-                    </ul>
-                    <h3>Assessment</h3>
-                    <ul>
-                    <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
-                    <li><a href='/AlgniteTechAssess'>Algnite Tech Assess</a></li>
-                    <li><a href='/AlgniteMindAssess'>Algnite Mind Assess</a></li>
-                    <li><a href='/AlgniteHIRE'>Algnite HIRE</a></li>             
-                    <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
-                    </ul>
-                  </div>
-        
-                  <div className="footer-section">
-                    <h3>Discover Us</h3>
-                    <ul>
-                      <li>About ZESPL</li>
-                      <li>Leadership</li>
-        
-                    </ul>
-                    <h3>Resources</h3>
-                    <ul>
-                      <li>Subject-Matter Expert</li>
-                      <li>Translators</li>
-                      <li>Editors</li>
-                      <li>Copywriters</li>
-                      <li>Digital Design Providers</li>
-                    </ul>
-                  </div>
-        
-                  <div className="footer-section">
-                    <h3>Contact</h3>
-                    <p>Address: 207, 1st floor, Sainik Vihar,</p>
-                    <p>Pitampura, Delhi, India - 110034</p>
-                    <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
-        
-                    <h3>Support</h3>
-                    <p>Learning Management System:</p>
-                    <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
-                  </div>
-                </div>
-              </div>
-        
-              <div className="bottom-section">
-                {/* <img src="" alt="CMMI Logo" className="cmmi-logo" /> */}
-                <p>© {currentYear} All rights reserved. Zenith Education Sol. Pvt. Ltd.</p>
-                <div className="bottom-links">
-                  <a href="#">Support</a>
-                  <span>|</span>
-                  <a href="#">Disclaimer</a>
-                  <span>|</span>
-                  <a href="#">Privacy Policy</a>
-                </div>
-              </div>
-            </footer>
+      <div className="top-section">
+        <div className="logo-section">
+          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
+          <div className="social-icons">
+            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
+            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
+            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
+          </div>
+        </div>
+
+        <div className="footer-content">
+          <div className="footer-section">
+            <h3>Content </h3>
+            <ul>
+            <li><a href='/LearningContentSolution'>Learning Content</a></li>
+              
+              
+              <li>Assessment Content </li>
+              <li><a href='/Translation'>Translation Services</a></li>
+            </ul>
+            <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
+
+            <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
+          </div>
+
+          <div className="footer-section">
+            <h3>Learning</h3>
+            <ul>
+              <li><a href='/AlgniteApti'>Algnite Apti</a></li>
+              <li><a href='/AlgniteTech'>Algnite Tech</a></li>
+              <li><a href='/AlgniteCommune'>Algnite Commune</a></li>
+              <li><a href='/AlgniteLab'>Algnite Lab</a></li>
+              <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
+            </ul>
+          
+          </div>
+          <div className="footer-section">
+            
+            <h3>Assessment</h3>
+            <ul>
+            <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
+            <li><a href='/AlgniteTechAssess'>Algnite Tech Assess</a></li>
+            <li><a href='/AlgniteMindAssess'>Algnite Mind Assess</a></li>
+            <li><a href='/AlgniteHIRE'>Algnite HIRE</a></li>             
+            <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
+            </ul>
+          </div>
+          
+
+     
+
+          <div className="footer-section">
+            <h3>Contact</h3>
+            <p>Address: 207, 1st floor, Sainik Vihar,</p>
+            <p>Pitampura, Delhi, India - 110034</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+
+            <h3>Support</h3>
+            <p>Learning Management System:</p>
+            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bottom-section">
+        {/* <img src="" alt="CMMI Logo" className="cmmi-logo" /> */}
+        <p>© {currentYear} All rights reserved. Zenith Education Sol. Pvt. Ltd.</p>
+        <div className="bottom-links">
+          <a href="#">Support</a>
+          <span>|</span>
+          <a href="#">Disclaimer</a>
+          <span>|</span>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </footer>
     </div>
   );
 };

@@ -9,7 +9,13 @@ import { Lightbulb, PenTool, Brain, Activity,
   Database, Code, Server, Cpu } from 'lucide-react';
   import { Play, Phone, Laptop, GraduationCap } from 'lucide-react';
 
-
+  import { 
+    FaLinkedin, 
+    FaFacebook, 
+    FaYoutube, 
+    FaInstagram, 
+    FaTwitter 
+  } from 'react-icons/fa';
 
 const DiscoverUs = () => {
   const currentYear = new Date().getFullYear();
@@ -66,33 +72,44 @@ const DiscoverUs = () => {
   const abtCards = [
     {
       icon: "🎯",
-      title: "Our Mission",
-      description: "To deliver innovative solutions that transform businesses and enrich customer experiences through cutting-edge technology."
+      title: "AI-Driven Learning Solutions ",
+      description: "Personalized and adaptive learning experiences powered by artificial intelligence."
     },
     {
       icon: "👁️",
-      title: "Our Vision",
-      description: "To become the global leader in digital transformation, setting new standards for excellence and innovation."
+      title: "College Training Support",
+      description: "Structured training modules designed to improve student employability and placement performance."
     },
     {
       icon: "🌟",
-      title: "Core Values",
-      description: "Excellence, Integrity, Innovation, and Customer-First approach drive everything we do."
+      title: "Advanced Assessment Solutions",
+      description: " AI-powered evaluations to track progress and enhance learning outcomes."
     },
     {
       icon: "📈",
-      title: "Our Growth",
-      description: "Starting from humble beginnings, we've grown into a dynamic organization serving clients worldwide."
+      title: "Real-Time Performance Analytics",
+      description: " Data-driven insights to monitor progress and enhance learning strategies."
     },
     {
       icon: "🤝",
-      title: "Our Team",
-      description: "A diverse group of passionate professionals working together to bring creative solutions to complex challenges."
+      title: "Customizable Learning Solutions",
+      description: "Tailored training and assessment programs to meet specific institutional and student needs."
     },
     {
       icon: "🎯",
-      title: "Our Impact",
-      description: "Making a difference through sustainable practices, community engagement, and transformative solutions."
+      title: "Question Authoring Tool",
+      description: "A smart platform for creating, reviewing, and managing high-quality exam questions efficiently."
+    }
+    ,
+    {
+      icon: "🤝",
+      title: "Multilingual Translation Support ",
+      description: "Seamless content translation to cater to diverse linguistic needs and enhance accessibility."
+    },
+    {
+      icon: "🎯",
+      title: "End-to-End Content Solutions",
+      description: " High-quality, curriculum-aligned study materials designed for K-12 education and skill-based learning."
     }
   ];
 
@@ -115,19 +132,66 @@ const DiscoverUs = () => {
         />
       </video>
       <div className="overlay"></div>
-      <div className="background-animation">
-        {[...Array(50)].map((_, index) => (
-          <div 
-            key={index} 
-            className="particle"
-            style={{
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${5 + Math.random() * 5}s`
-            }}
-          />
-        ))}
-      </div>
+      <style>
+        {`
+          @keyframes gradientText {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%; 
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
+
+          @keyframes slideInFromBottom {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          .title {
+            font-size: 4rem !important;
+            font-weight: 700;
+            background: linear-gradient(
+              90deg,
+              #ff6b6b,
+              #ffd93d,
+              #6c5ce7,
+              #ff6b6b
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 6s ease infinite,
+                       slideInFromBottom 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+          }
+
+          .title:hover {
+            transform: scale(1.05);
+          }
+
+          @media (max-width: 768px) {
+            .title {
+              font-size: 2.5rem !important;
+            }
+          }
+        `}
+      </style>
       <div className="content">
         
         <h1 className="title">
@@ -153,51 +217,63 @@ const DiscoverUs = () => {
               alt="Dashboard Preview" 
               className="lt-image"
             />
-            <div className="decorative-shape"></div>
-            <div className="decorative-glasses"></div>
+            
           </div>
         </div>
         
         <div className="right-section">
-          <h1 className="title animate-on-mount">
-            <span className="ab">ABOUT</span>
-            <span className="us">US</span>
+          <div className="about-us-title">
+
+          <h1 className="about-us-title">
+          We are transforming learning with innovation and AI-driven solutions
+
           </h1>
+          </div>
           
         
           
          
           
           <p className="sub-text animate-on-mount">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-          sed do eiusmod tempor incididunt ut labore
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut 
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore quis nostrud exercitation ullamco laboris 
-            nisi ut aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-            sed do eiusmod tempor incididunt ut labore
-          </p>
+          Zenith is a  leading EdTech solutions provider committed to transforming education through innovative technology. Our services include comprehensive placement training, AI-driven learning solutions, expert content development, and robust assessment solutions. By partnering with colleges and other institutions, we empower students with the skills and knowledge they need to excel in their careers.
+</p>
           
-          <button className="learn-more-btn animate-on-mount">
-            Learn more
-          </button>
+          
         </div>
       </div>
     </div>
-      
+
+    <div className="aptitude-section">
+      <div className="content">
+
+      <h1 className="about-us-title">
+          Our Vision
+
+          </h1>
+        <ul>
+          <li>To revolutionize education by integrating AI and technology-driven learning solutions.          </li>
+          <li>To bridge the gap between academic knowledge and industry demands through expert-led training.          </li>
+          <li>To empower students with personalized learning, innovative assessments, and skill development.          </li>
+          <li>To make education more accessible, adaptive, and impactful for institutions and learners          </li>
+        </ul>
+      </div>
+      <div className="image">
+        <img src="./img7.jpg" alt="Relevant Image" />
+      </div>
+    </div>
+
+     <div className="ABT-container">
     <div className="ABT">
     <div className="abt-container">
       <div className="abt-header">
-        <h1>Leadership Ideas Into Digital Reality</h1>
+        <h1>How We Stand Out?        </h1>
         
       </div>
       <div className="abt-grid">
         {abtCards.map((card, index) => (
           <div key={index} className="abt-card">
             <div className="abt-header-group">
-              <div className="abt-icon">{card.icon}</div>
+              
               <h3 className="abt-title">{card.title}</h3>
             </div>
             <p className="abt-description">{card.description}</p>
@@ -206,139 +282,63 @@ const DiscoverUs = () => {
       </div>
     </div>
     </div>
+    </div> 
 
      
-   <div className="bag">
-    <div className="A-hero-container">
-          <div className="A-left-section">
-            <div className="A-video-card">
-              <div className="A-video-thumbnail">
-                <div className="A-play-button">
-                  <Play fill="white" size={24} />
-                </div>
-                <img 
-                  src="/img6.jpg" 
-                  alt="Students learning"
-                  className="A-thumbnail-image"
-                />
-              </div>
-            </div>
-            
-            
-            
-            <div className="A-students-image">
-              <img 
-                src="/img5.jpg" 
-                alt="Students collaborating"
-                className="A-collaboration-image"
-              />
-            </div>
-          </div>
-    
-          <div className="A-right-section">
-             
-    
-          <h1 className="title animate-on-mount">
-            <span className="ab">Leadership</span>
-            <span className="us">Skills</span>
-          </h1>
-    
-            <p className="A-description">
-              Compellingly procrastinate equity invested markets with efficient process improvements, 
-              actualize mission-critical partnerships with integrated portals. Authoritatively optimize 
-              low-risk high-yield metrics and plug-and-play potentialities.
-            </p>
-    
-            <div className="A-stats-container">
-              <div className="A-stat-card">
-                <Laptop className="A-stat-icon" />
-                <div className="A-stat-content">
-                  <div className="A-stat-number">9.5K+</div>
-                  <div className="A-stat-label">Total active students taking gifted courses</div>
-                </div>
-              </div>
-    
-              <div className="A-stat-card">
-                <GraduationCap className="A-stat-icon" />
-                <div className="A-stat-content">
-                  <div className="A-stat-number">6.7K+</div>
-                  <div className="A-stat-label">Total active students taking gifted courses</div>
-                </div>
-              </div>
-            </div>
-    
-            <button className="learn-more-btn animate-on-mount">
-            View More
-          </button>
-          </div>
-          <div
-          ></div>
-        </div>
-        </div>
-    <footer className="footer-container">
+   
+   <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
+          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-linkedin"></i></a>
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-twitter"></i></a>
+            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
+            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
+            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
           </div>
         </div>
 
         <div className="footer-content">
           <div className="footer-section">
-            <h3>CollegeConnect</h3>
+            <h3>Content </h3>
             <ul>
-              <li>Integrated Degree Programs</li>
-              <li>Employability Skilling Programs</li>
-              <li>Courses - Core Engineering & IT</li>
-              <li>IITM Parvartak Joint Certification Programs</li>
-              <li>Certification Courses - Commerce & Science</li>
-              <li>Specialization Stacks - Commerce & Science</li>
-              <li>Assessment Solutions</li>
-              <li>Immersion</li>
-              <li>Academic Partners</li>
+            <li><a href='/LearningContentSolution'>Learning Content</a></li>
+              
+              
+              <li>Assessment Content </li>
+              <li><a href='/Translation'>Translation Services</a></li>
             </ul>
+            <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
+
+            <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
           </div>
 
           <div className="footer-section">
-            <h3>Workonnect</h3>
+            <h3>Learning</h3>
             <ul>
-              <li>Before Joining Programme</li>
-              <li>Hire Train Deploy Model</li>
-              <li>Role/Product Based-Skilling</li>
-              <li>Assessment Solutions</li>
-              <li>Enterprise Partners</li>
+              <li><a href='/AlgniteApti'>Algnite Apti</a></li>
+              <li><a href='/AlgniteTech'>Algnite Tech</a></li>
+              <li><a href='/AlgniteCommune'>Algnite Commune</a></li>
+              <li><a href='/AlgniteLab'>Algnite Lab</a></li>
+              <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
             </ul>
-            <h3>Other Initiatives</h3>
-            <ul>
-              <li>Emerging Tech</li>
-              <li>Skill Exchange</li>
-              <li>Engineers Ensemble</li>
-              <li>Micro Learning</li>
-            </ul>
+          
           </div>
-
           <div className="footer-section">
-            <h3>About</h3>
+            
+            <h3>Assessment</h3>
             <ul>
-              <li>About Us</li>
-              <li>Capabilities</li>
-              <li>Core Solutions</li>
-              <li>Leadership</li>
-              <li>Mentors</li>
-              <li>Experts</li>
-              <li>Blogs</li>
-              <li>EduTech Connect</li>
-              <li>Newsroom</li>
-              <li>Events</li>
-              <li>Testimonials</li>
-              <li>Careers</li>
+            <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
+            <li><a href='/AlgniteTechAssess'>Algnite Tech Assess</a></li>
+            <li><a href='/AlgniteMindAssess'>Algnite Mind Assess</a></li>
+            <li><a href='/AlgniteHIRE'>Algnite HIRE</a></li>             
+            <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
             </ul>
           </div>
+          
+
+     
 
           <div className="footer-section">
             <h3>Contact</h3>
@@ -354,8 +354,8 @@ const DiscoverUs = () => {
       </div>
 
       <div className="bottom-section">
-        <img src="" alt="CMMI Logo" className="cmmi-logo" />
-        <p>© {currentYear} All rights reserved. zenith education sol. pvt. ltd.</p>
+        {/* <img src="" alt="CMMI Logo" className="cmmi-logo" /> */}
+        <p>© {currentYear} All rights reserved. Zenith Education Sol. Pvt. Ltd.</p>
         <div className="bottom-links">
           <a href="#">Support</a>
           <span>|</span>

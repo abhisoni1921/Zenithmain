@@ -47,7 +47,16 @@
   z-index: 1;
 }
 
-
+.about-us-title {
+  font-size: 2rem;
+  font-weight: 500;
+  background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-align: left;
+  padding: 5px 0px;
+  transition: transform 0.3s ease-out;
+}
 
 @keyframes float {
   0% {
@@ -467,7 +476,7 @@ html {
 /* AbPage.css */
 .ab-container {
   min-height: 100vh;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -568,12 +577,12 @@ html {
   font-size: 1.5rem;
   color: #666;
   margin-bottom: 1.5rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .sub-text {
-  color: #888;
-  line-height: 1.8;
+  color: #333;
+  line-height: 1.5;
   margin-bottom: 2rem;
 }
 
@@ -646,6 +655,10 @@ html {
   .main-text {
     font-size: 1.2rem;
   }
+}
+.ABT-container{
+  margin-top: 4rem;
+  margin-bottom: 10rem;
 }
 
 .ABT{
@@ -746,6 +759,7 @@ html {
 
 .abt-title {
   font-size: 1.5rem;
+  line-height: 1.5;
   font-weight: 500;
   background: linear-gradient(135deg, #01145b 0%, #03a2ca 100%);
     -webkit-background-clip: text;

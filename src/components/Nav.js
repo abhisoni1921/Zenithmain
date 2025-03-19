@@ -71,7 +71,7 @@ const Navbar = () => {
     {
       title: 'Discover Us',
       link: '/DiscoverUs',
-      dropdown: true,
+      dropdown: false,
       items: [
         { title: 'About ZESPL', link: '/about' },
         // { title: 'Our Vision & Mission', link: '/visionMission' },

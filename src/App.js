@@ -56,6 +56,7 @@ import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE/Algni
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360/AlgniteAssess360';
 import Translation from './components/Pages/ContentSolution/Translation/Translation';
 import AssessmentContent from './components/Pages/ContentSolution/AssessmentContent/AssessmentContent';
+import Resources from './components/Pages/Resources/Resources';
 
 
 
@@ -127,7 +128,7 @@ function App() {
         <Route path='/K2education' element={<K2education/>}/>
         <Route path='/Translation' element={<Translation/>}/>
 
-        
+        <Route path='/Resources' element={<Resources/>}/>
 
 
       

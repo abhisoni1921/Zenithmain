@@ -92,26 +92,26 @@ const Card = ({ children, className = "" }) => {
 const bannerData = [
   {
     id: 1,
-    title: "Transforming Education with AI-Driven Personalization Smart Insights and Adaptive Learning",
+    title: "AI-Powered Personalized Adaptive Learning Education",
     description: "Experience personalized, AI-powered learning that adapts to your progress and maximizes success.",
-    image: "/blue.gif",
+    image: "/learn2.png",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-1"
     
   },
   {
     id: 2,
-    title: "Shaping the Future of Assessment with Cutting Edge Innovation",
+    title: "Advancing Assessment through Pioneering Innovation",
     description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
-    image: "/dblue.gif",
+    image: "/Assess2.png",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-2"
   },
   {
     id: 3,
-    title: "Future-Ready Content Curated by Experts and Enhanced with Cutting Edge AI",
+    title: "Future-Ready Content Curated by Experts and Enhanced with AI",
     description: "Access expert-crafted, AI-optimized content designed for better understanding and retention.",
-    image: "/dark.gif",
+    image: "/Content1.png",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-3"
   }
@@ -252,38 +252,45 @@ const originalCards = [
   const tabContent = {
     Learning: {
       title: "Learning",
-      description: "Industry-leading learning platform for technical skill development with support for 40+ programming languages and customizable learning paths Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      description: "Go beyond traditional education by integrating AI-driven personalized learning paths and an advanced Learning Management System (LMS). We provide structured learning journeys, tailored to individual needs, helping students and professionals enhance their skills efficiently.",
       features: [
-        { title: "AI-Driven Candidate Matching", icon: "brain" },
-        { title: "Automated Shortlisting", icon: "list" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Integrated Video Interviews", icon: "video" }
+        // { title: "AI Lab for Practice", icon: "shield" },
+        // { title: "AI-Powered Personalization", icon: "shield" },
+        // { title: "College Placement Training", icon: "shield" },
+        // { title: "Soft Skills & Personality Development", icon: "shield" },
+        // { title: "Comprehensive LMS", icon: "shield" },
+        // { title: "Industry-specific training modules", icon: "shield" }
+
+        { title: "Customizable Tests", icon: "shield" },
+        { title: "AI-Powered Analytics", icon: "shield" },
+        { title: "Skill-Based Assessments ", icon: "shield" },
+        { title: "Instant evaluation and detailed feedback", icon: "shield" },
+        { title: "Robust Question Authoring Tool", icon: "shield" },
+        { title: "Data-Driven Decision Making", icon: "shield" }
       ]
     },
     Assessment: {
       title: "Assessment",
-      description: "Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      description: "Our advanced assessment tools provide precise insights into learners' skills and progress. We offer customized tests, AI-powered analytics, and detailed feedback reports to help students, educators, and recruiters make data-driven decisions.",
       features: [
-        { title: "Skill-Based Assessments", icon: "target" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Customizable Recruitment Pipelines", icon: "settings" }
+        { title: "Customizable Tests", icon: "shield" },
+        { title: "AI-Powered Analytics", icon: "shield" },
+        { title: "Skill-Based Assessments ", icon: "shield" },
+        { title: "Instant evaluation and detailed feedback", icon: "shield" },
+        { title: "Robust Question Authoring Tool", icon: "shield" },
+        { title: "Data-Driven Decision Making", icon: "shield" }
       ]
     },
     Content: {
       title: "Content",
-      description: "Comprehensive content platform with rich media resources, customizable materials, and deep analytics for technical and non-technical roles Interactive technical assessments for hands-on evaluation in real-world environments with cloud-based infrastructure and project simulations.",
+      description: "Our AI-powered content development includes interactive learning modules, structured question banks, and concept-based materials that enhance comprehension and retention. Our team of Subject Matter Experts ensures that the content is accurate, engaging, and aligned with the latest curriculum standards.",
       features: [
-        { title: "Real-time Performance Analytics", icon: "chart" },
-        { title: "Multi-format Question Banks", icon: "database" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Secure AI Proctoring Tools", icon: "shield" },
-        { title: "Advanced Fraud Detection", icon: "alert" }
+        { title: "Expert-Curated Educational Content", icon: "shield" },
+        { title: "AI-Assisted Question Authoring", icon: "shield" },
+        { title: "Custom Content Development", icon: "shield" },
+        { title: "Multilingual Support", icon: "shield" },
+        { title: "K-12 Curriculum Support", icon: "shield" },
+        { title: "Engaging & Interactive Modules", icon: "shield" }
       ]
     }
   };
@@ -670,9 +677,10 @@ const originalCards = [
               </div>
               <style jsx>{`
                 .slide-badge {
-                  width: 250px;
+                  width: min(250px, 90%);
                   text-align: center;
-                  margin-left: 175px;
+                  margin-left: auto;
+                  margin-right: auto;
                   display: inline-flex;
                   padding: 8px 16px;
                   background: rgba(255, 255, 255, 0.1);
@@ -686,6 +694,21 @@ const originalCards = [
                   opacity: 0;
                 }
 
+                @media (max-width: 768px) {
+                  .slide-badge {
+                    padding: 6px 12px;
+                    margin-bottom: 16px;
+                  }
+                }
+
+                @media (max-width: 480px) {
+                  .slide-badge {
+                    padding: 4px 8px;
+                    margin-bottom: -12px;
+                    margin-top: 12px;
+                  }
+                }
+
                 @keyframes badgeSlideIn {
                   to {
                     transform: translateY(0);
@@ -697,10 +720,12 @@ const originalCards = [
                   display: flex;
                   align-items: center;
                   gap: 8px;
+                  width: 100%;
+                  justify-content: center;
                 }
 
                 .badge-icon {
-                  font-size: 1.2em;
+                  font-size: clamp(1em, 2vw, 1.2em);
                   animation: starPulse 2s infinite;
                 }
 
@@ -712,26 +737,31 @@ const originalCards = [
 
                 .badge-text {
                   font-weight: 600;
-                  font-size: 0.95em;
+                  font-size: clamp(0.8em, 1.5vw, 0.95em);
                   letter-spacing: 0.5px;
                   background: linear-gradient(120deg, #fff, #e0e0e0);
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
                   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+                  white-space: nowrap;
                 }
               `}</style>
               <h1 className="slide-title">
-                
-                  {slide.title.split('').map((char, charIndex) => (
-                    <span
-                      key={charIndex}
-                      style={{ '--char-index': charIndex }}
-                      className="animated-char"
-                    >
-                      {char === ' ' ? '\u00A0' : char}
-                    </span>
-                  ))}
-                </h1>
+                {slide.title.split(' ').map((word, wordIndex, words) => (
+                  <React.Fragment key={wordIndex}>
+                    {word.split('').map((char, charIndex) => (
+                      <span
+                        key={`${wordIndex}-${charIndex}`}
+                        style={{ '--char-index': wordIndex * words.length + charIndex }}
+                        className="animated-char"
+                      >
+                        {char}
+                      </span>
+                    ))}
+                    {wordIndex < words.length - 1 && ' '}
+                  </React.Fragment>
+                ))}
+              </h1>
                 <p className="slide-description">{slide.description}</p>
                 <button className="slide-button animate-on-mount visible">
                   <span className="button-text">{slide.buttonText}</span>
@@ -795,15 +825,16 @@ const originalCards = [
             <style>
               {`
                 .HI-overlay-title {
-                  font-size: 1.8rem;
+                  font-size: clamp(1.2rem, 3vw, 1.8rem);
                   font-weight: 600;
                   color: #fff;
-                  margin-bottom: 1.5rem;
+                  margin-bottom: clamp(1rem, 2vw, 1.5rem);
                   position: relative;
                   padding-bottom: 0.8rem;
                   text-transform: uppercase;
                   letter-spacing: 1px;
                   transition: all 0.3s ease;
+                  text-align: center;
                 }
 
                 .HI-overlay-title::after {
@@ -818,35 +849,50 @@ const originalCards = [
                   transition: width 0.3s ease;
                 }
 
-                .HI-overlay:hover .HI-overlay-title::after {
+                .HI-overlay-title:hover::after {
                   width: 100px;
                 }
 
                 .HI-links-list {
-                
                   list-style: none;
                   padding: 0;
                   margin: 0;
                   display: flex;
                   flex-direction: column;
-                  gap: 0.8rem;
+                  gap: clamp(0.5rem, 1vw, 0.8rem);
+                  opacity: 0;
+                  transform: translateY(-20px);
+                  transition: all 0.8s ease;
+                }
+
+                .HI-overlay:hover .HI-links-list {
+                  opacity: 1;
+                  transform: translateY(0);
                 }
 
                 .HI-link-item {
-                
                   color: #fff;
                   text-decoration: none;
-                  font-size: 1.1rem;
+                  font-size: clamp(0.9rem, 2vw, 1.1rem);
                   font-weight: 400;
                   transition: all 0.3s ease;
                   position: relative;
-                  padding: 0.5rem 1rem;
-                  border-radius: 4px;
+                  padding: clamp(0.3rem, 1vw, 0.5rem) clamp(0.5rem, 2vw, 1rem);
+                  border-radius: 10px;
                   background: rgba(255, 255, 255, 0.1);
+                  text-align: left;
+                  transform: translateY(-10px);
+                  opacity: 0;
+                  transition: all 0.8s ease;
+                }
+
+                .HI-overlay:hover .HI-link-item {
+                  transform: translateY(0);
+                  opacity: 1;
                 }
 
                 .HI-link-item:hover {
-                  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);;
+                  background: linear-gradient(135deg, #1a2980 0%, #26d0ce 100%);
                   transform: translateX(0px);
                   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
                 }
@@ -857,7 +903,45 @@ const originalCards = [
                     rgb(17 44 178 / 80%) 0%,
                     rgba(0, 0, 0, 0.9) 100%
                   );
-                  padding: 2rem;
+                  padding: clamp(1rem, 3vw, 2rem);
+                  transform: translateY(-100%);
+                  transition: transform 0.8s ease;
+                }
+
+                .HI-card-container:hover .HI-overlay {
+                  transform: translateY(0);
+                }
+
+                @media screen and (max-width: 768px) {
+                  .HI-overlay {
+                    padding: 1.5rem;
+                    transform: translateY(0);
+                  }
+                  
+                  .HI-links-list {
+                    gap: 0.5rem;
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+
+                  .HI-link-item {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+
+                @media screen and (max-width: 480px) {
+                  .HI-overlay {
+                    padding: 1rem;
+                  }
+                  
+                  .HI-overlay-title::after {
+                    width: 30px;
+                  }
+                  
+                  .HI-overlay:hover .HI-overlay-title::after {
+                    width: 60px;
+                  }
                 }
               `}
             </style>
@@ -998,7 +1082,16 @@ const originalCards = [
    <div className="dotrecruit-container">
       <div className="content-container1" style={{
         // background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(0, 0, 0, 0.2))',
-        
+        padding: '2rem',
+        '@media (max-width: 1024px)': {
+          padding: '1.5rem'
+        },
+        '@media (max-width: 768px)': {
+          padding: '1rem'
+        },
+        '@media (max-width: 480px)': {
+          padding: '0.75rem'
+        }
       }}>
         <h1 className="content-title1" style={{
           background: 'linear-gradient(90deg, #4ade80, #22c55e)',
@@ -1007,16 +1100,43 @@ const originalCards = [
           fontSize: '2.5rem',
           fontWeight: '600',
           marginBottom: '2rem',
-          textAlign: 'center'
-        }}>Discover Our Powerful Features</h1>
+          textAlign: 'center',
+          '@media (max-width: 1024px)': {
+            fontSize: '2.25rem',
+            marginBottom: '1.75rem'
+          },
+          '@media (max-width: 768px)': {
+            fontSize: '2rem',
+            marginBottom: '1.5rem'
+          },
+          '@media (max-width: 480px)': {
+            fontSize: '1.75rem',
+            marginBottom: '1.25rem'
+          }
+        }}>Unlock Potential with Our Innovative Solutions</h1>
         <p className="content-description1" style={{
           fontSize: '17px',
           lineHeight: '1.8',
           color: '#ede9e9',
           textAlign: 'center',
           maxWidth: '800px',
-          margin: '0 auto'
-        }}>Experience a comprehensive suite of cutting-edge recruitment tools designed to streamline your hiring process. Our platform combines intelligent automation, advanced candidate matching, and seamless collaboration features to help you find and secure the best talent efficiently. From AI-powered screening to interactive assessment tools, we provide everything you need to transform your recruitment workflow.</p>
+          margin: '0 auto',
+          '@media (max-width: 1024px)': {
+            fontSize: '16px',
+            maxWidth: '700px'
+          },
+          '@media (max-width: 768px)': {
+            fontSize: '15px',
+            maxWidth: '600px',
+            lineHeight: '1.6'
+          },
+          '@media (max-width: 480px)': {
+            fontSize: '14px',
+            maxWidth: '100%',
+            padding: '0 1rem',
+            lineHeight: '1.5'
+          }
+        }}>We revolutionize education and skill development with AI-driven learning, assessment, and content solutions. Our platform is designed to empower students, educators, and institutions with cutting-edge tools for seamless knowledge acquisition, practice, and evaluation.</p>
       </div>
       {/* Navigation Bar */}
       <div className="navigation-bar" style={{
@@ -1390,7 +1510,7 @@ const originalCards = [
 
 <div className="Cons-Title">
 <div className="header">
-      <h1 >Educational Solutions and Services Overview</h1>
+      <h1 >Dynamic Features for Engaging and Effective Learning</h1>
       </div>
       </div>
 <div className="consulting-container">
@@ -1402,17 +1522,11 @@ const originalCards = [
             className="C-service-card"
             style={{ animationDelay: `${index * 0.2}s` }}
           >
-            <div className="C-icon-wrapper">
-              {service.icon}
-            </div>
+            
             <h1 className="C-title">{service.title}</h1>
             {/* <p className="C-subtitle">{service.subtitle}</p> */}
             <p className="C-description">{service.description}</p>
-            <button 
-              className="learn-more-btn animate-on-mount visible"
-            >
-              view more
-            </button>
+            
           </div>
         ))}
       </div>
@@ -1640,18 +1754,17 @@ const originalCards = [
 
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Content Solutions</h3>
+            <h3>Content </h3>
             <ul>
-            <li><a href='/LearningContentSolution'>Learning Content Solution</a></li>
-              <li>Adaptive Learning</li>
-              <li>Virtual Instructor-Led Learning</li>
-              <li>Animated Learning</li>
-              <li>Gamification</li>
-              <li>K12 Learning</li>
-              <li>Micro Learning</li>
-              <li>Assessment Content Solutions</li>
+            <li><a href='/LearningContentSolution'>Learning Content</a></li>
+              
+              
+              <li>Assessment Content </li>
               <li><a href='/Translation'>Translation Services</a></li>
             </ul>
+            <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
+
+            <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
           </div>
 
           <div className="footer-section">
@@ -1663,6 +1776,10 @@ const originalCards = [
               <li><a href='/AlgniteLab'>Algnite Lab</a></li>
               <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
             </ul>
+          
+          </div>
+          <div className="footer-section">
+            
             <h3>Assessment</h3>
             <ul>
             <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
@@ -1672,23 +1789,9 @@ const originalCards = [
             <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
             </ul>
           </div>
+          
 
-          <div className="footer-section">
-            <h3>Discover Us</h3>
-            <ul>
-              <li>About ZESPL</li>
-              <li>Leadership</li>
-
-            </ul>
-            <h3>Resources</h3>
-            <ul>
-              <li>Subject-Matter Expert</li>
-              <li>Translators</li>
-              <li>Editors</li>
-              <li>Copywriters</li>
-              <li>Digital Design Providers</li>
-            </ul>
-          </div>
+     
 
           <div className="footer-section">
             <h3>Contact</h3>

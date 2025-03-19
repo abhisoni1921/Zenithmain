@@ -310,15 +310,158 @@ const LearningContentSolution = () => {
         `}
       </style>
       <div className="content">
+      <style>
+        {`
+          @keyframes gradientText {
+            0% {
+              background-position: 0% 50%;
+            }
+            50% {
+              background-position: 100% 50%; 
+            }
+            100% {
+              background-position: 0% 50%;
+            }
+          }
 
+          @keyframes slideInFromBottom {
+            0% {
+              opacity: 0;
+              transform: translateY(50px);
+            }
+            100% {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+
+          @keyframes morphShape {
+            0% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+            50% { border-radius: 30% 60% 70% 40%/50% 60% 30% 60%; }
+            100% { border-radius: 60% 40% 30% 70%/60% 30% 70% 40%; }
+          }
+
+          .animated-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+          }
+
+          .shape {
+            position: absolute;
+            opacity: 0.15;
+            pointer-events: none;
+            animation: morphShape 8s ease-in-out infinite;
+          }
+
+          .shape1 {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #FF6B6B, #FF8E53);
+            top: 20%;
+            left: 10%;
+          }
+
+          .shape2 {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #4E65FF, #92EFFD);
+            top: 40%;
+            right: 15%;
+          }
+
+          .shape3 {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #A17FE0, #5D26C1);
+            bottom: 20%;
+            left: 20%;
+          }
+
+          .shape4 {
+            width: 130px;
+            height: 130px;
+            background: linear-gradient(45deg, #59C173, #5D26C1);
+            bottom: 30%;
+            right: 20%;
+          }
+
+          .title {
+            font-size: 4rem !important;
+            font-weight: 700;
+            background: linear-gradient(
+              90deg,
+              #0d47a1,
+              #4a90e2,
+              #03a2ca,
+              #0d47a1
+            );
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: gradientText 6s ease infinite,
+                       slideInFromBottom 1.5s ease-out forwards;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            transition: transform 0.3s ease;
+            position: relative;
+            z-index: 2;
+            left: 5rem;
+          }
+
+          .title:hover {
+            transform: scale(1.05);
+          }
+
+          .divider {
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, #000000, #4E65FF, #A17FE0);
+            margin: 20px auto;
+            border-radius: 2px;
+          }
+
+          .subtitle {
+            font-size: 1.2rem;
+            color: #f8fafe;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+            animation: slideInFromBottom 1.5s ease-out 0.3s forwards;
+            opacity: 0;
+            position: relative;
+            z-index: 2;
+          }
+
+          @media (max-width: 768px) {
+            .title {
+              font-size: 2.5rem !important;
+            }
+            .subtitle {
+              font-size: 1rem;
+              padding: 0 20px;
+            }
+            .divider {
+              width: 150px;
+            }
+          }
+        `}
+      </style>
         <h1 className="title">
           Learning Content
         </h1>
-        {/* <p className="subtitle">
-          The premium WordPress theme designed to elevate your online<br />
-          presence to unparalleled heights.
-        </p> */}
-  
+        <div className="divider"></div>
+        <p className="subtitle">
+          Transform your performance evaluation process with our comprehensive 360-degree feedback system.
+          Leverage AI-powered insights to drive meaningful employee development and organizational growth.
+        </p>
       </div>
     </div>
 
@@ -551,7 +694,7 @@ const LearningContentSolution = () => {
 <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a>
+          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
@@ -563,18 +706,17 @@ const LearningContentSolution = () => {
 
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Content Solutions</h3>
+            <h3>Content </h3>
             <ul>
-            <li><a href='/LearningContentSolution'>Learning Content Solution</a></li>
-              <li>Adaptive Learning</li>
-              <li>Virtual Instructor-Led Learning</li>
-              <li>Animated Learning</li>
-              <li>Gamification</li>
-              <li>K12 Learning</li>
-              <li>Micro Learning</li>
-              <li>Assessment Content Solutions</li>
+            <li><a href='/LearningContentSolution'>Learning Content</a></li>
+              
+              
+              <li>Assessment Content </li>
               <li><a href='/Translation'>Translation Services</a></li>
             </ul>
+            <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
+
+            <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
           </div>
 
           <div className="footer-section">
@@ -586,6 +728,10 @@ const LearningContentSolution = () => {
               <li><a href='/AlgniteLab'>Algnite Lab</a></li>
               <li><a href='/AlgniteLMS'>Algnite LMS</a></li>
             </ul>
+          
+          </div>
+          <div className="footer-section">
+            
             <h3>Assessment</h3>
             <ul>
             <li><a href='/AlgniteAptiAssess'>Algnite Apti Assess</a></li>
@@ -595,23 +741,9 @@ const LearningContentSolution = () => {
             <li><a href='/AlgniteAssess360'>Algnite Assess360</a></li>
             </ul>
           </div>
+          
 
-          <div className="footer-section">
-            <h3>Discover Us</h3>
-            <ul>
-              <li>About ZESPL</li>
-              <li>Leadership</li>
-
-            </ul>
-            <h3>Resources</h3>
-            <ul>
-              <li>Subject-Matter Expert</li>
-              <li>Translators</li>
-              <li>Editors</li>
-              <li>Copywriters</li>
-              <li>Digital Design Providers</li>
-            </ul>
-          </div>
+     
 
           <div className="footer-section">
             <h3>Contact</h3>
