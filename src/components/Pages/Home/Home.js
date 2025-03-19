@@ -254,19 +254,14 @@ const originalCards = [
       title: "Learning",
       description: "Go beyond traditional education by integrating AI-driven personalized learning paths and an advanced Learning Management System (LMS). We provide structured learning journeys, tailored to individual needs, helping students and professionals enhance their skills efficiently.",
       features: [
-        // { title: "AI Lab for Practice", icon: "shield" },
-        // { title: "AI-Powered Personalization", icon: "shield" },
-        // { title: "College Placement Training", icon: "shield" },
-        // { title: "Soft Skills & Personality Development", icon: "shield" },
-        // { title: "Comprehensive LMS", icon: "shield" },
-        // { title: "Industry-specific training modules", icon: "shield" }
+        { title: "AI Lab for Practice", icon: "shield" },
+        { title: "AI-Powered Personalization", icon: "shield" },
+        { title: "College Placement Training", icon: "shield" },
+        { title: "Soft Skills & Personality Development", icon: "shield" },
+        { title: "Comprehensive LMS", icon: "shield" },
+        { title: "Industry-specific training modules", icon: "shield" }
 
-        { title: "Customizable Tests", icon: "shield" },
-        { title: "AI-Powered Analytics", icon: "shield" },
-        { title: "Skill-Based Assessments ", icon: "shield" },
-        { title: "Instant evaluation and detailed feedback", icon: "shield" },
-        { title: "Robust Question Authoring Tool", icon: "shield" },
-        { title: "Data-Driven Decision Making", icon: "shield" }
+        
       ]
     },
     Assessment: {
@@ -1225,10 +1220,37 @@ const originalCards = [
               {`
                 .features-grid {
                   display: grid;
-                  grid-template-columns: repeat(2, 1fr);
-                  grid-template-rows: repeat(3, 1fr);
+                  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                   gap: 1.5rem;
                   margin-top: 2rem;
+                  padding: 0 1rem;
+                }
+
+                @media (max-width: 768px) {
+                  .features-grid {
+                    grid-template-columns: 1fr;
+                    gap: 1rem;
+                  }
+
+                  .feature-item {
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+                  }
+
+                  .feature-icon-container {
+                    flex-shrink: 0;
+                  }
+
+                  .feature-title {
+                    font-size: 0.9rem;
+                  }
+                }
+
+                @media (max-width: 480px) {
+                  .features-grid {
+                    padding: 0 0.5rem;
+                  }
                 }
               `}
             </style>
