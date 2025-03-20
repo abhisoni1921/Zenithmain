@@ -147,7 +147,8 @@ const AlgniteTech = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="./1up-remove.png
+        " alt="Relevant Image" />
       </div>
     </div>
 
@@ -178,7 +179,7 @@ const AlgniteTech = () => {
                 Work on real-world coding challenges and refine your problem-solving skills.</p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img7.jpg" alt="Demo import interface" className="ct-main-image" />
+                <img src="cod.png" alt="Demo import interface" className="ct-main-image" />
                 <div className="ct-feature-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M13 5l7 7-7 7M5 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -201,7 +202,7 @@ const AlgniteTech = () => {
                 </p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img8.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/2up.jpg" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -222,7 +223,7 @@ const AlgniteTech = () => {
                 </p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img11.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/anlytics.jpg" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>

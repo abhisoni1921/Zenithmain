@@ -212,7 +212,7 @@ const AlgniteTechAssess = () => {
         
         <div className="neopat-image-container">
           <div className="neopat-image">
-          <img src="https://iamneo.ai/wp-content/uploads/2023/06/neo_coder_about-1.png" alt="Relevant Image" />
+          <img src="/techAssess.png" alt="Relevant Image" />
           </div>
         </div>
       </div>

@@ -113,6 +113,39 @@ const DiscoverUs = () => {
     }
   ];
 
+  const timelineData = [
+    {
+      date: "2002",
+      title: "The Beginning of Our Journey",
+      description: "Launched our platform with programming languages, workshops, and soft skill training.",
+      accentColor: "#41516C"
+    },
+    {
+      date: "2007",
+      title: "Expansion into Advanced Courses",
+      description: "Introduced advanced courses like full-stack development and web development to meet industry needs.",
+      accentColor: "#FBCA3E"
+    },
+    {
+      date: "2012",
+      title: "AI Integration and Client Growth",
+      description: "Implemented AI into our platform and secured our first circle of clients: Sri Krishna and MCET",
+      accentColor: "#E24A68"
+    },
+    {
+      date: "2017",
+      title: "Leading the EdTech Revolution",
+      description: "Continuing our leadership in the EdTech space with cutting-edge AI-powered learning tools and top-tier instructors.",
+      accentColor: "#1B5F8C"
+    },
+    {
+      date: "2022",
+      title: "Future of Education",
+      description: "Expanding our reach to include more institutions and students, ensuring that our AI-driven solutions are accessible to all.",
+      accentColor: "#4CADAD"
+    }
+  ];
+
 
 
   return (
@@ -213,7 +246,7 @@ const DiscoverUs = () => {
         <div className="left-section animate-on-mount">
           <div className="lt-container">
             <img 
-              src="https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?t=st=1739438706~exp=1739442306~hmac=428245df16c5ff70f60f234743acfe903e07a39e88fac771e3e5de46c1411425&w=740" 
+              src="/About us png.png" 
               alt="Dashboard Preview" 
               className="lt-image"
             />
@@ -258,8 +291,26 @@ const DiscoverUs = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="./vision1.png" alt="Relevant Image" />
       </div>
+    </div>
+
+    <div className="timeline-container">
+      <div className="timeline-header1">
+      <div className="header">
+      <h1 >Our Timeline</h1>
+      </div>
+      </div>
+      <ul className="timeline">
+        {timelineData.map((item, index) => (
+          <li key={index} style={{"--accent-color": item.accentColor}}>
+            <div className="date">{item.date}</div>
+            <div className="abt-title1">{item.title}</div>
+            <div className="descr">{item.description}</div>
+          </li>
+        ))}
+      </ul>
+      
     </div>
 
      <div className="ABT-container">

@@ -146,7 +146,7 @@ const AlgniteLab = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="./prac.png" alt="Relevant Image" />
       </div>
     </div>
 
@@ -180,7 +180,7 @@ It offers a comprehensive platform to enhance your skills through interactive ex
 Designed for learners and professionals, it supports a wide range of topics and difficulty levels.</p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img7.jpg" alt="Demo import interface" className="ct-main-image" />
+                <img src="/questions.jpg" alt="Demo import interface" className="ct-main-image" />
                 <div className="ct-feature-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M13 5l7 7-7 7M5 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -202,7 +202,7 @@ Designed for learners and professionals, it supports a wide range of topics and 
                 </p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img8.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/easyl.png" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -222,7 +222,7 @@ Designed for learners and professionals, it supports a wide range of topics and 
                 <p>Receive real-time feedback and debugging tips to optimize your code efficiently, all while improving your programming skills with practical insights and boosting your confidence as a developer.</p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img11.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/anlytics.jpg" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>

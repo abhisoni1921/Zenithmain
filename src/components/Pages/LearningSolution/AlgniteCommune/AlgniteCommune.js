@@ -148,7 +148,7 @@ const AlgniteCommune = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="./soft1.png" alt="Relevant Image" />
       </div>
     </div>
 
@@ -178,7 +178,7 @@ const AlgniteCommune = () => {
                 <p>AIgnite Commune focuses on building strong communication skills with the help of AI tools. It provides interactive exercises and real-time feedback to enhance verbal and written proficiency.</p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img7.jpg" alt="Demo import interface" className="ct-main-image" />
+                <img src="/communication.jpg" alt="Demo import interface" className="ct-main-image" />
                 <div className="ct-feature-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M13 5l7 7-7 7M5 5l7 7-7 7" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -200,7 +200,7 @@ const AlgniteCommune = () => {
                 </p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img8.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/com.png" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>
@@ -221,7 +221,7 @@ const AlgniteCommune = () => {
                 </p>
               </div>
               <div className="ct-feature-image">
-                <img src="/img11.jpg" alt="Real-time editing interface" className="ct-main-image" />
+                <img src="/anlytics.jpg" alt="Real-time editing interface" className="ct-main-image" />
                 <div className="ct-elementor-icon">
                   <svg viewBox="0 0 24 24" className="ct-icon">
                     <path d="M4 4h16v16H4z" fill="none" stroke="currentColor" strokeWidth="2"/>

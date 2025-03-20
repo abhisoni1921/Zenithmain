@@ -201,13 +201,13 @@ const Resources = () => {
 
 
     
-
+    <div className='abcd-container'>
     <div className="ab-container">
       <div className="content-wrapper">
         <div className="left-section animate-on-mount">
           <div className="lt-container">
             <img 
-              src="https://img.freepik.com/free-vector/teamwork-concept-landing-page_52683-20165.jpg?t=st=1739438706~exp=1739442306~hmac=428245df16c5ff70f60f234743acfe903e07a39e88fac771e3e5de46c1411425&w=740" 
+              src="/resources.png" 
               alt="Dashboard Preview" 
               className="lt-image"
             />
@@ -236,9 +236,10 @@ const Resources = () => {
         </div>
       </div>
     </div>
-
+    </div>
+    
    
-
+    <div className='abc-container'>
      <div className="ABT-container">
     <div className="ABT">
     <div className="abt-container">
@@ -261,6 +262,7 @@ const Resources = () => {
     </div>
     </div>
     </div> 
+    </div>
 
      
    

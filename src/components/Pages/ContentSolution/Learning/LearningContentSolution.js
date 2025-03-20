@@ -486,7 +486,7 @@ const LearningContentSolution = () => {
           icon="💎"
           title=" Adaptive Learning"
           description="Our Adaptive Learning platform uses AI to tailor content to each student’s learning pace and style. By analyzing performance data, it customizes lessons, quizzes, and practice exercises, ensuring an optimized learning path that maximizes understanding and minimizes frustration."
-          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          image={<img src="/adaptive learning.png" alt="Dashboard preview" className="dashboard-preview" />}
           learnMoreLink="#"
           className="premium-design"
         />
@@ -495,7 +495,7 @@ const LearningContentSolution = () => {
           icon="💎"
           title=" Virtual Instructor-Led Training"
           description="Experience the effectiveness of classroom learning with the convenience of virtual access through our Virtual Instructor-Led Training (VILT). We provide live sessions with expert instructors, interactive Q&A, and collaborative discussions, ensuring an engaging and connected learning environment."
-          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          image={<img src="/virtual learning.jpg" alt="Dashboard preview" className="dashboard-preview" />}
           learnMoreLink="#"
           className="premium-design"
         />
@@ -506,7 +506,7 @@ const LearningContentSolution = () => {
           icon="🚀"
           title="Animated Video Learning"
           description="Simplify complex ideas with our Animated Video Learning modules. Using high-quality animations and storytelling techniques, we make abstract or difficult topics easier to understand. These visually appealing videos boost engagement and enhance memory retention."
-          image={<img src="/img8.jpg" alt="Templates preview" className="templates-preview" />}
+          image={<img src="/animated video learning.jpg" alt="Templates preview" className="templates-preview" />}
           learnMoreLink="#"
           className="rapid-build"
         />
@@ -514,7 +514,7 @@ const LearningContentSolution = () => {
           icon="💎"
           title=" Gamification"
           description="Turn learning into an adventure with our Gamification solutions. We use game mechanics like points, badges, leaderboards, and challenges to make learning fun and motivating. This approach not only enhances student engagement but also improves knowledge retention by encouraging active participation."
-          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          image={<img src="/gami.png" alt="Dashboard preview" className="dashboard-preview" />}
           learnMoreLink="#"
           className="premium-design"
         />
@@ -522,7 +522,7 @@ const LearningContentSolution = () => {
           icon="💎"
           title=" K12 Learning"
           description="Empowering young minds with tailored educational content for every grade level. Our K-12 solutions align with curriculum standards, ensuring comprehensive learning through engaging and age-appropriate material. We offer various services like  Curriculum development, Assessment development, Workbook development, Teacher lesson plan  etc."
-          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          image={<img src="/k 12.jpg" alt="Dashboard preview" className="dashboard-preview" />}
           learnMoreLink="#"
           className="premium-design"
         />
@@ -530,7 +530,7 @@ const LearningContentSolution = () => {
           icon="💎"
           title=" Micro Learning"
           description="Deliver knowledge in short, focused segments with our micro-learning modules. Perfect for modern learners, these modules provide quick, accessible learning experiences anytime, anywhere."
-          image={<img src="/img4.jpg" alt="Dashboard preview" className="dashboard-preview" />}
+          image={<img src="/micro.png" alt="Dashboard preview" className="dashboard-preview" />}
           learnMoreLink="#"
           className="premium-design"
         />

@@ -383,7 +383,7 @@ const Translation = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="/img7.jpg" alt="Relevant Image" />
+        <img src="/trans1.png" alt="Relevant Image" />
       </div>
     </div>
 

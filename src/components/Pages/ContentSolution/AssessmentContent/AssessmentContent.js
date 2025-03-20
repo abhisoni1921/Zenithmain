@@ -373,7 +373,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
         
         <div className="neopat-image-container">
           <div className="neopat-image">
-          <img src="https://iamneo.ai/wp-content/uploads/2023/05/internal-exam.png" alt="Relevant Image" />
+          <img src="/Acontent.png" alt="Relevant Image" />
           </div>
         </div>
       </div>

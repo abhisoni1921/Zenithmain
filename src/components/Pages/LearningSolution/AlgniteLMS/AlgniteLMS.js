@@ -172,7 +172,7 @@ const AlgniteLMS = () => {
         </ul>
       </div>
       <div className="image">
-        <img src="./img7.jpg" alt="Relevant Image" />
+        <img src="./LMS2.png" alt="Relevant Image" />
       </div>
     </div>
 
@@ -289,7 +289,7 @@ const AlgniteLMS = () => {
         <div class="ag-courses-item_bg">
         </div>
         <div class="ag-courses-item_title">
-        Automated Enrollment System
+        Enrollment Automation
 
         </div>
         <p class="ag-courses-item_dis" >Streamline enrollment and payment procedures with automated invoicing and receipt management, enhancing operational efficiency.
