@@ -303,7 +303,7 @@ const AlgniteAssess360 = () => {
         
         <div className="neopat-image-container">
           <div className="neopat-image">
-          <img src="/assess360.PNG" alt="Relevant Image" />
+          <img src="/assess360.png" alt="Relevant Image" />
           </div>
         </div>
       </div>

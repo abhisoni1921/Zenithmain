@@ -1573,8 +1573,8 @@ const originalCards = [
             background: rgba(255,255,255,0.1);
             color: #fff;
             border: none;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
             font-size: 1.5rem;
             cursor: pointer;
@@ -1591,8 +1591,8 @@ const originalCards = [
             transform: translateY(-50%) scale(1.1);
           }
 
-          .carousel-button-prev { left: 20px; }
-          .carousel-button-next { right: 20px; }
+          .carousel-button-prev { left: 0px; }
+          .carousel-button-next { right: 0px; }
 
           .carousel-card {
             background: #2a2a2a;

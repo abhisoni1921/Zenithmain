@@ -246,7 +246,7 @@ const DiscoverUs = () => {
         <div className="left-section animate-on-mount">
           <div className="lt-container">
             <img 
-              src="/About us png.png" 
+              src="/discover.png" 
               alt="Dashboard Preview" 
               className="lt-image"
             />
