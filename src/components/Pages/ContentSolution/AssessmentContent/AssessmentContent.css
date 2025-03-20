@@ -234,6 +234,7 @@
   .process-box {
     width: 100%;
     margin-bottom: 1rem;
+    right: -15px
   }
   
   .arrow {

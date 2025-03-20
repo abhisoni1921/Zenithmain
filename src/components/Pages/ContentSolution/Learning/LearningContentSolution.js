@@ -443,6 +443,7 @@ const LearningContentSolution = () => {
           @media (max-width: 768px) {
             .title {
               font-size: 2.5rem !important;
+              left: 0px;
             }
             .subtitle {
               font-size: 1rem;

@@ -392,7 +392,8 @@ const Translation = () => {
 
       <div className="cour-title">
       <div className="header">
-      <h1 >Empowering Every Industry with Tailored Learning Solutions</h1>
+      <h1 >Learn in Your Language of Choice
+      </h1>
       </div>
       </div>
       
