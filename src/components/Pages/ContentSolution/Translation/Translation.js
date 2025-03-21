@@ -491,13 +491,13 @@ const Translation = () => {
 
           <div className="footer-section">
             <h3>Contact</h3>
-            <p>Address: 207, 1st floor, Sainik Vihar,</p>
-            <p>Pitampura, Delhi, India - 110034</p>
+            <p>Address: H-81 Sector 63 </p>
+            <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
             <h3>Support</h3>
             <p>Contact Us Now</p>
-            <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
+            {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>
       </div>

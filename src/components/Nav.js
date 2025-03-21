@@ -102,7 +102,7 @@ const Navbar = () => {
     },
     {
       title: 'Content',
-      link: '/Content',
+      
       dropdown: true,
       items: [
         { title: 'Assessment Content', link: '/AssessmentContent' },
