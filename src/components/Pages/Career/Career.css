@@ -569,5 +569,69 @@ p {
   .submit-btn {
     padding: 1rem 1.5rem;
     font-size: 1rem;
+    margin-left: -185px;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+  .job-card {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .job-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .job-title {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .job-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .job-details {
+    flex-direction: column;
+    gap: 1rem;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .detail-group {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .apply-btn {
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .job-listings {
+    padding: 0.5rem;
+    gap: 1rem;
+  }
+
+  .job-card {
+    padding: 1rem;
+  }
+
+  .job-info h3 {
+    font-size: 1.1rem;
+  }
+
+  .detail-label, .detail-value {
+    font-size: 0.85rem;
   }
 }
