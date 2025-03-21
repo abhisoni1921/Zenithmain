@@ -57,6 +57,7 @@ import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAsses
 import Translation from './components/Pages/ContentSolution/Translation/Translation';
 import AssessmentContent from './components/Pages/ContentSolution/AssessmentContent/AssessmentContent';
 import Resources from './components/Pages/Resources/Resources';
+import Career from './components/Pages/Career/Career';
 
 
 
@@ -129,7 +130,7 @@ function App() {
         <Route path='/Translation' element={<Translation/>}/>
 
         <Route path='/Resources' element={<Resources/>}/>
-
+        <Route path='/Career' element={<Career/>}/>
 
       
       </Routes>

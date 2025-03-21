@@ -262,6 +262,8 @@ Designed for learners and professionals, it supports a wide range of topics and 
             <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
+
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
           </div>
 
           <div className="footer-section">
@@ -297,7 +299,7 @@ Designed for learners and professionals, it supports a wide range of topics and 
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
             <h3>Support</h3>
-            <p>Learning Management System:</p>
+            <p>Contact Us Now</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
           </div>
         </div>
