@@ -670,7 +670,7 @@ const originalCards = [
                   <span className="badge-text">
                     {index === 0 ? "Smart Learning" : 
                      index === 1 ? "Smart Learning" : 
-                     "Placement Success"}
+                     "Smart Learning"}
                   </span>
                 </div>
               </div>
