@@ -668,7 +668,7 @@ const originalCards = [
                 <div className="badge-content">
                   <span className="badge-icon">⭐</span>
                   <span className="badge-text">
-                    {index === 0 ? "Professional" : 
+                    {index === 0 ? "Smart Learning" : 
                      index === 1 ? "Smart Learning" : 
                      "Placement Success"}
                   </span>
