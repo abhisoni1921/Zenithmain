@@ -138,7 +138,7 @@ const Career = () => {
   const categories = [
     { id: 'ALL', name: 'ALL' },
     { id: 'IT_ADMIN', name: 'IT & ADMIN' },
-    { id: 'ENGINEERING', name: 'ENGINEERING', count: 20 },
+    { id: 'ENGINEERING', name: 'ENGINEERING' },
     { id: 'SUPPORT', name: 'SUPPORT' },
     { id: 'DESIGN', name: 'DESIGN' },
     { id: 'DIGITAL_MARKETING', name: 'DIGITAL MARKETING' }
@@ -337,7 +337,7 @@ const Career = () => {
             transition: transform 0.3s ease;
             position: relative;
             z-index: 2;
-            left: 8rem;
+            left: 0rem;
           }
 
           .title:hover {
@@ -384,8 +384,7 @@ const Career = () => {
         </h1>
         <div className="divider"></div>
         <p className="subtitle">
-          Transform your performance evaluation process with our comprehensive 360-degree feedback system.
-          Leverage AI-powered insights to drive meaningful employee development and organizational growth.
+        At ZESPL, we provide a vibrant career filled with opportunities to innovate and excel. Join our team to work on impactful projects in a supportive, growth-oriented environment.
         </p>
       </div>
     </div>

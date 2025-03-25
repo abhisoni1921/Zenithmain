@@ -39,7 +39,7 @@ p {
 .benefits-section {
   margin-bottom: 5rem;
   position: relative;
-  padding: 2rem;
+  
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
@@ -128,7 +128,7 @@ p {
 /* Career Section */
 .career-section {
   margin-top: 5rem;
-  padding: 2rem;
+
   background: rgba(255, 255, 255, 0.9);
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
