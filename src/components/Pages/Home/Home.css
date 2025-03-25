@@ -1164,7 +1164,7 @@ h2 {
 /* Training Services Section */
 .training-services-section {
   background-color: transparent; /* Light Green */
-  padding: 3rem 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
   margin: 0rem 0;
 }
@@ -1398,7 +1398,7 @@ body {
 @media only screen and (max-width: 576px) {
   .ag-format-container {
     max-width: 100%;
-    padding: 0 10px;
+    
   }
 
   .ag-courses_item {
@@ -1444,7 +1444,7 @@ body {
 }
 
 .consulting-container {
-  padding: 2rem;
+  padding: 1.5rem;
   background-color: transparent;
   min-height: 90vh;
   
@@ -1575,14 +1575,36 @@ body {
   }
 }
 
-.content-title2{
+
+.content-title2 {
   background: linear-gradient(90deg, #4ade80, #22c55e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    text-align: center;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .content-title2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-title2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .content-title2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 .services-container {
@@ -1822,7 +1844,7 @@ body {
 /* Media query for very small screens (up to 480px) */
 @media (max-width: 480px) {
   .social-icons {
-    gap: 0rem; /* Even smaller gap */
+    gap: 2rem; /* Even smaller gap */
     margin-right: 0.5rem;
     justify-content: space-around; /* Spreads icons evenly */
     margin-bottom: 25px;

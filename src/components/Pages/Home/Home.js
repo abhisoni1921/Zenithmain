@@ -669,8 +669,8 @@ const originalCards = [
                   <span className="badge-icon">⭐</span>
                   <span className="badge-text">
                     {index === 0 ? "Smart Learning" : 
-                     index === 1 ? "Smart Learning" : 
-                     "Smart Learning"}
+                     index === 1 ? "Professional Solutions" : 
+                     "Placement Training"}
                   </span>
                 </div>
               </div>
@@ -1081,7 +1081,7 @@ const originalCards = [
    <div className="dotrecruit-container">
       <div className="content-container1" style={{
         // background: 'linear-gradient(135deg, rgba(74, 222, 128, 0.1), rgba(0, 0, 0, 0.2))',
-        padding: '2rem',
+        padding: '1.5rem',
         '@media (max-width: 1024px)': {
           padding: '1.5rem'
         },
@@ -1096,21 +1096,29 @@ const originalCards = [
           background: 'linear-gradient(90deg, #4ade80, #22c55e)',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
-          fontSize: '2.5rem',
+          fontSize: 'clamp(1.75rem, 5vw, 2.5rem)',
           fontWeight: '600',
-          marginBottom: '2rem',
+          marginBottom: 'clamp(1.25rem, 3vw, 2rem)',
           textAlign: 'center',
-          '@media (max-width: 1024px)': {
-            fontSize: '2.25rem',
-            marginBottom: '1.75rem'
-          },
-          '@media (max-width: 768px)': {
-            fontSize: '2rem',
-            marginBottom: '1.5rem'
-          },
-          '@media (max-width: 480px)': {
-            fontSize: '1.75rem',
-            marginBottom: '1.25rem'
+          padding: '1rem',
+          width: '100%',
+          maxWidth: '1200px',
+          margin: '0 auto',
+          lineHeight: '1.2',
+          transition: 'all 0.3s ease',
+          '@supports not (font-size: clamp(1.75rem, 5vw, 2.5rem))': {
+            '@media (max-width: 1024px)': {
+              fontSize: '2.25rem',
+              marginBottom: '1.75rem'
+            },
+            '@media (max-width: 768px)': {
+              fontSize: '2rem', 
+              marginBottom: '1.5rem'
+            },
+            '@media (max-width: 480px)': {
+              fontSize: '1.75rem',
+              marginBottom: '1.25rem'
+            }
           }
         }}>Unlock Potential with Our Innovative Solutions</h1>
         <p className="content-description1" style={{
@@ -1121,16 +1129,16 @@ const originalCards = [
           maxWidth: '800px',
           margin: '0 auto',
           '@media (max-width: 1024px)': {
-            fontSize: '16px',
+            fontSize: '17px',
             maxWidth: '700px'
           },
           '@media (max-width: 768px)': {
-            fontSize: '15px',
+            fontSize: '17px',
             maxWidth: '600px',
             lineHeight: '1.6'
           },
           '@media (max-width: 480px)': {
-            fontSize: '14px',
+            fontSize: '17px',
             maxWidth: '100%',
             padding: '0 1rem',
             lineHeight: '1.5'

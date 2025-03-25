@@ -883,7 +883,7 @@ html {
     color: transparent;
   text-align: left;
   transition: transform 0.3s ease;
-  margin: 1rem;
+  margin: 0.8rem;
 }
 .abt-card:hover .abt-title {
   color: #12100E;
@@ -926,8 +926,7 @@ html {
   display: grid;
   align-content: center;
   gap: 2rem;
-  padding: 2rem;
-  
+  padding: 1.5rem;
   color: var(--color);
   background: var(--bgColor);
 }
@@ -1103,4 +1102,131 @@ html {
 
 .credits a {
   color: var(--color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .timeline-container {
+    padding: 1rem;
+  }
+
+  .timeline {
+    --col-gap: 1.5rem;
+    --row-gap: 1.5rem;
+    width: 95%;
+  }
+
+  .timeline li {
+    --inlineP: 1rem;
+  }
+
+  .timeline li .date {
+    --dateH: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .timeline li .descr {
+    font-size: 17px;
+    margin: 0.8rem;
+  }
+
+  .timeline-header1 {
+    margin-top: 2rem;
+    margin-bottom: -1.5rem;
+  }
+
+  .timeline-header1 h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .timeline-container {
+    padding: 0.8rem;
+  }
+
+  .timeline {
+    --col-gap: 1rem;
+    --row-gap: 1.2rem;
+    width: 100%;
+  }
+
+  .timeline li {
+    --inlineP: 0.8rem;
+  }
+
+  .timeline li .date {
+    --dateH: 2rem;
+    font-size: 0.9rem;
+  }
+
+  .timeline li .descr {
+    font-size: 17px;
+    margin: 0.6rem;
+  }
+
+  .timeline-header1 {
+    margin-top: 2rem;
+    margin-bottom: -1rem;
+  }
+
+  .timeline-header1 h1 {
+    font-size: 2rem;
+  }
+
+  .timeline li .date::after {
+    width: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .timeline {
+    width: 80%;
+  }
+
+  .timeline li .descr {
+    font-size: 18px;
+  }
+}
+
+/* Fix for very small screens */
+@media screen and (max-width: 320px) {
+  .timeline-container {
+    padding: 0.5rem;
+  }
+
+  .timeline {
+    --col-gap: 0.8rem;
+    --row-gap: 1rem;
+  }
+
+  .timeline li .date {
+    --dateH: 1.8rem;
+    font-size: 0.8rem;
+  }
+
+  .timeline li .descr {
+    font-size: 13px;
+    margin: 0.5rem;
+  }
+
+  .timeline-header1 h1 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Fix for landscape orientation on mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .timeline-container {
+    min-height: auto;
+    padding: 2rem 1rem;
+  }
+
+  .timeline {
+    --row-gap: 1rem;
+  }
+
+  .timeline li {
+    grid-row: span 1.5;
+  }
 }

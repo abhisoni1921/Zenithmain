@@ -220,7 +220,7 @@ const AlgniteAssess360 = () => {
             transition: transform 0.3s ease;
             position: relative;
             z-index: 2;
-            left: 5rem;
+            left: 0rem;
           }
 
           .title:hover {
