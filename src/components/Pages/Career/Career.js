@@ -337,7 +337,37 @@ const Career = () => {
             transition: transform 0.3s ease;
             position: relative;
             z-index: 2;
-            left: 0rem;
+            left: 8rem;
+            @media (max-width: 1200px) {
+              font-size: 3.5rem !important;
+              left: 6rem;
+            }
+
+            @media (max-width: 992px) {
+              font-size: 3rem !important;
+              left: 4rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 2.5rem !important;
+              left: 0rem;
+            }
+
+            @media (max-width: 576px) {
+              font-size: 2rem !important;
+              left: 1rem;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 1.8rem !important;
+              left: 0.5rem;
+            }
+
+            @media (max-width: 320px) {
+              font-size: 1.5rem !important;
+              left: 0;
+            }
+            
           }
 
           .title:hover {
