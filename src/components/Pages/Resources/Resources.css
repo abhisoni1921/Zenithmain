@@ -5,3 +5,71 @@
     margin-top: -8rem;
     margin-bottom: 1rem;
 }
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .abc-container {
+        margin-top: -4rem;
+    }
+    
+    .abcd-container {
+        margin-top: -4rem;
+        margin-bottom: 2rem;
+    }
+
+    .content-wrapper {
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .left-section {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .right-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .lt-image {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+
+    .about-us-title h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .sub-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .abc-container {
+        margin-top: -2rem;
+    }
+    
+    .abcd-container {
+        margin-top: -2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .about-us-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .sub-text {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+
+    .lt-image {
+        max-width: 250px;
+    }
+}
