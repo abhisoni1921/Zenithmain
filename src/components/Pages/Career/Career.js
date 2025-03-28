@@ -137,67 +137,66 @@ const Career = () => {
 
   const categories = [
     { id: 'ALL', name: 'ALL' },
-    { id: 'IT_ADMIN', name: 'IT & ADMIN' },
-    { id: 'ENGINEERING', name: 'ENGINEERING' },
-    { id: 'SUPPORT', name: 'SUPPORT' },
-    { id: 'DESIGN', name: 'DESIGN' },
-    { id: 'DIGITAL_MARKETING', name: 'DIGITAL MARKETING' }
+    { id: 'TECHNICAL', name: 'TECHNICAL' },
+    { id: 'SUBJECT_MATTER_EXPERT', name: 'SUBJECT MATTER EXPERT' },
+    { id: 'TRANSLATOR', name: 'TRANSLATOR' },
+    { id: 'DESIGN_DIGITAL_MARKETING', name: 'DESIGN & DIGITAL MARKETING' }
   ];
 
   const jobs = [
     {
-      title: 'Wordpress Developer',
+      title: 'Frontend Developer',
       experience: '2 Years',
-      deadline: '2021-05-08',
-      category: 'ENGINEERING'
+      deadline: '2025-05-08',
+      category: 'TECHNICAL'
     },
     {
-      title: 'Javascript',
+      title: 'Backend Developer',
       experience: '1 Years',
-      deadline: '2021-05-08',
-      category: 'ENGINEERING'
+      deadline: '2025-05-08',
+      category: 'TECHNICAL'
     },
     {
       title: 'Apps Developer',
       experience: '3 Years',
-      deadline: '2021-05-08',
-      category: 'ENGINEERING'
+      deadline: '2025-05-08',
+      category: 'TECHNICAL'
     },
     {
       title: 'IOS Developer',
       experience: '2 Years',
-      deadline: '2021-05-08',
-      category: 'ENGINEERING'
+      deadline: '2025-05-08',
+      category: 'TECHNICAL'
     },
     {
-      title: 'Node JS Developer',
+      title: 'Python Developer',
       experience: '3 Years',
-      deadline: '2021-05-08',
-      category: 'ENGINEERING'
+      deadline: '2025-05-08',
+      category: 'TECHNICAL'
     },
     {
-      title: 'IT Support Specialist',
+      title: 'Aptitude Trainer',
       experience: '1 Year',
-      deadline: '2021-05-10',
-      category: 'IT_ADMIN'
+      deadline: '2025-05-10',
+      category: 'SUBJECT_MATTER_EXPERT'
     },
     {
-      title: 'UX Designer',
+      title: 'TRANSLATOR',
       experience: '2 Years',
-      deadline: '2021-05-12',
-      category: 'DESIGN'
+      deadline: '2025-05-12',
+      category: 'TRANSLATOR'
     },
     {
       title: 'Digital Marketing Specialist',
       experience: '2 Years',
-      deadline: '2021-05-15',
-      category: 'DIGITAL_MARKETING'
+      deadline: '2025-05-15',
+      category: 'DESIGN_DIGITAL_MARKETING'
     },
     {
-      title: 'Customer Support Specialist',
+      title: 'DSA Trainer',
       experience: '1 Year',
-      deadline: '2021-05-20',
-      category: 'SUPPORT'
+      deadline: '2025-05-20',
+      category: 'SUBJECT_MATTER_EXPERT'
     }
   ];
 
@@ -522,7 +521,7 @@ const Career = () => {
           
           <h2>Career Openings</h2>
           <p>
-            We're always looking for creative, talented self-starters to join the JMC family.
+            We're always looking for creative, talented self-starters to join the ZESPL family.
             Check out our open roles below and fill out an application.
           </p>
         </div>

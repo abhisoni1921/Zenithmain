@@ -65,8 +65,9 @@
     }
 
     .sub-text {
-        font-size: 0.9rem;
+        font-size: 17px;
         padding: 0 0.5rem;
+        text-align: left;
     }
 
     .lt-image {

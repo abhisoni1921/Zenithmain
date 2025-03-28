@@ -478,7 +478,7 @@ const LearningContentSolution = () => {
 
       <div className="landing-page">
       <header>
-        <h1 className="M-header">Curious About Effective Learning? </h1>
+        <h1 className="M-header1">Curious About Effective Learning? </h1>
         
       </header>
 

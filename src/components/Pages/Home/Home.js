@@ -167,22 +167,29 @@ const Home = () => {
 const originalCards = [
             {
               imageUrl: "/img1.jpg",
-              title: "Mountain Adventure",
-              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
+              title: "Skill Development ",
+              description: "Unlock your potential with our comprehensive skill development programs. Our platform offers hands-on training, industry-relevant courses, and personalized learning paths to ensure you’re ready for the professional world.",
               link: "#",
               viewMore: "https://example.com/mountains"
             },
             {
               imageUrl: "/img2.jpg",
-              title: "Ocean Escape",
-              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
+              title: "Career Readiness ",
+              description: "Prepare for your dream career with our intensive career readiness bootcamp. We combine expert mentorship, real-world simulations, and cutting-edge tools to help you build the skills and confidence needed to succeed.",
+              link: "#",
+              viewMore: "https://example.com/ocean"
+            },
+            {
+              imageUrl: "/img2.jpg",
+              title: "Industry Ready",
+              description: "Prepare for the workforce with our intensive bootcamps. Designed to deliver practical skills and industry insights, our programs combine powerful training tools with expert guidance to make you job & enhance your skills.",
               link: "#",
               viewMore: "https://example.com/ocean"
             },
             {
               imageUrl: "/img3.jpg",
-              title: "Urban Explorer",
-              description: "Discover innovative solutions and cutting-edge features that will transform your digital experience. Our platform combines powerful technology with intuitive design to deliver exceptional results.",
+              title: "Placement Connect",
+              description: "Step into your future with our seamless placement solutions. Our platform connects you with top employers, provides interview coaching, and offers tailored job-matching opportunities to launch your career with confidence.",
               link: "#",
               viewMore: "https://example.com/urban"
             }
@@ -1041,7 +1048,7 @@ const originalCards = [
       </div>
     </div>
 
-    <div className="brands-section">
+    {/* <div className="brands-section">
       <h1 className="content-title2">Our Partners</h1>
 
 
@@ -1061,7 +1068,7 @@ const originalCards = [
           ))}
         </div>
       </div>
-    </div>
+    </div> */}
 
     {/* <div className="F-Title">
 <div className="header">
@@ -1570,11 +1577,11 @@ const originalCards = [
     
     
     <div className="carousel-container">
-    <h1 className="M-header">Laser focused on WordPress</h1>
+    <h1 className="M-header">Your Path to Success: Learn, Train, and Thrive</h1>
       <style>
         {`
           .carousel-container {
-            background: #1a1a1a;
+            background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
             padding: 4rem 2rem;
             position: relative;
             border-radius: 12px;
@@ -1607,7 +1614,7 @@ const originalCards = [
           .carousel-button-next { right: 0px; }
 
           .carousel-card {
-            background: #2a2a2a;
+            background: linear-gradient(135deg, #2B4162 0%, #12100E 100%);
             
             overflow: hidden;
             transition: transform 0.3s ease;
@@ -1627,14 +1634,7 @@ const originalCards = [
             object-fit: cover;
           }
 
-          .carousel-image-overlay {
-            background: linear-gradient(to bottom, transparent, rgba(42,42,42,0.9));
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 50%;
-          }
+          
 
           .carousel-content {
             padding: 2rem;
