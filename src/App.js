@@ -58,6 +58,7 @@ import Translation from './components/Pages/ContentSolution/Translation/Translat
 import AssessmentContent from './components/Pages/ContentSolution/AssessmentContent/AssessmentContent';
 import Resources from './components/Pages/Resources/Resources';
 import Career from './components/Pages/Career/Career';
+import Contact from './components/Pages/Contact/Contact';
 
 
 
@@ -131,6 +132,7 @@ function App() {
 
         <Route path='/Resources' element={<Resources/>}/>
         <Route path='/Career' element={<Career/>}/>
+        <Route path='/Contact' element={<Contact/>}/>
 
       
       </Routes>

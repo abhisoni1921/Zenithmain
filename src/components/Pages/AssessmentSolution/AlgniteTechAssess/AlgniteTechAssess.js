@@ -295,7 +295,7 @@ const AlgniteTechAssess = () => {
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
 
-            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+            
           </div>
 
           <div className="footer-section">
@@ -330,8 +330,10 @@ const AlgniteTechAssess = () => {
             <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
-            <h3>Support</h3>
-            <p>Contact Us Now</p>
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+
+            <h3 ><a href='/Contact' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Submit a Query</a></h3>
+            
             {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>

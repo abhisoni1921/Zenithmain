@@ -103,7 +103,7 @@ const bannerData = [
     id: 2,
     title: "Advancing Assessment through Pioneering Innovation",
     description: "At Zenith, we are paving the way for the next generation of education and talent acquisition.",
-    image: "/Assess2.png",
+    image: "/A1.png",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-2"
   },
@@ -111,7 +111,7 @@ const bannerData = [
     id: 3,
     title: "Future-Ready Content Curated by Experts and Enhanced with AI",
     description: "Access expert-crafted, AI-optimized content designed for better understanding and retention.",
-    image: "/Content1.png",
+    image: "/C1.png",
     buttonText: "Explore Our Solutions",
     gradient: "bg-gradient-3"
   }
@@ -180,7 +180,7 @@ const originalCards = [
               viewMore: "https://example.com/ocean"
             },
             {
-              imageUrl: "/img2.jpg",
+              imageUrl: "/img2.2.jpg",
               title: "Industry Ready",
               description: "Prepare for the workforce with our intensive bootcamps. Designed to deliver practical skills and industry insights, our programs combine powerful training tools with expert guidance to make you job & enhance your skills.",
               link: "#",
@@ -1471,7 +1471,7 @@ const originalCards = [
         <div class="ag-courses-item_bg"></div>
 
         <div class="ag-courses-item_title">
-        Seamless Translation Services
+         Translation Services
 
         </div>
         <p class="ag-courses-item_dis" >Break language barriers with accurate and culturally adapted translations, we can enhance learning accessibility for diverse audiences.
@@ -1605,10 +1605,7 @@ const originalCards = [
             backdrop-filter: blur(8px);
           }
 
-          .carousel-button:hover {
-            background: rgba(255,255,255,0.2);
-            transform: translateY(-50%) scale(1.1);
-          }
+          
 
           .carousel-button-prev { left: 0px; }
           .carousel-button-next { right: 0px; }
@@ -1800,7 +1797,7 @@ const originalCards = [
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
 
-            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+            
           </div>
 
           <div className="footer-section">
@@ -1835,8 +1832,10 @@ const originalCards = [
             <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
-            <h3>Support</h3>
-            <p>Contact Us Now</p>
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+
+            <h3 ><a href='/Contact' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Submit a Query</a></h3>
+            
             {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>

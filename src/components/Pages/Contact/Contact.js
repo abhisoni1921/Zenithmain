@@ -1,95 +1,39 @@
-import React from 'react';
-import  { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Pencil, Key } from 'lucide-react';
-import MailIcon from '@mui/icons-material/Mail';
-  import { 
+import React, { useState } from 'react';
+import { 
     FaLinkedin, 
     FaFacebook, 
     FaYoutube, 
     FaInstagram, 
     FaTwitter 
   } from 'react-icons/fa';
-import './AlgniteAssess360.css'
- 
+  import MailIcon from '@mui/icons-material/Mail';
+import './Contact.css';
 
-const AlgniteAssess360 = () => {
-  const currentYear = new Date().getFullYear();
-  
-  const [animate, setAnimate] = useState(false);
+const Contact = () => {
+    const currentYear = new Date().getFullYear();
+    const [activeCategory, setActiveCategory] = useState('ALL');
 
-  useEffect(() => {
-    setAnimate(true);
-  }, []);
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+    const [errors, setErrors] = useState({});
+    const [submitStatus, setSubmitStatus] = useState('');
 
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    // Add a slight delay before starting animations
-    const timer = setTimeout(() => {
-      setIsVisible(true);
-    }, 300);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-
-  const features = [
-    {
-      icon: "⚙️",
-      title: "Multi-Source Feedback Collection ",
-      description: "Gather feedback from multiple sources for well-rounded evaluations"
-    },
-    {
-      icon: "📱",
-      title: "Confidential and Anonymous Inputs ",
-      description: "Ensure honest feedback with secure and anonymous input channels."
-    },
-    {
-      icon: "💬",
-      title: "Confidential and Anonymous Inputs ",
-      description: "Ensure honest feedback with secure and anonymous input channels."
-    },
-    {
-      icon: "👆",
-      title: "Customizable Assessment Frameworks",
-      description: "Design flexible evaluation criteria tailored to different roles and organizational needs."
-    }
-  ];
-
-  const abtCards = [
-    {
-      
-      title: "Peer Feedback",
-      description: "Collect constructive feedback from colleagues for balanced evaluations."
-    },
-    {
-      
-      title: "Manager Reviews",
-      description: "Gain leadership insights on employee performance and growth potential."
-    },
-    {
-      
-      title: "Customer Feedback",
-      description: "Include external client feedback for roles involving direct customer interactions."
-    },
-    {
-      
-      title: "Self-Assessments",
-      description: "Empower individuals to reflect on their strengths and areas of improvement."
-    },
     
-  ];
+
+   
 
 
-  
 
 
 
-  
+
+
+
+
+
+
+
+
+
+
 
 
   return (
@@ -103,19 +47,14 @@ const AlgniteAssess360 = () => {
         playsInline
       >
         <source 
-          src="/AssessContent.webm" 
-          type="video/webm" 
+          src="/video6.mp4" 
+          type="video/mp4" 
         />
       </video>
       <div className="overlay"></div>
       
       {/* Animated shapes */}
-      <div className="animated-shapes">
-        <div className="shape shape1"></div>
-        <div className="shape shape2"></div>
-        <div className="shape shape3"></div>
-        <div className="shape shape4"></div>
-      </div>
+      
 
       <div className="content">
       <style>
@@ -220,7 +159,37 @@ const AlgniteAssess360 = () => {
             transition: transform 0.3s ease;
             position: relative;
             z-index: 2;
-            left: 0rem;
+            left: 8rem;
+            @media (max-width: 1200px) {
+              font-size: 3.5rem !important;
+              left: 6rem;
+            }
+
+            @media (max-width: 992px) {
+              font-size: 3rem !important;
+              left: 4rem;
+            }
+
+            @media (max-width: 768px) {
+              font-size: 2.5rem !important;
+              left: 0rem;
+            }
+
+            @media (max-width: 576px) {
+              font-size: 2rem !important;
+              left: 1rem;
+            }
+
+            @media (max-width: 480px) {
+              font-size: 1.8rem !important;
+              left: 0.5rem;
+            }
+
+            @media (max-width: 320px) {
+              font-size: 1.5rem !important;
+              left: 0;
+            }
+            
           }
 
           .title:hover {
@@ -263,100 +232,76 @@ const AlgniteAssess360 = () => {
         `}
       </style>
         <h1 className="title">
-          Algnite Assess360
+        Connect With Us
         </h1>
         <div className="divider"></div>
         <p className="subtitle">
-          Transform your performance evaluation process with our comprehensive 360-degree feedback system.
-          Leverage AI-powered insights to drive meaningful employee development and organizational growth.
-        </p>
+        We’d love to hear from you! Whether you have questions, feedback, or need assistance, our team is here to help. Reach out to us via email, phone, or visit our office during business hours. You can also fill out the contact form, and we’ll get back to you as soon as possible. </p>
       </div>
     </div>
 
-    <div className={`neopat-container ${isVisible ? 'visible' : ''}`}>
-      <div className="neopat-content">
-        <div className="neopat-text-container">
-          <div className="neopat-logo">
-            <div className="neopat-speech-bubble"></div>
-            <h1 className="neopat-title">About Algnite Assess360</h1>
-          </div>
-          <div className="neo-dis">
-
-          <p className="neopat-description">
-          Achieve a comprehensive evaluation approach with AIgnite Assess360. 
-          By gathering feedback from peers, managers, and self-assessments, 
-          it provides a 360-degree view of an individual’s performance and potential. 
-          This AI-powered tool identifies strengths and areas for growth with precision, 
-          integrates seamlessly into existing HR systems, and delivers actionable insights 
-          to foster employee development. Elevate talent management with a holistic, data-driven perspective.
-          </p>
-          
-          {/* <div className='assess-btn'>
-          <button 
-              className="learn-more-btn animate-on-mount visible"
-            >
-              view more
-            </button>
-            </div> */}
-          </div>
-        </div>
-        
-        <div className="neopat-image-container">
-          <div className="neopat-image">
-          <img src="/assess360.png" alt="Relevant Image" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div className="ABT">
-    <div className="abt-container">
-      <div className="abt-header">
-        <h1>What We Cover?</h1>
-        
-      </div>
-      <div className="abt-grid">
-        {abtCards.map((card, index) => (
-          <div key={index} className="abt-card">
-            <div className="abt-header-group">
-              
-              <h3 className="abt-title">{card.title}</h3>
+    {/* Contact Form Section */}
+    <div className="contact-section">
+      <div className="contact-container">
+        <div className="contact-image-section">
+          <div className="image-animation">
+            <div className="floating-elements">
+              <div className="element element1"></div>
+              <div className="element element2"></div>
+              <div className="element element3"></div>
+              <div className="element element4"></div>
             </div>
-            <p className="abt-description">{card.description}</p>
+            <img src="/Cont.png" />
           </div>
-        ))}
-      </div>
-    </div>
-    </div>
-
-<div className="F-con">
-    <div className="F-Title">
-<div className="header">
-      <h1 >360-Degree Assessment Features for Holistic Evaluation
-      </h1>
-      </div>
-      </div>
-    <div className="f-container">
-      {features.map((feature, index) => (
-        <div key={index} className="f-card">
-          <div className="f-icon">{feature.icon}</div>
-          <h3 className="f-title">{feature.title}</h3>
-          <p className="f-description">{feature.description}</p>
         </div>
-      ))}
+        
+        <div className="contact-form-section">
+          <h2>Get in Touch</h2>
+          <p>Have questions? We'd love to hear from you.</p>
+          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+            <div className="form-group">
+              <input
+                type="text"
+                placeholder="Your Name"
+                required
+                className="form-input"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="tel"
+                placeholder="Mobile Number"
+                required
+                className="form-input"
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                placeholder="Email Address"
+                required
+                className="form-input"
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                placeholder="Your Message"
+                required
+                className="form-input"
+                rows="4"
+              ></textarea>
+            </div>
+            <button type="submit" className="submit-btn">
+              Send Message
+              <span className="btn-icon">→</span>
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
-    </div>
 
-    
-
-    
-
-
-    
-<div className="Footer-gap"></div>
-
-<footer className="footer-container">
+    <div className="Footer-gap"></div>
+    <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
           <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
@@ -382,6 +327,8 @@ const AlgniteAssess360 = () => {
             <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
+
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
 
             
           </div>
@@ -418,10 +365,8 @@ const AlgniteAssess360 = () => {
             <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
-            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
-
-            <h3 ><a href='/Contact' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Submit a Query</a></h3>
-            
+            <h3>Support</h3>
+            <p>Contact Us Now</p>
             {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>
@@ -440,6 +385,9 @@ const AlgniteAssess360 = () => {
       </div>
     </footer>
     </div>
+    
+    
   );
 };
-export default AlgniteAssess360;
+
+export default Contact ;

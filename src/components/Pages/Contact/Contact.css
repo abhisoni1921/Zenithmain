@@ -1,0 +1,244 @@
+/* Contact Section Styles */
+.contact-section {
+  
+  background: transparent;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: stretch;
+}
+
+/* Image Section Styles */
+.contact-image-section {
+  position: relative;
+  min-height: 700px; /* Match form height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  
+  padding: 40px;
+  height: 100%;
+}
+
+.image-animation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-illustration {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 2;
+  object-fit: contain;
+}
+
+.floating-elements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.element {
+  position: absolute;
+  background: linear-gradient(45deg, #4E65FF, #92EFFD);
+  border-radius: 50%;
+  opacity: 0.1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.element1 {
+  width: 100px;
+  height: 100px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.element2 {
+  width: 150px;
+  height: 150px;
+  top: 40%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.element3 {
+  width: 80px;
+  height: 80px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.element4 {
+  width: 120px;
+  height: 120px;
+  bottom: 30%;
+  right: 20%;
+  animation-delay: 3s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(5deg);
+  }
+}
+
+/* Form Section Styles */
+.contact-form-section {
+  background: transparent;
+  padding: 40px;
+  
+  min-height: 700px; /* Match image section */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form-section h2 {
+  font-size: 2.5rem;
+  color: #2d3436;
+  margin-bottom: 15px;
+  background: linear-gradient(45deg, #4E65FF, #06298a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.contact-form-section p {
+  color: #636e72;
+  margin-bottom: 30px;
+  font-size: 1.1rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #4E65FF;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(78, 101, 255, 0.1);
+}
+
+textarea.form-input {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: linear-gradient(45deg, #4E65FF, #92EFFD);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(78, 101, 255, 0.3);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.submit-btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-image-section,
+  .contact-form-section {
+    min-height: 500px;
+    padding: 30px;
+  }
+
+  .contact-illustration {
+    max-width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 40px 0;
+  }
+
+  .contact-image-section,
+  .contact-form-section {
+    min-height: 450px;
+    padding: 25px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-image-section,
+  .contact-form-section {
+    min-height: 400px;
+    padding: 20px;
+  }
+
+  .contact-illustration {
+    max-width: 300px;
+  }
+
+  .contact-form-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .submit-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
