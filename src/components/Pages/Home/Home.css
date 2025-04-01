@@ -1605,6 +1605,7 @@ body {
 @media (max-width: 768px) {
   .C-services-grid {
     grid-template-columns: 1fr;
+    gap: 0rem;
   }
   
   .C-service-card {

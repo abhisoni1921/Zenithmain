@@ -181,7 +181,7 @@ const Career = () => {
       category: 'SUBJECT_MATTER_EXPERT'
     },
     {
-      title: 'TRANSLATOR',
+      title: 'Translator',
       experience: '2 Years',
       deadline: '2025-05-12',
       category: 'TRANSLATOR'
