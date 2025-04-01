@@ -36,8 +36,8 @@
   margin-bottom: -2rem;
   padding: 15px;
   transition: transform 0.3s ease;
-  width: 210px;
-  margin-top: -10px;
+  width: 180px;
+  margin-top: 0px;
 }
 
 
@@ -481,7 +481,7 @@ body {
 
   .hamburger {
       display: flex;
-      margin-top: -10px;
+      margin-top: 0px;
   }
 
   .mobile-menu {
