@@ -271,11 +271,11 @@ const Resources = () => {
         <div className="logo-section">
           <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="https://www.linkedin.com/company/zenith-consultants-india/"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
-            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            {/* <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a> */}
             <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
-            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
+            {/* <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a> */}
           </div>
         </div>
 

@@ -189,6 +189,19 @@ textarea.form-input {
   transform: translateX(5px);
 }
 
+/* Success and Error Messages */
+.success-message {
+  color: #4caf50;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.error-message {
+  color: #f44336;
+  margin-top: 1rem;
+  text-align: center;
+}
+
 /* Responsive Design */
 @media (max-width: 992px) {
   .contact-container {

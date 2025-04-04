@@ -7,7 +7,12 @@ import {
     FaTwitter 
   } from 'react-icons/fa';
   import MailIcon from '@mui/icons-material/Mail';
+import emailjs from '@emailjs/browser';
 import './Career.css';
+
+const EMAILJS_SERVICE_ID = "service_41fgd55"; // Replace with your EmailJS service ID
+const EMAILJS_TEMPLATE_ID = "template_szi9xop"; // Replace with your EmailJS template ID
+const EMAILJS_PUBLIC_KEY = "tP5WV_ML-lUYCpGWW"; // Replace with your EmailJS public key
 
 const Career = () => {
     const currentYear = new Date().getFullYear();
@@ -17,7 +22,8 @@ const Career = () => {
       email: '',
       phone: '',
       jobRole: '',
-      resume: null
+      resume: null,
+      resumeLink: '' // Add this line
     });
     const [errors, setErrors] = useState({});
     const [submitStatus, setSubmitStatus] = useState('');
@@ -47,9 +53,14 @@ const Career = () => {
         newErrors.jobRole = 'Please select a job role';
       }
       
-      // Resume validation
-      if (!formData.resume) {
-        newErrors.resume = 'Please upload your resume';
+      // Resume validation (either file or link required)
+      if (!formData.resume && !formData.resumeLink) {
+        newErrors.resume = 'Please either upload a resume or provide a resume link';
+      }
+      
+      // Resume link validation if provided
+      if (formData.resumeLink && !formData.resumeLink.startsWith('https://')) {
+        newErrors.resumeLink = 'Please provide a valid secure (https) link';
       }
       
       setErrors(newErrors);
@@ -61,10 +72,26 @@ const Career = () => {
       if (validateForm()) {
         setSubmitStatus('submitting');
         try {
-          // Simulating API call
-          await new Promise(resolve => setTimeout(resolve, 1500));
+          const templateParams = {
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            jobRole: formData.jobRole,
+            resume: formData.resume ? formData.resume.name : 'No file uploaded',
+            resumeLink: formData.resumeLink || 'No link provided',  // Add this line
+          };
+
+          // Send email using EmailJS
+          await emailjs.send(
+            EMAILJS_SERVICE_ID,
+            EMAILJS_TEMPLATE_ID,
+            templateParams,
+            EMAILJS_PUBLIC_KEY
+          );
+
           console.log('Form submitted:', formData);
           setSubmitStatus('success');
+          
           // Reset form after 3 seconds
           setTimeout(() => {
             setFormData({
@@ -72,11 +99,13 @@ const Career = () => {
               email: '',
               phone: '',
               jobRole: '',
-              resume: null
+              resume: null,
+              resumeLink: '' // Add this line
             });
             setSubmitStatus('');
           }, 3000);
         } catch (error) {
+          console.error('Error submitting form:', error);
           setSubmitStatus('error');
         }
       }
@@ -147,55 +176,55 @@ const Career = () => {
     {
       title: 'Frontend Developer',
       experience: '2 Years',
-      deadline: '2025-05-08',
+      location: 'Delhi,Noida',
       category: 'TECHNICAL'
     },
     {
       title: 'Backend Developer',
       experience: '1 Years',
-      deadline: '2025-05-08',
+      location: 'Delhi,Noida',
       category: 'TECHNICAL'
     },
     {
       title: 'Apps Developer',
       experience: '3 Years',
-      deadline: '2025-05-08',
+      location: 'Delhi,Noida',
       category: 'TECHNICAL'
     },
     {
       title: 'IOS Developer',
       experience: '2 Years',
-      deadline: '2025-05-08',
+      location: 'Delhi,Noida',
       category: 'TECHNICAL'
     },
     {
       title: 'Python Developer',
       experience: '3 Years',
-      deadline: '2025-05-08',
+      location: 'Delhi,Noida',
       category: 'TECHNICAL'
     },
     {
-      title: 'Aptitude Trainer',
+      title: 'Computer Science Engineering',
       experience: '1 Year',
-      deadline: '2025-05-10',
+      location: 'Delhi,Noida',
       category: 'SUBJECT_MATTER_EXPERT'
     },
     {
       title: 'Translator',
       experience: '2 Years',
-      deadline: '2025-05-12',
+      location: 'Delhi,Noida',
       category: 'TRANSLATOR'
     },
     {
       title: 'Digital Marketing Specialist',
       experience: '2 Years',
-      deadline: '2025-05-15',
+      location: 'Delhi,Noida',
       category: 'DESIGN_DIGITAL_MARKETING'
     },
     {
-      title: 'DSA Trainer',
+      title: 'Engineering ',
       experience: '1 Year',
-      deadline: '2025-05-20',
+      location: 'Delhi,Noida',
       category: 'SUBJECT_MATTER_EXPERT'
     }
   ];
@@ -551,8 +580,8 @@ const Career = () => {
                     <span className="detail-value">{job.experience}</span>
                   </div>
                   <div className="detail-group">
-                    <span className="detail-label">Deadline</span>
-                    <span className="detail-value">{job.deadline}</span>
+                    <span className="detail-label">Location</span>
+                    <span className="detail-value">{job.location}</span>
                   </div>
                 </div>
               </div>
@@ -646,7 +675,6 @@ const Career = () => {
             <input
               type="file"
               id="resume"
-              required
               accept=".pdf,image/*"
               onChange={handleFileChange}
               className={`file-input ${errors.resume ? 'error' : ''}`}
@@ -658,6 +686,26 @@ const Career = () => {
           </div>
           {errors.resume && <span className="error-message">{errors.resume}</span>}
           <span className="file-format-hint">Accepted formats: PDF, JPG, PNG</span>
+          
+          {/* Add Resume Link Section */}
+          <div className="resume-link-section">
+            <p className="or-divider">OR</p>
+            <label htmlFor="resumeLink">Resume Link (Google Drive/Dropbox)</label>
+            <div classname="file-input-container">
+            <input
+              type="url"
+              id="resumeLink"
+              value={formData.resumeLink}
+              onChange={(e) => {
+                setFormData({ ...formData, resumeLink: e.target.value });
+                if (errors.resumeLink) setErrors({ ...errors, resumeLink: '' });
+              }}
+              placeholder="Enter your resume link"
+              className={errors.resumeLink ? 'error' : ''}
+            />
+            </div>
+            {errors.resumeLink && <span className="error-message">{errors.resumeLink}</span>}
+          </div>
         </div>
         
         <button 
@@ -677,13 +725,13 @@ const Career = () => {
     <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
+          <a href='/Home'><a href='/Home'><img src="/Znew.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="https://www.linkedin.com/company/zenith-consultants-india/"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
-            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            {/* <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a> */}
             <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
-            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
+            {/* <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a> */}
           </div>
         </div>
 
@@ -700,8 +748,6 @@ const Career = () => {
             <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
-
-            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
 
             
           </div>
@@ -738,8 +784,10 @@ const Career = () => {
             <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
-            <h3>Support</h3>
-            <p>Contact Us Now</p>
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+
+            <h3 ><a href='/Contact' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Submit a Query</a></h3>
+            
             {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>

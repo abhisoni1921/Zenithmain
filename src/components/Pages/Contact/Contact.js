@@ -6,35 +6,55 @@ import {
     FaInstagram, 
     FaTwitter 
   } from 'react-icons/fa';
-  import MailIcon from '@mui/icons-material/Mail';
+import MailIcon from '@mui/icons-material/Mail';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
     const currentYear = new Date().getFullYear();
     const [activeCategory, setActiveCategory] = useState('ALL');
-
     const [errors, setErrors] = useState({});
     const [submitStatus, setSubmitStatus] = useState('');
+    const [formData, setFormData] = useState({
+      name: '',
+      mobile: '',
+      email: '',
+      message: ''
+    });
 
-    
+    const handleInputChange = (e) => {
+      const { name, value } = e.target;
+      setFormData(prevState => ({
+        ...prevState,
+        [name]: value
+      }));
+    };
 
-   
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      try {
+        const result = await emailjs.send(
+          'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+          'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            mobile_number: formData.mobile,
+            message: formData.message,
+          },
+          'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        );
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        if (result.status === 200) {
+          setSubmitStatus('success');
+          setFormData({ name: '', mobile: '', email: '', message: '' });
+        }
+      } catch (error) {
+        setSubmitStatus('error');
+        console.error('Error sending email:', error);
+      }
+    };
 
   return (
     <div className="Learning-container">
@@ -251,50 +271,68 @@ const Contact = () => {
               <div className="element element3"></div>
               <div className="element element4"></div>
             </div>
-            <img src="/Cont.png" />
+            <img src="/Cont.webp" />
           </div>
         </div>
         
         <div className="contact-form-section">
           <h2>Get in Touch</h2>
           <p>Have questions? We'd love to hear from you.</p>
-          <form className="contact-form" onSubmit={(e) => e.preventDefault()}>
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="form-group">
               <input
                 type="text"
+                name="name"
                 placeholder="Your Name"
                 required
                 className="form-input"
+                value={formData.name}
+                onChange={handleInputChange}
               />
             </div>
             <div className="form-group">
               <input
                 type="tel"
+                name="mobile"
                 placeholder="Mobile Number"
                 required
                 className="form-input"
+                value={formData.mobile}
+                onChange={handleInputChange}
               />
             </div>
             <div className="form-group">
               <input
                 type="email"
+                name="email"
                 placeholder="Email Address"
                 required
                 className="form-input"
+                value={formData.email}
+                onChange={handleInputChange}
               />
             </div>
             <div className="form-group">
               <textarea
+                name="message"
                 placeholder="Your Message"
                 required
                 className="form-input"
                 rows="4"
+                value={formData.message}
+                onChange={handleInputChange}
               ></textarea>
             </div>
             <button type="submit" className="submit-btn">
               Send Message
               <span className="btn-icon">→</span>
             </button>
+            {submitStatus === 'success' && (
+              <p className="success-message">Message sent successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="error-message">Failed to send message. Please try again.</p>
+            )}
           </form>
         </div>
       </div>
@@ -304,13 +342,13 @@ const Contact = () => {
     <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
+          <a href='/Home'><a href='/Home'><img src="/Znew.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
-            <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
+            <a href="https://www.linkedin.com/company/zenith-consultants-india/"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
-            <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a>
+            {/* <a href="#"><i className="fab fa-youtube"><FaYoutube /></i></a> */}
             <a href="#"><i className="fab fa-instagram"><FaInstagram /></i></a>
-            <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a>
+            {/* <a href="#"><i className="fab fa-twitter"><FaTwitter /></i></a> */}
           </div>
         </div>
 
@@ -327,8 +365,6 @@ const Contact = () => {
             <h3 ><a href='/DiscoverUs' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Discover Us</a></h3>
 
             <h3 ><a href='/Resources' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Resources</a></h3>
-
-            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
 
             
           </div>
@@ -365,8 +401,10 @@ const Contact = () => {
             <p>Noida, Uttar Pradesh, India - 201301</p>
             <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p>
 
-            <h3>Support</h3>
-            <p>Contact Us Now</p>
+            <h3 ><a href='/Career' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Careers</a></h3>
+
+            <h3 ><a href='/Contact' className="footer-title1" style={{fontSize: '1.2rem', color: '#ffffff'}}>Submit a Query</a></h3>
+            
             {/* <p><MailIcon/><a href="mailto:contact@lntedutech.com">info@zenithindia.org</a></p> */}
           </div>
         </div>

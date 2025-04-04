@@ -35,8 +35,8 @@
   align-items: center;
   margin-bottom: -2rem;
   padding: 15px;
-  transition: transform 0.3s ease;
-  width: 200px;
+  
+  width: 210px;
   margin-top: 0px;
 }
 
@@ -235,9 +235,9 @@ body {
 }
 
 /* Logo and dropdown icon styles */
-.navbar-logo img {
+/* .navbar-logo img {
   transition: all 0.3s ease;
-}
+} */
 
 .dropdown-icon {
   margin-left: 0.25rem;
