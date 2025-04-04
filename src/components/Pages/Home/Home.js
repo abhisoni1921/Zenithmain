@@ -671,7 +671,7 @@ const originalCards = [
             <div className="slide-content">
               
               <div className="slide-text">
-              <div className="slide-badge">
+              {/* <div className="slide-badge">
                 <div className="badge-content">
                   <span className="badge-icon">⭐</span>
                   <span className="badge-text">
@@ -751,7 +751,7 @@ const originalCards = [
                   text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
                   white-space: nowrap;
                 }
-              `}</style>
+              `}</style> */}
               <h1 className="slide-title">
                 {slide.title.split(' ').map((word, wordIndex, words) => (
                   <React.Fragment key={wordIndex}>
@@ -769,10 +769,10 @@ const originalCards = [
                 ))}
               </h1>
                 <p className="slide-description">{slide.description}</p>
-                <button className="slide-button animate-on-mount visible">
+                {/* <button className="slide-button animate-on-mount visible">
                   <span className="button-text">{slide.buttonText}</span>
                   <span className="button-shine"></span>
-                </button>
+                </button> */}
               </div>
               <div className="slide-image-container">
                 <div className="image-wrapper">
@@ -1773,7 +1773,7 @@ const originalCards = [
         <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
+          <a href='/Home'><a href='/Home'><img src="/Znew.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
             <a href="#"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>

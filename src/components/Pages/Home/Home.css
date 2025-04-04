@@ -175,7 +175,7 @@
 
 .slide-title {
   text-align: left;
-  font-size: clamp(2.5rem, 4vw, 3.4rem);
+  font-size: clamp(2.5rem, 4vw, 3.7rem);
   font-weight: 600;
   color: #ffffff;
   line-height: 1.2;
@@ -1848,7 +1848,7 @@ body {
 
 .lt-logo {
   margin-left: -20px;
-  width: 250px;
+  width: 200px;
 }
 
 .social-icons {
