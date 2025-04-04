@@ -380,28 +380,28 @@
 }
 @media screen and (max-width: 1200px) {
   .T-container {
-    padding: 6rem;
+    padding: 4rem 0rem;
     margin-bottom: 3rem;
   }
 }
 
 @media screen and (max-width: 992px) {
   .T-container {
-    padding: 4rem;
+    padding: 2rem 0rem;
     margin-bottom: 2.5rem;
   }
 }
 
 @media screen and (max-width: 768px) {
   .T-container {
-    padding: 3rem;
+    padding: 2rem 0rem;
     margin-bottom: 2rem;
   }
 }
 
 @media screen and (max-width: 576px) {
   .T-container {
-    padding: 2rem;
+    padding: 2rem 0rem;
     margin-bottom: 1.5rem;
   }
 }

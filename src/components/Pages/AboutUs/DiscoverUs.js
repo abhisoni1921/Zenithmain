@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  { useEffect } from 'react';
+import  { useEffect , useState} from 'react';
 import MailIcon from '@mui/icons-material/Mail';
 import './DiscoverUs.css';
 
@@ -68,6 +68,17 @@ const DiscoverUs = () => {
       }, index * 200);
     });
   }, []);
+
+    const [isVisible, setIsVisible] = useState(false);
+  
+    useEffect(() => {
+      // Add a slight delay before starting animations
+      const timer = setTimeout(() => {
+        setIsVisible(true);
+      }, 300);
+  
+      return () => clearTimeout(timer);
+    }, []);
 
   const abtCards = [
     {
@@ -230,19 +241,48 @@ const DiscoverUs = () => {
         <h1 className="title">
           Get to know us
         </h1>
-        {/* <p className="subtitle">
-          The premium WordPress theme designed to elevate your online<br />
-          presence to unparalleled heights.
-        </p> */}
-       
+         
+             
+            </div>
+          </div>
+
+
+          
+
+          <div className="ab-container">
+          <div className={`neopat-container ${isVisible ? 'visible' : ''}`}>
+            <div className="neopat-content">
+            <div className="neopat-text-container">
+              <div className="neopat-logo">
+              <div className="neopat-speech-bubble"></div>
+              <h1 className="neopat-title" style={{ fontWeight: 600 }}>Zenith Edu. Sol. Pvt. Ltd</h1>
+              </div>
+              <div className="neo-dis">
+
+              <p className="neopat-description">
+              Zenith is a  leading EdTech solutions provider committed to transforming education through innovative technology. Our services include comprehensive placement training, AI-driven learning solutions, expert content development, and robust assessment solutions. By partnering with colleges and other institutions, we empower students with the skills and knowledge they need to excel in their careers.
+
+              </p>
+              
+              {/* <div className='assess-btn'>
+              <button 
+                className="learn-more-btn animate-on-mount visible"
+                style={{ fontWeight: 600 }}
+              >
+                view more
+              </button>
+              </div> */}
+          </div>
+        </div>
+        
+        <div className="neopat-image-container">
+          <div className="neopat-image">
+          <img src="/discover.png" alt="Relevant Image" />
+          </div>
+        </div>
       </div>
     </div>
-
-
-    
-
-    <div className="ab-container">
-      <div className="content-wrapper">
+      {/* <div className="content-wrapper">
         <div className="left-section animate-on-mount">
           <div className="lt-container">
             <img 
@@ -273,7 +313,7 @@ const DiscoverUs = () => {
           
           
         </div>
-      </div>
+      </div> */}
     </div>
 
     

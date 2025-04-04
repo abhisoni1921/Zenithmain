@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  { useEffect } from 'react';
+import  { useEffect, useState } from 'react';
 import MailIcon from '@mui/icons-material/Mail';
 import './Resources.css';
 
@@ -68,6 +68,17 @@ const Resources = () => {
       }, index * 200);
     });
   }, []);
+
+      const [isVisible, setIsVisible] = useState(false);
+    
+      useEffect(() => {
+        // Add a slight delay before starting animations
+        const timer = setTimeout(() => {
+          setIsVisible(true);
+        }, 300);
+    
+        return () => clearTimeout(timer);
+      }, []);
 
   const abtCards = [
     {
@@ -203,11 +214,45 @@ const Resources = () => {
     
     <div className='abcd-container'>
     <div className="ab-container">
-      <div className="content-wrapper">
+      
+      <div className="ab-container">
+          <div className={`neopat-container ${isVisible ? 'visible' : ''}`}>
+            <div className="neopat-content">
+            <div className="neopat-text-container">
+              <div className="neopat-logo">
+              <div className="neopat-speech-bubble"></div>
+              <h1 className="neopat-title" style={{ fontWeight: 600 }}>Expertise That Drives Excellence</h1>
+              </div>
+              <div className="neo-dis">
+
+              <p className="neopat-description">
+              Behind every great learning experience is a team of dedicated professionals. Our resources include industry experts, skilled trainers, and content specialists who work together to create high-quality educational solutions. From crafting precise content to delivering impactful training, our team ensures that students and institutions receive the best support for academic and professional success.
+         
+              </p>
+              
+              {/* <div className='assess-btn'>
+              <button 
+                className="learn-more-btn animate-on-mount visible"
+                style={{ fontWeight: 600 }}
+              >
+                view more
+              </button>
+              </div> */}
+          </div>
+        </div>
+        
+        <div className="neopat-image-container">
+          <div className="neopat-image">
+          <img src="/resources.png" alt="Relevant Image" />
+          </div>
+        </div>
+      </div>
+    </div>
+      {/* <div className="content-wrapper">
         <div className="left-section animate-on-mount">
           <div className="lt-container">
             <img 
-              src="/resources.png" 
+              src="/discover.png" 
               alt="Dashboard Preview" 
               className="lt-image"
             />
@@ -219,7 +264,7 @@ const Resources = () => {
           <div className="about-us-title">
 
           <h1 className="about-us-title">
-          Expertise That Drives Excellence
+          We are transforming learning with innovation and AI-driven solutions
 
           </h1>
           </div>
@@ -229,12 +274,13 @@ const Resources = () => {
          
           
           <p className="sub-text animate-on-mount">
-          Behind every great learning experience is a team of dedicated professionals. Our resources include industry experts, skilled trainers, and content specialists who work together to create high-quality educational solutions. From crafting precise content to delivering impactful training, our team ensures that students and institutions receive the best support for academic and professional success.
-          </p>
+          Zenith is a  leading EdTech solutions provider committed to transforming education through innovative technology. Our services include comprehensive placement training, AI-driven learning solutions, expert content development, and robust assessment solutions. By partnering with colleges and other institutions, we empower students with the skills and knowledge they need to excel in their careers.
+</p>
           
           
         </div>
-      </div>
+      </div> */}
+    </div>
     </div>
     </div>
     
