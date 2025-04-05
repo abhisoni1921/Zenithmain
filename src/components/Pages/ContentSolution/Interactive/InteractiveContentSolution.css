@@ -902,7 +902,7 @@
     margin-top: -3rem;
     margin-bottom: 8rem;
   }
-  
+
   .stat-item {
     display: flex;
     flex-direction: column;
@@ -910,31 +910,31 @@
     text-align: center;
     padding: 0 1rem;
   }
-  
+
   .stat-value {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
   }
-  
+
   .stat-label {
     font-size: 1rem;
     opacity: 0.9;
     white-space: nowrap;
   }
-  
+
   .stars {
     display: flex;
     justify-content: center;
     gap: 2px;
     margin-top: 0.5rem;
   }
-  
+
   .star-icon {
     width: 16px;
     height: 16px;
   }
-  
+
   .elementor-icon {
     width: 40px;
     height: 40px;
@@ -947,6 +947,65 @@
     font-weight: bold;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .stats-container {
+      flex-direction: column;
+      padding: 1.5rem;
+    }
+
+    .stat-item {
+      padding: 1rem 0;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .stats-container {
+      padding: 1rem;
+    }
+
+    .stat-value {
+      font-size: 1.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+    }
+
+    .elementor-icon {
+      width: 30px;
+      height: 30px;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .stats-container {
+      padding: 0.5rem;
+    }
+
+    .stat-value {
+      font-size: 1.2rem;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+    }
+
+    .elementor-icon {
+      width: 25px;
+      height: 25px;
+      font-size: 1rem;
+    }
   }
   
   @media (max-width: 768px) {
