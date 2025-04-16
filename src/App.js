@@ -59,6 +59,8 @@ import AssessmentContent from './components/Pages/ContentSolution/AssessmentCont
 import Resources from './components/Pages/Resources/Resources';
 import Career from './components/Pages/Career/Career';
 import Contact from './components/Pages/Contact/Contact';
+import Error from './components/Pages/Error/Error';
+
 
 
 
@@ -133,6 +135,9 @@ function App() {
         <Route path='/Resources' element={<Resources/>}/>
         <Route path='/Career' element={<Career/>}/>
         <Route path='/Contact' element={<Contact/>}/>
+        <Route path='*' element={<Error/>}/>
+
+        {/* Add more routes as needed */}
 
       
       </Routes>

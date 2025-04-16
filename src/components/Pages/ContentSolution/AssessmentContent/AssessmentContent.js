@@ -671,7 +671,7 @@ QMAT is an indispensable tool for secure, efficient, and high-quality question m
 <footer className="footer-container">
       <div className="top-section">
         <div className="logo-section">
-          <a href='/Home'><a href='/Home'><img src="/Zenith.png" alt="Zenith Logo" className="lt-logo" /></a></a>
+          <a href='/Home'><a href='/Home'><img src="/Znew.png" alt="Zenith Logo" className="lt-logo" /></a></a>
           <div className="social-icons">
             <a href="https://www.linkedin.com/company/zenith-consultants-india/"><i className="fab fa-linkedin"><FaLinkedin /></i></a>
             <a href="#"><i className="fab fa-facebook"><FaFacebook /></i></a>
