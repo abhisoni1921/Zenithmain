@@ -11,19 +11,13 @@ import {  Routes, Route } from 'react-router-dom';
 // import AnchorTemporaryDrawer from './nav';
 // import CustomizedList from './n';
 import Navbar from './components/Nav';
-import AboutZESPL from './components/Pages/AboutUs/AboutZESPL';
-import Leadership from './components/Pages/AboutUs/Leadership';
-import VisionMission from './components/Pages/AboutUs/VisionMission';
 
 
 
-import AlgniteSoftSkillsBoost from './components/Pages/LearningSolution/AlgniteSoftSkillsBoost';
-import AlgniteSoftSkillsForge from './components/Pages/LearningSolution/AlgniteSoftSkillsForge';
-import AlgniteTechForge from './components/Pages/LearningSolution/AlgniteTechForge';
-import AlgniteAptiBoost from './components/Pages/LearningSolution/AlgniteAptiBoost';
-import AlgniteLab from './components/Pages/LearningSolution/AlgniteLab';
-import AlgniteCompanySpecificPulse from './components/Pages/LearningSolution/AlgniteCompanySpecificPulse';
-import AlgniteAptiForge from './components/Pages/LearningSolution/AlgniteAptiForge';
+
+
+
+
 
 
  
@@ -33,6 +27,7 @@ import AlgniteAptiForge from './components/Pages/LearningSolution/AlgniteAptiFor
 import AlgniteApti from './components/Pages/LearningSolution/AlgniteApti/AlgniteApti';
 import AlgniteTech from './components/Pages/LearningSolution/AlgniteTech/AlgniteTech';
 import AlgniteCommune from './components/Pages/LearningSolution/AlgniteCommune/AlgniteCommune';
+import AlgniteLab from './components/Pages/LearningSolution/AlgniteLab';
 import AlgniteLMS from './components/Pages/LearningSolution/AlgniteLMS/AlgniteLMS';
 // import LearningContentSolution from './components/Pages/ContentSolution/LearningContentSolution';
 import InteractiveContentSolution from './components/Pages/ContentSolution/Interactive/InteractiveContentSolution';
@@ -42,11 +37,10 @@ import LearningContentSolution from './components/Pages/ContentSolution/Learning
 
 import Home from './components/Pages/Home/Home';
 import DiscoverUs from './components/Pages/AboutUs/DiscoverUs';
-import Whoweserve from './components/Pages/AboutUs/Whoweserve/Whoweserve';
 
-import Talentdevelopment from './components/Pages/LearningSolution/Talentdevelopment/Talentdevelopment';
-import K2education from './components/Pages/ContentSolution/K2education/K2education';
-import Content from './components/Pages/ContentSolution/Content/Content';
+
+
+
 
 
 import AlgniteAptiAssess from './components/Pages/AssessmentSolution/AlgniteAptiAssess/AlgniteAptiAssess';
@@ -90,19 +84,11 @@ function App() {
       <Route path='/' element= {<Home/>}/>
         <Route path='/Home' element= {<Home/>}/>
         <Route path='/DiscoverUs' element={<DiscoverUs/>}/>
-        <Route path='/Whoweserve' element={<Whoweserve/>}/>
-        <Route path='/about' element={<AboutZESPL/>}/>
-        <Route path='/leadership' element={<Leadership/>}/>
-        <Route path='/visionMission' element={<VisionMission/>}/>
-        <Route path='/AlgniteAptiBoost' element={<AlgniteAptiBoost/>}/>
-        <Route path='/AlgniteAptiForge' element={<AlgniteAptiForge/>}/>
-        <Route path='/AlgniteCompanySpecificPulse' element={<AlgniteCompanySpecificPulse/>}/>
-        <Route path='/AlgniteLab' element={<AlgniteLab/>}/>
         
-        <Route path='/Talentdevelopment' element={<Talentdevelopment/>}/>
-        <Route path='/AlgniteSoftSkillsBoost' element={<AlgniteSoftSkillsBoost/>}/>
-        <Route path='/AlgniteSoftSkillsForge' element={<AlgniteSoftSkillsForge/>}/>
-        <Route path='/AlgniteTechForge' element={<AlgniteTechForge/>}/>
+        
+        
+        
+        
         
         
         
@@ -120,16 +106,17 @@ function App() {
         <Route path='/AlgniteApti' element={<AlgniteApti/>}/>
         <Route path='/AlgniteTech' element={<AlgniteTech/>}/>
         <Route path='/AlgniteCommune' element={<AlgniteCommune/>}/>
+        <Route path='/AlgniteLab' element={<AlgniteLab/>}/>
         <Route path='/AlgniteLMS' element={<AlgniteLMS/>}/>
 
 
 
-        <Route path='/Content' element={<Content/>}/>
+        
         <Route path='/AssessmentContent' element={<AssessmentContent/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
-        <Route path='/K2education' element={<K2education/>}/>
+        
         <Route path='/Translation' element={<Translation/>}/>
 
         <Route path='/Resources' element={<Resources/>}/>
