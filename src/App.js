@@ -50,6 +50,7 @@ import AlgniteHIRE from './components/Pages/AssessmentSolution/AlgniteHIRE/Algni
 import AlgniteAssess360 from './components/Pages/AssessmentSolution/AlgniteAssess360/AlgniteAssess360';
 import Translation from './components/Pages/ContentSolution/Translation/Translation';
 import AssessmentContent from './components/Pages/ContentSolution/AssessmentContent/AssessmentContent';
+import Content from './components/Pages/ContentSolution/Content/Content';
 import Resources from './components/Pages/Resources/Resources';
 import Career from './components/Pages/Career/Career';
 import Contact from './components/Pages/Contact/Contact';
@@ -111,7 +112,8 @@ function App() {
 
 
 
-        
+
+        <Route path='/Content' element={<Content/>}/>
         <Route path='/AssessmentContent' element={<AssessmentContent/>}/>
         <Route path='/LearningContentSolution' element={<LearningContentSolution/>}/>
         <Route path='/InteractiveContentSolution' element={<InteractiveContentSolution/>}/>
